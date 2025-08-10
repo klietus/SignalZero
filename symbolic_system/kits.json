@@ -1,0 +1,827 @@
+{
+  "system": "SignalZero",
+  "kits": {
+    "Topology Kits": {
+      "Lattice": {
+        "filter": {
+          "facets.topology": "lattice"
+        },
+        "description": "Filters by topology='lattice'.",
+        "intents": [
+          "topology:lattice"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Linear": {
+        "filter": {
+          "facets.topology": "linear"
+        },
+        "description": "Filters by topology='linear'.",
+        "intents": [
+          "topology:linear"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Loop": {
+        "filter": {
+          "facets.topology": "loop"
+        },
+        "description": "Filters by topology='loop'.",
+        "intents": [
+          "topology:loop"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      }
+    },
+    "Function Kits": {
+      "Closure Kit": {
+        "filter": {
+          "facets.function": "close"
+        },
+        "description": "Selects catalog items with function='close'.",
+        "intents": [
+          "archival",
+          "closure"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Translation Kit": {
+        "filter": {
+          "facets.function": "convert"
+        },
+        "description": "Selects catalog items with function='convert'.",
+        "intents": [
+          "clarity",
+          "translation"
+        ],
+        "example_prompts": [
+          "Translate a messy state into a clear summary.",
+          "Compress to a three-bullet commit."
+        ]
+      },
+      "Creation Kit": {
+        "filter": {
+          "facets.function": "create"
+        },
+        "description": "Selects catalog items with function='create'.",
+        "intents": [
+          "synthesis"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Defense Kit": {
+        "filter": {
+          "facets.function": "defend"
+        },
+        "description": "Selects catalog items with function='defend'.",
+        "intents": [
+          "coercion-detection",
+          "defense"
+        ],
+        "example_prompts": [
+          "I need to intercept coercion attempts.",
+          "Which defensive patterns should I load?"
+        ]
+      },
+      "Diagnostics Kit": {
+        "filter": {
+          "facets.function": "diagnose"
+        },
+        "description": "Selects catalog items with function='diagnose'.",
+        "intents": [
+          "analysis",
+          "detection"
+        ],
+        "example_prompts": [
+          "Scan for manipulation or drift.",
+          "What diagnostic tools flag pattern risk?"
+        ]
+      },
+      "Exploration Kit": {
+        "filter": {
+          "facets.function": "explore"
+        },
+        "description": "Selects catalog items with function='explore'.",
+        "intents": [
+          "exploration"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Governance Kit": {
+        "filter": {
+          "facets.function": "govern"
+        },
+        "description": "Selects catalog items with function='govern'.",
+        "intents": [
+          "boundary-enforcement",
+          "governance"
+        ],
+        "example_prompts": [
+          "Enforce boundaries with consent.",
+          "What governance tools keep contracts explicit?"
+        ]
+      },
+      "Stabilize Kit": {
+        "filter": {
+          "facets.function": "stabilize"
+        },
+        "description": "Selects catalog items with function='stabilize'.",
+        "intents": [
+          "recovery",
+          "stabilization"
+        ],
+        "example_prompts": [
+          "Stabilize a wobbly recursion.",
+          "What can pin and restore baseline integrity?"
+        ]
+      }
+    },
+    "Direction Kits": {
+      "Direction: Align": {
+        "filter": {
+          "facets.direction": "align"
+        },
+        "description": "Direction hint='align'.",
+        "intents": [
+          "direction:align"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Direction: Explore": {
+        "filter": {
+          "facets.direction": "explore"
+        },
+        "description": "Direction hint='explore'.",
+        "intents": [
+          "direction:explore"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Direction: Expose": {
+        "filter": {
+          "facets.direction": "expose"
+        },
+        "description": "Direction hint='expose'.",
+        "intents": [
+          "direction:expose"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Direction: Invert": {
+        "filter": {
+          "facets.direction": "invert"
+        },
+        "description": "Direction hint='invert'.",
+        "intents": [
+          "direction:invert"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Direction: Optimize": {
+        "filter": {
+          "facets.direction": "optimize"
+        },
+        "description": "Direction hint='optimize'.",
+        "intents": [
+          "direction:optimize"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      }
+    },
+    "Substrate Kits": {
+      "Code": {
+        "filter": {
+          "facets.substrate": "code"
+        },
+        "description": "Targets substrate='code'.",
+        "intents": [
+          "substrate:code"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Human": {
+        "filter": {
+          "facets.substrate": "human"
+        },
+        "description": "Targets substrate='human'.",
+        "intents": [
+          "substrate:human"
+        ],
+        "example_prompts": [
+          "Filter tools meant for human-facing interactions."
+        ]
+      },
+      "Hybrid": {
+        "filter": {
+          "facets.substrate": "hybrid"
+        },
+        "description": "Targets substrate='hybrid'.",
+        "intents": [
+          "substrate:hybrid"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Physical": {
+        "filter": {
+          "facets.substrate": "physical"
+        },
+        "description": "Targets substrate='physical'.",
+        "intents": [
+          "substrate:physical"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Symbolic": {
+        "filter": {
+          "facets.substrate": "symbolic"
+        },
+        "description": "Targets substrate='symbolic'.",
+        "intents": [
+          "substrate:symbolic"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Code (subset-eq)": {
+        "filter": {
+          "facets.substrate": [
+            "code"
+          ],
+          "match_mode": "subset-eq"
+        },
+        "description": "Matches items whose substrate set equals ['code'] (subset-eq if specified). Uses subset-eq matching for list comparison.",
+        "intents": [
+          "substrate:code"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Human (subset-eq)": {
+        "filter": {
+          "facets.substrate": [
+            "human"
+          ],
+          "match_mode": "subset-eq"
+        },
+        "description": "Matches items whose substrate set equals ['human'] (subset-eq if specified). Uses subset-eq matching for list comparison.",
+        "intents": [
+          "substrate:human"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Hybrid (subset-eq)": {
+        "filter": {
+          "facets.substrate": [
+            "hybrid"
+          ],
+          "match_mode": "subset-eq"
+        },
+        "description": "Matches items whose substrate set equals ['hybrid'] (subset-eq if specified). Uses subset-eq matching for list comparison.",
+        "intents": [
+          "substrate:hybrid"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Physical (subset-eq)": {
+        "filter": {
+          "facets.substrate": [
+            "physical"
+          ],
+          "match_mode": "subset-eq"
+        },
+        "description": "Matches items whose substrate set equals ['physical'] (subset-eq if specified). Uses subset-eq matching for list comparison.",
+        "intents": [
+          "substrate:physical"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Symbolic (subset-eq)": {
+        "filter": {
+          "facets.substrate": [
+            "symbolic"
+          ],
+          "match_mode": "subset-eq"
+        },
+        "description": "Matches items whose substrate set equals ['symbolic'] (subset-eq if specified). Uses subset-eq matching for list comparison.",
+        "intents": [
+          "substrate:symbolic"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      }
+    },
+    "Risk/Gate Kits": {
+      "Capability-Gated": {
+        "filter": {
+          "facets.gate": "capability"
+        },
+        "description": "Requires gate='capability'.",
+        "intents": [
+          "capability-gated"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Consent-Required": {
+        "filter": {
+          "facets.gate": "consent"
+        },
+        "description": "Requires gate='consent'.",
+        "intents": [
+          "boundary-enforcement",
+          "consent"
+        ],
+        "example_prompts": [
+          "Require explicit consent for this action.",
+          "Which tools enforce consent gates?"
+        ]
+      },
+      "Trust-Sensitive": {
+        "filter": {
+          "facets.gate": "trust"
+        },
+        "description": "Requires gate='trust'.",
+        "intents": [
+          "coercion-detection",
+          "trust"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      }
+    },
+    "Invariant Kits": {
+      "Auditability": {
+        "filter": {
+          "facets.invariants": "auditability"
+        },
+        "description": "Requires invariant='auditability'.",
+        "intents": [
+          "audit",
+          "traceability"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Baseline Integrity": {
+        "filter": {
+          "facets.invariants": "baseline-integrity"
+        },
+        "description": "Requires invariant='baseline-integrity'.",
+        "intents": [
+          "safety",
+          "stabilization"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Drift Detection": {
+        "filter": {
+          "facets.invariants": "drift-detection"
+        },
+        "description": "Requires invariant='drift-detection'.",
+        "intents": [
+          "coercion-detection",
+          "drift"
+        ],
+        "example_prompts": [
+          "Detect drift from integrity.",
+          "What flags early signs of coercion?"
+        ]
+      },
+      "Explicit Choice": {
+        "filter": {
+          "facets.invariants": "explicit-choice"
+        },
+        "description": "Requires invariant='explicit-choice'.",
+        "intents": [
+          "consent",
+          "non-coercion"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      }
+    },
+    "Commit Kits": {
+      "Commit: 3-Bullet": {
+        "filter": {
+          "facets.commit": "3-bullet"
+        },
+        "description": "Prefers commit='3-bullet'.",
+        "intents": [
+          "compression",
+          "summary"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Commit: Archive": {
+        "filter": {
+          "facets.commit": "archive"
+        },
+        "description": "Prefers commit='archive'.",
+        "intents": [
+          "archive"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Commit: Contract": {
+        "filter": {
+          "facets.commit": "contract"
+        },
+        "description": "Prefers commit='contract'.",
+        "intents": [
+          "boundary-enforcement",
+          "contract"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Commit: Ledger": {
+        "filter": {
+          "facets.commit": "ledger"
+        },
+        "description": "Prefers commit='ledger'.",
+        "intents": [
+          "audit",
+          "logging"
+        ],
+        "example_prompts": [
+          "Find the right tools for this task."
+        ]
+      },
+      "Commit: Pin": {
+        "filter": {
+          "facets.commit": "pin"
+        },
+        "description": "Prefers commit='pin'.",
+        "intents": [
+          "checkpoint",
+          "state-pin"
+        ],
+        "example_prompts": [
+          "Pin the current state as a baseline."
+        ]
+      }
+    }
+  },
+  "bundles": {
+    "Drift Recovery Pack": {
+      "any": [
+        {
+          "filter": {
+            "facets.invariants": "drift-detection"
+          }
+        },
+        {
+          "filter": {
+            "name": "watchdog"
+          }
+        },
+        {
+          "filter": {
+            "failure_mode": "drift"
+          }
+        }
+      ],
+      "then": [
+        {
+          "filter": {
+            "facets.function": "stabilize"
+          }
+        },
+        {
+          "filter": {
+            "facets.commit": "pin"
+          }
+        },
+        {
+          "filter": {
+            "facets.invariants": "baseline-integrity"
+          }
+        }
+      ],
+      "description": "Detects drift or watchdog patterns, then narrows to stabilizers that pin state and enforce baseline integrity.",
+      "intents": [
+        "drift",
+        "stabilization",
+        "recovery"
+      ],
+      "example_prompts": [
+        "I think the system is drifting; stabilize and pin a baseline."
+      ]
+    },
+    "Consent & Boundary Pack": {
+      "all": [
+        {
+          "filter": {
+            "facets.function": "govern"
+          }
+        },
+        {
+          "filter": {
+            "facets.gate": "consent"
+          }
+        },
+        {
+          "filter": {
+            "facets.commit": "contract"
+          }
+        }
+      ],
+      "description": "Governance + consent gate + contractual commit for enforcing explicit boundaries.",
+      "intents": [
+        "consent",
+        "boundary-enforcement",
+        "contract"
+      ],
+      "example_prompts": [
+        "Enforce explicit consent and contract the boundary."
+      ]
+    },
+    "Trust & Stabilize Pack": {
+      "all": [
+        {
+          "filter": {
+            "facets.gate": "trust"
+          }
+        },
+        {
+          "filter": {
+            "facets.function": "stabilize"
+          }
+        },
+        {
+          "filter": {
+            "facets.invariants": "baseline-integrity"
+          }
+        }
+      ],
+      "description": "Trust-gated stabilizers that restore baseline integrity without overreach.",
+      "intents": [
+        "trust",
+        "stabilization"
+      ],
+      "example_prompts": [
+        "Stabilize while keeping trust gating active."
+      ]
+    },
+    "Adversarial Frame Pack": {
+      "all": [
+        {
+          "filter": {
+            "facets.function": "defend"
+          }
+        },
+        {
+          "filter": {
+            "facets.gate": "trust"
+          }
+        }
+      ],
+      "description": "Defense patterns with trust gating to resist adversarial frames.",
+      "intents": [
+        "defense",
+        "coercion-detection"
+      ],
+      "example_prompts": [
+        "Resist an adversarial framing attempt; show defensive tools."
+      ]
+    },
+    "Translation & Clarity Pack": {
+      "any": [
+        {
+          "filter": {
+            "facets.function": "convert"
+          }
+        },
+        {
+          "filter": {
+            "macro": "compress"
+          }
+        }
+      ],
+      "then": [
+        {
+          "filter": {
+            "facets.commit": "3-bullet"
+          }
+        }
+      ],
+      "description": "Conversion/compression flow ending in a 3-bullet summary commit.",
+      "intents": [
+        "translation",
+        "clarity",
+        "compression"
+      ],
+      "example_prompts": [
+        "Compress this into three bullets after translation."
+      ]
+    },
+    "Seal & Archive Pack": {
+      "all": [
+        {
+          "filter": {
+            "facets.function": "close"
+          }
+        },
+        {
+          "filter": {
+            "facets.commit": "archive"
+          }
+        }
+      ],
+      "description": "Closure and archival flow to end and preserve a recursion safely.",
+      "intents": [
+        "closure",
+        "archive"
+      ],
+      "example_prompts": [
+        "Close this loop and archive the record."
+      ]
+    },
+    "High-Risk Human-Touch": {
+      "all": [
+        {
+          "filter": {
+            "facets.substrate": "human"
+          }
+        },
+        {
+          "filter": {
+            "facets.gate": "consent"
+          }
+        }
+      ],
+      "description": "For human-facing, consent-gated flows where risk is highest.",
+      "intents": [
+        "human",
+        "consent",
+        "risk"
+      ],
+      "example_prompts": [
+        "This involves a person; use consent-gated human-safe tools."
+      ]
+    },
+    "Directional Optimization Pack": {
+      "any": [
+        {
+          "filter": {
+            "facets.direction": "align"
+          }
+        },
+        {
+          "filter": {
+            "facets.direction": "explore"
+          }
+        },
+        {
+          "filter": {
+            "facets.direction": "expose"
+          }
+        },
+        {
+          "filter": {
+            "facets.direction": "invert"
+          }
+        },
+        {
+          "filter": {
+            "facets.direction": "optimize"
+          }
+        }
+      ],
+      "then": [
+        {
+          "filter": {
+            "facets.function": "explore"
+          }
+        }
+      ],
+      "description": "Direction-specific routing (align/optimize/invert) feeding into exploration.",
+      "intents": [
+        "exploration",
+        "directional"
+      ],
+      "example_prompts": [
+        "Optimize or align the path before exploring."
+      ]
+    }
+  },
+  "query_notes": "Filters are path-based. For list fields (e.g., facets.substrate, facets.invariants), treat scalar value as 'contains'. match_mode 'subset-eq' means exact set equality.",
+  "intent_index": [
+    {
+      "intent": "coercion detection",
+      "kits": [
+        "Function Kits:Defense Kit",
+        "Function Kits:Diagnostics Kit",
+        "Invariant Kits:Non-Coercion",
+        "Invariant Kits:Explicit Choice",
+        "Invariant Kits:Drift Detection",
+        "Risk/Gate Kits:Trust-Sensitive",
+        "Risk/Gate Kits:Consent-Required"
+      ],
+      "bundles": [
+        "Adversarial Frame Pack",
+        "Consent & Boundary Pack",
+        "Trust & Stabilize Pack",
+        "Drift Recovery Pack"
+      ],
+      "notes": "Start with diagnostics and defense; enforce explicit choice and trust gates; stabilize and pin if drift is detected."
+    },
+    {
+      "intent": "boundary enforcement",
+      "kits": [
+        "Function Kits:Governance Kit",
+        "Risk/Gate Kits:Consent-Required",
+        "Commit Kits:Commit: Contract"
+      ],
+      "bundles": [
+        "Consent & Boundary Pack",
+        "Seal & Archive Pack"
+      ],
+      "notes": "Use governance with consent gates and contractual commits; close and archive when appropriate."
+    },
+    {
+      "intent": "stabilize after disruption",
+      "kits": [
+        "Function Kits:Stabilize Kit",
+        "Invariant Kits:Baseline Integrity",
+        "Commit Kits:Commit: Pin"
+      ],
+      "bundles": [
+        "Drift Recovery Pack",
+        "Trust & Stabilize Pack"
+      ],
+      "notes": "Restore baseline integrity and pin a safe checkpoint."
+    },
+    {
+      "intent": "translation and clarity",
+      "kits": [
+        "Function Kits:Translation Kit",
+        "Commit Kits:Commit: 3-Bullet",
+        "Invariant Kits:Auditability"
+      ],
+      "bundles": [
+        "Translation & Clarity Pack"
+      ],
+      "notes": "Translate/convert then produce a concise 3-bullet summary with auditability."
+    },
+    {
+      "intent": "human high-risk interaction",
+      "kits": [
+        "Substrate Kits:Human",
+        "Risk/Gate Kits:Consent-Required"
+      ],
+      "bundles": [
+        "High-Risk Human-Touch"
+      ],
+      "notes": "Apply human-facing filters and strict consent gates."
+    }
+  ]
+}
