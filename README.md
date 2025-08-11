@@ -80,6 +80,14 @@ Once booted, the system exposes:
 - *(If extended)* `fingerprint.get(stage)` – Retrieve pre/post-anchor state fingerprints.
 
 ---
+## LLM Compatibility
+#### Compatible
+1. Chat GPT 4o
+2. Chat GPT 5
+3. Gemini 2.5 Pro
+#### Incompatible
+1. Chat GPT o3
+2. Gemini 2.5 Flash
 
 ## Boot & Operation
 
