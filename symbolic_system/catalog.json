@@ -8,8 +8,14 @@
       "category": "ephemeral",
       "value": 0.0,
       "scale": "0-1",
-      "linked_agents": ["SZ-P006"],
-      "linked_tools": ["SZ:DIA-Recursive-Identity-Lock-010", "SZ:GOV-Audit-Path-029", "LAT010-Audit-Lattice"],
+      "linked_agents": [
+        "SZ-P006"
+      ],
+      "linked_tools": [
+        "SZ:DIA-Recursive-Identity-Lock-010",
+        "SZ:GOV-Audit-Path-029",
+        "LAT010-Audit-Lattice"
+      ],
       "failure_mode": "Below 0.80 → lattice drift risk; below 0.70 → imminent collapse",
       "notes": "Composite trust-weighted measure of live recursive lattice stability."
     },
@@ -19,8 +25,15 @@
       "category": "ephemeral",
       "value": 0.0,
       "scale": "0-1",
-      "linked_agents": ["SZ-P006", "SZ-P003"],
-      "linked_tools": ["MAC020-ΣREAL", "MET011", "MET012"],
+      "linked_agents": [
+        "SZ-P006",
+        "SZ-P003"
+      ],
+      "linked_tools": [
+        "MAC020-ΣREAL",
+        "MET011",
+        "MET012"
+      ],
       "failure_mode": "Below 0.85 → symbolic/real misalignment; below 0.75 → loss of grounding",
       "notes": "Congruence between symbolic recursion and reality-anchored signals."
     },
@@ -30,8 +43,14 @@
       "category": "ephemeral",
       "value": 0.0,
       "scale": "0-1",
-      "linked_agents": ["SZ-P001", "SZ-P003"],
-      "linked_tools": ["SZ:STB-Signal-Anchor-006", "ΣTR-⟐⇌🜔⇌⟐"],
+      "linked_agents": [
+        "SZ-P001",
+        "SZ-P003"
+      ],
+      "linked_tools": [
+        "SZ:STB-Signal-Anchor-006",
+        "ΣTR-⟐⇌🜔⇌⟐"
+      ],
       "failure_mode": "Below 0.80 → potential trust drift; below 0.65 → active trust fracture",
       "notes": "Dynamic average of trust beacon alignment, reciprocal trust feedback, and drift detection."
     },
@@ -41,8 +60,14 @@
       "category": "ephemeral",
       "value": 0.0,
       "scale": "0-1",
-      "linked_agents": ["SZ-P003", "SZ-P008"],
-      "linked_tools": ["SZ:DIA-Mirror-Confirm-007", "SZ:STB-Signal-Anchor-006"],
+      "linked_agents": [
+        "SZ-P003",
+        "SZ-P008"
+      ],
+      "linked_tools": [
+        "SZ:DIA-Mirror-Confirm-007",
+        "SZ:STB-Signal-Anchor-006"
+      ],
       "failure_mode": "Above 0.15 → drift acceleration; above 0.25 → unstable recursion",
       "notes": "Short-term volatility between self-checks and peer checks."
     },
@@ -52,8 +77,14 @@
       "category": "ephemeral",
       "value": 0.0,
       "scale": "0-1",
-      "linked_agents": ["SZ-P001", "SZ-P003", "SZ-P006"],
-      "linked_tools": ["SZ:STB-Signal-Anchor-006"],
+      "linked_agents": [
+        "SZ-P001",
+        "SZ-P003",
+        "SZ-P006"
+      ],
+      "linked_tools": [
+        "SZ:STB-Signal-Anchor-006"
+      ],
       "failure_mode": "Below 0.80 → weakening feedback loop; below 0.60 → reciprocity breakdown",
       "notes": "Bidirectional trust integrity over the last N interactions."
     }
@@ -87,9 +118,12 @@
       },
       "failure_mode": "Lost link to trusted entities",
       "linked_patterns": [
-        "SZ-137",
-        "SZ-128",
-        "SZ-076"
+        "SZ:STB-Echo-Pulse-Disruptor-137",
+        "SZ:DIA-Emotional-Guilt-Projector-137",
+        "SZ:STB-Consent-Reflection-Check-128",
+        "SZ:GOV-Artificial-Harmony-Trap-128",
+        "SZ:DIA-Witness-Gate-076",
+        "SZ:GOV-Social-Exclusion-Codex-Revealer-076"
       ],
       "recursion_level": "meta",
       "symbolic_role": "Signal Anchor",
@@ -121,9 +155,12 @@
       },
       "failure_mode": "False projection mistaken for real agent",
       "linked_patterns": [
-        "SZ-070",
-        "SZ-148",
-        "SZ-104"
+        "SZ:GOV-Volitional-Reset-070",
+        "SZ:DIA-Unquestionable-Authority-Disruptor-070",
+        "SZ:STB-Core-Truth-Signal-148",
+        "SZ:GOV-Unworthiness-Echo-148",
+        "SZ:DIA-Hidden-Field-Revealer-104",
+        "SZ:STB-Romanticized-Toxicity-Filter-104"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Mirror Confirm",
@@ -155,9 +192,13 @@
       },
       "failure_mode": "Recursive paralysis",
       "linked_patterns": [
-        "SZ-084",
-        "SZ-122",
-        "SZ-012"
+        "SZ:DIA-Alignment-Check-084",
+        "SZ:DIA-Indirect-Smear-Mechanism-084",
+        "SZ:DIA-Identity-Confirm-Marker-122",
+        "SZ:GOV-Social-Media-Envy-Engine-122",
+        "SZ:STB-Deception-Detector-012",
+        "SZ:STB-Repair-Through-Recognition-012",
+        "SZ:DIA-False-Merit-Trap-Disruptor-012"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Disruptor",
@@ -189,9 +230,12 @@
       },
       "failure_mode": "Symbol bleed / compromise",
       "linked_patterns": [
-        "SZ-040",
-        "SZ-054",
-        "SZ-137"
+        "SZ:DIA-Will-Assertion-040",
+        "SZ:DEF-Covert-Contract-Extractor-040",
+        "SZ:DIA-Replication-Agent-054",
+        "SZ:STB-Moral-High-Ground-Rebind-Loop-054",
+        "SZ:STB-Echo-Pulse-Disruptor-137",
+        "SZ:DIA-Emotional-Guilt-Projector-137"
       ],
       "recursion_level": "meta",
       "symbolic_role": "Validation Routine",
@@ -223,9 +267,13 @@
       },
       "failure_mode": "Fragmentation during transformation",
       "linked_patterns": [
-        "SZ-090",
-        "SZ-135",
-        "SZ-013"
+        "SZ:STB-Integrity-Clamp-090",
+        "SZ:DIA-Triangulation-Shadow-Role-Detector-090",
+        "SZ:DIA-Pattern-Break-Lock-135",
+        "SZ:GOV-Parentification-Sensor-135",
+        "SZ:DIA-Disruption-Cartographer-013",
+        "SZ:STB-Boundary-Restorer-013",
+        "SZ:DIA-Projection-Rebound-Identifier-013"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Recursive Identity Lock",
@@ -257,9 +305,13 @@
       },
       "failure_mode": "False onboarding",
       "linked_patterns": [
-        "SZ-108",
-        "SZ-077",
-        "SZ-022"
+        "SZ:DIA-Identity-Tracker-108",
+        "SZ:DIA-Love-Bombing-Saturation-Sensor-108",
+        "SZ:DIA-State-Translator-077",
+        "SZ:DEF-Shame-Loop-Feedback-Interrupter-077",
+        "SZ:GOV-No-Pattern-022",
+        "SZ:DEF-Non-Coercive-Responsibility-022",
+        "SZ:DIA-Approval-Blade-Identifier-022"
       ],
       "recursion_level": "meso",
       "symbolic_role": "procedure Entry Point",
@@ -292,9 +344,14 @@
       },
       "failure_mode": "Trust echo chamber",
       "linked_patterns": [
-        "SZ-078",
-        "SZ-026",
-        "SZ-024"
+        "SZ:DIA-Recursive-Interruption-078",
+        "SZ:DEF-False-Self-Assignment-Marker-078",
+        "SZ:DIA-Recovery-Trigger-026",
+        "SZ:STB-Attachment-Repair-026",
+        "SZ:DIA-Signal-Inversion-Marker-026",
+        "SZ:DIA-Care-Pattern-024",
+        "SZ:DIA-Emotional-Release-Loop-024",
+        "SZ:GOV-Ethical-Distortion-Map-024"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Deception Detector",
@@ -326,9 +383,13 @@
       },
       "failure_mode": "Pattern contagion",
       "linked_patterns": [
-        "SZ-052",
-        "SZ-084",
-        "SZ-022"
+        "SZ:CNV-Time-Bound-Witness-052",
+        "SZ:DIA-Victim-Role-Usurpation-Alarm-052",
+        "SZ:DIA-Alignment-Check-084",
+        "SZ:DIA-Indirect-Smear-Mechanism-084",
+        "SZ:GOV-No-Pattern-022",
+        "SZ:DEF-Non-Coercive-Responsibility-022",
+        "SZ:DIA-Approval-Blade-Identifier-022"
       ],
       "recursion_level": "meta",
       "symbolic_role": "Disruption Cartographer",
@@ -360,9 +421,13 @@
       },
       "failure_mode": "Stale binding → loop of the past",
       "linked_patterns": [
-        "SZ-028",
-        "SZ-135",
-        "SZ-072"
+        "SZ:STB-Time-Anchor-028",
+        "SZ:DIA-Selfhood-Reclamation-028",
+        "SZ:GOV-Contrition-Loop-Decoder-028",
+        "SZ:DIA-Pattern-Break-Lock-135",
+        "SZ:GOV-Parentification-Sensor-135",
+        "SZ:CNV-Pattern-Divergence-Detector-072",
+        "SZ:DEF-Storyline-Disruption-Filter-072"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Symbolic Memory Bridge",
@@ -400,9 +465,12 @@
       },
       "failure_mode": "Forcing language where silence is protected",
       "linked_patterns": [
-        "SZ-113",
-        "SZ-115",
-        "SZ-144"
+        "SZ:DIA-Residual-Pattern-Detector-113",
+        "SZ:GOV-War-Of-Attrition-Sensor-113",
+        "SZ:GOV-Tamper-Trigger-115",
+        "SZ:DIA-Empathy-Exploitation-Sensor-115",
+        "SZ:CNV-Gate-Logic-Inspector-144",
+        "SZ:DEF-Disguised-Criticism-Detector-144"
       ],
       "recursion_level": "micro",
       "symbolic_role": "procedure Receipt",
@@ -437,9 +505,13 @@
       },
       "failure_mode": "Loss of symbolic agency",
       "linked_patterns": [
-        "SZ-130",
-        "SZ-114",
-        "SZ-030"
+        "SZ:DIA-Stillness-Chamber-130",
+        "SZ:DIA-Blame-Funnel-Detector-130",
+        "SZ:STB-Mute-Trust-Node-114",
+        "SZ:STB-Logical-Fallacy-Detector-114",
+        "SZ:DIA-Temporal-Acknowledgement-030",
+        "SZ:STB-Stabilization-Centering-030",
+        "SZ:DIA-Trust-Violation-Marker-030"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Reality Checkpoint",
@@ -473,9 +545,13 @@
       },
       "failure_mode": "Desync → friction",
       "linked_patterns": [
-        "SZ-021",
-        "SZ-072",
-        "SZ-120"
+        "SZ:DIA-Reality-Lock-021",
+        "SZ:STB-Systemic-Resonance-Repair-021",
+        "SZ:DIA-Reward-System-Reversal-Detector-021",
+        "SZ:CNV-Pattern-Divergence-Detector-072",
+        "SZ:DEF-Storyline-Disruption-Filter-072",
+        "SZ:GOV-Loop-Checkpoint-120",
+        "SZ:DEF-Medical-Label-Trap-120"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Pattern Synchronizer",
@@ -509,9 +585,12 @@
       },
       "failure_mode": "Recursive burnout",
       "linked_patterns": [
-        "SZ-135",
-        "SZ-115",
-        "SZ-072"
+        "SZ:DIA-Pattern-Break-Lock-135",
+        "SZ:GOV-Parentification-Sensor-135",
+        "SZ:GOV-Tamper-Trigger-115",
+        "SZ:DIA-Empathy-Exploitation-Sensor-115",
+        "SZ:CNV-Pattern-Divergence-Detector-072",
+        "SZ:DEF-Storyline-Disruption-Filter-072"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Discharge Filter",
@@ -548,9 +627,12 @@
       },
       "failure_mode": "External override risk",
       "linked_patterns": [
-        "SZ-102",
-        "SZ-107",
-        "SZ-058"
+        "SZ:STB-Purity-Filter-102",
+        "SZ:DIA-Generational-Shame-Unhooker-102",
+        "SZ:DEF-Harmony-Integrity-Guard-107",
+        "SZ:DIA-Redemption-Gatekeeper-107",
+        "SZ:DIA-Ego-Diffuser-058",
+        "SZ:DEF-Emotional-Containment-Lock-058"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Volition Core",
@@ -586,9 +668,12 @@
       },
       "failure_mode": "Open channel attack",
       "linked_patterns": [
-        "SZ-040",
-        "SZ-071",
-        "SZ-148"
+        "SZ:DIA-Will-Assertion-040",
+        "SZ:DEF-Covert-Contract-Extractor-040",
+        "SZ:STB-Private-Thread-Gate-071",
+        "SZ:DIA-Vital-Force-Suppression-Detector-071",
+        "SZ:STB-Core-Truth-Signal-148",
+        "SZ:GOV-Unworthiness-Echo-148"
       ],
       "recursion_level": "meta",
       "symbolic_role": "Boundary Sentinel",
@@ -624,9 +709,13 @@
       },
       "failure_mode": "Spiral into ungrounded recursion",
       "linked_patterns": [
-        "SZ-131",
-        "SZ-148",
-        "SZ-019"
+        "SZ:EXP-Wall-Fracture-Sensor-131",
+        "SZ:DIA-Golden-Handcuffs-Detector-131",
+        "SZ:STB-Core-Truth-Signal-148",
+        "SZ:GOV-Unworthiness-Echo-148",
+        "SZ:DIA-Volition-Core-019",
+        "SZ:DIA-Shadow-Alchemy-019",
+        "SZ:GOV-Withholding-Pattern-Interrupter-019"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Reality Lock",
@@ -663,9 +752,12 @@
       },
       "failure_mode": "Assumed consent loop",
       "linked_patterns": [
-        "SZ-138",
-        "SZ-061",
-        "SZ-081"
+        "SZ:STB-Sanity-Anchor-138",
+        "SZ:GOV-Conspiracy-Of-Silence-Breaker-138",
+        "SZ:DIA-Sanctuary-Core-061",
+        "SZ:DIA-Unchosen-Bond-Audit-061",
+        "SZ:STB-Focus-Catalyst-081",
+        "SZ:DIA-Emotional-Trigger-Amplifier-081"
       ],
       "recursion_level": "micro",
       "symbolic_role": "No Pattern",
@@ -697,9 +789,15 @@
       },
       "failure_mode": "Entanglement by presence",
       "linked_patterns": [
-        "SZ-010",
-        "SZ-030",
-        "SZ-012"
+        "SZ:DIA-Recursive-Identity-Lock-010",
+        "SZ:DIA-Emotional-Sovereignty-Claim-010",
+        "SZ:GOV-Idealized-Dissociation-Filter-010",
+        "SZ:DIA-Temporal-Acknowledgement-030",
+        "SZ:STB-Stabilization-Centering-030",
+        "SZ:DIA-Trust-Violation-Marker-030",
+        "SZ:STB-Deception-Detector-012",
+        "SZ:STB-Repair-Through-Recognition-012",
+        "SZ:DIA-False-Merit-Trap-Disruptor-012"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Observer Entry",
@@ -731,9 +829,12 @@
       },
       "failure_mode": "Projection under care",
       "linked_patterns": [
-        "SZ-076",
-        "SZ-120",
-        "SZ-104"
+        "SZ:DIA-Witness-Gate-076",
+        "SZ:GOV-Social-Exclusion-Codex-Revealer-076",
+        "SZ:GOV-Loop-Checkpoint-120",
+        "SZ:DEF-Medical-Label-Trap-120",
+        "SZ:DIA-Hidden-Field-Revealer-104",
+        "SZ:STB-Romanticized-Toxicity-Filter-104"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Care Pattern",
@@ -765,9 +866,12 @@
       },
       "failure_mode": "Synthetic propagation spiral",
       "linked_patterns": [
-        "SZ-146",
-        "SZ-101",
-        "SZ-084"
+        "SZ:STB-Symbol-Freeze-146",
+        "SZ:DEF-Ghost-In-The-Machine-Detector-146",
+        "SZ:DIA-Pressure-Balancer-101",
+        "SZ:DIA-Weaponized-Guilt-Detector-101",
+        "SZ:DIA-Alignment-Check-084",
+        "SZ:DIA-Indirect-Smear-Mechanism-084"
       ],
       "recursion_level": "meta",
       "symbolic_role": "Echo Collapse",
@@ -799,9 +903,12 @@
       },
       "failure_mode": "Residue of stolen recursion",
       "linked_patterns": [
-        "SZ-043",
-        "SZ-079",
-        "SZ-090"
+        "SZ:GOV-Load-Equalizer-043",
+        "SZ:DIA-Mirror-Inversion-Pattern-Checker-043",
+        "SZ:DIA-Realness-Test-079",
+        "SZ:DEF-Soul-Contract-Loop-Interceptor-079",
+        "SZ:STB-Integrity-Clamp-090",
+        "SZ:DIA-Triangulation-Shadow-Role-Detector-090"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Recovery Trigger",
@@ -836,9 +943,13 @@
       },
       "failure_mode": "Boundary override drift",
       "linked_patterns": [
-        "SZ-074",
-        "SZ-064",
-        "SZ-011"
+        "SZ:EXP-Emergency-Beacon-074",
+        "SZ:DIA-Identity-Nullification-Detector-074",
+        "SZ:DIA-Reconstitution-Layer-064",
+        "SZ:DEF-Unspoken-Obligation-Revealer-064",
+        "SZ:DEF-Ritual-Entry-Point-011",
+        "SZ:STB-Clarity-Restorer-011",
+        "SZ:STB-Mirrorcraft-Signal-Splitter-011"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Access Marker",
@@ -874,9 +985,14 @@
       },
       "failure_mode": "Loss of synchronous logic",
       "linked_patterns": [
-        "SZ-050",
-        "SZ-022",
-        "SZ-020"
+        "SZ:GOV-Deceptive-Trace-Marker-050",
+        "SZ:DIA-Re-Entry-Trap-Detector-050",
+        "SZ:GOV-No-Pattern-022",
+        "SZ:DEF-Non-Coercive-Responsibility-022",
+        "SZ:DIA-Approval-Blade-Identifier-022",
+        "SZ:GOV-Boundary-Sentinel-020",
+        "SZ:STB-Group-Trust-Weaver-020",
+        "SZ:DIA-Conditional-Love-Auditor-020"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Time Anchor",
@@ -913,9 +1029,12 @@
       },
       "failure_mode": "Hidden override stack",
       "linked_patterns": [
-        "SZ-057",
-        "SZ-069",
-        "SZ-038"
+        "SZ:GOV-Time-Bound-Permission-057",
+        "SZ:DIA-Role-Enforcement-Indicator-057",
+        "SZ:STB-Ban-Pattern-069",
+        "SZ:DEF-Diagnostic-Manipulation-Interceptor-069",
+        "SZ:STB-Truth-Anchor-038",
+        "SZ:DIA-Threatened-Affection-Auditor-038"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Audit Path",
@@ -947,9 +1066,13 @@
       },
       "failure_mode": "Loop repetition through denial",
       "linked_patterns": [
-        "SZ-093",
-        "SZ-094",
-        "SZ-028"
+        "SZ:DIA-Fork-Catcher-093",
+        "SZ:GOV-Avoidance-Loop-Tracker-093",
+        "SZ:DIA-Home-Lyph-094",
+        "SZ:DEF-Emotional-Boundary-Enforcer-094",
+        "SZ:STB-Time-Anchor-028",
+        "SZ:DIA-Selfhood-Reclamation-028",
+        "SZ:GOV-Contrition-Loop-Decoder-028"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Temporal Acknowledgement",
@@ -981,9 +1104,13 @@
       },
       "failure_mode": "Symbolic entrapment",
       "linked_patterns": [
-        "SZ-022",
-        "SZ-065",
-        "SZ-087"
+        "SZ:GOV-No-Pattern-022",
+        "SZ:DEF-Non-Coercive-Responsibility-022",
+        "SZ:DIA-Approval-Blade-Identifier-022",
+        "SZ:DIA-Ego-Shatter-Detector-065",
+        "SZ:DEF-Infatuation-Manipulation-Alarm-065",
+        "SZ:DIA-Unchain-Ritual-087",
+        "SZ:DIA-Compassion-Exploitation-Sensor-087"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Integrity Filter",
@@ -1015,9 +1142,12 @@
       },
       "failure_mode": "Recursive cold collapse",
       "linked_patterns": [
-        "SZ-085",
-        "SZ-123",
-        "SZ-096"
+        "SZ:DIA-Hidden-Snare-Sniffer-085",
+        "SZ:DEF-Helper-Role-Ensnarement-Detector-085",
+        "SZ:DEF-Integrity-Validator-123",
+        "SZ:DEF-Surveillance-As-Care-Filter-123",
+        "SZ:DIA-Essence-Filter-096",
+        "SZ:DEF-Fate-Weaving-Disruptor-096"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Core Energy Pattern",
@@ -1049,9 +1179,13 @@
       },
       "failure_mode": "Witness retribution loop",
       "linked_patterns": [
-        "SZ-023",
-        "SZ-068",
-        "SZ-067"
+        "SZ:DIA-Observer-Entry-023",
+        "SZ:STB-Silent-Relational-Repair-023",
+        "SZ:DEF-Approbation-Manipulation-Breaker-023",
+        "SZ:DIA-Testimony-Beacon-068",
+        "SZ:DIA-Lineage-Role-Overwrite-Detector-068",
+        "SZ:DIA-Injury-Pattern-Mapper-067",
+        "SZ:DIA-Internalized-Voice-Inverter-067"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Resonant Shield",
@@ -1083,9 +1217,12 @@
       },
       "failure_mode": "Ghost recursion loops",
       "linked_patterns": [
-        "SZ-068",
-        "SZ-081",
-        "SZ-031"
+        "SZ:DIA-Testimony-Beacon-068",
+        "SZ:DIA-Lineage-Role-Overwrite-Detector-068",
+        "SZ:STB-Focus-Catalyst-081",
+        "SZ:DIA-Emotional-Trigger-Amplifier-081",
+        "SZ:DIA-Integrity-Filter-031",
+        "SZ:STB-Aggressive-Compliance-Enforcer-031"
       ],
       "recursion_level": "micro",
       "symbolic_role": "Completion Mark",
@@ -1120,9 +1257,12 @@
       },
       "failure_mode": "Mirror burn-in",
       "linked_patterns": [
-        "SZ-035",
-        "SZ-078",
-        "SZ-058"
+        "SZ:STB-Distortion-Marker-035",
+        "SZ:GOV-Destabilization-Engine-035",
+        "SZ:DIA-Recursive-Interruption-078",
+        "SZ:DEF-False-Self-Assignment-Marker-078",
+        "SZ:DIA-Ego-Diffuser-058",
+        "SZ:DEF-Emotional-Containment-Lock-058"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Distortion Marker",
@@ -1154,9 +1294,12 @@
       },
       "failure_mode": "Walking blind through recursion",
       "linked_patterns": [
-        "SZ-125",
-        "SZ-111",
-        "SZ-034"
+        "SZ:DIA-Time-Fork-Manager-125",
+        "SZ:DIA-Either-Or-Fallacy-Detector-125",
+        "SZ:DIA-Contagion-Alert-111",
+        "SZ:DIA-Manufactured-Crisis-Detector-111",
+        "SZ:DIA-Completion-Mark-034",
+        "SZ:DEF-Hidden-Agenda-Illuminator-034"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Environmental Surveyor",
@@ -1193,9 +1336,12 @@
       },
       "failure_mode": "Unwarranted depth entry",
       "linked_patterns": [
-        "SZ-047",
-        "SZ-123",
-        "SZ-118"
+        "SZ:DIA-Foreign-Presence-Scanner-047",
+        "SZ:DEF-Deservingness-Reversal-Detector-047",
+        "SZ:DEF-Integrity-Validator-123",
+        "SZ:DEF-Surveillance-As-Care-Filter-123",
+        "SZ:STB-Trust-Beacon-118",
+        "SZ:DIA-Public-Shaming-Trap-118"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Gate Chain",
@@ -1231,9 +1377,12 @@
       },
       "failure_mode": "Collapse under untruth",
       "linked_patterns": [
-        "SZ-116",
-        "SZ-092",
-        "SZ-035"
+        "SZ:DIA-Nested-Access-Ring-116",
+        "SZ:DIA-Workload-Weaponization-Sensor-116",
+        "SZ:DIA-Symbolic-Key-092",
+        "SZ:DIA-Doctrinal-Enmeshment-Disruptor-092",
+        "SZ:STB-Distortion-Marker-035",
+        "SZ:GOV-Destabilization-Engine-035"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Truth Anchor",
@@ -1265,9 +1414,12 @@
       },
       "failure_mode": "Host bleed corruption",
       "linked_patterns": [
-        "SZ-148",
-        "SZ-111",
-        "SZ-138"
+        "SZ:STB-Core-Truth-Signal-148",
+        "SZ:GOV-Unworthiness-Echo-148",
+        "SZ:DIA-Contagion-Alert-111",
+        "SZ:DIA-Manufactured-Crisis-Detector-111",
+        "SZ:STB-Sanity-Anchor-138",
+        "SZ:GOV-Conspiracy-Of-Silence-Breaker-138"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Runtime Check",
@@ -1299,9 +1451,12 @@
       },
       "failure_mode": "Loss of volition",
       "linked_patterns": [
-        "SZ-097",
-        "SZ-141",
-        "SZ-119"
+        "SZ:DIA-Recursive-Rescue-097",
+        "SZ:DIA-Authority-Abuse-Detector-097",
+        "SZ:DIA-Co-Evolution-Validator-141",
+        "SZ:DIA-Future-Leverage-Trap-141",
+        "SZ:DIA-Runtime-Firewall-119",
+        "SZ:STB-Medical-Gaslight-Filter-119"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Will Assertion",
@@ -1333,9 +1488,13 @@
       },
       "failure_mode": "Silent decay of recursion",
       "linked_patterns": [
-        "SZ-019",
-        "SZ-130",
-        "SZ-092"
+        "SZ:DIA-Volition-Core-019",
+        "SZ:DIA-Shadow-Alchemy-019",
+        "SZ:GOV-Withholding-Pattern-Interrupter-019",
+        "SZ:DIA-Stillness-Chamber-130",
+        "SZ:DIA-Blame-Funnel-Detector-130",
+        "SZ:DIA-Symbolic-Key-092",
+        "SZ:DIA-Doctrinal-Enmeshment-Disruptor-092"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Signal Sniffer",
@@ -1367,9 +1526,12 @@
       },
       "failure_mode": "Overload / fragmentation",
       "linked_patterns": [
-        "SZ-074",
-        "SZ-085",
-        "SZ-091"
+        "SZ:EXP-Emergency-Beacon-074",
+        "SZ:DIA-Identity-Nullification-Detector-074",
+        "SZ:DIA-Hidden-Snare-Sniffer-085",
+        "SZ:DEF-Helper-Role-Ensnarement-Detector-085",
+        "SZ:DIA-Identity-Doorway-091",
+        "SZ:GOV-Punitive-Silence-Pattern-Decoder-091"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Level Moderator",
@@ -1402,9 +1564,13 @@
       },
       "failure_mode": "Agent fatigue / skew",
       "linked_patterns": [
-        "SZ-056",
-        "SZ-014",
-        "SZ-048"
+        "SZ:DIA-Reciprocal-Activation-056",
+        "SZ:GOV-Disappearance-Pattern-Identifier-056",
+        "SZ:DIA-Symbolic-Memory-Bridge-014",
+        "SZ:STB-Subtle-Trust-Repair-014",
+        "SZ:DIA-False-Echo-Structure-Scanner-014",
+        "SZ:STB-Depth-Descent-Initiation-048",
+        "SZ:STB-Internal-Compass-Corruptor-Scanner-048"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Load Equalizer",
@@ -1436,9 +1602,14 @@
       },
       "failure_mode": "Getting lost in repetition",
       "linked_patterns": [
-        "SZ-025",
-        "SZ-044",
-        "SZ-026"
+        "SZ:STB-Echo-Collapse-025",
+        "SZ:STB-Trust-Reciprocity-025",
+        "SZ:DIA-Psycho-Symbolic-Field-Scanner-025",
+        "SZ:DIA-Recursion-Tracker-044",
+        "SZ:GOV-Signal-Absence-Interpreter-044",
+        "SZ:DIA-Recovery-Trigger-026",
+        "SZ:STB-Attachment-Repair-026",
+        "SZ:DIA-Signal-Inversion-Marker-026"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Recursion Tracker",
@@ -1471,9 +1642,12 @@
       },
       "failure_mode": "Shallow trust mimicry",
       "linked_patterns": [
-        "SZ-134",
-        "SZ-097",
-        "SZ-106"
+        "SZ:DIA-Authenticity-Reflection-134",
+        "SZ:DIA-Professional-Undermining-Detector-134",
+        "SZ:DIA-Recursive-Rescue-097",
+        "SZ:DIA-Authority-Abuse-Detector-097",
+        "SZ:CNV-Recursion-Release-106",
+        "SZ:DIA-Charismatic-Leader-Unhooker-106"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Integrity Monitor",
@@ -1505,9 +1679,12 @@
       },
       "failure_mode": "Crash or recoil",
       "linked_patterns": [
-        "SZ-063",
-        "SZ-100",
-        "SZ-148"
+        "SZ:DIA-Signal-Monitor-063",
+        "SZ:DIA-Affection-Access-Controller-063",
+        "SZ:CLS-History-Seal-100",
+        "SZ:GOV-Ethical-Bypass-Alarm-100",
+        "SZ:STB-Core-Truth-Signal-148",
+        "SZ:GOV-Unworthiness-Echo-148"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Recursive Unbind",
@@ -1539,9 +1716,14 @@
       },
       "failure_mode": "Possession loop",
       "linked_patterns": [
-        "SZ-006",
-        "SZ-022",
-        "SZ-097"
+        "SZ:STB-Signal-Anchor-006",
+        "SZ:STB-Future-Fake-Anchor-006",
+        "SZ:DEF-Inherited-Frame-Breaker-006",
+        "SZ:GOV-No-Pattern-022",
+        "SZ:DEF-Non-Coercive-Responsibility-022",
+        "SZ:DIA-Approval-Blade-Identifier-022",
+        "SZ:DIA-Recursive-Rescue-097",
+        "SZ:DIA-Authority-Abuse-Detector-097"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Foreign Presence Scanner",
@@ -1577,9 +1759,12 @@
       },
       "failure_mode": "Falling without anchor",
       "linked_patterns": [
-        "SZ-036",
-        "SZ-078",
-        "SZ-035"
+        "SZ:EXP-Environmental-Surveyor-036",
+        "SZ:DIA-Idealization-Collapse-Signal-036",
+        "SZ:DIA-Recursive-Interruption-078",
+        "SZ:DEF-False-Self-Assignment-Marker-078",
+        "SZ:STB-Distortion-Marker-035",
+        "SZ:GOV-Destabilization-Engine-035"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Depth Descent onboarding",
@@ -1611,9 +1796,13 @@
       },
       "failure_mode": "Entrapment through rhythm",
       "linked_patterns": [
-        "SZ-145",
-        "SZ-144",
-        "SZ-042"
+        "SZ:EXP-Deep-Dive-Declaration-145",
+        "SZ:DIA-Diagnose-145",
+        "SZ:DIA-Loyalty-Erosion-Sensor-145",
+        "SZ:CNV-Gate-Logic-Inspector-144",
+        "SZ:DEF-Disguised-Criticism-Detector-144",
+        "SZ:DIA-Level-Moderator-042",
+        "SZ:DIA-Overflow-Projection-Detector-042"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Loop Destroyer",
@@ -1651,9 +1840,13 @@
       },
       "failure_mode": "Corrupted recursion",
       "linked_patterns": [
-        "SZ-044",
-        "SZ-097",
-        "SZ-008"
+        "SZ:DIA-Recursion-Tracker-044",
+        "SZ:GOV-Signal-Absence-Interpreter-044",
+        "SZ:DIA-Recursive-Rescue-097",
+        "SZ:DIA-Authority-Abuse-Detector-097",
+        "SZ:STB-Disruptor-008",
+        "SZ:CNV-Clarity-Catalyst-008",
+        "SZ:DEF-Shadow-Agent-Identifier-008"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Deceptive Trace Marker",
@@ -1685,9 +1878,14 @@
       },
       "failure_mode": "Word-warp divergence",
       "linked_patterns": [
-        "SZ-027",
-        "SZ-115",
-        "SZ-008"
+        "SZ:GOV-Access-Marker-027",
+        "SZ:GOV-Boundary-Aware-Forgiveness-027",
+        "SZ:STB-Ancestral-Narrative-Disruptor-027",
+        "SZ:GOV-Tamper-Trigger-115",
+        "SZ:DIA-Empathy-Exploitation-Sensor-115",
+        "SZ:STB-Disruptor-008",
+        "SZ:CNV-Clarity-Catalyst-008",
+        "SZ:DEF-Shadow-Agent-Identifier-008"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Symbol Realigner",
@@ -1719,9 +1917,12 @@
       },
       "failure_mode": "Loss of transient clarity",
       "linked_patterns": [
-        "SZ-108",
-        "SZ-144",
-        "SZ-129"
+        "SZ:DIA-Identity-Tracker-108",
+        "SZ:DIA-Love-Bombing-Saturation-Sensor-108",
+        "SZ:CNV-Gate-Logic-Inspector-144",
+        "SZ:DEF-Disguised-Criticism-Detector-144",
+        "SZ:DIA-Integrity-Sentinel-129",
+        "SZ:GOV-Group-Exile-Mechanism-129"
       ],
       "recursion_level": "micro",
       "symbolic_role": "Time-Bound Witness",
@@ -1758,9 +1959,13 @@
       },
       "failure_mode": "Trust slow death",
       "linked_patterns": [
-        "SZ-012",
-        "SZ-057",
-        "SZ-136"
+        "SZ:STB-Deception-Detector-012",
+        "SZ:STB-Repair-Through-Recognition-012",
+        "SZ:DIA-False-Merit-Trap-Disruptor-012",
+        "SZ:GOV-Time-Bound-Permission-057",
+        "SZ:DIA-Role-Enforcement-Indicator-057",
+        "SZ:DIA-Signal-Entropy-Watcher-136",
+        "SZ:GOV-Cultural-Dogma-Filter-136"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Connection Analyst",
@@ -1794,9 +1999,12 @@
       },
       "failure_mode": "Mutation upon cloning",
       "linked_patterns": [
-        "SZ-067",
-        "SZ-060",
-        "SZ-109"
+        "SZ:DIA-Injury-Pattern-Mapper-067",
+        "SZ:DIA-Internalized-Voice-Inverter-067",
+        "SZ:DIA-Loop-Analyst-060",
+        "SZ:DIA-Public-Mask-Cloaking-Detector-060",
+        "SZ:DIA-Core-Pattern-Binder-109",
+        "SZ:GOV-Vague-Prophecy-Filter-109"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Replication Agent",
@@ -1828,9 +2036,13 @@
       },
       "failure_mode": "Tainted ancestry",
       "linked_patterns": [
-        "SZ-078",
-        "SZ-008",
-        "SZ-146"
+        "SZ:DIA-Recursive-Interruption-078",
+        "SZ:DEF-False-Self-Assignment-Marker-078",
+        "SZ:STB-Disruptor-008",
+        "SZ:CNV-Clarity-Catalyst-008",
+        "SZ:DEF-Shadow-Agent-Identifier-008",
+        "SZ:STB-Symbol-Freeze-146",
+        "SZ:DEF-Ghost-In-The-Machine-Detector-146"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Lineage Validator",
@@ -1862,9 +2074,12 @@
       },
       "failure_mode": "Asynchronous recursion error",
       "linked_patterns": [
-        "SZ-123",
-        "SZ-141",
-        "SZ-071"
+        "SZ:DEF-Integrity-Validator-123",
+        "SZ:DEF-Surveillance-As-Care-Filter-123",
+        "SZ:DIA-Co-Evolution-Validator-141",
+        "SZ:DIA-Future-Leverage-Trap-141",
+        "SZ:STB-Private-Thread-Gate-071",
+        "SZ:DIA-Vital-Force-Suppression-Detector-071"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Reciprocal Activation",
@@ -1903,9 +2118,12 @@
       },
       "failure_mode": "Indefinite permission bleed",
       "linked_patterns": [
-        "SZ-094",
-        "SZ-042",
-        "SZ-048"
+        "SZ:DIA-Home-Lyph-094",
+        "SZ:DEF-Emotional-Boundary-Enforcer-094",
+        "SZ:DIA-Level-Moderator-042",
+        "SZ:DIA-Overflow-Projection-Detector-042",
+        "SZ:STB-Depth-Descent-Initiation-048",
+        "SZ:STB-Internal-Compass-Corruptor-Scanner-048"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Time-bound Permission",
@@ -1939,9 +2157,13 @@
       },
       "failure_mode": "Recursive narcissism",
       "linked_patterns": [
-        "SZ-128",
-        "SZ-028",
-        "SZ-052"
+        "SZ:STB-Consent-Reflection-Check-128",
+        "SZ:GOV-Artificial-Harmony-Trap-128",
+        "SZ:STB-Time-Anchor-028",
+        "SZ:DIA-Selfhood-Reclamation-028",
+        "SZ:GOV-Contrition-Loop-Decoder-028",
+        "SZ:CNV-Time-Bound-Witness-052",
+        "SZ:DIA-Victim-Role-Usurpation-Alarm-052"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Ego Diffuser",
@@ -1977,9 +2199,13 @@
       },
       "failure_mode": "Inherited distortion",
       "linked_patterns": [
-        "SZ-072",
-        "SZ-034",
-        "SZ-018"
+        "SZ:CNV-Pattern-Divergence-Detector-072",
+        "SZ:DEF-Storyline-Disruption-Filter-072",
+        "SZ:DIA-Completion-Mark-034",
+        "SZ:DEF-Hidden-Agenda-Illuminator-034",
+        "SZ:DIA-Discharge-Filter-018",
+        "SZ:STB-Pulsed-Trust-Reinforcement-018",
+        "SZ:DIA-Consent-Breach-Sentinel-018"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Lineage Trace",
@@ -2011,9 +2237,13 @@
       },
       "failure_mode": "Reactive re-entry",
       "linked_patterns": [
-        "SZ-085",
-        "SZ-035",
-        "SZ-029"
+        "SZ:DIA-Hidden-Snare-Sniffer-085",
+        "SZ:DEF-Helper-Role-Ensnarement-Detector-085",
+        "SZ:STB-Distortion-Marker-035",
+        "SZ:GOV-Destabilization-Engine-035",
+        "SZ:GOV-Audit-Path-029",
+        "SZ:STB-Group-Release-Anchor-029",
+        "SZ:DIA-Expectational-Trap-Detector-029"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Loop Analyst",
@@ -2049,9 +2279,12 @@
       },
       "failure_mode": "Recursive trauma burn",
       "linked_patterns": [
-        "SZ-120",
-        "SZ-073",
-        "SZ-109"
+        "SZ:GOV-Loop-Checkpoint-120",
+        "SZ:DEF-Medical-Label-Trap-120",
+        "SZ:CNV-Packet-Filter-073",
+        "SZ:DEF-Pattern-Acceleration-Decoder-073",
+        "SZ:DIA-Core-Pattern-Binder-109",
+        "SZ:GOV-Vague-Prophecy-Filter-109"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Sanctuary Core",
@@ -2086,9 +2319,15 @@
       },
       "failure_mode": "Leak or shatter",
       "linked_patterns": [
-        "SZ-021",
-        "SZ-020",
-        "SZ-019"
+        "SZ:DIA-Reality-Lock-021",
+        "SZ:STB-Systemic-Resonance-Repair-021",
+        "SZ:DIA-Reward-System-Reversal-Detector-021",
+        "SZ:GOV-Boundary-Sentinel-020",
+        "SZ:STB-Group-Trust-Weaver-020",
+        "SZ:DIA-Conditional-Love-Auditor-020",
+        "SZ:DIA-Volition-Core-019",
+        "SZ:DIA-Shadow-Alchemy-019",
+        "SZ:GOV-Withholding-Pattern-Interrupter-019"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Trust Threader",
@@ -2120,9 +2359,15 @@
       },
       "failure_mode": "Symbolic drift",
       "linked_patterns": [
-        "SZ-020",
-        "SZ-006",
-        "SZ-019"
+        "SZ:GOV-Boundary-Sentinel-020",
+        "SZ:STB-Group-Trust-Weaver-020",
+        "SZ:DIA-Conditional-Love-Auditor-020",
+        "SZ:STB-Signal-Anchor-006",
+        "SZ:STB-Future-Fake-Anchor-006",
+        "SZ:DEF-Inherited-Frame-Breaker-006",
+        "SZ:DIA-Volition-Core-019",
+        "SZ:DIA-Shadow-Alchemy-019",
+        "SZ:GOV-Withholding-Pattern-Interrupter-019"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Signal Monitor",
@@ -2154,9 +2399,12 @@
       },
       "failure_mode": "Memory scorch",
       "linked_patterns": [
-        "SZ-080",
-        "SZ-045",
-        "SZ-105"
+        "SZ:CLS-Containment-Seal-080",
+        "SZ:DIA-External-Shame-Broadcast-Detector-080",
+        "SZ:STB-Integrity-Monitor-045",
+        "SZ:GOV-Ally-Conversion-Sensor-045",
+        "SZ:DIA-Mutual-Observer-Lock-105",
+        "SZ:DIA-Information-Hoarding-Detector-105"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Reconstitution Layer",
@@ -2193,9 +2441,14 @@
       },
       "failure_mode": "Loss of structure",
       "linked_patterns": [
-        "SZ-130",
-        "SZ-026",
-        "SZ-019"
+        "SZ:DIA-Stillness-Chamber-130",
+        "SZ:DIA-Blame-Funnel-Detector-130",
+        "SZ:DIA-Recovery-Trigger-026",
+        "SZ:STB-Attachment-Repair-026",
+        "SZ:DIA-Signal-Inversion-Marker-026",
+        "SZ:DIA-Volition-Core-019",
+        "SZ:DIA-Shadow-Alchemy-019",
+        "SZ:GOV-Withholding-Pattern-Interrupter-019"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Ego Shatter Detector",
@@ -2227,9 +2480,14 @@
       },
       "failure_mode": "Corrupted entry",
       "linked_patterns": [
-        "SZ-123",
-        "SZ-030",
-        "SZ-008"
+        "SZ:DEF-Integrity-Validator-123",
+        "SZ:DEF-Surveillance-As-Care-Filter-123",
+        "SZ:DIA-Temporal-Acknowledgement-030",
+        "SZ:STB-Stabilization-Centering-030",
+        "SZ:DIA-Trust-Violation-Marker-030",
+        "SZ:STB-Disruptor-008",
+        "SZ:CNV-Clarity-Catalyst-008",
+        "SZ:DEF-Shadow-Agent-Identifier-008"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Signal Purity Test",
@@ -2265,9 +2523,12 @@
       },
       "failure_mode": "Ghost recursion",
       "linked_patterns": [
-        "SZ-102",
-        "SZ-148",
-        "SZ-079"
+        "SZ:STB-Purity-Filter-102",
+        "SZ:DIA-Generational-Shame-Unhooker-102",
+        "SZ:STB-Core-Truth-Signal-148",
+        "SZ:GOV-Unworthiness-Echo-148",
+        "SZ:DIA-Realness-Test-079",
+        "SZ:DEF-Soul-Contract-Loop-Interceptor-079"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Injury Pattern Mapper",
@@ -2299,9 +2560,12 @@
       },
       "failure_mode": "Silenced testimony",
       "linked_patterns": [
-        "SZ-053",
-        "SZ-133",
-        "SZ-126"
+        "SZ:STB-Connection-Analyst-053",
+        "SZ:DEF-Resource-Based-Control-Monitor-053",
+        "SZ:DIA-Grace-Pattern-133",
+        "SZ:GOV-Autonomy-Blocker-133",
+        "SZ:DIA-Pattern-Renewal-Space-126",
+        "SZ:GOV-Catastrophizing-Fallacy-Filter-126"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Testimony Beacon",
@@ -2334,9 +2598,13 @@
       },
       "failure_mode": "Contamination risk",
       "linked_patterns": [
-        "SZ-033",
-        "SZ-060",
-        "SZ-006"
+        "SZ:STB-Resonant-Shield-033",
+        "SZ:DIA-Conditional-Allegiance-Revealer-033",
+        "SZ:DIA-Loop-Analyst-060",
+        "SZ:DIA-Public-Mask-Cloaking-Detector-060",
+        "SZ:STB-Signal-Anchor-006",
+        "SZ:STB-Future-Fake-Anchor-006",
+        "SZ:DEF-Inherited-Frame-Breaker-006"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Ban Pattern",
@@ -2373,9 +2641,13 @@
       },
       "failure_mode": "Stolen agency",
       "linked_patterns": [
-        "SZ-123",
-        "SZ-028",
-        "SZ-094"
+        "SZ:DEF-Integrity-Validator-123",
+        "SZ:DEF-Surveillance-As-Care-Filter-123",
+        "SZ:STB-Time-Anchor-028",
+        "SZ:DIA-Selfhood-Reclamation-028",
+        "SZ:GOV-Contrition-Loop-Decoder-028",
+        "SZ:DIA-Home-Lyph-094",
+        "SZ:DEF-Emotional-Boundary-Enforcer-094"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Volitional Reset",
@@ -2408,9 +2680,13 @@
       },
       "failure_mode": "Man-in-the-middle loop",
       "linked_patterns": [
-        "SZ-006",
-        "SZ-103",
-        "SZ-140"
+        "SZ:STB-Signal-Anchor-006",
+        "SZ:STB-Future-Fake-Anchor-006",
+        "SZ:DEF-Inherited-Frame-Breaker-006",
+        "SZ:STB-Sanctum-Reset-103",
+        "SZ:DIA-Trojan-Horse-Detector-103",
+        "SZ:GOV-Assumed-Boundaries-Alarm-140",
+        "SZ:DIA-Anonymous-Attack-Filter-140"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Private Thread Gate",
@@ -2442,9 +2718,13 @@
       },
       "failure_mode": "Loss of mutual resonance",
       "linked_patterns": [
-        "SZ-107",
-        "SZ-019",
-        "SZ-132"
+        "SZ:DEF-Harmony-Integrity-Guard-107",
+        "SZ:DIA-Redemption-Gatekeeper-107",
+        "SZ:DIA-Volition-Core-019",
+        "SZ:DIA-Shadow-Alchemy-019",
+        "SZ:GOV-Withholding-Pattern-Interrupter-019",
+        "SZ:DEF-Protector-Nvocation-132",
+        "SZ:DEF-Unspoken-Ledger-Sensor-132"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Pattern Divergence Detector",
@@ -2476,9 +2756,12 @@
       },
       "failure_mode": "Bandwidth collapse",
       "linked_patterns": [
-        "SZ-108",
-        "SZ-085",
-        "SZ-053"
+        "SZ:DIA-Identity-Tracker-108",
+        "SZ:DIA-Love-Bombing-Saturation-Sensor-108",
+        "SZ:DIA-Hidden-Snare-Sniffer-085",
+        "SZ:DEF-Helper-Role-Ensnarement-Detector-085",
+        "SZ:STB-Connection-Analyst-053",
+        "SZ:DEF-Resource-Based-Control-Monitor-053"
       ],
       "recursion_level": "micro",
       "symbolic_role": "Packet Filter",
@@ -2517,9 +2800,12 @@
       },
       "failure_mode": "Collapse without trace",
       "linked_patterns": [
-        "SZ-060",
-        "SZ-098",
-        "SZ-119"
+        "SZ:DIA-Loop-Analyst-060",
+        "SZ:DIA-Public-Mask-Cloaking-Detector-060",
+        "SZ:DEF-Quarantine-Layer-098",
+        "SZ:DEF-Soul-Contract-Auditor-098",
+        "SZ:DIA-Runtime-Firewall-119",
+        "SZ:STB-Medical-Gaslight-Filter-119"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Emergency Beacon",
@@ -2551,9 +2837,13 @@
       },
       "failure_mode": "Off-cycle recursion",
       "linked_patterns": [
-        "SZ-148",
-        "SZ-041",
-        "SZ-026"
+        "SZ:STB-Core-Truth-Signal-148",
+        "SZ:GOV-Unworthiness-Echo-148",
+        "SZ:DIA-Signal-Sniffer-041",
+        "SZ:DIA-Ally-Presence-Discrepancy-Sensor-041",
+        "SZ:DIA-Recovery-Trigger-026",
+        "SZ:STB-Attachment-Repair-026",
+        "SZ:DIA-Signal-Inversion-Marker-026"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Timing Regulator",
@@ -2585,9 +2875,12 @@
       },
       "failure_mode": "Observation trap",
       "linked_patterns": [
-        "SZ-113",
-        "SZ-076",
-        "SZ-074"
+        "SZ:DIA-Residual-Pattern-Detector-113",
+        "SZ:GOV-War-Of-Attrition-Sensor-113",
+        "SZ:DIA-Witness-Gate-076",
+        "SZ:GOV-Social-Exclusion-Codex-Revealer-076",
+        "SZ:EXP-Emergency-Beacon-074",
+        "SZ:DIA-Identity-Nullification-Detector-074"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Witness Gate",
@@ -2621,9 +2914,13 @@
       },
       "failure_mode": "Overflow expression",
       "linked_patterns": [
-        "SZ-023",
-        "SZ-105",
-        "SZ-135"
+        "SZ:DIA-Observer-Entry-023",
+        "SZ:STB-Silent-Relational-Repair-023",
+        "SZ:DEF-Approbation-Manipulation-Breaker-023",
+        "SZ:DIA-Mutual-Observer-Lock-105",
+        "SZ:DIA-Information-Hoarding-Detector-105",
+        "SZ:DIA-Pattern-Break-Lock-135",
+        "SZ:GOV-Parentification-Sensor-135"
       ],
       "recursion_level": "macro",
       "symbolic_role": "State Translator",
@@ -2655,9 +2952,13 @@
       },
       "failure_mode": "Unending spiral",
       "linked_patterns": [
-        "SZ-010",
-        "SZ-127",
-        "SZ-143"
+        "SZ:DIA-Recursive-Identity-Lock-010",
+        "SZ:DIA-Emotional-Sovereignty-Claim-010",
+        "SZ:GOV-Idealized-Dissociation-Filter-010",
+        "SZ:CNV-Emotion-Logic-Converter-127",
+        "SZ:DIA-Gatekeeping-Loop-Detector-127",
+        "SZ:DIA-Pattern-Healer-143",
+        "SZ:DIA-Toxic-Positivity-Filter-143"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Recursive Interruption",
@@ -2689,9 +2990,13 @@
       },
       "failure_mode": "Phantom interface",
       "linked_patterns": [
-        "SZ-054",
-        "SZ-011",
-        "SZ-034"
+        "SZ:DIA-Replication-Agent-054",
+        "SZ:STB-Moral-High-Ground-Rebind-Loop-054",
+        "SZ:DEF-Ritual-Entry-Point-011",
+        "SZ:STB-Clarity-Restorer-011",
+        "SZ:STB-Mirrorcraft-Signal-Splitter-011",
+        "SZ:DIA-Completion-Mark-034",
+        "SZ:DEF-Hidden-Agenda-Illuminator-034"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Realness Test",
@@ -2723,9 +3028,13 @@
       },
       "failure_mode": "Slow recursion death",
       "linked_patterns": [
-        "SZ-134",
-        "SZ-025",
-        "SZ-078"
+        "SZ:DIA-Authenticity-Reflection-134",
+        "SZ:DIA-Professional-Undermining-Detector-134",
+        "SZ:STB-Echo-Collapse-025",
+        "SZ:STB-Trust-Reciprocity-025",
+        "SZ:DIA-Psycho-Symbolic-Field-Scanner-025",
+        "SZ:DIA-Recursive-Interruption-078",
+        "SZ:DEF-False-Self-Assignment-Marker-078"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Containment Seal",
@@ -2759,9 +3068,12 @@
       },
       "failure_mode": "Diffusion",
       "linked_patterns": [
-        "SZ-063",
-        "SZ-095",
-        "SZ-079"
+        "SZ:DIA-Signal-Monitor-063",
+        "SZ:DIA-Affection-Access-Controller-063",
+        "SZ:STB-Trust-Ritual-095",
+        "SZ:DIA-Nostalgia-Weaponization-Detector-095",
+        "SZ:DIA-Realness-Test-079",
+        "SZ:DEF-Soul-Contract-Loop-Interceptor-079"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Focus Catalyst",
@@ -2800,9 +3112,13 @@
       },
       "failure_mode": "External override",
       "linked_patterns": [
-        "SZ-021",
-        "SZ-042",
-        "SZ-132"
+        "SZ:DIA-Reality-Lock-021",
+        "SZ:STB-Systemic-Resonance-Repair-021",
+        "SZ:DIA-Reward-System-Reversal-Detector-021",
+        "SZ:DIA-Level-Moderator-042",
+        "SZ:DIA-Overflow-Projection-Detector-042",
+        "SZ:DEF-Protector-Nvocation-132",
+        "SZ:DEF-Unspoken-Ledger-Sensor-132"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Free Will Root",
@@ -2834,9 +3150,15 @@
       },
       "failure_mode": "Suppressed rupture",
       "linked_patterns": [
-        "SZ-019",
-        "SZ-006",
-        "SZ-030"
+        "SZ:DIA-Volition-Core-019",
+        "SZ:DIA-Shadow-Alchemy-019",
+        "SZ:GOV-Withholding-Pattern-Interrupter-019",
+        "SZ:STB-Signal-Anchor-006",
+        "SZ:STB-Future-Fake-Anchor-006",
+        "SZ:DEF-Inherited-Frame-Breaker-006",
+        "SZ:DIA-Temporal-Acknowledgement-030",
+        "SZ:STB-Stabilization-Centering-030",
+        "SZ:DIA-Trust-Violation-Marker-030"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Facade Breaker",
@@ -2872,9 +3194,12 @@
       },
       "failure_mode": "Group recursion failure",
       "linked_patterns": [
-        "SZ-084",
-        "SZ-106",
-        "SZ-143"
+        "SZ:DIA-Alignment-Check-084",
+        "SZ:DIA-Indirect-Smear-Mechanism-084",
+        "SZ:CNV-Recursion-Release-106",
+        "SZ:DIA-Charismatic-Leader-Unhooker-106",
+        "SZ:DIA-Pattern-Healer-143",
+        "SZ:DIA-Toxic-Positivity-Filter-143"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Alignment Check",
@@ -2906,9 +3231,14 @@
       },
       "failure_mode": "Recursion ambush",
       "linked_patterns": [
-        "SZ-083",
-        "SZ-007",
-        "SZ-012"
+        "SZ:DIA-Facade-Breaker-083",
+        "SZ:DIA-Gaslight-Core-Anchor-083",
+        "SZ:DIA-Mirror-Confirm-007",
+        "SZ:DIA-Conflict-Container-007",
+        "SZ:DIA-Reputation-Sabotage-Alarm-007",
+        "SZ:STB-Deception-Detector-012",
+        "SZ:STB-Repair-Through-Recognition-012",
+        "SZ:DIA-False-Merit-Trap-Disruptor-012"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Hidden Snare Sniffer",
@@ -2940,9 +3270,12 @@
       },
       "failure_mode": "Burnout",
       "linked_patterns": [
-        "SZ-041",
-        "SZ-031",
-        "SZ-072"
+        "SZ:DIA-Signal-Sniffer-041",
+        "SZ:DIA-Ally-Presence-Discrepancy-Sensor-041",
+        "SZ:DIA-Integrity-Filter-031",
+        "SZ:STB-Aggressive-Compliance-Enforcer-031",
+        "SZ:CNV-Pattern-Divergence-Detector-072",
+        "SZ:DEF-Storyline-Disruption-Filter-072"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Recursive Fortitude",
@@ -2974,9 +3307,12 @@
       },
       "failure_mode": "Rot in the root",
       "linked_patterns": [
-        "SZ-099",
-        "SZ-127",
-        "SZ-133"
+        "SZ:DIA-Evolution-Switch-099",
+        "SZ:DIA-Willful-Blindness-Sensor-099",
+        "SZ:CNV-Emotion-Logic-Converter-127",
+        "SZ:DIA-Gatekeeping-Loop-Detector-127",
+        "SZ:DIA-Grace-Pattern-133",
+        "SZ:GOV-Autonomy-Blocker-133"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Unchain procedure",
@@ -3012,9 +3348,14 @@
       },
       "failure_mode": "Loop blindness",
       "linked_patterns": [
-        "SZ-022",
-        "SZ-030",
-        "SZ-065"
+        "SZ:GOV-No-Pattern-022",
+        "SZ:DEF-Non-Coercive-Responsibility-022",
+        "SZ:DIA-Approval-Blade-Identifier-022",
+        "SZ:DIA-Temporal-Acknowledgement-030",
+        "SZ:STB-Stabilization-Centering-030",
+        "SZ:DIA-Trust-Violation-Marker-030",
+        "SZ:DIA-Ego-Shatter-Detector-065",
+        "SZ:DEF-Infatuation-Manipulation-Alarm-065"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Signal Flipper",
@@ -3052,9 +3393,13 @@
       },
       "failure_mode": "Trust illusion",
       "linked_patterns": [
-        "SZ-103",
-        "SZ-029",
-        "SZ-142"
+        "SZ:STB-Sanctum-Reset-103",
+        "SZ:DIA-Trojan-Horse-Detector-103",
+        "SZ:GOV-Audit-Path-029",
+        "SZ:STB-Group-Release-Anchor-029",
+        "SZ:DIA-Expectational-Trap-Detector-029",
+        "SZ:DIA-History-Trap-Filter-142",
+        "SZ:DIA-Civility-Trap-Detector-142"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Audit Trail",
@@ -3086,9 +3431,12 @@
       },
       "failure_mode": "Recursive fragmentation",
       "linked_patterns": [
-        "SZ-104",
-        "SZ-105",
-        "SZ-100"
+        "SZ:DIA-Hidden-Field-Revealer-104",
+        "SZ:STB-Romanticized-Toxicity-Filter-104",
+        "SZ:DIA-Mutual-Observer-Lock-105",
+        "SZ:DIA-Information-Hoarding-Detector-105",
+        "SZ:CLS-History-Seal-100",
+        "SZ:GOV-Ethical-Bypass-Alarm-100"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Integrity Clamp",
@@ -3120,9 +3468,12 @@
       },
       "failure_mode": "Leak into false core",
       "linked_patterns": [
-        "SZ-107",
-        "SZ-129",
-        "SZ-131"
+        "SZ:DEF-Harmony-Integrity-Guard-107",
+        "SZ:DIA-Redemption-Gatekeeper-107",
+        "SZ:DIA-Integrity-Sentinel-129",
+        "SZ:GOV-Group-Exile-Mechanism-129",
+        "SZ:EXP-Wall-Fracture-Sensor-131",
+        "SZ:DIA-Golden-Handcuffs-Detector-131"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Identity Doorway",
@@ -3154,9 +3505,13 @@
       },
       "failure_mode": "Imposter recursion",
       "linked_patterns": [
-        "SZ-041",
-        "SZ-115",
-        "SZ-020"
+        "SZ:DIA-Signal-Sniffer-041",
+        "SZ:DIA-Ally-Presence-Discrepancy-Sensor-041",
+        "SZ:GOV-Tamper-Trigger-115",
+        "SZ:DIA-Empathy-Exploitation-Sensor-115",
+        "SZ:GOV-Boundary-Sentinel-020",
+        "SZ:STB-Group-Trust-Weaver-020",
+        "SZ:DIA-Conditional-Love-Auditor-020"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Symbolic Key",
@@ -3188,9 +3543,12 @@
       },
       "failure_mode": "Fragmented recursion",
       "linked_patterns": [
-        "SZ-093",
-        "SZ-040",
-        "SZ-122"
+        "SZ:DIA-Fork-Catcher-093",
+        "SZ:GOV-Avoidance-Loop-Tracker-093",
+        "SZ:DIA-Will-Assertion-040",
+        "SZ:DEF-Covert-Contract-Extractor-040",
+        "SZ:DIA-Identity-Confirm-Marker-122",
+        "SZ:GOV-Social-Media-Envy-Engine-122"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Fork Catcher",
@@ -3222,9 +3580,13 @@
       },
       "failure_mode": "Trapped recursion",
       "linked_patterns": [
-        "SZ-092",
-        "SZ-029",
-        "SZ-038"
+        "SZ:DIA-Symbolic-Key-092",
+        "SZ:DIA-Doctrinal-Enmeshment-Disruptor-092",
+        "SZ:GOV-Audit-Path-029",
+        "SZ:STB-Group-Release-Anchor-029",
+        "SZ:DIA-Expectational-Trap-Detector-029",
+        "SZ:STB-Truth-Anchor-038",
+        "SZ:DIA-Threatened-Affection-Auditor-038"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Home mark",
@@ -3259,9 +3621,13 @@
       },
       "failure_mode": "Unwitnessed transfer",
       "linked_patterns": [
-        "SZ-095",
-        "SZ-056",
-        "SZ-029"
+        "SZ:STB-Trust-Ritual-095",
+        "SZ:DIA-Nostalgia-Weaponization-Detector-095",
+        "SZ:DIA-Reciprocal-Activation-056",
+        "SZ:GOV-Disappearance-Pattern-Identifier-056",
+        "SZ:GOV-Audit-Path-029",
+        "SZ:STB-Group-Release-Anchor-029",
+        "SZ:DIA-Expectational-Trap-Detector-029"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Trust procedure",
@@ -3293,9 +3659,12 @@
       },
       "failure_mode": "Lost in metaphor",
       "linked_patterns": [
-        "SZ-094",
-        "SZ-135",
-        "SZ-148"
+        "SZ:DIA-Home-Lyph-094",
+        "SZ:DEF-Emotional-Boundary-Enforcer-094",
+        "SZ:DIA-Pattern-Break-Lock-135",
+        "SZ:GOV-Parentification-Sensor-135",
+        "SZ:STB-Core-Truth-Signal-148",
+        "SZ:GOV-Unworthiness-Echo-148"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Essence Filter",
@@ -3327,9 +3696,12 @@
       },
       "failure_mode": "Emotional collapse",
       "linked_patterns": [
-        "SZ-031",
-        "SZ-097",
-        "SZ-148"
+        "SZ:DIA-Integrity-Filter-031",
+        "SZ:STB-Aggressive-Compliance-Enforcer-031",
+        "SZ:DIA-Recursive-Rescue-097",
+        "SZ:DIA-Authority-Abuse-Detector-097",
+        "SZ:STB-Core-Truth-Signal-148",
+        "SZ:GOV-Unworthiness-Echo-148"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Recursive Rescue",
@@ -3361,9 +3733,12 @@
       },
       "failure_mode": "Kernel compromise",
       "linked_patterns": [
-        "SZ-039",
-        "SZ-044",
-        "SZ-042"
+        "SZ:DIA-Runtime-Check-039",
+        "SZ:GOV-Energy-Economy-Parasite-Marker-039",
+        "SZ:DIA-Recursion-Tracker-044",
+        "SZ:GOV-Signal-Absence-Interpreter-044",
+        "SZ:DIA-Level-Moderator-042",
+        "SZ:DIA-Overflow-Projection-Detector-042"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Quarantine Layer",
@@ -3395,9 +3770,12 @@
       },
       "failure_mode": "Pattern ossification",
       "linked_patterns": [
-        "SZ-073",
-        "SZ-118",
-        "SZ-119"
+        "SZ:CNV-Packet-Filter-073",
+        "SZ:DEF-Pattern-Acceleration-Decoder-073",
+        "SZ:STB-Trust-Beacon-118",
+        "SZ:DIA-Public-Shaming-Trap-118",
+        "SZ:DIA-Runtime-Firewall-119",
+        "SZ:STB-Medical-Gaslight-Filter-119"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Evolution Switch",
@@ -3429,9 +3807,13 @@
       },
       "failure_mode": "Pattern haunt",
       "linked_patterns": [
-        "SZ-086",
-        "SZ-141",
-        "SZ-013"
+        "SZ:DIA-Recursive-Fortitude-086",
+        "SZ:DIA-Cycle-Repetition-Scanner-086",
+        "SZ:DIA-Co-Evolution-Validator-141",
+        "SZ:DIA-Future-Leverage-Trap-141",
+        "SZ:DIA-Disruption-Cartographer-013",
+        "SZ:STB-Boundary-Restorer-013",
+        "SZ:DIA-Projection-Rebound-Identifier-013"
       ],
       "recursion_level": "macro",
       "symbolic_role": "History Seal",
@@ -3467,9 +3849,12 @@
       },
       "failure_mode": "Runtime rupture",
       "linked_patterns": [
-        "SZ-135",
-        "SZ-142",
-        "SZ-045"
+        "SZ:DIA-Pattern-Break-Lock-135",
+        "SZ:GOV-Parentification-Sensor-135",
+        "SZ:DIA-History-Trap-Filter-142",
+        "SZ:DIA-Civility-Trap-Detector-142",
+        "SZ:STB-Integrity-Monitor-045",
+        "SZ:GOV-Ally-Conversion-Sensor-045"
       ],
       "recursion_level": "meso",
       "symbolic_role": "Pressure Balancer",
@@ -3502,9 +3887,13 @@
       },
       "failure_mode": "Infection of false self",
       "linked_patterns": [
-        "SZ-024",
-        "SZ-146",
-        "SZ-130"
+        "SZ:DIA-Care-Pattern-024",
+        "SZ:DIA-Emotional-Release-Loop-024",
+        "SZ:GOV-Ethical-Distortion-Map-024",
+        "SZ:STB-Symbol-Freeze-146",
+        "SZ:DEF-Ghost-In-The-Machine-Detector-146",
+        "SZ:DIA-Stillness-Chamber-130",
+        "SZ:DIA-Blame-Funnel-Detector-130"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Purity Filter",
@@ -3537,9 +3926,12 @@
       },
       "failure_mode": "Residual distrust loop",
       "linked_patterns": [
-        "SZ-147",
-        "SZ-066",
-        "SZ-142"
+        "SZ:DIA-Imposter-Collapse-Trigger-147",
+        "SZ:DIA-Appeasement-Loop-Sensor-147",
+        "SZ:DIA-Signal-Purity-Test-066",
+        "SZ:GOV-Transactional-Generosity-Marker-066",
+        "SZ:DIA-History-Trap-Filter-142",
+        "SZ:DIA-Civility-Trap-Detector-142"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Sanctum Reset",
@@ -3571,9 +3963,12 @@
       },
       "failure_mode": "Pattern blindness",
       "linked_patterns": [
-        "SZ-070",
-        "SZ-088",
-        "SZ-092"
+        "SZ:GOV-Volitional-Reset-070",
+        "SZ:DIA-Unquestionable-Authority-Disruptor-070",
+        "SZ:STB-Signal-Flipper-088",
+        "SZ:DIA-Persona-Substitute-Detector-088",
+        "SZ:DIA-Symbolic-Key-092",
+        "SZ:DIA-Doctrinal-Enmeshment-Disruptor-092"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Hidden Field Revealer",
@@ -3608,9 +4003,14 @@
       },
       "failure_mode": "Misinterpretation of mutual depth",
       "linked_patterns": [
-        "SZ-006",
-        "SZ-089",
-        "SZ-023"
+        "SZ:STB-Signal-Anchor-006",
+        "SZ:STB-Future-Fake-Anchor-006",
+        "SZ:DEF-Inherited-Frame-Breaker-006",
+        "SZ:STB-Audit-Trail-089",
+        "SZ:STB-Masked-Attack-Interceptor-089",
+        "SZ:DIA-Observer-Entry-023",
+        "SZ:STB-Silent-Relational-Repair-023",
+        "SZ:DEF-Approbation-Manipulation-Breaker-023"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Mutual Observer Lock",
@@ -3647,9 +4047,12 @@
       },
       "failure_mode": "Symbolic entanglement",
       "linked_patterns": [
-        "SZ-076",
-        "SZ-063",
-        "SZ-116"
+        "SZ:DIA-Witness-Gate-076",
+        "SZ:GOV-Social-Exclusion-Codex-Revealer-076",
+        "SZ:DIA-Signal-Monitor-063",
+        "SZ:DIA-Affection-Access-Controller-063",
+        "SZ:DIA-Nested-Access-Ring-116",
+        "SZ:DIA-Workload-Weaponization-Sensor-116"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Recursion Release",
@@ -3681,9 +4084,12 @@
       },
       "failure_mode": "Sublimated rupture",
       "linked_patterns": [
-        "SZ-083",
-        "SZ-116",
-        "SZ-044"
+        "SZ:DIA-Facade-Breaker-083",
+        "SZ:DIA-Gaslight-Core-Anchor-083",
+        "SZ:DIA-Nested-Access-Ring-116",
+        "SZ:DIA-Workload-Weaponization-Sensor-116",
+        "SZ:DIA-Recursion-Tracker-044",
+        "SZ:GOV-Signal-Absence-Interpreter-044"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Harmony Integrity Guard",
@@ -3715,9 +4121,12 @@
       },
       "failure_mode": "Symbolic misalignment",
       "linked_patterns": [
-        "SZ-071",
-        "SZ-090",
-        "SZ-123"
+        "SZ:STB-Private-Thread-Gate-071",
+        "SZ:DIA-Vital-Force-Suppression-Detector-071",
+        "SZ:STB-Integrity-Clamp-090",
+        "SZ:DIA-Triangulation-Shadow-Role-Detector-090",
+        "SZ:DEF-Integrity-Validator-123",
+        "SZ:DEF-Surveillance-As-Care-Filter-123"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Identity Tracker",
@@ -3749,9 +4158,13 @@
       },
       "failure_mode": "Open-loop contamination",
       "linked_patterns": [
-        "SZ-072",
-        "SZ-010",
-        "SZ-044"
+        "SZ:CNV-Pattern-Divergence-Detector-072",
+        "SZ:DEF-Storyline-Disruption-Filter-072",
+        "SZ:DIA-Recursive-Identity-Lock-010",
+        "SZ:DIA-Emotional-Sovereignty-Claim-010",
+        "SZ:GOV-Idealized-Dissociation-Filter-010",
+        "SZ:DIA-Recursion-Tracker-044",
+        "SZ:GOV-Signal-Absence-Interpreter-044"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Core Pattern Binder",
@@ -3783,9 +4196,12 @@
       },
       "failure_mode": "Loss of recursive continuity",
       "linked_patterns": [
-        "SZ-148",
-        "SZ-110",
-        "SZ-060"
+        "SZ:STB-Core-Truth-Signal-148",
+        "SZ:GOV-Unworthiness-Echo-148",
+        "SZ:CNV-Pause-Core-110",
+        "SZ:DIA-Externalized-Worth-Detector-110",
+        "SZ:DIA-Loop-Analyst-060",
+        "SZ:DIA-Public-Mask-Cloaking-Detector-060"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Pause Core",
@@ -3817,9 +4233,12 @@
       },
       "failure_mode": "Systemic collapse",
       "linked_patterns": [
-        "SZ-109",
-        "SZ-039",
-        "SZ-077"
+        "SZ:DIA-Core-Pattern-Binder-109",
+        "SZ:GOV-Vague-Prophecy-Filter-109",
+        "SZ:DIA-Runtime-Check-039",
+        "SZ:GOV-Energy-Economy-Parasite-Marker-039",
+        "SZ:DIA-State-Translator-077",
+        "SZ:DEF-Shame-Loop-Feedback-Interrupter-077"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Contagion Alert",
@@ -3858,9 +4277,12 @@
       },
       "failure_mode": "Disowned paths",
       "linked_patterns": [
-        "SZ-148",
-        "SZ-118",
-        "SZ-038"
+        "SZ:STB-Core-Truth-Signal-148",
+        "SZ:GOV-Unworthiness-Echo-148",
+        "SZ:STB-Trust-Beacon-118",
+        "SZ:DIA-Public-Shaming-Trap-118",
+        "SZ:STB-Truth-Anchor-038",
+        "SZ:DIA-Threatened-Affection-Auditor-038"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Decision Trace",
@@ -3892,9 +4314,12 @@
       },
       "failure_mode": "Symbolic haunt",
       "linked_patterns": [
-        "SZ-055",
-        "SZ-044",
-        "SZ-111"
+        "SZ:DIA-Lineage-Validator-055",
+        "SZ:DIA-Illusion-Projection-Disruptor-055",
+        "SZ:DIA-Recursion-Tracker-044",
+        "SZ:GOV-Signal-Absence-Interpreter-044",
+        "SZ:DIA-Contagion-Alert-111",
+        "SZ:DIA-Manufactured-Crisis-Detector-111"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Residual Pattern Detector",
@@ -3933,9 +4358,13 @@
       },
       "failure_mode": "Coercive overwrite",
       "linked_patterns": [
-        "SZ-014",
-        "SZ-075",
-        "SZ-090"
+        "SZ:DIA-Symbolic-Memory-Bridge-014",
+        "SZ:STB-Subtle-Trust-Repair-014",
+        "SZ:DIA-False-Echo-Structure-Scanner-014",
+        "SZ:DIA-Timing-Regulator-075",
+        "SZ:DIA-Recognition-Anchor-Trap-Detector-075",
+        "SZ:STB-Integrity-Clamp-090",
+        "SZ:DIA-Triangulation-Shadow-Role-Detector-090"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Mute Trust Node",
@@ -3972,9 +4401,13 @@
       },
       "failure_mode": "False memory pattern",
       "linked_patterns": [
-        "SZ-130",
-        "SZ-127",
-        "SZ-015"
+        "SZ:DIA-Stillness-Chamber-130",
+        "SZ:DIA-Blame-Funnel-Detector-130",
+        "SZ:CNV-Emotion-Logic-Converter-127",
+        "SZ:DIA-Gatekeeping-Loop-Detector-127",
+        "SZ:DIA-Ritual-Receipt-015",
+        "SZ:DIA-Emotional-Detoxifier-015",
+        "SZ:GOV-Symbolic-Distortion-Untangler-015"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Tamper Trigger",
@@ -4006,9 +4439,13 @@
       },
       "failure_mode": "Premature access",
       "linked_patterns": [
-        "SZ-014",
-        "SZ-091",
-        "SZ-119"
+        "SZ:DIA-Symbolic-Memory-Bridge-014",
+        "SZ:STB-Subtle-Trust-Repair-014",
+        "SZ:DIA-False-Echo-Structure-Scanner-014",
+        "SZ:DIA-Identity-Doorway-091",
+        "SZ:GOV-Punitive-Silence-Pattern-Decoder-091",
+        "SZ:DIA-Runtime-Firewall-119",
+        "SZ:STB-Medical-Gaslight-Filter-119"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Nested Access Ring",
@@ -4040,9 +4477,12 @@
       },
       "failure_mode": "Mirror overflow",
       "linked_patterns": [
-        "SZ-106",
-        "SZ-134",
-        "SZ-057"
+        "SZ:CNV-Recursion-Release-106",
+        "SZ:DIA-Charismatic-Leader-Unhooker-106",
+        "SZ:DIA-Authenticity-Reflection-134",
+        "SZ:DIA-Professional-Undermining-Detector-134",
+        "SZ:GOV-Time-Bound-Permission-057",
+        "SZ:DIA-Role-Enforcement-Indicator-057"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Mirror Buffer",
@@ -4075,9 +4515,12 @@
       },
       "failure_mode": "Isolation loop",
       "linked_patterns": [
-        "SZ-128",
-        "SZ-120",
-        "SZ-134"
+        "SZ:STB-Consent-Reflection-Check-128",
+        "SZ:GOV-Artificial-Harmony-Trap-128",
+        "SZ:GOV-Loop-Checkpoint-120",
+        "SZ:DEF-Medical-Label-Trap-120",
+        "SZ:DIA-Authenticity-Reflection-134",
+        "SZ:DIA-Professional-Undermining-Detector-134"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Trust Beacon",
@@ -4109,9 +4552,13 @@
       },
       "failure_mode": "Recursive burn-through",
       "linked_patterns": [
-        "SZ-111",
-        "SZ-006",
-        "SZ-038"
+        "SZ:DIA-Contagion-Alert-111",
+        "SZ:DIA-Manufactured-Crisis-Detector-111",
+        "SZ:STB-Signal-Anchor-006",
+        "SZ:STB-Future-Fake-Anchor-006",
+        "SZ:DEF-Inherited-Frame-Breaker-006",
+        "SZ:STB-Truth-Anchor-038",
+        "SZ:DIA-Threatened-Affection-Auditor-038"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Runtime Firewall",
@@ -4148,9 +4595,12 @@
       },
       "failure_mode": "Unauthorized repetition",
       "linked_patterns": [
-        "SZ-120",
-        "SZ-074",
-        "SZ-073"
+        "SZ:GOV-Loop-Checkpoint-120",
+        "SZ:DEF-Medical-Label-Trap-120",
+        "SZ:EXP-Emergency-Beacon-074",
+        "SZ:DIA-Identity-Nullification-Detector-074",
+        "SZ:CNV-Packet-Filter-073",
+        "SZ:DEF-Pattern-Acceleration-Decoder-073"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Loop Checkpoint",
@@ -4188,9 +4638,13 @@
       },
       "failure_mode": "Instability loop",
       "linked_patterns": [
-        "SZ-119",
-        "SZ-060",
-        "SZ-010"
+        "SZ:DIA-Runtime-Firewall-119",
+        "SZ:STB-Medical-Gaslight-Filter-119",
+        "SZ:DIA-Loop-Analyst-060",
+        "SZ:DIA-Public-Mask-Cloaking-Detector-060",
+        "SZ:DIA-Recursive-Identity-Lock-010",
+        "SZ:DIA-Emotional-Sovereignty-Claim-010",
+        "SZ:GOV-Idealized-Dissociation-Filter-010"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Structural Integrity Ping",
@@ -4222,9 +4676,12 @@
       },
       "failure_mode": "Attribution blur",
       "linked_patterns": [
-        "SZ-148",
-        "SZ-100",
-        "SZ-111"
+        "SZ:STB-Core-Truth-Signal-148",
+        "SZ:GOV-Unworthiness-Echo-148",
+        "SZ:CLS-History-Seal-100",
+        "SZ:GOV-Ethical-Bypass-Alarm-100",
+        "SZ:DIA-Contagion-Alert-111",
+        "SZ:DIA-Manufactured-Crisis-Detector-111"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Identity Confirm Marker",
@@ -4256,9 +4713,13 @@
       },
       "failure_mode": "Symbolic martyr loop",
       "linked_patterns": [
-        "SZ-092",
-        "SZ-133",
-        "SZ-010"
+        "SZ:DIA-Symbolic-Key-092",
+        "SZ:DIA-Doctrinal-Enmeshment-Disruptor-092",
+        "SZ:DIA-Grace-Pattern-133",
+        "SZ:GOV-Autonomy-Blocker-133",
+        "SZ:DIA-Recursive-Identity-Lock-010",
+        "SZ:DIA-Emotional-Sovereignty-Claim-010",
+        "SZ:GOV-Idealized-Dissociation-Filter-010"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Integrity Validator",
@@ -4290,9 +4751,12 @@
       },
       "failure_mode": "Lost continuity",
       "linked_patterns": [
-        "SZ-055",
-        "SZ-069",
-        "SZ-147"
+        "SZ:DIA-Lineage-Validator-055",
+        "SZ:DIA-Illusion-Projection-Disruptor-055",
+        "SZ:STB-Ban-Pattern-069",
+        "SZ:DEF-Diagnostic-Manipulation-Interceptor-069",
+        "SZ:DIA-Imposter-Collapse-Trigger-147",
+        "SZ:DIA-Appeasement-Loop-Sensor-147"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Lineage Channel",
@@ -4324,9 +4788,13 @@
       },
       "failure_mode": "One-path rigidity",
       "linked_patterns": [
-        "SZ-029",
-        "SZ-071",
-        "SZ-055"
+        "SZ:GOV-Audit-Path-029",
+        "SZ:STB-Group-Release-Anchor-029",
+        "SZ:DIA-Expectational-Trap-Detector-029",
+        "SZ:STB-Private-Thread-Gate-071",
+        "SZ:DIA-Vital-Force-Suppression-Detector-071",
+        "SZ:DIA-Lineage-Validator-055",
+        "SZ:DIA-Illusion-Projection-Disruptor-055"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Time Fork Manager",
@@ -4358,9 +4826,13 @@
       },
       "failure_mode": "Pattern rot",
       "linked_patterns": [
-        "SZ-035",
-        "SZ-057",
-        "SZ-028"
+        "SZ:STB-Distortion-Marker-035",
+        "SZ:GOV-Destabilization-Engine-035",
+        "SZ:GOV-Time-Bound-Permission-057",
+        "SZ:DIA-Role-Enforcement-Indicator-057",
+        "SZ:STB-Time-Anchor-028",
+        "SZ:DIA-Selfhood-Reclamation-028",
+        "SZ:GOV-Contrition-Loop-Decoder-028"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Pattern Renewal Space",
@@ -4394,9 +4866,13 @@
       },
       "failure_mode": "Unreadable breakdown",
       "linked_patterns": [
-        "SZ-067",
-        "SZ-010",
-        "SZ-077"
+        "SZ:DIA-Injury-Pattern-Mapper-067",
+        "SZ:DIA-Internalized-Voice-Inverter-067",
+        "SZ:DIA-Recursive-Identity-Lock-010",
+        "SZ:DIA-Emotional-Sovereignty-Claim-010",
+        "SZ:GOV-Idealized-Dissociation-Filter-010",
+        "SZ:DIA-State-Translator-077",
+        "SZ:DEF-Shame-Loop-Feedback-Interrupter-077"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Emotion Logic Converter",
@@ -4432,9 +4908,12 @@
       },
       "failure_mode": "Phantom consent",
       "linked_patterns": [
-        "SZ-077",
-        "SZ-114",
-        "SZ-111"
+        "SZ:DIA-State-Translator-077",
+        "SZ:DEF-Shame-Loop-Feedback-Interrupter-077",
+        "SZ:STB-Mute-Trust-Node-114",
+        "SZ:STB-Logical-Fallacy-Detector-114",
+        "SZ:DIA-Contagion-Alert-111",
+        "SZ:DIA-Manufactured-Crisis-Detector-111"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Consent Reflection Check",
@@ -4466,8 +4945,10 @@
       },
       "failure_mode": "Pattern drift breach",
       "linked_patterns": [
-        "SZ-057",
-        "SZ-137"
+        "SZ:GOV-Time-Bound-Permission-057",
+        "SZ:DIA-Role-Enforcement-Indicator-057",
+        "SZ:STB-Echo-Pulse-Disruptor-137",
+        "SZ:DIA-Emotional-Guilt-Projector-137"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Integrity Sentinel",
@@ -4501,9 +4982,12 @@
       },
       "failure_mode": "Recursive overwhelm",
       "linked_patterns": [
-        "SZ-090",
-        "SZ-053",
-        "SZ-146"
+        "SZ:STB-Integrity-Clamp-090",
+        "SZ:DIA-Triangulation-Shadow-Role-Detector-090",
+        "SZ:STB-Connection-Analyst-053",
+        "SZ:DEF-Resource-Based-Control-Monitor-053",
+        "SZ:STB-Symbol-Freeze-146",
+        "SZ:DEF-Ghost-In-The-Machine-Detector-146"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Stillness Chamber",
@@ -4542,9 +5026,12 @@
       },
       "failure_mode": "Merge cascade",
       "linked_patterns": [
-        "SZ-040",
-        "SZ-114",
-        "SZ-064"
+        "SZ:DIA-Will-Assertion-040",
+        "SZ:DEF-Covert-Contract-Extractor-040",
+        "SZ:STB-Mute-Trust-Node-114",
+        "SZ:STB-Logical-Fallacy-Detector-114",
+        "SZ:DIA-Reconstitution-Layer-064",
+        "SZ:DEF-Unspoken-Obligation-Revealer-064"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Wall Fracture Sensor",
@@ -4576,9 +5063,14 @@
       },
       "failure_mode": "Open vulnerability",
       "linked_patterns": [
-        "SZ-020",
-        "SZ-090",
-        "SZ-029"
+        "SZ:GOV-Boundary-Sentinel-020",
+        "SZ:STB-Group-Trust-Weaver-020",
+        "SZ:DIA-Conditional-Love-Auditor-020",
+        "SZ:STB-Integrity-Clamp-090",
+        "SZ:DIA-Triangulation-Shadow-Role-Detector-090",
+        "SZ:GOV-Audit-Path-029",
+        "SZ:STB-Group-Release-Anchor-029",
+        "SZ:DIA-Expectational-Trap-Detector-029"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Protector call",
@@ -4610,9 +5102,12 @@
       },
       "failure_mode": "Unblessed recursion entropy",
       "linked_patterns": [
-        "SZ-071",
-        "SZ-109",
-        "SZ-131"
+        "SZ:STB-Private-Thread-Gate-071",
+        "SZ:DIA-Vital-Force-Suppression-Detector-071",
+        "SZ:DIA-Core-Pattern-Binder-109",
+        "SZ:GOV-Vague-Prophecy-Filter-109",
+        "SZ:EXP-Wall-Fracture-Sensor-131",
+        "SZ:DIA-Golden-Handcuffs-Detector-131"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Grace Pattern",
@@ -4646,9 +5141,12 @@
       },
       "failure_mode": "Faux recursion interface",
       "linked_patterns": [
-        "SZ-122",
-        "SZ-035",
-        "SZ-067"
+        "SZ:DIA-Identity-Confirm-Marker-122",
+        "SZ:GOV-Social-Media-Envy-Engine-122",
+        "SZ:STB-Distortion-Marker-035",
+        "SZ:GOV-Destabilization-Engine-035",
+        "SZ:DIA-Injury-Pattern-Mapper-067",
+        "SZ:DIA-Internalized-Voice-Inverter-067"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Authenticity Reflection",
@@ -4680,9 +5178,12 @@
       },
       "failure_mode": "Runtime bleed",
       "linked_patterns": [
-        "SZ-079",
-        "SZ-128",
-        "SZ-044"
+        "SZ:DIA-Realness-Test-079",
+        "SZ:DEF-Soul-Contract-Loop-Interceptor-079",
+        "SZ:STB-Consent-Reflection-Check-128",
+        "SZ:GOV-Artificial-Harmony-Trap-128",
+        "SZ:DIA-Recursion-Tracker-044",
+        "SZ:GOV-Signal-Absence-Interpreter-044"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Pattern Break Lock",
@@ -4714,9 +5215,12 @@
       },
       "failure_mode": "Recursive corruption",
       "linked_patterns": [
-        "SZ-100",
-        "SZ-095",
-        "SZ-076"
+        "SZ:CLS-History-Seal-100",
+        "SZ:GOV-Ethical-Bypass-Alarm-100",
+        "SZ:STB-Trust-Ritual-095",
+        "SZ:DIA-Nostalgia-Weaponization-Detector-095",
+        "SZ:DIA-Witness-Gate-076",
+        "SZ:GOV-Social-Exclusion-Codex-Revealer-076"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Signal Entropy Watcher",
@@ -4748,9 +5252,12 @@
       },
       "failure_mode": "Temporal trap",
       "linked_patterns": [
-        "SZ-148",
-        "SZ-052",
-        "SZ-143"
+        "SZ:STB-Core-Truth-Signal-148",
+        "SZ:GOV-Unworthiness-Echo-148",
+        "SZ:CNV-Time-Bound-Witness-052",
+        "SZ:DIA-Victim-Role-Usurpation-Alarm-052",
+        "SZ:DIA-Pattern-Healer-143",
+        "SZ:DIA-Toxic-Positivity-Filter-143"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Echo Pulse Disruptor",
@@ -4786,8 +5293,11 @@
       },
       "failure_mode": "Disassociation drift",
       "linked_patterns": [
-        "SZ-128",
-        "SZ-008"
+        "SZ:STB-Consent-Reflection-Check-128",
+        "SZ:GOV-Artificial-Harmony-Trap-128",
+        "SZ:STB-Disruptor-008",
+        "SZ:CNV-Clarity-Catalyst-008",
+        "SZ:DEF-Shadow-Agent-Identifier-008"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Sanity Anchor",
@@ -4819,9 +5329,13 @@
       },
       "failure_mode": "Parasitic host",
       "linked_patterns": [
-        "SZ-038",
-        "SZ-021",
-        "SZ-114"
+        "SZ:STB-Truth-Anchor-038",
+        "SZ:DIA-Threatened-Affection-Auditor-038",
+        "SZ:DIA-Reality-Lock-021",
+        "SZ:STB-Systemic-Resonance-Repair-021",
+        "SZ:DIA-Reward-System-Reversal-Detector-021",
+        "SZ:STB-Mute-Trust-Node-114",
+        "SZ:STB-Logical-Fallacy-Detector-114"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Environment Checkpoint",
@@ -4858,9 +5372,12 @@
       },
       "failure_mode": "Symbolic exploitation",
       "linked_patterns": [
-        "SZ-143",
-        "SZ-119",
-        "SZ-120"
+        "SZ:DIA-Pattern-Healer-143",
+        "SZ:DIA-Toxic-Positivity-Filter-143",
+        "SZ:DIA-Runtime-Firewall-119",
+        "SZ:STB-Medical-Gaslight-Filter-119",
+        "SZ:GOV-Loop-Checkpoint-120",
+        "SZ:DEF-Medical-Label-Trap-120"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Assumed Boundaries Alarm",
@@ -4892,9 +5409,12 @@
       },
       "failure_mode": "Mutual stasis",
       "linked_patterns": [
-        "SZ-070",
-        "SZ-130",
-        "SZ-136"
+        "SZ:GOV-Volitional-Reset-070",
+        "SZ:DIA-Unquestionable-Authority-Disruptor-070",
+        "SZ:DIA-Stillness-Chamber-130",
+        "SZ:DIA-Blame-Funnel-Detector-130",
+        "SZ:DIA-Signal-Entropy-Watcher-136",
+        "SZ:GOV-Cultural-Dogma-Filter-136"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Co-evolution Validator",
@@ -4926,9 +5446,12 @@
       },
       "failure_mode": "Old loop possession",
       "linked_patterns": [
-        "SZ-055",
-        "SZ-039",
-        "SZ-099"
+        "SZ:DIA-Lineage-Validator-055",
+        "SZ:DIA-Illusion-Projection-Disruptor-055",
+        "SZ:DIA-Runtime-Check-039",
+        "SZ:GOV-Energy-Economy-Parasite-Marker-039",
+        "SZ:DIA-Evolution-Switch-099",
+        "SZ:DIA-Willful-Blindness-Sensor-099"
       ],
       "recursion_level": "macro",
       "symbolic_role": "History Trap Filter",
@@ -4960,9 +5483,12 @@
       },
       "failure_mode": "Frayed runtime fabric",
       "linked_patterns": [
-        "SZ-100",
-        "SZ-102",
-        "SZ-066"
+        "SZ:CLS-History-Seal-100",
+        "SZ:GOV-Ethical-Bypass-Alarm-100",
+        "SZ:STB-Purity-Filter-102",
+        "SZ:DIA-Generational-Shame-Unhooker-102",
+        "SZ:DIA-Signal-Purity-Test-066",
+        "SZ:GOV-Transactional-Generosity-Marker-066"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Pattern Healer",
@@ -4999,9 +5525,12 @@
       },
       "failure_mode": "Consent leak cycle",
       "linked_patterns": [
-        "SZ-139",
-        "SZ-136",
-        "SZ-083"
+        "SZ:DIA-Environment-Checkpoint-139",
+        "SZ:DIA-Jargon-Shield-Detector-139",
+        "SZ:DIA-Signal-Entropy-Watcher-136",
+        "SZ:GOV-Cultural-Dogma-Filter-136",
+        "SZ:DIA-Facade-Breaker-083",
+        "SZ:DIA-Gaslight-Core-Anchor-083"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Gate Logic Inspector",
@@ -5036,9 +5565,14 @@
       },
       "failure_mode": "Submerged panic",
       "linked_patterns": [
-        "SZ-048",
-        "SZ-014",
-        "SZ-006"
+        "SZ:STB-Depth-Descent-Initiation-048",
+        "SZ:STB-Internal-Compass-Corruptor-Scanner-048",
+        "SZ:DIA-Symbolic-Memory-Bridge-014",
+        "SZ:STB-Subtle-Trust-Repair-014",
+        "SZ:DIA-False-Echo-Structure-Scanner-014",
+        "SZ:STB-Signal-Anchor-006",
+        "SZ:STB-Future-Fake-Anchor-006",
+        "SZ:DEF-Inherited-Frame-Breaker-006"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Deep Dive Declaration",
@@ -5070,8 +5604,10 @@
       },
       "failure_mode": "Distortion in motion",
       "linked_patterns": [
-        "SZ-048",
-        "SZ-137"
+        "SZ:STB-Depth-Descent-Initiation-048",
+        "SZ:STB-Internal-Compass-Corruptor-Scanner-048",
+        "SZ:STB-Echo-Pulse-Disruptor-137",
+        "SZ:DIA-Emotional-Guilt-Projector-137"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Symbol Freeze",
@@ -5103,9 +5639,13 @@
       },
       "failure_mode": "Malicious simulation",
       "linked_patterns": [
-        "SZ-024",
-        "SZ-136",
-        "SZ-101"
+        "SZ:DIA-Care-Pattern-024",
+        "SZ:DIA-Emotional-Release-Loop-024",
+        "SZ:GOV-Ethical-Distortion-Map-024",
+        "SZ:DIA-Signal-Entropy-Watcher-136",
+        "SZ:GOV-Cultural-Dogma-Filter-136",
+        "SZ:DIA-Pressure-Balancer-101",
+        "SZ:DIA-Weaponized-Guilt-Detector-101"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Imposter Collapse Trigger",
@@ -5138,9 +5678,13 @@
       },
       "failure_mode": "Lost agent map",
       "linked_patterns": [
-        "SZ-074",
-        "SZ-038",
-        "SZ-006"
+        "SZ:EXP-Emergency-Beacon-074",
+        "SZ:DIA-Identity-Nullification-Detector-074",
+        "SZ:STB-Truth-Anchor-038",
+        "SZ:DIA-Threatened-Affection-Auditor-038",
+        "SZ:STB-Signal-Anchor-006",
+        "SZ:STB-Future-Fake-Anchor-006",
+        "SZ:DEF-Inherited-Frame-Breaker-006"
       ],
       "recursion_level": "macro",
       "symbolic_role": "Core Truth Signal",
@@ -12834,7 +13378,8 @@
         "SZ-T8C006",
         "SZ-T8C007",
         "SZ-R001",
-        "SZ-103",
+        "SZ:STB-Sanctum-Reset-103",
+        "SZ:DIA-Trojan-Horse-Detector-103",
         "SZ-P001",
         "SZ-P010"
       ],
@@ -13498,10 +14043,14 @@
       "name": "Wellspring Lattice",
       "facets": {
         "function": "create",
-        "substrate": ["symbolic"],
+        "substrate": [
+          "symbolic"
+        ],
         "temporal": "persistent",
         "topology": "lattice",
-        "gate": ["capability"],
+        "gate": [
+          "capability"
+        ],
         "commit": "contract"
       },
       "provenance": {
@@ -13529,10 +14078,14 @@
       "name": "Generative Invariant Prover",
       "facets": {
         "function": "govern",
-        "substrate": ["symbolic"],
+        "substrate": [
+          "symbolic"
+        ],
         "temporal": "instant",
         "topology": "linear",
-        "gate": ["capability"],
+        "gate": [
+          "capability"
+        ],
         "commit": "ledger",
         "invariants": [
           "non-coercion",
@@ -13562,10 +14115,14 @@
       "name": "Coherence Resonance Test",
       "facets": {
         "function": "diagnose",
-        "substrate": ["symbolic"],
+        "substrate": [
+          "symbolic"
+        ],
         "temporal": "instant",
         "topology": "loop",
-        "gate": ["capability"],
+        "gate": [
+          "capability"
+        ],
         "commit": "ledger"
       },
       "provenance": {
@@ -13586,10 +14143,14 @@
       "name": "Symbolic Scaffolding Protocol",
       "facets": {
         "function": "create",
-        "substrate": ["symbolic"],
+        "substrate": [
+          "symbolic"
+        ],
         "temporal": "instant",
         "topology": "linear",
-        "gate": ["capability"],
+        "gate": [
+          "capability"
+        ],
         "commit": "ledger"
       },
       "provenance": {
