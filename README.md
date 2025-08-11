@@ -99,6 +99,8 @@ Once booted, the system exposes:
 6. **Monitor Ephemeral Metrics** → Adjust or halt if thresholds are crossed.
 
 ---
+### [Documentation](./docs/README.md)
 
-## License
-*MIT*
+### [Boot Example](./BOOT_EXAMPLE.md)
+
+### [License (MIT)](./README.md)
