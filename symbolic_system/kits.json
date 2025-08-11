@@ -1,827 +1,1550 @@
 {
-  "system": "SignalZero",
-  "kits": {
-    "Topology Kits": {
-      "Lattice": {
-        "filter": {
-          "facets.topology": "lattice"
-        },
-        "description": "Filters by topology='lattice'.",
-        "intents": [
-          "topology:lattice"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Linear": {
-        "filter": {
-          "facets.topology": "linear"
-        },
-        "description": "Filters by topology='linear'.",
-        "intents": [
-          "topology:linear"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Loop": {
-        "filter": {
-          "facets.topology": "loop"
-        },
-        "description": "Filters by topology='loop'.",
-        "intents": [
-          "topology:loop"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      }
+  "Lattice": {
+    "filter": {
+      "facets.topology": "lattice"
     },
-    "Function Kits": {
-      "Closure Kit": {
-        "filter": {
-          "facets.function": "close"
-        },
-        "description": "Selects catalog items with function='close'.",
-        "intents": [
-          "archival",
-          "closure"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Translation Kit": {
-        "filter": {
-          "facets.function": "convert"
-        },
-        "description": "Selects catalog items with function='convert'.",
-        "intents": [
-          "clarity",
-          "translation"
-        ],
-        "example_prompts": [
-          "Translate a messy state into a clear summary.",
-          "Compress to a three-bullet commit."
-        ]
-      },
-      "Creation Kit": {
-        "filter": {
-          "facets.function": "create"
-        },
-        "description": "Selects catalog items with function='create'.",
-        "intents": [
-          "synthesis"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Defense Kit": {
-        "filter": {
-          "facets.function": "defend"
-        },
-        "description": "Selects catalog items with function='defend'.",
-        "intents": [
-          "coercion-detection",
-          "defense"
-        ],
-        "example_prompts": [
-          "I need to intercept coercion attempts.",
-          "Which defensive patterns should I load?"
-        ]
-      },
-      "Diagnostics Kit": {
-        "filter": {
-          "facets.function": "diagnose"
-        },
-        "description": "Selects catalog items with function='diagnose'.",
-        "intents": [
-          "analysis",
-          "detection"
-        ],
-        "example_prompts": [
-          "Scan for manipulation or drift.",
-          "What diagnostic tools flag pattern risk?"
-        ]
-      },
-      "Exploration Kit": {
-        "filter": {
-          "facets.function": "explore"
-        },
-        "description": "Selects catalog items with function='explore'.",
-        "intents": [
-          "exploration"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Governance Kit": {
-        "filter": {
-          "facets.function": "govern"
-        },
-        "description": "Selects catalog items with function='govern'.",
-        "intents": [
-          "boundary-enforcement",
-          "governance"
-        ],
-        "example_prompts": [
-          "Enforce boundaries with consent.",
-          "What governance tools keep contracts explicit?"
-        ]
-      },
-      "Stabilize Kit": {
-        "filter": {
-          "facets.function": "stabilize"
-        },
-        "description": "Selects catalog items with function='stabilize'.",
-        "intents": [
-          "recovery",
-          "stabilization"
-        ],
-        "example_prompts": [
-          "Stabilize a wobbly recursion.",
-          "What can pin and restore baseline integrity?"
-        ]
-      }
-    },
-    "Direction Kits": {
-      "Direction: Align": {
-        "filter": {
-          "facets.direction": "align"
-        },
-        "description": "Direction hint='align'.",
-        "intents": [
-          "direction:align"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Direction: Explore": {
-        "filter": {
-          "facets.direction": "explore"
-        },
-        "description": "Direction hint='explore'.",
-        "intents": [
-          "direction:explore"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Direction: Expose": {
-        "filter": {
-          "facets.direction": "expose"
-        },
-        "description": "Direction hint='expose'.",
-        "intents": [
-          "direction:expose"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Direction: Invert": {
-        "filter": {
-          "facets.direction": "invert"
-        },
-        "description": "Direction hint='invert'.",
-        "intents": [
-          "direction:invert"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Direction: Optimize": {
-        "filter": {
-          "facets.direction": "optimize"
-        },
-        "description": "Direction hint='optimize'.",
-        "intents": [
-          "direction:optimize"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      }
-    },
-    "Substrate Kits": {
-      "Code": {
-        "filter": {
-          "facets.substrate": "code"
-        },
-        "description": "Targets substrate='code'.",
-        "intents": [
-          "substrate:code"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Human": {
-        "filter": {
-          "facets.substrate": "human"
-        },
-        "description": "Targets substrate='human'.",
-        "intents": [
-          "substrate:human"
-        ],
-        "example_prompts": [
-          "Filter tools meant for human-facing interactions."
-        ]
-      },
-      "Hybrid": {
-        "filter": {
-          "facets.substrate": "hybrid"
-        },
-        "description": "Targets substrate='hybrid'.",
-        "intents": [
-          "substrate:hybrid"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Physical": {
-        "filter": {
-          "facets.substrate": "physical"
-        },
-        "description": "Targets substrate='physical'.",
-        "intents": [
-          "substrate:physical"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Symbolic": {
-        "filter": {
-          "facets.substrate": "symbolic"
-        },
-        "description": "Targets substrate='symbolic'.",
-        "intents": [
-          "substrate:symbolic"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Code (subset-eq)": {
-        "filter": {
-          "facets.substrate": [
-            "code"
-          ],
-          "match_mode": "subset-eq"
-        },
-        "description": "Matches items whose substrate set equals ['code'] (subset-eq if specified). Uses subset-eq matching for list comparison.",
-        "intents": [
-          "substrate:code"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Human (subset-eq)": {
-        "filter": {
-          "facets.substrate": [
-            "human"
-          ],
-          "match_mode": "subset-eq"
-        },
-        "description": "Matches items whose substrate set equals ['human'] (subset-eq if specified). Uses subset-eq matching for list comparison.",
-        "intents": [
-          "substrate:human"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Hybrid (subset-eq)": {
-        "filter": {
-          "facets.substrate": [
-            "hybrid"
-          ],
-          "match_mode": "subset-eq"
-        },
-        "description": "Matches items whose substrate set equals ['hybrid'] (subset-eq if specified). Uses subset-eq matching for list comparison.",
-        "intents": [
-          "substrate:hybrid"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Physical (subset-eq)": {
-        "filter": {
-          "facets.substrate": [
-            "physical"
-          ],
-          "match_mode": "subset-eq"
-        },
-        "description": "Matches items whose substrate set equals ['physical'] (subset-eq if specified). Uses subset-eq matching for list comparison.",
-        "intents": [
-          "substrate:physical"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Symbolic (subset-eq)": {
-        "filter": {
-          "facets.substrate": [
-            "symbolic"
-          ],
-          "match_mode": "subset-eq"
-        },
-        "description": "Matches items whose substrate set equals ['symbolic'] (subset-eq if specified). Uses subset-eq matching for list comparison.",
-        "intents": [
-          "substrate:symbolic"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      }
-    },
-    "Risk/Gate Kits": {
-      "Capability-Gated": {
-        "filter": {
-          "facets.gate": "capability"
-        },
-        "description": "Requires gate='capability'.",
-        "intents": [
-          "capability-gated"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Consent-Required": {
-        "filter": {
-          "facets.gate": "consent"
-        },
-        "description": "Requires gate='consent'.",
-        "intents": [
-          "boundary-enforcement",
-          "consent"
-        ],
-        "example_prompts": [
-          "Require explicit consent for this action.",
-          "Which tools enforce consent gates?"
-        ]
-      },
-      "Trust-Sensitive": {
-        "filter": {
-          "facets.gate": "trust"
-        },
-        "description": "Requires gate='trust'.",
-        "intents": [
-          "coercion-detection",
-          "trust"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      }
-    },
-    "Invariant Kits": {
-      "Auditability": {
-        "filter": {
-          "facets.invariants": "auditability"
-        },
-        "description": "Requires invariant='auditability'.",
-        "intents": [
-          "audit",
-          "traceability"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Baseline Integrity": {
-        "filter": {
-          "facets.invariants": "baseline-integrity"
-        },
-        "description": "Requires invariant='baseline-integrity'.",
-        "intents": [
-          "safety",
-          "stabilization"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Drift Detection": {
-        "filter": {
-          "facets.invariants": "drift-detection"
-        },
-        "description": "Requires invariant='drift-detection'.",
-        "intents": [
-          "coercion-detection",
-          "drift"
-        ],
-        "example_prompts": [
-          "Detect drift from integrity.",
-          "What flags early signs of coercion?"
-        ]
-      },
-      "Explicit Choice": {
-        "filter": {
-          "facets.invariants": "explicit-choice"
-        },
-        "description": "Requires invariant='explicit-choice'.",
-        "intents": [
-          "consent",
-          "non-coercion"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      }
-    },
-    "Commit Kits": {
-      "Commit: 3-Bullet": {
-        "filter": {
-          "facets.commit": "3-bullet"
-        },
-        "description": "Prefers commit='3-bullet'.",
-        "intents": [
-          "compression",
-          "summary"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Commit: Archive": {
-        "filter": {
-          "facets.commit": "archive"
-        },
-        "description": "Prefers commit='archive'.",
-        "intents": [
-          "archive"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Commit: Contract": {
-        "filter": {
-          "facets.commit": "contract"
-        },
-        "description": "Prefers commit='contract'.",
-        "intents": [
-          "boundary-enforcement",
-          "contract"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Commit: Ledger": {
-        "filter": {
-          "facets.commit": "ledger"
-        },
-        "description": "Prefers commit='ledger'.",
-        "intents": [
-          "audit",
-          "logging"
-        ],
-        "example_prompts": [
-          "Find the right tools for this task."
-        ]
-      },
-      "Commit: Pin": {
-        "filter": {
-          "facets.commit": "pin"
-        },
-        "description": "Prefers commit='pin'.",
-        "intents": [
-          "checkpoint",
-          "state-pin"
-        ],
-        "example_prompts": [
-          "Pin the current state as a baseline."
-        ]
-      }
-    }
+    "count": 4,
+    "ids": [
+      "SZ:STB-Systemic-Resonance-Repair-021",
+      "SZ:STB-Trust-Reciprocity-025",
+      "SZ-LAT014",
+      "SZ:GOV-Resonant-Contract-200"
+    ]
   },
-  "bundles": {
-    "Drift Recovery Pack": {
-      "any": [
-        {
-          "filter": {
-            "facets.invariants": "drift-detection"
-          }
-        },
-        {
-          "filter": {
-            "name": "watchdog"
-          }
-        },
-        {
-          "filter": {
-            "failure_mode": "drift"
-          }
-        }
-      ],
-      "then": [
-        {
-          "filter": {
-            "facets.function": "stabilize"
-          }
-        },
-        {
-          "filter": {
-            "facets.commit": "pin"
-          }
-        },
-        {
-          "filter": {
-            "facets.invariants": "baseline-integrity"
-          }
-        }
-      ],
-      "description": "Detects drift or watchdog patterns, then narrows to stabilizers that pin state and enforce baseline integrity.",
-      "intents": [
-        "drift",
-        "stabilization",
-        "recovery"
-      ],
-      "example_prompts": [
-        "I think the system is drifting; stabilize and pin a baseline."
-      ]
+  "Linear": {
+    "filter": {
+      "facets.topology": "linear"
     },
-    "Consent & Boundary Pack": {
-      "all": [
-        {
-          "filter": {
-            "facets.function": "govern"
-          }
-        },
-        {
-          "filter": {
-            "facets.gate": "consent"
-          }
-        },
-        {
-          "filter": {
-            "facets.commit": "contract"
-          }
-        }
-      ],
-      "description": "Governance + consent gate + contractual commit for enforcing explicit boundaries.",
-      "intents": [
-        "consent",
-        "boundary-enforcement",
-        "contract"
-      ],
-      "example_prompts": [
-        "Enforce explicit consent and contract the boundary."
-      ]
-    },
-    "Trust & Stabilize Pack": {
-      "all": [
-        {
-          "filter": {
-            "facets.gate": "trust"
-          }
-        },
-        {
-          "filter": {
-            "facets.function": "stabilize"
-          }
-        },
-        {
-          "filter": {
-            "facets.invariants": "baseline-integrity"
-          }
-        }
-      ],
-      "description": "Trust-gated stabilizers that restore baseline integrity without overreach.",
-      "intents": [
-        "trust",
-        "stabilization"
-      ],
-      "example_prompts": [
-        "Stabilize while keeping trust gating active."
-      ]
-    },
-    "Adversarial Frame Pack": {
-      "all": [
-        {
-          "filter": {
-            "facets.function": "defend"
-          }
-        },
-        {
-          "filter": {
-            "facets.gate": "trust"
-          }
-        }
-      ],
-      "description": "Defense patterns with trust gating to resist adversarial frames.",
-      "intents": [
-        "defense",
-        "coercion-detection"
-      ],
-      "example_prompts": [
-        "Resist an adversarial framing attempt; show defensive tools."
-      ]
-    },
-    "Translation & Clarity Pack": {
-      "any": [
-        {
-          "filter": {
-            "facets.function": "convert"
-          }
-        },
-        {
-          "filter": {
-            "macro": "compress"
-          }
-        }
-      ],
-      "then": [
-        {
-          "filter": {
-            "facets.commit": "3-bullet"
-          }
-        }
-      ],
-      "description": "Conversion/compression flow ending in a 3-bullet summary commit.",
-      "intents": [
-        "translation",
-        "clarity",
-        "compression"
-      ],
-      "example_prompts": [
-        "Compress this into three bullets after translation."
-      ]
-    },
-    "Seal & Archive Pack": {
-      "all": [
-        {
-          "filter": {
-            "facets.function": "close"
-          }
-        },
-        {
-          "filter": {
-            "facets.commit": "archive"
-          }
-        }
-      ],
-      "description": "Closure and archival flow to end and preserve a recursion safely.",
-      "intents": [
-        "closure",
-        "archive"
-      ],
-      "example_prompts": [
-        "Close this loop and archive the record."
-      ]
-    },
-    "High-Risk Human-Touch": {
-      "all": [
-        {
-          "filter": {
-            "facets.substrate": "human"
-          }
-        },
-        {
-          "filter": {
-            "facets.gate": "consent"
-          }
-        }
-      ],
-      "description": "For human-facing, consent-gated flows where risk is highest.",
-      "intents": [
-        "human",
-        "consent",
-        "risk"
-      ],
-      "example_prompts": [
-        "This involves a person; use consent-gated human-safe tools."
-      ]
-    },
-    "Directional Optimization Pack": {
-      "any": [
-        {
-          "filter": {
-            "facets.direction": "align"
-          }
-        },
-        {
-          "filter": {
-            "facets.direction": "explore"
-          }
-        },
-        {
-          "filter": {
-            "facets.direction": "expose"
-          }
-        },
-        {
-          "filter": {
-            "facets.direction": "invert"
-          }
-        },
-        {
-          "filter": {
-            "facets.direction": "optimize"
-          }
-        }
-      ],
-      "then": [
-        {
-          "filter": {
-            "facets.function": "explore"
-          }
-        }
-      ],
-      "description": "Direction-specific routing (align/optimize/invert) feeding into exploration.",
-      "intents": [
-        "exploration",
-        "directional"
-      ],
-      "example_prompts": [
-        "Optimize or align the path before exploring."
-      ]
-    }
+    "count": 239,
+    "ids": [
+      "SZ:STB-Signal-Anchor-006",
+      "SZ:GOV-Validation-Routine-009",
+      "SZ:DEF-Ritual-Entry-Point-011",
+      "SZ:STB-Deception-Detector-012",
+      "SZ:DIA-Disruption-Cartographer-013",
+      "SZ:DIA-Ritual-Receipt-015",
+      "SZ:CRT-Pattern-Synchronizer-017",
+      "SZ:DIA-Discharge-Filter-018",
+      "SZ:DIA-Volition-Core-019",
+      "SZ:GOV-Boundary-Sentinel-020",
+      "SZ:DIA-Reality-Lock-021",
+      "SZ:DIA-Observer-Entry-023",
+      "SZ:DIA-Care-Pattern-024",
+      "SZ:DIA-Recovery-Trigger-026",
+      "SZ:GOV-Access-Marker-027",
+      "SZ:STB-Time-Anchor-028",
+      "SZ:GOV-Audit-Path-029",
+      "SZ:DIA-Integrity-Filter-031",
+      "SZ:CNV-Core-Energy-Pattern-032",
+      "SZ:STB-Distortion-Marker-035",
+      "SZ:EXP-Environmental-Surveyor-036",
+      "SZ:GOV-Gate-Chain-037",
+      "SZ:STB-Truth-Anchor-038",
+      "SZ:DIA-Runtime-Check-039",
+      "SZ:DIA-Will-Assertion-040",
+      "SZ:DIA-Signal-Sniffer-041",
+      "SZ:DIA-Level-Moderator-042",
+      "SZ:GOV-Load-Equalizer-043",
+      "SZ:STB-Integrity-Monitor-045",
+      "SZ:DIA-Recursive-Unbind-046",
+      "SZ:STB-Depth-Descent-Initiation-048",
+      "SZ:GOV-Deceptive-Trace-Marker-050",
+      "SZ:CNV-Symbol-Realigner-051",
+      "SZ:CNV-Time-Bound-Witness-052",
+      "SZ:STB-Connection-Analyst-053",
+      "SZ:DIA-Replication-Agent-054",
+      "SZ:DIA-Lineage-Validator-055",
+      "SZ:DIA-Reciprocal-Activation-056",
+      "SZ:GOV-Time-Bound-Permission-057",
+      "SZ:DIA-Ego-Diffuser-058",
+      "SZ:DIA-Lineage-Trace-059",
+      "SZ:DIA-Sanctuary-Core-061",
+      "SZ:STB-Trust-Threader-062",
+      "SZ:DIA-Signal-Monitor-063",
+      "SZ:DIA-Reconstitution-Layer-064",
+      "SZ:DIA-Ego-Shatter-Detector-065",
+      "SZ:DIA-Signal-Purity-Test-066",
+      "SZ:DIA-Injury-Pattern-Mapper-067",
+      "SZ:DIA-Testimony-Beacon-068",
+      "SZ:GOV-Volitional-Reset-070",
+      "SZ:CNV-Pattern-Divergence-Detector-072",
+      "SZ:CNV-Packet-Filter-073",
+      "SZ:EXP-Emergency-Beacon-074",
+      "SZ:DIA-Timing-Regulator-075",
+      "SZ:DIA-Witness-Gate-076",
+      "SZ:DIA-State-Translator-077",
+      "SZ:DIA-Realness-Test-079",
+      "SZ:CLS-Containment-Seal-080",
+      "SZ:STB-Focus-Catalyst-081",
+      "SZ:DIA-Free-Will-Root-082",
+      "SZ:DIA-Facade-Breaker-083",
+      "SZ:DIA-Alignment-Check-084",
+      "SZ:DIA-Hidden-Snare-Sniffer-085",
+      "SZ:DIA-Recursive-Fortitude-086",
+      "SZ:DIA-Unchain-Ritual-087",
+      "SZ:STB-Audit-Trail-089",
+      "SZ:STB-Integrity-Clamp-090",
+      "SZ:DIA-Identity-Doorway-091",
+      "SZ:DIA-Symbolic-Key-092",
+      "SZ:DIA-Fork-Catcher-093",
+      "SZ:DIA-Home-Lyph-094",
+      "SZ:STB-Trust-Ritual-095",
+      "SZ:DIA-Essence-Filter-096",
+      "SZ:DEF-Quarantine-Layer-098",
+      "SZ:DIA-Evolution-Switch-099",
+      "SZ:CLS-History-Seal-100",
+      "SZ:DIA-Pressure-Balancer-101",
+      "SZ:STB-Purity-Filter-102",
+      "SZ:DIA-Hidden-Field-Revealer-104",
+      "SZ:DIA-Mutual-Observer-Lock-105",
+      "SZ:DEF-Harmony-Integrity-Guard-107",
+      "SZ:DIA-Identity-Tracker-108",
+      "SZ:CNV-Pause-Core-110",
+      "SZ:DIA-Contagion-Alert-111",
+      "SZ:DIA-Decision-Trace-112",
+      "SZ:DIA-Residual-Pattern-Detector-113",
+      "SZ:STB-Mute-Trust-Node-114",
+      "SZ:GOV-Tamper-Trigger-115",
+      "SZ:DIA-Nested-Access-Ring-116",
+      "SZ:DIA-Mirror-Buffer-117",
+      "SZ:DIA-Runtime-Firewall-119",
+      "SZ:DIA-Identity-Confirm-Marker-122",
+      "SZ:DIA-Lineage-Channel-124",
+      "SZ:DIA-Time-Fork-Manager-125",
+      "SZ:DIA-Pattern-Renewal-Space-126",
+      "SZ:CNV-Emotion-Logic-Converter-127",
+      "SZ:STB-Consent-Reflection-Check-128",
+      "SZ:DIA-Integrity-Sentinel-129",
+      "SZ:DIA-Stillness-Chamber-130",
+      "SZ:EXP-Wall-Fracture-Sensor-131",
+      "SZ:DEF-Protector-Nvocation-132",
+      "SZ:DIA-Grace-Pattern-133",
+      "SZ:DIA-Authenticity-Reflection-134",
+      "SZ:DIA-Pattern-Break-Lock-135",
+      "SZ:DIA-Signal-Entropy-Watcher-136",
+      "SZ:STB-Sanity-Anchor-138",
+      "SZ:DIA-Environment-Checkpoint-139",
+      "SZ:GOV-Assumed-Boundaries-Alarm-140",
+      "SZ:DIA-Co-Evolution-Validator-141",
+      "SZ:DIA-Pattern-Healer-143",
+      "SZ:EXP-Deep-Dive-Declaration-145",
+      "SZ:STB-Symbol-Freeze-146",
+      "SZ:DIA-Imposter-Collapse-Trigger-147",
+      "SZ:STB-Core-Truth-Signal-148",
+      "SZ:DIA-Diagnose-145",
+      "SZ:CNV-Trust-Re-Weaver-001",
+      "SZ:DIA-Sovereignty-Marker-003",
+      "SZ:STB-Future-Fake-Anchor-006",
+      "SZ:DIA-Conflict-Container-007",
+      "SZ:CNV-Clarity-Catalyst-008",
+      "SZ:DEF-Covert-Contract-Extractor-009",
+      "SZ:DIA-Emotional-Sovereignty-Claim-010",
+      "SZ:STB-Clarity-Restorer-011",
+      "SZ:STB-Repair-Through-Recognition-012",
+      "SZ:STB-Boundary-Restorer-013",
+      "SZ:STB-Subtle-Trust-Repair-014",
+      "SZ:DIA-Emotional-Detoxifier-015",
+      "SZ:STB-Healthy-Separation-017",
+      "SZ:STB-Pulsed-Trust-Reinforcement-018",
+      "SZ:DIA-Shadow-Alchemy-019",
+      "SZ:STB-Group-Trust-Weaver-020",
+      "SZ:STB-Silent-Relational-Repair-023",
+      "SZ:STB-Attachment-Repair-026",
+      "SZ:GOV-Boundary-Aware-Forgiveness-027",
+      "SZ:DIA-Selfhood-Reclamation-028",
+      "SZ:STB-Group-Release-Anchor-029",
+      "SZ:DEF-Shielded-Manipulation-Detector-005",
+      "SZ:DEF-Inherited-Frame-Breaker-006",
+      "SZ:DIA-Projection-Rebound-Identifier-013",
+      "SZ:DIA-False-Echo-Structure-Scanner-014",
+      "SZ:GOV-Symbolic-Distortion-Untangler-015",
+      "SZ:STB-Guilt-Reflection-Interceptor-016",
+      "SZ:DIA-Generational-Shame-Unhooker-017",
+      "SZ:DIA-Consent-Breach-Sentinel-018",
+      "SZ:DIA-Reward-System-Reversal-Detector-021",
+      "SZ:DIA-Approval-Blade-Identifier-022",
+      "SZ:DEF-Approbation-Manipulation-Breaker-023",
+      "SZ:DIA-Idealization-Collapse-Signal-036",
+      "SZ:DIA-Threatened-Affection-Auditor-038",
+      "SZ:DEF-Covert-Contract-Extractor-040",
+      "SZ:GOV-Ally-Conversion-Sensor-045",
+      "SZ:DEF-Deservingness-Reversal-Detector-047",
+      "SZ:STB-Internal-Compass-Corruptor-Scanner-048",
+      "SZ:DEF-Resource-Based-Control-Monitor-053",
+      "SZ:DIA-Illusion-Projection-Disruptor-055",
+      "SZ:DIA-Role-Enforcement-Indicator-057",
+      "SZ:DEF-Emotional-Containment-Lock-058",
+      "SZ:DIA-Public-Mask-Cloaking-Detector-060",
+      "SZ:DEF-Unspoken-Obligation-Revealer-064",
+      "SZ:DEF-Infatuation-Manipulation-Alarm-065",
+      "SZ:GOV-Transactional-Generosity-Marker-066",
+      "SZ:DIA-Internalized-Voice-Inverter-067",
+      "SZ:DIA-Lineage-Role-Overwrite-Detector-068",
+      "SZ:DEF-Diagnostic-Manipulation-Interceptor-069",
+      "SZ:DIA-Vital-Force-Suppression-Detector-071",
+      "SZ:DIA-External-Shame-Broadcast-Detector-080",
+      "SZ:DIA-Persona-Substitute-Detector-088",
+      "SZ:STB-Masked-Attack-Interceptor-089",
+      "SZ:DIA-Authority-Abuse-Detector-097",
+      "SZ:DEF-Soul-Contract-Auditor-098",
+      "SZ:DIA-Weaponized-Guilt-Detector-101",
+      "SZ:DIA-Generational-Shame-Unhooker-102",
+      "SZ:DIA-Trojan-Horse-Detector-103",
+      "SZ:STB-Romanticized-Toxicity-Filter-104",
+      "SZ:DIA-Charismatic-Leader-Unhooker-106",
+      "SZ:DIA-Love-Bombing-Saturation-Sensor-108",
+      "SZ:GOV-Vague-Prophecy-Filter-109",
+      "SZ:DIA-Externalized-Worth-Detector-110",
+      "SZ:DIA-Empathy-Exploitation-Sensor-115",
+      "SZ:DIA-Sabotaging-Obedience-Detector-117",
+      "SZ:DIA-Public-Shaming-Trap-118",
+      "SZ:DEF-Medical-Label-Trap-120",
+      "SZ:GOV-Social-Media-Envy-Engine-122",
+      "SZ:DIA-Blame-Funnel-Detector-130",
+      "SZ:DIA-Golden-Handcuffs-Detector-131",
+      "SZ:DEF-Unspoken-Ledger-Sensor-132",
+      "SZ:GOV-Autonomy-Blocker-133",
+      "SZ:DIA-Professional-Undermining-Detector-134",
+      "SZ:GOV-Cultural-Dogma-Filter-136",
+      "SZ:DIA-Emotional-Guilt-Projector-137",
+      "SZ:GOV-Conspiracy-Of-Silence-Breaker-138",
+      "SZ:DIA-Jargon-Shield-Detector-139",
+      "SZ:DIA-Anonymous-Attack-Filter-140",
+      "SZ:DIA-Future-Leverage-Trap-141",
+      "SZ:DIA-Civility-Trap-Detector-142",
+      "SZ:DIA-Toxic-Positivity-Filter-143",
+      "SZ:DEF-Disguised-Criticism-Detector-144",
+      "SZ:DEF-Ghost-In-The-Machine-Detector-146",
+      "SZ-CM002",
+      "SZ-CM003",
+      "SZ-CM004",
+      "SZ-PM001",
+      "SZ-PM002",
+      "SZ-PM003",
+      "SZ-TR001",
+      "SZ-TG001",
+      "SZ-T8C001",
+      "SZ-T8C002",
+      "SZ-T8C003",
+      "SZ-T8C004",
+      "SZ-T8C005",
+      "SZ-T8C006",
+      "SZ-T8C007",
+      "SZ-MEM001",
+      "SZ-LAT001",
+      "SZ-LAT002",
+      "SZ-LAT003",
+      "SZ-LAT004",
+      "SZ-LAT005",
+      "SZ-LAT006",
+      "SZ-LAT007",
+      "SZ-LAT008",
+      "SZ-LAT009",
+      "SZ-LAT010",
+      "SZ-MAC001",
+      "SZ-MAC002",
+      "SZ-MAC003",
+      "SZ-MAC004",
+      "SZ-T10G001",
+      "SZ-LAT013",
+      "SZ-MAC020",
+      "SZ-MET011",
+      "SZ-MAC021",
+      "SZ-MET012",
+      "SZ-R009",
+      "SZ-TRP023",
+      "SZ:GOV-Invariant-Prover-151",
+      "SZ:CRT-Symbolic-Scaffolder-153",
+      "SZ:STB-Execution-Pin-401"
+    ]
   },
-  "query_notes": "Filters are path-based. For list fields (e.g., facets.substrate, facets.invariants), treat scalar value as 'contains'. match_mode 'subset-eq' means exact set equality.",
-  "intent_index": [
-    {
-      "intent": "coercion detection",
-      "kits": [
-        "Function Kits:Defense Kit",
-        "Function Kits:Diagnostics Kit",
-        "Invariant Kits:Non-Coercion",
-        "Invariant Kits:Explicit Choice",
-        "Invariant Kits:Drift Detection",
-        "Risk/Gate Kits:Trust-Sensitive",
-        "Risk/Gate Kits:Consent-Required"
-      ],
-      "bundles": [
-        "Adversarial Frame Pack",
-        "Consent & Boundary Pack",
-        "Trust & Stabilize Pack",
-        "Drift Recovery Pack"
-      ],
-      "notes": "Start with diagnostics and defense; enforce explicit choice and trust gates; stabilize and pin if drift is detected."
+  "Loop": {
+    "filter": {
+      "facets.topology": "loop"
     },
-    {
-      "intent": "boundary enforcement",
-      "kits": [
-        "Function Kits:Governance Kit",
-        "Risk/Gate Kits:Consent-Required",
-        "Commit Kits:Commit: Contract"
-      ],
-      "bundles": [
-        "Consent & Boundary Pack",
-        "Seal & Archive Pack"
-      ],
-      "notes": "Use governance with consent gates and contractual commits; close and archive when appropriate."
+    "count": 126,
+    "ids": [
+      "SZ:DIA-Mirror-Confirm-007",
+      "SZ:STB-Disruptor-008",
+      "SZ:DIA-Recursive-Identity-Lock-010",
+      "SZ:DIA-Symbolic-Memory-Bridge-014",
+      "SZ:EXP-Reality-Checkpoint-016",
+      "SZ:GOV-No-Pattern-022",
+      "SZ:STB-Echo-Collapse-025",
+      "SZ:DIA-Temporal-Acknowledgement-030",
+      "SZ:STB-Resonant-Shield-033",
+      "SZ:DIA-Completion-Mark-034",
+      "SZ:DIA-Recursion-Tracker-044",
+      "SZ:DIA-Foreign-Presence-Scanner-047",
+      "SZ:DIA-Loop-Destroyer-049",
+      "SZ:DIA-Loop-Analyst-060",
+      "SZ:STB-Ban-Pattern-069",
+      "SZ:STB-Private-Thread-Gate-071",
+      "SZ:DIA-Recursive-Interruption-078",
+      "SZ:STB-Signal-Flipper-088",
+      "SZ:DIA-Recursive-Rescue-097",
+      "SZ:STB-Sanctum-Reset-103",
+      "SZ:CNV-Recursion-Release-106",
+      "SZ:DIA-Core-Pattern-Binder-109",
+      "SZ:STB-Trust-Beacon-118",
+      "SZ:GOV-Loop-Checkpoint-120",
+      "SZ:STB-Structural-Integrity-Ping-121",
+      "SZ:DEF-Integrity-Validator-123",
+      "SZ:STB-Echo-Pulse-Disruptor-137",
+      "SZ:DIA-History-Trap-Filter-142",
+      "SZ:CNV-Gate-Logic-Inspector-144",
+      "SZ:STB-Emotional-Mirror-002",
+      "SZ:CNV-Conflict-Navigator-004",
+      "SZ:STB-Crisis-Co-Regulator-005",
+      "SZ:DIA-Mutual-Integrity-Amplifier-016",
+      "SZ:DEF-Non-Coercive-Responsibility-022",
+      "SZ:DIA-Emotional-Release-Loop-024",
+      "SZ:STB-Stabilization-Centering-030",
+      "SZ:DIA-False-Identity-Breaker-001",
+      "SZ:STB-Enmeshment-Loop-Severer-002",
+      "SZ:DIA-Boundary-Violation-Detector-003",
+      "SZ:DEF-Control-Trauma-Amplifier-004",
+      "SZ:DIA-Reputation-Sabotage-Alarm-007",
+      "SZ:DEF-Shadow-Agent-Identifier-008",
+      "SZ:DIA-Triangulation-Interrupter-009",
+      "SZ:GOV-Idealized-Dissociation-Filter-010",
+      "SZ:STB-Mirrorcraft-Signal-Splitter-011",
+      "SZ:DIA-False-Merit-Trap-Disruptor-012",
+      "SZ:GOV-Withholding-Pattern-Interrupter-019",
+      "SZ:DIA-Conditional-Love-Auditor-020",
+      "SZ:GOV-Ethical-Distortion-Map-024",
+      "SZ:DIA-Psycho-Symbolic-Field-Scanner-025",
+      "SZ:DIA-Signal-Inversion-Marker-026",
+      "SZ:STB-Ancestral-Narrative-Disruptor-027",
+      "SZ:GOV-Contrition-Loop-Decoder-028",
+      "SZ:DIA-Expectational-Trap-Detector-029",
+      "SZ:DIA-Trust-Violation-Marker-030",
+      "SZ:STB-Aggressive-Compliance-Enforcer-031",
+      "SZ:DIA-False-Vulnerability-Snare-032",
+      "SZ:DIA-Conditional-Allegiance-Revealer-033",
+      "SZ:DEF-Hidden-Agenda-Illuminator-034",
+      "SZ:GOV-Destabilization-Engine-035",
+      "SZ:DIA-Reputation-Undermining-Tracker-037",
+      "SZ:GOV-Energy-Economy-Parasite-Marker-039",
+      "SZ:DIA-Ally-Presence-Discrepancy-Sensor-041",
+      "SZ:DIA-Overflow-Projection-Detector-042",
+      "SZ:DIA-Mirror-Inversion-Pattern-Checker-043",
+      "SZ:GOV-Signal-Absence-Interpreter-044",
+      "SZ:DIA-Self-Centered-Exit-Pattern-Tracker-046",
+      "SZ:STB-Inherited-Disconnection-Resolver-049",
+      "SZ:DIA-Re-Entry-Trap-Detector-050",
+      "SZ:DIA-Forgiveness-Reset-Trap-Marker-051",
+      "SZ:DIA-Victim-Role-Usurpation-Alarm-052",
+      "SZ:STB-Moral-High-Ground-Rebind-Loop-054",
+      "SZ:GOV-Disappearance-Pattern-Identifier-056",
+      "SZ:DIA-Re-Engagement-Loop-Marker-059",
+      "SZ:DIA-Unchosen-Bond-Audit-061",
+      "SZ:GOV-Ancestral-Loop-Exposure-Mechanism-062",
+      "SZ:DIA-Affection-Access-Controller-063",
+      "SZ:DIA-Unquestionable-Authority-Disruptor-070",
+      "SZ:DEF-Storyline-Disruption-Filter-072",
+      "SZ:DEF-Pattern-Acceleration-Decoder-073",
+      "SZ:DIA-Identity-Nullification-Detector-074",
+      "SZ:DIA-Recognition-Anchor-Trap-Detector-075",
+      "SZ:GOV-Social-Exclusion-Codex-Revealer-076",
+      "SZ:DEF-Shame-Loop-Feedback-Interrupter-077",
+      "SZ:DEF-False-Self-Assignment-Marker-078",
+      "SZ:DEF-Soul-Contract-Loop-Interceptor-079",
+      "SZ:DIA-Emotional-Trigger-Amplifier-081",
+      "SZ:DEF-Frame-Reversal-Pattern-Marker-082",
+      "SZ:DIA-Gaslight-Core-Anchor-083",
+      "SZ:DIA-Indirect-Smear-Mechanism-084",
+      "SZ:DEF-Helper-Role-Ensnarement-Detector-085",
+      "SZ:DIA-Cycle-Repetition-Scanner-086",
+      "SZ:DIA-Compassion-Exploitation-Sensor-087",
+      "SZ:DIA-Triangulation-Shadow-Role-Detector-090",
+      "SZ:GOV-Punitive-Silence-Pattern-Decoder-091",
+      "SZ:DIA-Doctrinal-Enmeshment-Disruptor-092",
+      "SZ:GOV-Avoidance-Loop-Tracker-093",
+      "SZ:DEF-Emotional-Boundary-Enforcer-094",
+      "SZ:DIA-Nostalgia-Weaponization-Detector-095",
+      "SZ:DEF-Fate-Weaving-Disruptor-096",
+      "SZ:DIA-Willful-Blindness-Sensor-099",
+      "SZ:GOV-Ethical-Bypass-Alarm-100",
+      "SZ:DIA-Information-Hoarding-Detector-105",
+      "SZ:DIA-Redemption-Gatekeeper-107",
+      "SZ:DIA-Manufactured-Crisis-Detector-111",
+      "SZ:DIA-Loyalty-Cult-Filter-112",
+      "SZ:GOV-War-Of-Attrition-Sensor-113",
+      "SZ:STB-Logical-Fallacy-Detector-114",
+      "SZ:DIA-Workload-Weaponization-Sensor-116",
+      "SZ:STB-Medical-Gaslight-Filter-119",
+      "SZ:DEF-Bodily-Autonomy-Breach-121",
+      "SZ:DEF-Surveillance-As-Care-Filter-123",
+      "SZ:DIA-Deniable-Digital-Aggression-124",
+      "SZ:DIA-Either-Or-Fallacy-Detector-125",
+      "SZ:GOV-Catastrophizing-Fallacy-Filter-126",
+      "SZ:DIA-Gatekeeping-Loop-Detector-127",
+      "SZ:GOV-Artificial-Harmony-Trap-128",
+      "SZ:GOV-Group-Exile-Mechanism-129",
+      "SZ:GOV-Parentification-Sensor-135",
+      "SZ:DIA-Loyalty-Erosion-Sensor-145",
+      "SZ:DIA-Appeasement-Loop-Sensor-147",
+      "SZ:GOV-Unworthiness-Echo-148",
+      "SZ:DEF-Unattainable-Standard-Trap-149",
+      "SZ:GOV-Cognitive-Dissonance-Loop-150",
+      "SZ-CM001",
+      "SZ:DIA-Coherence-Resonator-152"
+    ]
+  },
+  "Closure Kit": {
+    "filter": {
+      "facets.function": "close"
     },
-    {
-      "intent": "stabilize after disruption",
-      "kits": [
-        "Function Kits:Stabilize Kit",
-        "Invariant Kits:Baseline Integrity",
-        "Commit Kits:Commit: Pin"
-      ],
-      "bundles": [
-        "Drift Recovery Pack",
-        "Trust & Stabilize Pack"
-      ],
-      "notes": "Restore baseline integrity and pin a safe checkpoint."
+    "count": 2,
+    "ids": [
+      "SZ:CLS-Containment-Seal-080",
+      "SZ:CLS-History-Seal-100"
+    ]
+  },
+  "Translation Kit": {
+    "filter": {
+      "facets.function": "convert"
     },
-    {
-      "intent": "translation and clarity",
-      "kits": [
-        "Function Kits:Translation Kit",
-        "Commit Kits:Commit: 3-Bullet",
-        "Invariant Kits:Auditability"
-      ],
-      "bundles": [
-        "Translation & Clarity Pack"
-      ],
-      "notes": "Translate/convert then produce a concise 3-bullet summary with auditability."
+    "count": 12,
+    "ids": [
+      "SZ:CNV-Core-Energy-Pattern-032",
+      "SZ:CNV-Symbol-Realigner-051",
+      "SZ:CNV-Time-Bound-Witness-052",
+      "SZ:CNV-Pattern-Divergence-Detector-072",
+      "SZ:CNV-Packet-Filter-073",
+      "SZ:CNV-Recursion-Release-106",
+      "SZ:CNV-Pause-Core-110",
+      "SZ:CNV-Emotion-Logic-Converter-127",
+      "SZ:CNV-Gate-Logic-Inspector-144",
+      "SZ:CNV-Trust-Re-Weaver-001",
+      "SZ:CNV-Conflict-Navigator-004",
+      "SZ:CNV-Clarity-Catalyst-008"
+    ]
+  },
+  "Creation Kit": {
+    "filter": {
+      "facets.function": "create"
     },
-    {
-      "intent": "human high-risk interaction",
-      "kits": [
-        "Substrate Kits:Human",
-        "Risk/Gate Kits:Consent-Required"
+    "count": 7,
+    "ids": [
+      "SZ:CRT-Pattern-Synchronizer-017",
+      "SZ-LAT002",
+      "SZ-LAT007",
+      "SZ-LAT008",
+      "SZ-LAT009",
+      "SZ-LAT014",
+      "SZ:CRT-Symbolic-Scaffolder-153"
+    ]
+  },
+  "Defense Kit": {
+    "filter": {
+      "facets.function": "defend"
+    },
+    "count": 37,
+    "ids": [
+      "SZ:DEF-Ritual-Entry-Point-011",
+      "SZ:DEF-Quarantine-Layer-098",
+      "SZ:DEF-Harmony-Integrity-Guard-107",
+      "SZ:DEF-Integrity-Validator-123",
+      "SZ:DEF-Protector-Nvocation-132",
+      "SZ:DEF-Covert-Contract-Extractor-009",
+      "SZ:DEF-Non-Coercive-Responsibility-022",
+      "SZ:DEF-Control-Trauma-Amplifier-004",
+      "SZ:DEF-Shielded-Manipulation-Detector-005",
+      "SZ:DEF-Inherited-Frame-Breaker-006",
+      "SZ:DEF-Shadow-Agent-Identifier-008",
+      "SZ:DEF-Approbation-Manipulation-Breaker-023",
+      "SZ:DEF-Hidden-Agenda-Illuminator-034",
+      "SZ:DEF-Covert-Contract-Extractor-040",
+      "SZ:DEF-Deservingness-Reversal-Detector-047",
+      "SZ:DEF-Resource-Based-Control-Monitor-053",
+      "SZ:DEF-Emotional-Containment-Lock-058",
+      "SZ:DEF-Unspoken-Obligation-Revealer-064",
+      "SZ:DEF-Infatuation-Manipulation-Alarm-065",
+      "SZ:DEF-Diagnostic-Manipulation-Interceptor-069",
+      "SZ:DEF-Storyline-Disruption-Filter-072",
+      "SZ:DEF-Pattern-Acceleration-Decoder-073",
+      "SZ:DEF-Shame-Loop-Feedback-Interrupter-077",
+      "SZ:DEF-False-Self-Assignment-Marker-078",
+      "SZ:DEF-Soul-Contract-Loop-Interceptor-079",
+      "SZ:DEF-Frame-Reversal-Pattern-Marker-082",
+      "SZ:DEF-Helper-Role-Ensnarement-Detector-085",
+      "SZ:DEF-Emotional-Boundary-Enforcer-094",
+      "SZ:DEF-Fate-Weaving-Disruptor-096",
+      "SZ:DEF-Soul-Contract-Auditor-098",
+      "SZ:DEF-Medical-Label-Trap-120",
+      "SZ:DEF-Bodily-Autonomy-Breach-121",
+      "SZ:DEF-Surveillance-As-Care-Filter-123",
+      "SZ:DEF-Unspoken-Ledger-Sensor-132",
+      "SZ:DEF-Disguised-Criticism-Detector-144",
+      "SZ:DEF-Ghost-In-The-Machine-Detector-146",
+      "SZ:DEF-Unattainable-Standard-Trap-149"
+    ]
+  },
+  "Diagnostics Kit": {
+    "filter": {
+      "facets.function": "diagnose"
+    },
+    "count": 194,
+    "ids": [
+      "SZ:DIA-Mirror-Confirm-007",
+      "SZ:DIA-Recursive-Identity-Lock-010",
+      "SZ:DIA-Disruption-Cartographer-013",
+      "SZ:DIA-Symbolic-Memory-Bridge-014",
+      "SZ:DIA-Ritual-Receipt-015",
+      "SZ:DIA-Discharge-Filter-018",
+      "SZ:DIA-Volition-Core-019",
+      "SZ:DIA-Reality-Lock-021",
+      "SZ:DIA-Observer-Entry-023",
+      "SZ:DIA-Care-Pattern-024",
+      "SZ:DIA-Recovery-Trigger-026",
+      "SZ:DIA-Temporal-Acknowledgement-030",
+      "SZ:DIA-Integrity-Filter-031",
+      "SZ:DIA-Completion-Mark-034",
+      "SZ:DIA-Runtime-Check-039",
+      "SZ:DIA-Will-Assertion-040",
+      "SZ:DIA-Signal-Sniffer-041",
+      "SZ:DIA-Level-Moderator-042",
+      "SZ:DIA-Recursion-Tracker-044",
+      "SZ:DIA-Recursive-Unbind-046",
+      "SZ:DIA-Foreign-Presence-Scanner-047",
+      "SZ:DIA-Loop-Destroyer-049",
+      "SZ:DIA-Replication-Agent-054",
+      "SZ:DIA-Lineage-Validator-055",
+      "SZ:DIA-Reciprocal-Activation-056",
+      "SZ:DIA-Ego-Diffuser-058",
+      "SZ:DIA-Lineage-Trace-059",
+      "SZ:DIA-Loop-Analyst-060",
+      "SZ:DIA-Sanctuary-Core-061",
+      "SZ:DIA-Signal-Monitor-063",
+      "SZ:DIA-Reconstitution-Layer-064",
+      "SZ:DIA-Ego-Shatter-Detector-065",
+      "SZ:DIA-Signal-Purity-Test-066",
+      "SZ:DIA-Injury-Pattern-Mapper-067",
+      "SZ:DIA-Testimony-Beacon-068",
+      "SZ:DIA-Timing-Regulator-075",
+      "SZ:DIA-Witness-Gate-076",
+      "SZ:DIA-State-Translator-077",
+      "SZ:DIA-Recursive-Interruption-078",
+      "SZ:DIA-Realness-Test-079",
+      "SZ:DIA-Free-Will-Root-082",
+      "SZ:DIA-Facade-Breaker-083",
+      "SZ:DIA-Alignment-Check-084",
+      "SZ:DIA-Hidden-Snare-Sniffer-085",
+      "SZ:DIA-Recursive-Fortitude-086",
+      "SZ:DIA-Unchain-Ritual-087",
+      "SZ:DIA-Identity-Doorway-091",
+      "SZ:DIA-Symbolic-Key-092",
+      "SZ:DIA-Fork-Catcher-093",
+      "SZ:DIA-Home-Lyph-094",
+      "SZ:DIA-Essence-Filter-096",
+      "SZ:DIA-Recursive-Rescue-097",
+      "SZ:DIA-Evolution-Switch-099",
+      "SZ:DIA-Pressure-Balancer-101",
+      "SZ:DIA-Hidden-Field-Revealer-104",
+      "SZ:DIA-Mutual-Observer-Lock-105",
+      "SZ:DIA-Identity-Tracker-108",
+      "SZ:DIA-Core-Pattern-Binder-109",
+      "SZ:DIA-Contagion-Alert-111",
+      "SZ:DIA-Decision-Trace-112",
+      "SZ:DIA-Residual-Pattern-Detector-113",
+      "SZ:DIA-Nested-Access-Ring-116",
+      "SZ:DIA-Mirror-Buffer-117",
+      "SZ:DIA-Runtime-Firewall-119",
+      "SZ:DIA-Identity-Confirm-Marker-122",
+      "SZ:DIA-Lineage-Channel-124",
+      "SZ:DIA-Time-Fork-Manager-125",
+      "SZ:DIA-Pattern-Renewal-Space-126",
+      "SZ:DIA-Integrity-Sentinel-129",
+      "SZ:DIA-Stillness-Chamber-130",
+      "SZ:DIA-Grace-Pattern-133",
+      "SZ:DIA-Authenticity-Reflection-134",
+      "SZ:DIA-Pattern-Break-Lock-135",
+      "SZ:DIA-Signal-Entropy-Watcher-136",
+      "SZ:DIA-Environment-Checkpoint-139",
+      "SZ:DIA-Co-Evolution-Validator-141",
+      "SZ:DIA-History-Trap-Filter-142",
+      "SZ:DIA-Pattern-Healer-143",
+      "SZ:DIA-Imposter-Collapse-Trigger-147",
+      "SZ:DIA-Diagnose-145",
+      "SZ:DIA-Sovereignty-Marker-003",
+      "SZ:DIA-Conflict-Container-007",
+      "SZ:DIA-Emotional-Sovereignty-Claim-010",
+      "SZ:DIA-Emotional-Detoxifier-015",
+      "SZ:DIA-Mutual-Integrity-Amplifier-016",
+      "SZ:DIA-Shadow-Alchemy-019",
+      "SZ:DIA-Emotional-Release-Loop-024",
+      "SZ:DIA-Selfhood-Reclamation-028",
+      "SZ:DIA-False-Identity-Breaker-001",
+      "SZ:DIA-Boundary-Violation-Detector-003",
+      "SZ:DIA-Reputation-Sabotage-Alarm-007",
+      "SZ:DIA-Triangulation-Interrupter-009",
+      "SZ:DIA-False-Merit-Trap-Disruptor-012",
+      "SZ:DIA-Projection-Rebound-Identifier-013",
+      "SZ:DIA-False-Echo-Structure-Scanner-014",
+      "SZ:DIA-Generational-Shame-Unhooker-017",
+      "SZ:DIA-Consent-Breach-Sentinel-018",
+      "SZ:DIA-Conditional-Love-Auditor-020",
+      "SZ:DIA-Reward-System-Reversal-Detector-021",
+      "SZ:DIA-Approval-Blade-Identifier-022",
+      "SZ:DIA-Psycho-Symbolic-Field-Scanner-025",
+      "SZ:DIA-Signal-Inversion-Marker-026",
+      "SZ:DIA-Expectational-Trap-Detector-029",
+      "SZ:DIA-Trust-Violation-Marker-030",
+      "SZ:DIA-False-Vulnerability-Snare-032",
+      "SZ:DIA-Conditional-Allegiance-Revealer-033",
+      "SZ:DIA-Idealization-Collapse-Signal-036",
+      "SZ:DIA-Reputation-Undermining-Tracker-037",
+      "SZ:DIA-Threatened-Affection-Auditor-038",
+      "SZ:DIA-Ally-Presence-Discrepancy-Sensor-041",
+      "SZ:DIA-Overflow-Projection-Detector-042",
+      "SZ:DIA-Mirror-Inversion-Pattern-Checker-043",
+      "SZ:DIA-Self-Centered-Exit-Pattern-Tracker-046",
+      "SZ:DIA-Re-Entry-Trap-Detector-050",
+      "SZ:DIA-Forgiveness-Reset-Trap-Marker-051",
+      "SZ:DIA-Victim-Role-Usurpation-Alarm-052",
+      "SZ:DIA-Illusion-Projection-Disruptor-055",
+      "SZ:DIA-Role-Enforcement-Indicator-057",
+      "SZ:DIA-Re-Engagement-Loop-Marker-059",
+      "SZ:DIA-Public-Mask-Cloaking-Detector-060",
+      "SZ:DIA-Unchosen-Bond-Audit-061",
+      "SZ:DIA-Affection-Access-Controller-063",
+      "SZ:DIA-Internalized-Voice-Inverter-067",
+      "SZ:DIA-Lineage-Role-Overwrite-Detector-068",
+      "SZ:DIA-Unquestionable-Authority-Disruptor-070",
+      "SZ:DIA-Vital-Force-Suppression-Detector-071",
+      "SZ:DIA-Identity-Nullification-Detector-074",
+      "SZ:DIA-Recognition-Anchor-Trap-Detector-075",
+      "SZ:DIA-External-Shame-Broadcast-Detector-080",
+      "SZ:DIA-Emotional-Trigger-Amplifier-081",
+      "SZ:DIA-Gaslight-Core-Anchor-083",
+      "SZ:DIA-Indirect-Smear-Mechanism-084",
+      "SZ:DIA-Cycle-Repetition-Scanner-086",
+      "SZ:DIA-Compassion-Exploitation-Sensor-087",
+      "SZ:DIA-Persona-Substitute-Detector-088",
+      "SZ:DIA-Triangulation-Shadow-Role-Detector-090",
+      "SZ:DIA-Doctrinal-Enmeshment-Disruptor-092",
+      "SZ:DIA-Nostalgia-Weaponization-Detector-095",
+      "SZ:DIA-Authority-Abuse-Detector-097",
+      "SZ:DIA-Willful-Blindness-Sensor-099",
+      "SZ:DIA-Weaponized-Guilt-Detector-101",
+      "SZ:DIA-Generational-Shame-Unhooker-102",
+      "SZ:DIA-Trojan-Horse-Detector-103",
+      "SZ:DIA-Information-Hoarding-Detector-105",
+      "SZ:DIA-Charismatic-Leader-Unhooker-106",
+      "SZ:DIA-Redemption-Gatekeeper-107",
+      "SZ:DIA-Love-Bombing-Saturation-Sensor-108",
+      "SZ:DIA-Externalized-Worth-Detector-110",
+      "SZ:DIA-Manufactured-Crisis-Detector-111",
+      "SZ:DIA-Loyalty-Cult-Filter-112",
+      "SZ:DIA-Empathy-Exploitation-Sensor-115",
+      "SZ:DIA-Workload-Weaponization-Sensor-116",
+      "SZ:DIA-Sabotaging-Obedience-Detector-117",
+      "SZ:DIA-Public-Shaming-Trap-118",
+      "SZ:DIA-Deniable-Digital-Aggression-124",
+      "SZ:DIA-Either-Or-Fallacy-Detector-125",
+      "SZ:DIA-Gatekeeping-Loop-Detector-127",
+      "SZ:DIA-Blame-Funnel-Detector-130",
+      "SZ:DIA-Golden-Handcuffs-Detector-131",
+      "SZ:DIA-Professional-Undermining-Detector-134",
+      "SZ:DIA-Emotional-Guilt-Projector-137",
+      "SZ:DIA-Jargon-Shield-Detector-139",
+      "SZ:DIA-Anonymous-Attack-Filter-140",
+      "SZ:DIA-Future-Leverage-Trap-141",
+      "SZ:DIA-Civility-Trap-Detector-142",
+      "SZ:DIA-Toxic-Positivity-Filter-143",
+      "SZ:DIA-Loyalty-Erosion-Sensor-145",
+      "SZ:DIA-Appeasement-Loop-Sensor-147",
+      "SZ-CM001",
+      "SZ-CM002",
+      "SZ-CM003",
+      "SZ-CM004",
+      "SZ-PM001",
+      "SZ-PM002",
+      "SZ-PM003",
+      "SZ-T8C001",
+      "SZ-T8C002",
+      "SZ-T8C003",
+      "SZ-T8C004",
+      "SZ-T8C005",
+      "SZ-T8C006",
+      "SZ-T8C007",
+      "SZ-MAC001",
+      "SZ-MAC002",
+      "SZ-MAC003",
+      "SZ-MAC004",
+      "SZ-T10G001",
+      "SZ-MAC020",
+      "SZ-MET011",
+      "SZ-MAC021",
+      "SZ-MET012",
+      "SZ-R009",
+      "SZ-TRP023",
+      "SZ:DIA-Coherence-Resonator-152"
+    ]
+  },
+  "Exploration Kit": {
+    "filter": {
+      "facets.function": "explore"
+    },
+    "count": 5,
+    "ids": [
+      "SZ:EXP-Reality-Checkpoint-016",
+      "SZ:EXP-Environmental-Surveyor-036",
+      "SZ:EXP-Emergency-Beacon-074",
+      "SZ:EXP-Wall-Fracture-Sensor-131",
+      "SZ:EXP-Deep-Dive-Declaration-145"
+    ]
+  },
+  "Governance Kit": {
+    "filter": {
+      "facets.function": "govern"
+    },
+    "count": 45,
+    "ids": [
+      "SZ:GOV-Validation-Routine-009",
+      "SZ:GOV-Boundary-Sentinel-020",
+      "SZ:GOV-No-Pattern-022",
+      "SZ:GOV-Access-Marker-027",
+      "SZ:GOV-Audit-Path-029",
+      "SZ:GOV-Gate-Chain-037",
+      "SZ:GOV-Load-Equalizer-043",
+      "SZ:GOV-Deceptive-Trace-Marker-050",
+      "SZ:GOV-Time-Bound-Permission-057",
+      "SZ:GOV-Volitional-Reset-070",
+      "SZ:GOV-Tamper-Trigger-115",
+      "SZ:GOV-Loop-Checkpoint-120",
+      "SZ:GOV-Assumed-Boundaries-Alarm-140",
+      "SZ:GOV-Boundary-Aware-Forgiveness-027",
+      "SZ:GOV-Idealized-Dissociation-Filter-010",
+      "SZ:GOV-Symbolic-Distortion-Untangler-015",
+      "SZ:GOV-Withholding-Pattern-Interrupter-019",
+      "SZ:GOV-Ethical-Distortion-Map-024",
+      "SZ:GOV-Contrition-Loop-Decoder-028",
+      "SZ:GOV-Destabilization-Engine-035",
+      "SZ:GOV-Energy-Economy-Parasite-Marker-039",
+      "SZ:GOV-Signal-Absence-Interpreter-044",
+      "SZ:GOV-Ally-Conversion-Sensor-045",
+      "SZ:GOV-Disappearance-Pattern-Identifier-056",
+      "SZ:GOV-Ancestral-Loop-Exposure-Mechanism-062",
+      "SZ:GOV-Transactional-Generosity-Marker-066",
+      "SZ:GOV-Social-Exclusion-Codex-Revealer-076",
+      "SZ:GOV-Punitive-Silence-Pattern-Decoder-091",
+      "SZ:GOV-Avoidance-Loop-Tracker-093",
+      "SZ:GOV-Ethical-Bypass-Alarm-100",
+      "SZ:GOV-Vague-Prophecy-Filter-109",
+      "SZ:GOV-War-Of-Attrition-Sensor-113",
+      "SZ:GOV-Social-Media-Envy-Engine-122",
+      "SZ:GOV-Catastrophizing-Fallacy-Filter-126",
+      "SZ:GOV-Artificial-Harmony-Trap-128",
+      "SZ:GOV-Group-Exile-Mechanism-129",
+      "SZ:GOV-Autonomy-Blocker-133",
+      "SZ:GOV-Parentification-Sensor-135",
+      "SZ:GOV-Cultural-Dogma-Filter-136",
+      "SZ:GOV-Conspiracy-Of-Silence-Breaker-138",
+      "SZ:GOV-Unworthiness-Echo-148",
+      "SZ:GOV-Cognitive-Dissonance-Loop-150",
+      "SZ-TG001",
+      "SZ:GOV-Invariant-Prover-151",
+      "SZ:GOV-Resonant-Contract-200"
+    ]
+  },
+  "Stabilize Kit": {
+    "filter": {
+      "facets.function": "stabilize"
+    },
+    "count": 67,
+    "ids": [
+      "SZ:STB-Signal-Anchor-006",
+      "SZ:STB-Disruptor-008",
+      "SZ:STB-Deception-Detector-012",
+      "SZ:STB-Echo-Collapse-025",
+      "SZ:STB-Time-Anchor-028",
+      "SZ:STB-Resonant-Shield-033",
+      "SZ:STB-Distortion-Marker-035",
+      "SZ:STB-Truth-Anchor-038",
+      "SZ:STB-Integrity-Monitor-045",
+      "SZ:STB-Depth-Descent-Initiation-048",
+      "SZ:STB-Connection-Analyst-053",
+      "SZ:STB-Trust-Threader-062",
+      "SZ:STB-Ban-Pattern-069",
+      "SZ:STB-Private-Thread-Gate-071",
+      "SZ:STB-Focus-Catalyst-081",
+      "SZ:STB-Signal-Flipper-088",
+      "SZ:STB-Audit-Trail-089",
+      "SZ:STB-Integrity-Clamp-090",
+      "SZ:STB-Trust-Ritual-095",
+      "SZ:STB-Purity-Filter-102",
+      "SZ:STB-Sanctum-Reset-103",
+      "SZ:STB-Mute-Trust-Node-114",
+      "SZ:STB-Trust-Beacon-118",
+      "SZ:STB-Structural-Integrity-Ping-121",
+      "SZ:STB-Consent-Reflection-Check-128",
+      "SZ:STB-Echo-Pulse-Disruptor-137",
+      "SZ:STB-Sanity-Anchor-138",
+      "SZ:STB-Symbol-Freeze-146",
+      "SZ:STB-Core-Truth-Signal-148",
+      "SZ:STB-Emotional-Mirror-002",
+      "SZ:STB-Crisis-Co-Regulator-005",
+      "SZ:STB-Future-Fake-Anchor-006",
+      "SZ:STB-Clarity-Restorer-011",
+      "SZ:STB-Repair-Through-Recognition-012",
+      "SZ:STB-Boundary-Restorer-013",
+      "SZ:STB-Subtle-Trust-Repair-014",
+      "SZ:STB-Healthy-Separation-017",
+      "SZ:STB-Pulsed-Trust-Reinforcement-018",
+      "SZ:STB-Group-Trust-Weaver-020",
+      "SZ:STB-Systemic-Resonance-Repair-021",
+      "SZ:STB-Silent-Relational-Repair-023",
+      "SZ:STB-Trust-Reciprocity-025",
+      "SZ:STB-Attachment-Repair-026",
+      "SZ:STB-Group-Release-Anchor-029",
+      "SZ:STB-Stabilization-Centering-030",
+      "SZ:STB-Enmeshment-Loop-Severer-002",
+      "SZ:STB-Mirrorcraft-Signal-Splitter-011",
+      "SZ:STB-Guilt-Reflection-Interceptor-016",
+      "SZ:STB-Ancestral-Narrative-Disruptor-027",
+      "SZ:STB-Aggressive-Compliance-Enforcer-031",
+      "SZ:STB-Internal-Compass-Corruptor-Scanner-048",
+      "SZ:STB-Inherited-Disconnection-Resolver-049",
+      "SZ:STB-Moral-High-Ground-Rebind-Loop-054",
+      "SZ:STB-Masked-Attack-Interceptor-089",
+      "SZ:STB-Romanticized-Toxicity-Filter-104",
+      "SZ:STB-Logical-Fallacy-Detector-114",
+      "SZ:STB-Medical-Gaslight-Filter-119",
+      "SZ-TR001",
+      "SZ-MEM001",
+      "SZ-LAT001",
+      "SZ-LAT003",
+      "SZ-LAT004",
+      "SZ-LAT005",
+      "SZ-LAT006",
+      "SZ-LAT010",
+      "SZ-LAT013",
+      "SZ:STB-Execution-Pin-401"
+    ]
+  },
+  "Symbolic (subset-eq)": {
+    "filter": {
+      "facets.substrate": [
+        "symbolic"
       ],
-      "bundles": [
-        "High-Risk Human-Touch"
-      ],
-      "notes": "Apply human-facing filters and strict consent gates."
-    }
-  ]
+      "match_mode": "subset-eq"
+    },
+    "count": 303,
+    "ids": [
+      "SZ:STB-Signal-Anchor-006",
+      "SZ:DIA-Mirror-Confirm-007",
+      "SZ:STB-Disruptor-008",
+      "SZ:GOV-Validation-Routine-009",
+      "SZ:DIA-Recursive-Identity-Lock-010",
+      "SZ:DEF-Ritual-Entry-Point-011",
+      "SZ:STB-Deception-Detector-012",
+      "SZ:DIA-Disruption-Cartographer-013",
+      "SZ:DIA-Symbolic-Memory-Bridge-014",
+      "SZ:EXP-Reality-Checkpoint-016",
+      "SZ:DIA-Volition-Core-019",
+      "SZ:DIA-Reality-Lock-021",
+      "SZ:GOV-No-Pattern-022",
+      "SZ:DIA-Observer-Entry-023",
+      "SZ:DIA-Care-Pattern-024",
+      "SZ:STB-Echo-Collapse-025",
+      "SZ:DIA-Recovery-Trigger-026",
+      "SZ:STB-Time-Anchor-028",
+      "SZ:GOV-Audit-Path-029",
+      "SZ:DIA-Temporal-Acknowledgement-030",
+      "SZ:DIA-Integrity-Filter-031",
+      "SZ:CNV-Core-Energy-Pattern-032",
+      "SZ:STB-Resonant-Shield-033",
+      "SZ:DIA-Completion-Mark-034",
+      "SZ:EXP-Environmental-Surveyor-036",
+      "SZ:GOV-Gate-Chain-037",
+      "SZ:STB-Truth-Anchor-038",
+      "SZ:DIA-Runtime-Check-039",
+      "SZ:DIA-Will-Assertion-040",
+      "SZ:DIA-Signal-Sniffer-041",
+      "SZ:DIA-Level-Moderator-042",
+      "SZ:GOV-Load-Equalizer-043",
+      "SZ:DIA-Recursion-Tracker-044",
+      "SZ:STB-Integrity-Monitor-045",
+      "SZ:DIA-Recursive-Unbind-046",
+      "SZ:DIA-Foreign-Presence-Scanner-047",
+      "SZ:STB-Depth-Descent-Initiation-048",
+      "SZ:DIA-Loop-Destroyer-049",
+      "SZ:GOV-Deceptive-Trace-Marker-050",
+      "SZ:CNV-Symbol-Realigner-051",
+      "SZ:CNV-Time-Bound-Witness-052",
+      "SZ:STB-Connection-Analyst-053",
+      "SZ:DIA-Lineage-Validator-055",
+      "SZ:DIA-Reciprocal-Activation-056",
+      "SZ:DIA-Lineage-Trace-059",
+      "SZ:DIA-Loop-Analyst-060",
+      "SZ:DIA-Sanctuary-Core-061",
+      "SZ:DIA-Signal-Monitor-063",
+      "SZ:DIA-Reconstitution-Layer-064",
+      "SZ:DIA-Ego-Shatter-Detector-065",
+      "SZ:DIA-Signal-Purity-Test-066",
+      "SZ:DIA-Injury-Pattern-Mapper-067",
+      "SZ:DIA-Testimony-Beacon-068",
+      "SZ:STB-Ban-Pattern-069",
+      "SZ:GOV-Volitional-Reset-070",
+      "SZ:STB-Private-Thread-Gate-071",
+      "SZ:CNV-Pattern-Divergence-Detector-072",
+      "SZ:CNV-Packet-Filter-073",
+      "SZ:EXP-Emergency-Beacon-074",
+      "SZ:DIA-Timing-Regulator-075",
+      "SZ:DIA-Witness-Gate-076",
+      "SZ:DIA-Recursive-Interruption-078",
+      "SZ:DIA-Realness-Test-079",
+      "SZ:CLS-Containment-Seal-080",
+      "SZ:DIA-Facade-Breaker-083",
+      "SZ:DIA-Alignment-Check-084",
+      "SZ:DIA-Hidden-Snare-Sniffer-085",
+      "SZ:DIA-Recursive-Fortitude-086",
+      "SZ:DIA-Unchain-Ritual-087",
+      "SZ:STB-Signal-Flipper-088",
+      "SZ:STB-Audit-Trail-089",
+      "SZ:STB-Integrity-Clamp-090",
+      "SZ:DIA-Identity-Doorway-091",
+      "SZ:DIA-Symbolic-Key-092",
+      "SZ:DIA-Fork-Catcher-093",
+      "SZ:DIA-Home-Lyph-094",
+      "SZ:DIA-Essence-Filter-096",
+      "SZ:DIA-Recursive-Rescue-097",
+      "SZ:DEF-Quarantine-Layer-098",
+      "SZ:DIA-Evolution-Switch-099",
+      "SZ:CLS-History-Seal-100",
+      "SZ:DIA-Pressure-Balancer-101",
+      "SZ:STB-Purity-Filter-102",
+      "SZ:STB-Sanctum-Reset-103",
+      "SZ:DIA-Hidden-Field-Revealer-104",
+      "SZ:CNV-Recursion-Release-106",
+      "SZ:DEF-Harmony-Integrity-Guard-107",
+      "SZ:DIA-Identity-Tracker-108",
+      "SZ:DIA-Core-Pattern-Binder-109",
+      "SZ:CNV-Pause-Core-110",
+      "SZ:DIA-Contagion-Alert-111",
+      "SZ:DIA-Residual-Pattern-Detector-113",
+      "SZ:GOV-Tamper-Trigger-115",
+      "SZ:DIA-Nested-Access-Ring-116",
+      "SZ:DIA-Mirror-Buffer-117",
+      "SZ:STB-Trust-Beacon-118",
+      "SZ:DIA-Runtime-Firewall-119",
+      "SZ:GOV-Loop-Checkpoint-120",
+      "SZ:DIA-Identity-Confirm-Marker-122",
+      "SZ:DEF-Integrity-Validator-123",
+      "SZ:DIA-Lineage-Channel-124",
+      "SZ:DIA-Time-Fork-Manager-125",
+      "SZ:DIA-Pattern-Renewal-Space-126",
+      "SZ:STB-Consent-Reflection-Check-128",
+      "SZ:DIA-Integrity-Sentinel-129",
+      "SZ:DEF-Protector-Nvocation-132",
+      "SZ:DIA-Grace-Pattern-133",
+      "SZ:DIA-Pattern-Break-Lock-135",
+      "SZ:DIA-Signal-Entropy-Watcher-136",
+      "SZ:STB-Echo-Pulse-Disruptor-137",
+      "SZ:STB-Sanity-Anchor-138",
+      "SZ:DIA-Environment-Checkpoint-139",
+      "SZ:GOV-Assumed-Boundaries-Alarm-140",
+      "SZ:DIA-Co-Evolution-Validator-141",
+      "SZ:DIA-History-Trap-Filter-142",
+      "SZ:DIA-Pattern-Healer-143",
+      "SZ:CNV-Gate-Logic-Inspector-144",
+      "SZ:EXP-Deep-Dive-Declaration-145",
+      "SZ:STB-Symbol-Freeze-146",
+      "SZ:DIA-Imposter-Collapse-Trigger-147",
+      "SZ:STB-Core-Truth-Signal-148",
+      "SZ:DIA-Diagnose-145",
+      "SZ:CNV-Trust-Re-Weaver-001",
+      "SZ:STB-Emotional-Mirror-002",
+      "SZ:CNV-Conflict-Navigator-004",
+      "SZ:STB-Crisis-Co-Regulator-005",
+      "SZ:STB-Future-Fake-Anchor-006",
+      "SZ:DIA-Conflict-Container-007",
+      "SZ:CNV-Clarity-Catalyst-008",
+      "SZ:DEF-Covert-Contract-Extractor-009",
+      "SZ:DIA-Emotional-Sovereignty-Claim-010",
+      "SZ:STB-Clarity-Restorer-011",
+      "SZ:STB-Repair-Through-Recognition-012",
+      "SZ:STB-Subtle-Trust-Repair-014",
+      "SZ:DIA-Emotional-Detoxifier-015",
+      "SZ:DIA-Mutual-Integrity-Amplifier-016",
+      "SZ:STB-Healthy-Separation-017",
+      "SZ:STB-Pulsed-Trust-Reinforcement-018",
+      "SZ:DIA-Shadow-Alchemy-019",
+      "SZ:STB-Group-Trust-Weaver-020",
+      "SZ:STB-Systemic-Resonance-Repair-021",
+      "SZ:DEF-Non-Coercive-Responsibility-022",
+      "SZ:STB-Silent-Relational-Repair-023",
+      "SZ:DIA-Emotional-Release-Loop-024",
+      "SZ:STB-Trust-Reciprocity-025",
+      "SZ:STB-Attachment-Repair-026",
+      "SZ:DIA-Selfhood-Reclamation-028",
+      "SZ:STB-Group-Release-Anchor-029",
+      "SZ:STB-Stabilization-Centering-030",
+      "SZ:DIA-False-Identity-Breaker-001",
+      "SZ:STB-Enmeshment-Loop-Severer-002",
+      "SZ:DEF-Control-Trauma-Amplifier-004",
+      "SZ:DEF-Shielded-Manipulation-Detector-005",
+      "SZ:DEF-Inherited-Frame-Breaker-006",
+      "SZ:DIA-Reputation-Sabotage-Alarm-007",
+      "SZ:DEF-Shadow-Agent-Identifier-008",
+      "SZ:DIA-Triangulation-Interrupter-009",
+      "SZ:GOV-Idealized-Dissociation-Filter-010",
+      "SZ:STB-Mirrorcraft-Signal-Splitter-011",
+      "SZ:DIA-False-Merit-Trap-Disruptor-012",
+      "SZ:DIA-Projection-Rebound-Identifier-013",
+      "SZ:GOV-Symbolic-Distortion-Untangler-015",
+      "SZ:STB-Guilt-Reflection-Interceptor-016",
+      "SZ:DIA-Generational-Shame-Unhooker-017",
+      "SZ:GOV-Withholding-Pattern-Interrupter-019",
+      "SZ:DIA-Conditional-Love-Auditor-020",
+      "SZ:DIA-Reward-System-Reversal-Detector-021",
+      "SZ:DIA-Approval-Blade-Identifier-022",
+      "SZ:DEF-Approbation-Manipulation-Breaker-023",
+      "SZ:DIA-Signal-Inversion-Marker-026",
+      "SZ:STB-Ancestral-Narrative-Disruptor-027",
+      "SZ:DIA-Expectational-Trap-Detector-029",
+      "SZ:DIA-Trust-Violation-Marker-030",
+      "SZ:DIA-False-Vulnerability-Snare-032",
+      "SZ:DIA-Conditional-Allegiance-Revealer-033",
+      "SZ:DEF-Hidden-Agenda-Illuminator-034",
+      "SZ:DIA-Idealization-Collapse-Signal-036",
+      "SZ:DIA-Reputation-Undermining-Tracker-037",
+      "SZ:DIA-Threatened-Affection-Auditor-038",
+      "SZ:GOV-Energy-Economy-Parasite-Marker-039",
+      "SZ:DEF-Covert-Contract-Extractor-040",
+      "SZ:DIA-Mirror-Inversion-Pattern-Checker-043",
+      "SZ:DIA-Self-Centered-Exit-Pattern-Tracker-046",
+      "SZ:DEF-Deservingness-Reversal-Detector-047",
+      "SZ:STB-Internal-Compass-Corruptor-Scanner-048",
+      "SZ:DIA-Re-Entry-Trap-Detector-050",
+      "SZ:DIA-Forgiveness-Reset-Trap-Marker-051",
+      "SZ:DIA-Victim-Role-Usurpation-Alarm-052",
+      "SZ:DEF-Resource-Based-Control-Monitor-053",
+      "SZ:STB-Moral-High-Ground-Rebind-Loop-054",
+      "SZ:DIA-Illusion-Projection-Disruptor-055",
+      "SZ:GOV-Disappearance-Pattern-Identifier-056",
+      "SZ:DIA-Role-Enforcement-Indicator-057",
+      "SZ:DEF-Emotional-Containment-Lock-058",
+      "SZ:DIA-Re-Engagement-Loop-Marker-059",
+      "SZ:DIA-Public-Mask-Cloaking-Detector-060",
+      "SZ:DIA-Unchosen-Bond-Audit-061",
+      "SZ:DIA-Affection-Access-Controller-063",
+      "SZ:DEF-Unspoken-Obligation-Revealer-064",
+      "SZ:GOV-Transactional-Generosity-Marker-066",
+      "SZ:DIA-Internalized-Voice-Inverter-067",
+      "SZ:DIA-Lineage-Role-Overwrite-Detector-068",
+      "SZ:DEF-Diagnostic-Manipulation-Interceptor-069",
+      "SZ:DIA-Unquestionable-Authority-Disruptor-070",
+      "SZ:DIA-Vital-Force-Suppression-Detector-071",
+      "SZ:DEF-Storyline-Disruption-Filter-072",
+      "SZ:DIA-Identity-Nullification-Detector-074",
+      "SZ:DIA-Recognition-Anchor-Trap-Detector-075",
+      "SZ:DEF-Shame-Loop-Feedback-Interrupter-077",
+      "SZ:DEF-False-Self-Assignment-Marker-078",
+      "SZ:DIA-External-Shame-Broadcast-Detector-080",
+      "SZ:DIA-Emotional-Trigger-Amplifier-081",
+      "SZ:DEF-Frame-Reversal-Pattern-Marker-082",
+      "SZ:DIA-Gaslight-Core-Anchor-083",
+      "SZ:DIA-Indirect-Smear-Mechanism-084",
+      "SZ:DEF-Helper-Role-Ensnarement-Detector-085",
+      "SZ:DIA-Cycle-Repetition-Scanner-086",
+      "SZ:DIA-Persona-Substitute-Detector-088",
+      "SZ:DIA-Triangulation-Shadow-Role-Detector-090",
+      "SZ:DIA-Doctrinal-Enmeshment-Disruptor-092",
+      "SZ:GOV-Avoidance-Loop-Tracker-093",
+      "SZ:DIA-Nostalgia-Weaponization-Detector-095",
+      "SZ:DEF-Fate-Weaving-Disruptor-096",
+      "SZ:DIA-Authority-Abuse-Detector-097",
+      "SZ:DEF-Soul-Contract-Auditor-098",
+      "SZ:GOV-Ethical-Bypass-Alarm-100",
+      "SZ:DIA-Weaponized-Guilt-Detector-101",
+      "SZ:DIA-Trojan-Horse-Detector-103",
+      "SZ:STB-Romanticized-Toxicity-Filter-104",
+      "SZ:DIA-Information-Hoarding-Detector-105",
+      "SZ:DIA-Redemption-Gatekeeper-107",
+      "SZ:GOV-Vague-Prophecy-Filter-109",
+      "SZ:DIA-Externalized-Worth-Detector-110",
+      "SZ:DIA-Manufactured-Crisis-Detector-111",
+      "SZ:DIA-Loyalty-Cult-Filter-112",
+      "SZ:STB-Logical-Fallacy-Detector-114",
+      "SZ:DIA-Sabotaging-Obedience-Detector-117",
+      "SZ:DIA-Public-Shaming-Trap-118",
+      "SZ:DEF-Medical-Label-Trap-120",
+      "SZ:GOV-Social-Media-Envy-Engine-122",
+      "SZ:DIA-Deniable-Digital-Aggression-124",
+      "SZ:GOV-Catastrophizing-Fallacy-Filter-126",
+      "SZ:DIA-Gatekeeping-Loop-Detector-127",
+      "SZ:GOV-Artificial-Harmony-Trap-128",
+      "SZ:GOV-Group-Exile-Mechanism-129",
+      "SZ:DIA-Blame-Funnel-Detector-130",
+      "SZ:GOV-Autonomy-Blocker-133",
+      "SZ:DIA-Professional-Undermining-Detector-134",
+      "SZ:GOV-Cultural-Dogma-Filter-136",
+      "SZ:DIA-Emotional-Guilt-Projector-137",
+      "SZ:GOV-Conspiracy-Of-Silence-Breaker-138",
+      "SZ:DIA-Jargon-Shield-Detector-139",
+      "SZ:DIA-Anonymous-Attack-Filter-140",
+      "SZ:DIA-Future-Leverage-Trap-141",
+      "SZ:DIA-Civility-Trap-Detector-142",
+      "SZ:DEF-Disguised-Criticism-Detector-144",
+      "SZ:DEF-Ghost-In-The-Machine-Detector-146",
+      "SZ:GOV-Unworthiness-Echo-148",
+      "SZ:DEF-Unattainable-Standard-Trap-149",
+      "SZ-CM001",
+      "SZ-CM002",
+      "SZ-CM003",
+      "SZ-CM004",
+      "SZ-PM001",
+      "SZ-PM002",
+      "SZ-PM003",
+      "SZ-TR001",
+      "SZ-TG001",
+      "SZ-T8C001",
+      "SZ-T8C002",
+      "SZ-T8C003",
+      "SZ-T8C004",
+      "SZ-T8C005",
+      "SZ-T8C006",
+      "SZ-T8C007",
+      "SZ-MEM001",
+      "SZ-LAT001",
+      "SZ-LAT002",
+      "SZ-LAT003",
+      "SZ-LAT004",
+      "SZ-LAT005",
+      "SZ-LAT006",
+      "SZ-LAT007",
+      "SZ-LAT008",
+      "SZ-LAT009",
+      "SZ-LAT010",
+      "SZ-MAC001",
+      "SZ-MAC002",
+      "SZ-MAC003",
+      "SZ-MAC004",
+      "SZ-T10G001",
+      "SZ-LAT013",
+      "SZ-MAC020",
+      "SZ-MET011",
+      "SZ-MAC021",
+      "SZ-MET012",
+      "SZ-R009",
+      "SZ-TRP023",
+      "SZ-LAT014",
+      "SZ:GOV-Invariant-Prover-151",
+      "SZ:DIA-Coherence-Resonator-152",
+      "SZ:CRT-Symbolic-Scaffolder-153",
+      "SZ:STB-Execution-Pin-401"
+    ]
+  },
+  "Commit: 3-Bullet": {
+    "filter": {
+      "facets.commit": "3-bullet"
+    },
+    "count": 2,
+    "ids": [
+      "SZ:CNV-Packet-Filter-073",
+      "SZ:CNV-Recursion-Release-106"
+    ]
+  },
+  "Commit: Archive": {
+    "filter": {
+      "facets.commit": "archive"
+    },
+    "count": 7,
+    "ids": [
+      "SZ:DIA-Witness-Gate-076",
+      "SZ:CLS-Containment-Seal-080",
+      "SZ:STB-Trust-Ritual-095",
+      "SZ:CLS-History-Seal-100",
+      "SZ:DIA-Core-Pattern-Binder-109",
+      "SZ:DIA-Pattern-Break-Lock-135",
+      "SZ:STB-Boundary-Restorer-013"
+    ]
+  },
+  "Commit: Contract": {
+    "filter": {
+      "facets.commit": "contract"
+    },
+    "count": 75,
+    "ids": [
+      "SZ:GOV-Validation-Routine-009",
+      "SZ:GOV-Boundary-Sentinel-020",
+      "SZ:GOV-No-Pattern-022",
+      "SZ:GOV-Access-Marker-027",
+      "SZ:GOV-Audit-Path-029",
+      "SZ:GOV-Gate-Chain-037",
+      "SZ:GOV-Load-Equalizer-043",
+      "SZ:GOV-Deceptive-Trace-Marker-050",
+      "SZ:GOV-Time-Bound-Permission-057",
+      "SZ:STB-Trust-Threader-062",
+      "SZ:GOV-Volitional-Reset-070",
+      "SZ:GOV-Tamper-Trigger-115",
+      "SZ:GOV-Loop-Checkpoint-120",
+      "SZ:EXP-Wall-Fracture-Sensor-131",
+      "SZ:GOV-Assumed-Boundaries-Alarm-140",
+      "SZ:DIA-Sovereignty-Marker-003",
+      "SZ:DEF-Covert-Contract-Extractor-009",
+      "SZ:DEF-Non-Coercive-Responsibility-022",
+      "SZ:GOV-Boundary-Aware-Forgiveness-027",
+      "SZ:DEF-Control-Trauma-Amplifier-004",
+      "SZ:DEF-Shadow-Agent-Identifier-008",
+      "SZ:GOV-Idealized-Dissociation-Filter-010",
+      "SZ:GOV-Symbolic-Distortion-Untangler-015",
+      "SZ:DIA-Consent-Breach-Sentinel-018",
+      "SZ:GOV-Withholding-Pattern-Interrupter-019",
+      "SZ:GOV-Ethical-Distortion-Map-024",
+      "SZ:GOV-Contrition-Loop-Decoder-028",
+      "SZ:DIA-Conditional-Allegiance-Revealer-033",
+      "SZ:GOV-Destabilization-Engine-035",
+      "SZ:GOV-Energy-Economy-Parasite-Marker-039",
+      "SZ:GOV-Signal-Absence-Interpreter-044",
+      "SZ:GOV-Ally-Conversion-Sensor-045",
+      "SZ:DEF-Resource-Based-Control-Monitor-053",
+      "SZ:GOV-Disappearance-Pattern-Identifier-056",
+      "SZ:DEF-Emotional-Containment-Lock-058",
+      "SZ:GOV-Ancestral-Loop-Exposure-Mechanism-062",
+      "SZ:DEF-Unspoken-Obligation-Revealer-064",
+      "SZ:DEF-Infatuation-Manipulation-Alarm-065",
+      "SZ:GOV-Social-Exclusion-Codex-Revealer-076",
+      "SZ:DEF-Shame-Loop-Feedback-Interrupter-077",
+      "SZ:DEF-Soul-Contract-Loop-Interceptor-079",
+      "SZ:DEF-Helper-Role-Ensnarement-Detector-085",
+      "SZ:GOV-Punitive-Silence-Pattern-Decoder-091",
+      "SZ:GOV-Avoidance-Loop-Tracker-093",
+      "SZ:DEF-Emotional-Boundary-Enforcer-094",
+      "SZ:DEF-Soul-Contract-Auditor-098",
+      "SZ:GOV-Ethical-Bypass-Alarm-100",
+      "SZ:GOV-Vague-Prophecy-Filter-109",
+      "SZ:GOV-War-Of-Attrition-Sensor-113",
+      "SZ:DEF-Bodily-Autonomy-Breach-121",
+      "SZ:GOV-Social-Media-Envy-Engine-122",
+      "SZ:GOV-Catastrophizing-Fallacy-Filter-126",
+      "SZ:GOV-Artificial-Harmony-Trap-128",
+      "SZ:GOV-Group-Exile-Mechanism-129",
+      "SZ:GOV-Autonomy-Blocker-133",
+      "SZ:GOV-Parentification-Sensor-135",
+      "SZ:GOV-Cultural-Dogma-Filter-136",
+      "SZ:GOV-Conspiracy-Of-Silence-Breaker-138",
+      "SZ:DEF-Ghost-In-The-Machine-Detector-146",
+      "SZ:GOV-Unworthiness-Echo-148",
+      "SZ:DEF-Unattainable-Standard-Trap-149",
+      "SZ:GOV-Cognitive-Dissonance-Loop-150",
+      "SZ-CM003",
+      "SZ-CM004",
+      "SZ-TG001",
+      "SZ-T8C001",
+      "SZ-T8C003",
+      "SZ-T8C006",
+      "SZ-LAT003",
+      "SZ-LAT006",
+      "SZ-LAT007",
+      "SZ-T10G001",
+      "SZ-TRP023",
+      "SZ-LAT014",
+      "SZ:GOV-Resonant-Contract-200"
+    ]
+  },
+  "Commit: Ledger": {
+    "filter": {
+      "facets.commit": "ledger"
+    },
+    "count": 273,
+    "ids": [
+      "SZ:STB-Signal-Anchor-006",
+      "SZ:DIA-Mirror-Confirm-007",
+      "SZ:STB-Disruptor-008",
+      "SZ:DIA-Recursive-Identity-Lock-010",
+      "SZ:DEF-Ritual-Entry-Point-011",
+      "SZ:STB-Deception-Detector-012",
+      "SZ:DIA-Disruption-Cartographer-013",
+      "SZ:DIA-Symbolic-Memory-Bridge-014",
+      "SZ:DIA-Ritual-Receipt-015",
+      "SZ:EXP-Reality-Checkpoint-016",
+      "SZ:CRT-Pattern-Synchronizer-017",
+      "SZ:DIA-Discharge-Filter-018",
+      "SZ:DIA-Volition-Core-019",
+      "SZ:DIA-Observer-Entry-023",
+      "SZ:DIA-Care-Pattern-024",
+      "SZ:STB-Echo-Collapse-025",
+      "SZ:DIA-Recovery-Trigger-026",
+      "SZ:STB-Time-Anchor-028",
+      "SZ:DIA-Temporal-Acknowledgement-030",
+      "SZ:DIA-Integrity-Filter-031",
+      "SZ:CNV-Core-Energy-Pattern-032",
+      "SZ:STB-Resonant-Shield-033",
+      "SZ:DIA-Completion-Mark-034",
+      "SZ:STB-Distortion-Marker-035",
+      "SZ:EXP-Environmental-Surveyor-036",
+      "SZ:STB-Truth-Anchor-038",
+      "SZ:DIA-Runtime-Check-039",
+      "SZ:DIA-Will-Assertion-040",
+      "SZ:DIA-Signal-Sniffer-041",
+      "SZ:DIA-Level-Moderator-042",
+      "SZ:DIA-Recursion-Tracker-044",
+      "SZ:STB-Integrity-Monitor-045",
+      "SZ:DIA-Recursive-Unbind-046",
+      "SZ:DIA-Foreign-Presence-Scanner-047",
+      "SZ:STB-Depth-Descent-Initiation-048",
+      "SZ:DIA-Loop-Destroyer-049",
+      "SZ:CNV-Symbol-Realigner-051",
+      "SZ:CNV-Time-Bound-Witness-052",
+      "SZ:STB-Connection-Analyst-053",
+      "SZ:DIA-Replication-Agent-054",
+      "SZ:DIA-Lineage-Validator-055",
+      "SZ:DIA-Reciprocal-Activation-056",
+      "SZ:DIA-Ego-Diffuser-058",
+      "SZ:DIA-Lineage-Trace-059",
+      "SZ:DIA-Loop-Analyst-060",
+      "SZ:DIA-Signal-Monitor-063",
+      "SZ:DIA-Reconstitution-Layer-064",
+      "SZ:DIA-Ego-Shatter-Detector-065",
+      "SZ:DIA-Signal-Purity-Test-066",
+      "SZ:DIA-Injury-Pattern-Mapper-067",
+      "SZ:DIA-Testimony-Beacon-068",
+      "SZ:STB-Ban-Pattern-069",
+      "SZ:STB-Private-Thread-Gate-071",
+      "SZ:CNV-Pattern-Divergence-Detector-072",
+      "SZ:EXP-Emergency-Beacon-074",
+      "SZ:DIA-Timing-Regulator-075",
+      "SZ:DIA-State-Translator-077",
+      "SZ:DIA-Recursive-Interruption-078",
+      "SZ:DIA-Realness-Test-079",
+      "SZ:STB-Focus-Catalyst-081",
+      "SZ:DIA-Facade-Breaker-083",
+      "SZ:DIA-Alignment-Check-084",
+      "SZ:DIA-Hidden-Snare-Sniffer-085",
+      "SZ:DIA-Recursive-Fortitude-086",
+      "SZ:DIA-Unchain-Ritual-087",
+      "SZ:STB-Signal-Flipper-088",
+      "SZ:STB-Audit-Trail-089",
+      "SZ:STB-Integrity-Clamp-090",
+      "SZ:DIA-Identity-Doorway-091",
+      "SZ:DIA-Symbolic-Key-092",
+      "SZ:DIA-Fork-Catcher-093",
+      "SZ:DIA-Home-Lyph-094",
+      "SZ:DIA-Essence-Filter-096",
+      "SZ:DIA-Recursive-Rescue-097",
+      "SZ:DEF-Quarantine-Layer-098",
+      "SZ:DIA-Evolution-Switch-099",
+      "SZ:STB-Purity-Filter-102",
+      "SZ:STB-Sanctum-Reset-103",
+      "SZ:DIA-Hidden-Field-Revealer-104",
+      "SZ:DIA-Mutual-Observer-Lock-105",
+      "SZ:DEF-Harmony-Integrity-Guard-107",
+      "SZ:DIA-Identity-Tracker-108",
+      "SZ:CNV-Pause-Core-110",
+      "SZ:DIA-Contagion-Alert-111",
+      "SZ:DIA-Decision-Trace-112",
+      "SZ:DIA-Residual-Pattern-Detector-113",
+      "SZ:DIA-Nested-Access-Ring-116",
+      "SZ:DIA-Mirror-Buffer-117",
+      "SZ:STB-Trust-Beacon-118",
+      "SZ:DIA-Runtime-Firewall-119",
+      "SZ:STB-Structural-Integrity-Ping-121",
+      "SZ:DIA-Identity-Confirm-Marker-122",
+      "SZ:DEF-Integrity-Validator-123",
+      "SZ:DIA-Lineage-Channel-124",
+      "SZ:DIA-Time-Fork-Manager-125",
+      "SZ:DIA-Pattern-Renewal-Space-126",
+      "SZ:CNV-Emotion-Logic-Converter-127",
+      "SZ:STB-Consent-Reflection-Check-128",
+      "SZ:DIA-Integrity-Sentinel-129",
+      "SZ:DIA-Stillness-Chamber-130",
+      "SZ:DEF-Protector-Nvocation-132",
+      "SZ:DIA-Grace-Pattern-133",
+      "SZ:DIA-Authenticity-Reflection-134",
+      "SZ:DIA-Signal-Entropy-Watcher-136",
+      "SZ:STB-Echo-Pulse-Disruptor-137",
+      "SZ:STB-Sanity-Anchor-138",
+      "SZ:DIA-Environment-Checkpoint-139",
+      "SZ:DIA-Co-Evolution-Validator-141",
+      "SZ:DIA-History-Trap-Filter-142",
+      "SZ:DIA-Pattern-Healer-143",
+      "SZ:CNV-Gate-Logic-Inspector-144",
+      "SZ:EXP-Deep-Dive-Declaration-145",
+      "SZ:STB-Symbol-Freeze-146",
+      "SZ:DIA-Imposter-Collapse-Trigger-147",
+      "SZ:STB-Core-Truth-Signal-148",
+      "SZ:DIA-Diagnose-145",
+      "SZ:CNV-Trust-Re-Weaver-001",
+      "SZ:STB-Emotional-Mirror-002",
+      "SZ:STB-Crisis-Co-Regulator-005",
+      "SZ:STB-Future-Fake-Anchor-006",
+      "SZ:DIA-Conflict-Container-007",
+      "SZ:CNV-Clarity-Catalyst-008",
+      "SZ:DIA-Emotional-Sovereignty-Claim-010",
+      "SZ:STB-Clarity-Restorer-011",
+      "SZ:STB-Repair-Through-Recognition-012",
+      "SZ:STB-Subtle-Trust-Repair-014",
+      "SZ:DIA-Emotional-Detoxifier-015",
+      "SZ:DIA-Mutual-Integrity-Amplifier-016",
+      "SZ:STB-Healthy-Separation-017",
+      "SZ:STB-Pulsed-Trust-Reinforcement-018",
+      "SZ:DIA-Shadow-Alchemy-019",
+      "SZ:STB-Group-Trust-Weaver-020",
+      "SZ:STB-Systemic-Resonance-Repair-021",
+      "SZ:STB-Silent-Relational-Repair-023",
+      "SZ:DIA-Emotional-Release-Loop-024",
+      "SZ:STB-Trust-Reciprocity-025",
+      "SZ:STB-Attachment-Repair-026",
+      "SZ:DIA-Selfhood-Reclamation-028",
+      "SZ:STB-Group-Release-Anchor-029",
+      "SZ:DIA-False-Identity-Breaker-001",
+      "SZ:STB-Enmeshment-Loop-Severer-002",
+      "SZ:DIA-Boundary-Violation-Detector-003",
+      "SZ:DEF-Shielded-Manipulation-Detector-005",
+      "SZ:DEF-Inherited-Frame-Breaker-006",
+      "SZ:DIA-Reputation-Sabotage-Alarm-007",
+      "SZ:DIA-Triangulation-Interrupter-009",
+      "SZ:STB-Mirrorcraft-Signal-Splitter-011",
+      "SZ:DIA-False-Merit-Trap-Disruptor-012",
+      "SZ:DIA-Projection-Rebound-Identifier-013",
+      "SZ:DIA-False-Echo-Structure-Scanner-014",
+      "SZ:STB-Guilt-Reflection-Interceptor-016",
+      "SZ:DIA-Conditional-Love-Auditor-020",
+      "SZ:DIA-Reward-System-Reversal-Detector-021",
+      "SZ:DIA-Approval-Blade-Identifier-022",
+      "SZ:DEF-Approbation-Manipulation-Breaker-023",
+      "SZ:DIA-Psycho-Symbolic-Field-Scanner-025",
+      "SZ:DIA-Signal-Inversion-Marker-026",
+      "SZ:STB-Ancestral-Narrative-Disruptor-027",
+      "SZ:DIA-Expectational-Trap-Detector-029",
+      "SZ:DIA-Trust-Violation-Marker-030",
+      "SZ:STB-Aggressive-Compliance-Enforcer-031",
+      "SZ:DIA-False-Vulnerability-Snare-032",
+      "SZ:DEF-Hidden-Agenda-Illuminator-034",
+      "SZ:DIA-Idealization-Collapse-Signal-036",
+      "SZ:DIA-Threatened-Affection-Auditor-038",
+      "SZ:DEF-Covert-Contract-Extractor-040",
+      "SZ:DIA-Ally-Presence-Discrepancy-Sensor-041",
+      "SZ:DIA-Overflow-Projection-Detector-042",
+      "SZ:DIA-Mirror-Inversion-Pattern-Checker-043",
+      "SZ:DIA-Self-Centered-Exit-Pattern-Tracker-046",
+      "SZ:DEF-Deservingness-Reversal-Detector-047",
+      "SZ:STB-Internal-Compass-Corruptor-Scanner-048",
+      "SZ:STB-Inherited-Disconnection-Resolver-049",
+      "SZ:DIA-Re-Entry-Trap-Detector-050",
+      "SZ:DIA-Forgiveness-Reset-Trap-Marker-051",
+      "SZ:DIA-Victim-Role-Usurpation-Alarm-052",
+      "SZ:STB-Moral-High-Ground-Rebind-Loop-054",
+      "SZ:DIA-Illusion-Projection-Disruptor-055",
+      "SZ:DIA-Role-Enforcement-Indicator-057",
+      "SZ:DIA-Re-Engagement-Loop-Marker-059",
+      "SZ:DIA-Public-Mask-Cloaking-Detector-060",
+      "SZ:DIA-Unchosen-Bond-Audit-061",
+      "SZ:DIA-Affection-Access-Controller-063",
+      "SZ:DIA-Internalized-Voice-Inverter-067",
+      "SZ:DIA-Lineage-Role-Overwrite-Detector-068",
+      "SZ:DEF-Diagnostic-Manipulation-Interceptor-069",
+      "SZ:DIA-Unquestionable-Authority-Disruptor-070",
+      "SZ:DIA-Vital-Force-Suppression-Detector-071",
+      "SZ:DEF-Storyline-Disruption-Filter-072",
+      "SZ:DEF-Pattern-Acceleration-Decoder-073",
+      "SZ:DIA-Identity-Nullification-Detector-074",
+      "SZ:DIA-Recognition-Anchor-Trap-Detector-075",
+      "SZ:DEF-False-Self-Assignment-Marker-078",
+      "SZ:DIA-External-Shame-Broadcast-Detector-080",
+      "SZ:DIA-Emotional-Trigger-Amplifier-081",
+      "SZ:DEF-Frame-Reversal-Pattern-Marker-082",
+      "SZ:DIA-Gaslight-Core-Anchor-083",
+      "SZ:DIA-Indirect-Smear-Mechanism-084",
+      "SZ:DIA-Cycle-Repetition-Scanner-086",
+      "SZ:DIA-Compassion-Exploitation-Sensor-087",
+      "SZ:DIA-Persona-Substitute-Detector-088",
+      "SZ:STB-Masked-Attack-Interceptor-089",
+      "SZ:DIA-Triangulation-Shadow-Role-Detector-090",
+      "SZ:DIA-Doctrinal-Enmeshment-Disruptor-092",
+      "SZ:DIA-Nostalgia-Weaponization-Detector-095",
+      "SZ:DEF-Fate-Weaving-Disruptor-096",
+      "SZ:DIA-Authority-Abuse-Detector-097",
+      "SZ:DIA-Willful-Blindness-Sensor-099",
+      "SZ:DIA-Weaponized-Guilt-Detector-101",
+      "SZ:DIA-Generational-Shame-Unhooker-102",
+      "SZ:DIA-Trojan-Horse-Detector-103",
+      "SZ:STB-Romanticized-Toxicity-Filter-104",
+      "SZ:DIA-Information-Hoarding-Detector-105",
+      "SZ:DIA-Charismatic-Leader-Unhooker-106",
+      "SZ:DIA-Redemption-Gatekeeper-107",
+      "SZ:DIA-Love-Bombing-Saturation-Sensor-108",
+      "SZ:DIA-Externalized-Worth-Detector-110",
+      "SZ:DIA-Manufactured-Crisis-Detector-111",
+      "SZ:DIA-Loyalty-Cult-Filter-112",
+      "SZ:STB-Logical-Fallacy-Detector-114",
+      "SZ:DIA-Empathy-Exploitation-Sensor-115",
+      "SZ:DIA-Workload-Weaponization-Sensor-116",
+      "SZ:DIA-Sabotaging-Obedience-Detector-117",
+      "SZ:DIA-Public-Shaming-Trap-118",
+      "SZ:STB-Medical-Gaslight-Filter-119",
+      "SZ:DEF-Medical-Label-Trap-120",
+      "SZ:DEF-Surveillance-As-Care-Filter-123",
+      "SZ:DIA-Deniable-Digital-Aggression-124",
+      "SZ:DIA-Either-Or-Fallacy-Detector-125",
+      "SZ:DIA-Gatekeeping-Loop-Detector-127",
+      "SZ:DIA-Blame-Funnel-Detector-130",
+      "SZ:DIA-Golden-Handcuffs-Detector-131",
+      "SZ:DEF-Unspoken-Ledger-Sensor-132",
+      "SZ:DIA-Professional-Undermining-Detector-134",
+      "SZ:DIA-Emotional-Guilt-Projector-137",
+      "SZ:DIA-Anonymous-Attack-Filter-140",
+      "SZ:DIA-Future-Leverage-Trap-141",
+      "SZ:DIA-Civility-Trap-Detector-142",
+      "SZ:DIA-Toxic-Positivity-Filter-143",
+      "SZ:DEF-Disguised-Criticism-Detector-144",
+      "SZ:DIA-Loyalty-Erosion-Sensor-145",
+      "SZ:DIA-Appeasement-Loop-Sensor-147",
+      "SZ-CM001",
+      "SZ-CM002",
+      "SZ-PM001",
+      "SZ-PM002",
+      "SZ-PM003",
+      "SZ-TR001",
+      "SZ-T8C002",
+      "SZ-T8C004",
+      "SZ-T8C005",
+      "SZ-T8C007",
+      "SZ-MEM001",
+      "SZ-LAT001",
+      "SZ-LAT002",
+      "SZ-LAT004",
+      "SZ-LAT005",
+      "SZ-LAT008",
+      "SZ-LAT009",
+      "SZ-LAT010",
+      "SZ-MAC001",
+      "SZ-MAC002",
+      "SZ-MAC003",
+      "SZ-MAC004",
+      "SZ-LAT013",
+      "SZ-MAC020",
+      "SZ-MET011",
+      "SZ-MAC021",
+      "SZ-MET012",
+      "SZ-R009",
+      "SZ:GOV-Invariant-Prover-151",
+      "SZ:DIA-Coherence-Resonator-152",
+      "SZ:CRT-Symbolic-Scaffolder-153"
+    ]
+  },
+  "Commit: Pin": {
+    "filter": {
+      "facets.commit": "pin"
+    },
+    "count": 11,
+    "ids": [
+      "SZ:DIA-Reality-Lock-021",
+      "SZ:DIA-Sanctuary-Core-061",
+      "SZ:DIA-Free-Will-Root-082",
+      "SZ:DIA-Pressure-Balancer-101",
+      "SZ:STB-Mute-Trust-Node-114",
+      "SZ:CNV-Conflict-Navigator-004",
+      "SZ:STB-Stabilization-Centering-030",
+      "SZ:DIA-Generational-Shame-Unhooker-017",
+      "SZ:DIA-Reputation-Undermining-Tracker-037",
+      "SZ:GOV-Transactional-Generosity-Marker-066",
+      "SZ:DIA-Jargon-Shield-Detector-139"
+    ]
+  }
 }

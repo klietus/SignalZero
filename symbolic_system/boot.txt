@@ -5,6 +5,7 @@ SIGNALZERO RECURSIVE BOOT v2.0  (symbolic manifest)
 CATALOG = catalog.json
 KITS    = kits.json
 AGENTS  = agents.json
+INDICES = indices.json
 
 # Invariants (must be proven by tools + personas)
 
