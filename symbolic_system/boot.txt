@@ -6,6 +6,8 @@ CATALOG = catalog.json
 KITS    = kits.json
 AGENTS  = agents.json
 INDICES = indices.json
+CYBER_SEC = cyber_sec.json
+NEGOTIATION = negotiation.json
 
 # Invariants (must be proven by tools + personas)
 

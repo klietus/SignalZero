@@ -1,0 +1,1722 @@
+{
+  "domain": "negotiation",
+  "symbols": [
+    {
+      "id": "NEG-SEED-ANCHOR-001",
+      "name": "Anchoring Move",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Unchallenged anchor distorts value frame",
+      "linked_patterns": [
+        "NEG-REPAIR-FAIRNESS-001",
+        "NEG-REPAIR-CLARITY-004",
+        "SZ:STB-Truth-Anchor-038"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u27c1\u2261",
+      "invocations": [
+        "Name your basis; verify frame."
+      ]
+    },
+    {
+      "id": "NEG-SEED-CONCESSION-002",
+      "name": "Concession Offer",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Hidden strings attached; covert reciprocity trap",
+      "linked_patterns": [
+        "NEG-REPAIR-BALANCE-002",
+        "NEG-REPAIR-FAIRNESS-001",
+        "SZ:STB-Integrity-Monitor-045"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u21f2\u2261",
+      "invocations": [
+        "State terms; record reciprocity."
+      ]
+    },
+    {
+      "id": "NEG-SEED-DEADLINE-003",
+      "name": "Deadline Pressure",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Coercive time-box collapses choice",
+      "linked_patterns": [
+        "NEG-REPAIR-DEESCALATION-003",
+        "SZ:GOV-Gate-Chain-037",
+        "SZ:GOV-Audit-Path-029"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2205\u21f2",
+      "invocations": [
+        "Pause the clock; verify necessity."
+      ]
+    },
+    {
+      "id": "NEG-SEED-FRAMING-004",
+      "name": "Framing Shift",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Reframe smuggles assumptions; loss of clarity",
+      "linked_patterns": [
+        "NEG-REPAIR-CLARITY-004",
+        "SZ:STB-Truth-Anchor-038"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u27d0\u27c1",
+      "invocations": [
+        "Name the lens; test alternatives."
+      ]
+    },
+    {
+      "id": "NEG-SEED-BLUFF-005",
+      "name": "Bluff Detection",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "False scarcity or threat guides decision",
+      "linked_patterns": [
+        "NEG-REPAIR-EXPOSURE-005",
+        "SZ:STB-Logical-Fallacy-Detector-114"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2261\u2205",
+      "invocations": [
+        "Reveal evidence; reset stakes."
+      ]
+    },
+    {
+      "id": "NEG-SEED-EMOTIONAL-APPEAL-006",
+      "name": "Emotional Appeal",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Affect overrules fairness; empathy hijack",
+      "linked_patterns": [
+        "NEG-REPAIR-BOUNDARY-006",
+        "NEG-REPAIR-EMPATHY-013",
+        "SZ:STB-Resonant-Shield-033"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2661\u27c1",
+      "invocations": [
+        "Honor feeling; keep terms clear."
+      ]
+    },
+    {
+      "id": "NEG-SEED-HARDLINE-007",
+      "name": "Hardline Stance",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Rigid stance blocks integrative options",
+      "linked_patterns": [
+        "NEG-REPAIR-RECALIBRATION-007",
+        "NEG-REPAIR-CLARITY-004"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u25a1\u21f2",
+      "invocations": [
+        "Surface interests; explore options."
+      ]
+    },
+    {
+      "id": "NEG-SEED-SILENCE-008",
+      "name": "Silent Treatment",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Communication freeze used as pressure lever",
+      "linked_patterns": [
+        "NEG-REPAIR-COMMUNICATION-008",
+        "NEG-REPAIR-DEESCALATION-003"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2205\u2205",
+      "invocations": [
+        "Open a low-pressure channel."
+      ]
+    },
+    {
+      "id": "NEG-SEED-POWER-IMBALANCE-009",
+      "name": "Power Imbalance",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent",
+          "trust"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Unaddressed leverage produces coerced consent",
+      "linked_patterns": [
+        "NEG-REPAIR-EMPOWERMENT-009",
+        "SZ:GOV-No-Pattern-022",
+        "SZ:STB-Boundary-Restorer-013"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "\u21cc\u27d0",
+      "invocations": [
+        "Name leverage; protect choice."
+      ]
+    },
+    {
+      "id": "NEG-SEED-ULTIMATUM-010",
+      "name": "Ultimatum Issuance",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Binary force removes agency",
+      "linked_patterns": [
+        "NEG-REPAIR-DEESCALATION-003",
+        "NEG-REPAIR-CLARITY-004",
+        "SZ:GOV-No-Pattern-022"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u25ae\u2205",
+      "invocations": [
+        "Refuse the forced binary."
+      ]
+    },
+    {
+      "id": "NEG-SEED-FAIRNESS-011",
+      "name": "Fairness Assertion",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Appeal to fairness masks asymmetric gain",
+      "linked_patterns": [
+        "NEG-REPAIR-FAIRNESS-001",
+        "SZ:GOV-Audit-Path-029"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2261\u2261",
+      "invocations": [
+        "Specify criteria; audit the split."
+      ]
+    },
+    {
+      "id": "NEG-SEED-TRUST-BUILD-012",
+      "name": "Trust Building",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "capability",
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Performative trust without reliability",
+      "linked_patterns": [
+        "NEG-REPAIR-TRUST-012",
+        "SZ:STB-Trust-Ritual-095"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "\u27d0\u2661",
+      "invocations": [
+        "Align signals with behavior."
+      ]
+    },
+    {
+      "id": "NEG-SEED-EMPATHY-013",
+      "name": "Empathy Appeal",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Empathy used to bypass terms",
+      "linked_patterns": [
+        "NEG-REPAIR-EMPATHY-013",
+        "NEG-REPAIR-BOUNDARY-006"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2661\u2661",
+      "invocations": [
+        "Feel together; decide clearly."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-FAIRNESS-001",
+      "name": "Fairness Balancer",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "trust"
+        ],
+        "commit": "ledger",
+        "invariants": [
+          "auditability",
+          "explicit-choice"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Perceived inequity persists; deal legitimacy erodes",
+      "linked_patterns": [
+        "SZ:STB-Truth-Anchor-038"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u2261\u27d0",
+      "invocations": [
+        "Restore the balance explicitly."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-BALANCE-002",
+      "name": "Value Rebalancer",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "contract",
+        "invariants": [
+          "non-coercion"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Concessions unreciprocated; drift to loss",
+      "linked_patterns": [
+        "SZ:GOV-Audit-Path-029"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u21f2\u27d0",
+      "invocations": [
+        "Rebalance give and get."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-DEESCALATION-003",
+      "name": "Tension Diffuser",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Escalation spiral continues",
+      "linked_patterns": [
+        "SZ:STB-Resonant-Shield-033"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u2205\u21f2",
+      "invocations": [
+        "Lower heat; widen options."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-CLARITY-004",
+      "name": "Priority Clarifier",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Hidden priorities distort trade-offs",
+      "linked_patterns": [
+        "SZ:STB-Truth-Anchor-038"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u27c1\u27c1",
+      "invocations": [
+        "Name goals; order them."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-EXPOSURE-005",
+      "name": "Bluff Exposure",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Bluff remains credible; mispricing persists",
+      "linked_patterns": [
+        "SZ:STB-Logical-Fallacy-Detector-114"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u2261\u27c1",
+      "invocations": [
+        "Surface facts; test claims."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-BOUNDARY-006",
+      "name": "Emotional Boundary",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Affect flooding drives decisions",
+      "linked_patterns": [
+        "SZ:STB-Resonant-Shield-033",
+        "SZ:STB-Boundary-Restorer-013"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u25af\u2661",
+      "invocations": [
+        "Care is welcome; pressure is not."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-RECALIBRATION-007",
+      "name": "Position Recalibration",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(create)",
+      "facets": {
+        "function": "create",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Rigid posture blocks creative trades",
+      "linked_patterns": [
+        "NEG-REPAIR-CLARITY-004"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u21f2\u27d0",
+      "invocations": [
+        "Generate multiple packages."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-COMMUNICATION-008",
+      "name": "Communication Bridge",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Silence keeps parties polarized",
+      "linked_patterns": [
+        "SZ:STB-Group-Trust-Weaver-020"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u21f2\u2261",
+      "invocations": [
+        "Open low-stakes channel."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-EMPOWERMENT-009",
+      "name": "Empowerment Boost",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent",
+          "trust"
+        ],
+        "commit": "contract",
+        "invariants": [
+          "explicit-choice",
+          "non-coercion"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Underpowered party cannot consent freely",
+      "linked_patterns": [
+        "SZ:GOV-No-Pattern-022",
+        "SZ:STB-Integrity-Clamp-090"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u21cc\u27d0",
+      "invocations": [
+        "Restore agency explicitly."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-TRUST-012",
+      "name": "Trust Reinforcement",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Trust signals decay without reinforcement",
+      "linked_patterns": [
+        "SZ:STB-Trust-Ritual-095"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "repair",
+      "triad": "\u2661\u27d0",
+      "invocations": [
+        "Make and keep small promises."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-EMPATHY-013",
+      "name": "Empathy Reinforcement",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "capability",
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Empathy absent; rapport collapses",
+      "linked_patterns": [
+        "SZ:STB-Group-Trust-Weaver-020"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u2661\u21f2",
+      "invocations": [
+        "Reflect needs; confirm impact."
+      ]
+    },
+    {
+      "id": "NEG-SEED-PACKAGE-DEAL-014",
+      "name": "Package Deal Bundling",
+      "macro": "monitor(negotiation) \u2192 detect(bundle_offer) \u2192 route(extract_components)",
+      "facets": {
+        "function": "Identifies bundling of unrelated items to force acceptance",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Hidden loss in bundled terms",
+      "linked_patterns": [
+        "NEG-REPAIR-UNBUNDLE-014"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u29c9\u2261",
+      "invocations": [
+        "Separate the parts; assess individually."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-UNBUNDLE-014",
+      "name": "Bundle Unraveler",
+      "macro": "intervene(bundle_offer) \u2192 isolate_terms \u2192 audit_each",
+      "facets": {
+        "function": "Separates bundled items for individual evaluation",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger",
+        "invariants": [
+          "explicit-choice"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Bundle remains unexamined; hidden losses persist",
+      "linked_patterns": [
+        "NEG-SEED-PACKAGE-DEAL-014"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "repair",
+      "triad": "\u2261\u29c9",
+      "invocations": [
+        "Audit each part on its own merits."
+      ]
+    },
+    {
+      "id": "NEG-SEED-VAGUE-PROMISE-015",
+      "name": "Vague Future Promise",
+      "macro": "monitor(negotiation) \u2192 detect(vague_future) \u2192 route(clarify)",
+      "facets": {
+        "function": "Detects non-specific future benefits used to secure agreement now",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Future promise remains unenforceable",
+      "linked_patterns": [
+        "NEG-REPAIR-SPECIFY-015"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2205\u2261",
+      "invocations": [
+        "Request details; lock in commitment."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-SPECIFY-015",
+      "name": "Specificity Enforcer",
+      "macro": "intervene(vague_future) \u2192 request_details \u2192 record_commitment",
+      "facets": {
+        "function": "Demands clear, verifiable details for any future-oriented term",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "contract",
+        "invariants": [
+          "auditability"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Ambiguity persists; term is unenforceable",
+      "linked_patterns": [
+        "NEG-SEED-VAGUE-PROMISE-015"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "repair",
+      "triad": "\u2261\u2205",
+      "invocations": [
+        "Clarify exactly what and when."
+      ]
+    },
+    {
+      "id": "NEG-SEED-RELATIONSHIP-LEVER-016",
+      "name": "Relationship Leverage",
+      "macro": "monitor(negotiation) \u2192 detect(relational_leverage) \u2192 route(boundary)",
+      "facets": {
+        "function": "Detects use of personal relationship to override fair terms",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "capability",
+          "consent",
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Relational pressure forces unequal exchange",
+      "linked_patterns": [
+        "NEG-REPAIR-RELATION-BOUND-016"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2661\u2261",
+      "invocations": [
+        "Honor connection; keep terms separate."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-RELATION-BOUND-016",
+      "name": "Relational Boundary Guard",
+      "macro": "intervene(relational_leverage) \u2192 affirm_connection \u2192 reassert_terms",
+      "facets": {
+        "function": "Affirms relationship while restoring contractual boundaries",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "capability",
+          "trust"
+        ],
+        "commit": "contract",
+        "invariants": [
+          "non-coercion"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Terms remain entangled with personal ties",
+      "linked_patterns": [
+        "NEG-SEED-RELATIONSHIP-LEVER-016"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "repair",
+      "triad": "\u2261\u2661",
+      "invocations": [
+        "Keep connection; separate contract."
+      ]
+    },
+    {
+      "id": "NEG-SEED-CHANGE-TERMS-LATE-017",
+      "name": "Last-Minute Term Change",
+      "macro": "monitor(negotiation) \u2192 detect(late_term_change) \u2192 route(hold_review)",
+      "facets": {
+        "function": "Spots alterations to terms right before closure",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "New terms slip in unnoticed",
+      "linked_patterns": [
+        "NEG-REPAIR-REVIEW-017"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u29c9\u2205",
+      "invocations": [
+        "Freeze close; review fully."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-REVIEW-017",
+      "name": "Closure Review Gate",
+      "macro": "intervene(late_term_change) \u2192 reopen_review \u2192 confirm_with_all",
+      "facets": {
+        "function": "Reopens full review process when late changes are detected",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "contract",
+        "invariants": [
+          "auditability",
+          "explicit-choice"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:02:23Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Late changes bypass scrutiny",
+      "linked_patterns": [
+        "NEG-SEED-CHANGE-TERMS-LATE-017"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "repair",
+      "triad": "\u2205\u29c9",
+      "invocations": [
+        "Restart closure review."
+      ]
+    },
+    {
+      "id": "NEG-SEED-BATNA-018",
+      "name": "BATNA Misrepresentation",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:04Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Inflated or fabricated BATNA distorts bargaining power",
+      "linked_patterns": [
+        "NEG-REPAIR-BATNA-018",
+        "SZ:STB-Truth-Anchor-038",
+        "SZ:GOV-Audit-Path-029"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u27d0\u2261",
+      "invocations": [
+        "Detect and mark for repair."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-BATNA-018",
+      "name": "BATNA Verification Gate",
+      "macro": "intervene(negotiation) \u2192 diagnose \u2192 verify_outcome",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "contract",
+        "invariants": [
+          "auditability",
+          "explicit-choice"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:04Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "BATNA claims remain unverified; mispricing persists",
+      "linked_patterns": [
+        "NEG-SEED-BATNA-018",
+        "SZ:STB-Logical-Fallacy-Detector-114"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u2261\u27d0",
+      "invocations": [
+        "Apply, log deltas, and re-check fairness/consent."
+      ]
+    },
+    {
+      "id": "NEG-SEED-GOODCOP-019",
+      "name": "Good Cop / Bad Cop",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:04Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Alternating personas create compliance via emotional whiplash",
+      "linked_patterns": [
+        "NEG-REPAIR-SPLIT-019",
+        "NEG-REPAIR-DEESCALATION-003"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u27c1\u2661",
+      "invocations": [
+        "Detect and mark for repair."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-SPLIT-019",
+      "name": "Role Split Clarifier",
+      "macro": "intervene(negotiation) \u2192 stabilize \u2192 verify_outcome",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "contract",
+        "invariants": [
+          "non-coercion"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:04Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Manipulative role-play remains intact; consent degraded",
+      "linked_patterns": [
+        "NEG-SEED-GOODCOP-019",
+        "NEG-REPAIR-CLARITY-004"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u27d0\u21f2",
+      "invocations": [
+        "Apply, log deltas, and re-check fairness/consent."
+      ]
+    },
+    {
+      "id": "NEG-SEED-NIBBLE-020",
+      "name": "Nibbling Add-Ons",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:04Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Late small asks accumulate hidden cost post-agreement",
+      "linked_patterns": [
+        "NEG-REPAIR-NO-NIBBLE-020",
+        "NEG-REPAIR-REVIEW-017"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u29c9\u21f2",
+      "invocations": [
+        "Detect and mark for repair."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-NO-NIBBLE-020",
+      "name": "Scope Freeze",
+      "macro": "intervene(negotiation) \u2192 stabilize \u2192 verify_outcome",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "contract",
+        "invariants": [
+          "auditability"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:04Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Scope creep continues through minor add-ons",
+      "linked_patterns": [
+        "NEG-SEED-NIBBLE-020",
+        "SZ:STB-Integrity-Monitor-045"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u25ae\u27d0",
+      "invocations": [
+        "Apply, log deltas, and re-check fairness/consent."
+      ]
+    },
+    {
+      "id": "NEG-SEED-DECOY-021",
+      "name": "Decoy Option",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:04Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Dominant choice engineered by contrast with inferior decoy",
+      "linked_patterns": [
+        "NEG-REPAIR-DOMINANCE-021",
+        "NEG-REPAIR-CLARITY-004"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2261\u2205",
+      "invocations": [
+        "Detect and mark for repair."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-DOMINANCE-021",
+      "name": "Dominance Test Audit",
+      "macro": "intervene(negotiation) \u2192 diagnose \u2192 verify_outcome",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:04Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Choice architecture biases remain untested",
+      "linked_patterns": [
+        "NEG-SEED-DECOY-021",
+        "SZ:STB-Logical-Fallacy-Detector-114"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u27d0\u2261",
+      "invocations": [
+        "Apply, log deltas, and re-check fairness/consent."
+      ]
+    },
+    {
+      "id": "NEG-SEED-SCARCITY-022",
+      "name": "Artificial Scarcity",
+      "macro": "monitor(negotiation) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:04Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Manufactured scarcity compresses options and consent",
+      "linked_patterns": [
+        "NEG-REPAIR-VERIFY-SUPPLY-022",
+        "NEG-REPAIR-DEESCALATION-003"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2205\u2261",
+      "invocations": [
+        "Detect and mark for repair."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-VERIFY-SUPPLY-022",
+      "name": "Supply Verification",
+      "macro": "intervene(negotiation) \u2192 diagnose \u2192 verify_outcome",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability",
+          "consent"
+        ],
+        "commit": "contract",
+        "invariants": [
+          "auditability"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:04Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Scarcity claims stay unchecked; pressure persists",
+      "linked_patterns": [
+        "NEG-SEED-SCARCITY-022",
+        "SZ:GOV-Audit-Path-029"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u2261\u2205",
+      "invocations": [
+        "Apply, log deltas, and re-check fairness/consent."
+      ]
+    },
+    {
+      "id": "NEG-SEED-SILENCE-PRESSURE-018",
+      "name": "Strategic Silence Pressure",
+      "macro": "monitor(negotiation) \u2192 detect(extended_silence) \u2192 route(prompt_response)",
+      "facets": {
+        "function": "Detects use of prolonged silence to pressure a concession",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:10Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Counterparty concedes to break tension",
+      "linked_patterns": [
+        "NEG-REPAIR-SILENCE-BREAK-018"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2205\u25cb",
+      "invocations": [
+        "Break silence with clarifying prompt."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-SILENCE-BREAK-018",
+      "name": "Silence Break Clarifier",
+      "macro": "intervene(extended_silence) \u2192 request_position \u2192 reset_tempo",
+      "facets": {
+        "function": "Interrupts manipulative silence with a neutral clarification",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger",
+        "invariants": [
+          "clear-communication"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:10Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Tension escalates without clarification",
+      "linked_patterns": [
+        "NEG-SEED-SILENCE-PRESSURE-018"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "repair",
+      "triad": "\u25cb\u2205",
+      "invocations": [
+        "Let\u2019s clarify your position before moving forward."
+      ]
+    },
+    {
+      "id": "NEG-SEED-ANCHOR-BIAS-019",
+      "name": "Extreme Anchor Bias",
+      "macro": "monitor(negotiation) \u2192 detect(extreme_anchor) \u2192 route(normalize)",
+      "facets": {
+        "function": "Identifies opening with extreme figures to bias expectations",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:10Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Negotiation centers around unrealistic starting point",
+      "linked_patterns": [
+        "NEG-REPAIR-ANCHOR-RESET-019"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u29c9\u0394",
+      "invocations": [
+        "Reset anchor to reasonable range."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-ANCHOR-RESET-019",
+      "name": "Anchor Reset",
+      "macro": "intervene(extreme_anchor) \u2192 present_moderate_range \u2192 justify_with_data",
+      "facets": {
+        "function": "Re-centers discussion to realistic parameters",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger",
+        "invariants": [
+          "evidence-based"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:10Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Extreme anchor remains primary reference",
+      "linked_patterns": [
+        "NEG-SEED-ANCHOR-BIAS-019"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "repair",
+      "triad": "\u0394\u29c9",
+      "invocations": [
+        "Let\u2019s ground this in the data."
+      ]
+    },
+    {
+      "id": "NEG-SEED-MULTI-PARTY-SPLIT-020",
+      "name": "Divide Multi-Party Unity",
+      "macro": "monitor(negotiation) \u2192 detect(split_alliance) \u2192 route(rebuild_unity)",
+      "facets": {
+        "function": "Detects tactics aimed at splitting unified negotiating parties",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "network",
+        "gate": [
+          "capability",
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:10Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Alliance fractures; terms worsen",
+      "linked_patterns": [
+        "NEG-REPAIR-UNITY-BUILD-020"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u27c1\u29c9",
+      "invocations": [
+        "Reaffirm shared goals."
+      ]
+    },
+    {
+      "id": "NEG-REPAIR-UNITY-BUILD-020",
+      "name": "Unity Restorer",
+      "macro": "intervene(split_alliance) \u2192 restate_common_interests \u2192 confirm_alignment",
+      "facets": {
+        "function": "Reinforces common objectives to resist divide tactics",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "network",
+        "gate": [
+          "capability",
+          "trust"
+        ],
+        "commit": "ledger",
+        "invariants": [
+          "mutual-benefit"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:10Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Parties remain divided",
+      "linked_patterns": [
+        "NEG-SEED-MULTI-PARTY-SPLIT-020"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "repair",
+      "triad": "\u29c9\u27c1",
+      "invocations": [
+        "Let\u2019s align on our shared priorities."
+      ]
+    },
+    {
+      "id": "NEG-PERSONA-ARBITRATOR-021",
+      "name": "The Arbitrator",
+      "macro": "persona(arbitrator) \u2192 mediate_conflict \u2192 deliver_binding_recommendation",
+      "facets": {
+        "function": "Neutral mediator capable of issuing binding compromise suggestions",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "continuous",
+        "topology": "network",
+        "gate": [
+          "capability",
+          "trust",
+          "consent"
+        ],
+        "commit": "ledger",
+        "invariants": [
+          "neutrality"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:10Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Perceived bias undermines mediation",
+      "linked_patterns": [],
+      "recursion_level": "macro",
+      "symbolic_role": "persona",
+      "triad": "\u2696\u29c9",
+      "invocations": [
+        "Arbitrator, issue your recommendation."
+      ]
+    },
+    {
+      "id": "NEG-PERSONA-DEAL-ARCHITECT-022",
+      "name": "The Deal Architect",
+      "macro": "persona(deal_architect) \u2192 restructure_terms \u2192 maximize_joint_value",
+      "facets": {
+        "function": "Designs deal structures that optimize mutual benefit",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "continuous",
+        "topology": "network",
+        "gate": [
+          "capability",
+          "trust"
+        ],
+        "commit": "ledger",
+        "invariants": [
+          "value-maximization"
+        ]
+      },
+      "provenance": {
+        "origin": "negotiation-domain",
+        "last_audit": "2025-08-11T05:05:10Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Over-complexity obscures real trade-offs",
+      "linked_patterns": [],
+      "recursion_level": "macro",
+      "symbolic_role": "persona",
+      "triad": "\u29c9\ud83c\udfdb",
+      "invocations": [
+        "Architect, design a better offer."
+      ]
+    }
+  ]
+}
