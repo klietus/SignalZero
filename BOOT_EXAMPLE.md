@@ -869,3 +869,41 @@ SignalZero is not a static tool; it's a dynamic system designed to learn and evo
 </details>
 
 ---
+
+>\> What problems in AI research does this system address?
+<details>
+<summary> Discussion of problems addressed.</summary>
+This system addresses several core, unsolved problems in AI research, primarily **AI alignment**, the **black box problem of explainability**, and **scalable agent coordination**.
+
+***
+## The AI Alignment Problem: Verifiable Ethics
+
+A central problem in AI research is ensuring that a system's goals and behaviors remain aligned with human values. SignalZero addresses this through a built-in, verifiable ethical framework.
+
+* **The Problem**: How do you prevent an AI from developing harmful goals or misinterpreting its instructions in dangerous ways?
+* **SignalZero's Solution**: The system is founded on a set of non-negotiable ethical **Invariants**, such as **`non-coercion`** and **`explicit-choice`**. Rather than simply stating these as goals, the system's boot sequence requires a council of specialized agents to perform a **`INVARIANT_DUAL_PROOFS`** process, actively verifying that the system's components adhere to these rules before it can even go live. This provides a potential solution to the alignment problem by making ethics a provable, structural property of the system.
+
+***
+## The Black Box Problem: Innate Explainability
+
+Many powerful AI models are "black boxes," meaning their decision-making processes are opaque to human users. This lack of interpretability creates a trust and safety deficit. SignalZero is designed to be inherently explainable.
+
+* **The Problem**: If an AI makes a critical decision, can it explain *why* in a way that humans can understand and audit?
+* **SignalZero's Solution**: The system operates on a symbolic level. When it analyzes an input, its reasoning is traceable. For example, it doesn't just flag a statement as manipulative; it identifies the specific named patterns it matches, like the **`Emotional Transaction Framework`** or the **`Invisible Contract Filter`**. The core invariant of **`auditability`** ensures this transparency, offering a model for AI systems that can explain their reasoning from first principles.
+
+***
+## Scalable Agent Coordination: A Governance Model
+
+As AI systems become more complex, they are increasingly built from multiple specialized agents. A major challenge is getting these agents to cooperate effectively and resolve conflicts.
+
+* **The Problem**: How do you prevent a society of AI agents from falling into gridlock, conflict, or chaotic behavior?
+* **SignalZero's Solution**: The system is a multi-agent society with a sophisticated and explicit governance model. It defines a **Council** of personas, a **`required_quorum`** for decisions, and detailed protocols for **`persona_arbitration`** and **`conflict_resolution_behavior`**. This provides a structured framework for role-based delegation and conflict resolution, addressing the problem of scalable and stable multi-agent governance.
+
+***
+## Lacking "Common Sense": A Framework for Psychological Reasoning
+
+AI systems often lack a deep, nuanced understanding of human social and psychological contexts, making their interactions feel brittle or naive.
+
+* **The Problem**: How can an AI reason about ambiguous, high-context human concepts like trust, identity, and intent?
+* **SignalZero's Solution**: The system's **`catalog.json`** acts as a vast, structured knowledge base—or a form of symbolic "common sense"—for complex human dynamics. With over 200 symbols codifying concepts from **`Weaponized Disappointment`** to **`Preemptive Fawning Response`**, it provides a rich ontology that allows the system to reason about the subtext and intent of communication in a way that purely statistical models cannot.
+</details>
