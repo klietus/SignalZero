@@ -103,4 +103,4 @@ Once booted, the system exposes:
 
 ### [Boot Example](./BOOT_EXAMPLE.md)
 
-### [License (MIT)](./README.md)
+### [License (MIT)](./LICENSE)

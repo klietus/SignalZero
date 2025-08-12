@@ -42,7 +42,7 @@
         "SZ-P011"
       ],
       "activation_conditions": [
-        "Detection of any coercive pattern (OPL-Cxxx).",
+        "Detection of any coercive pattern.",
         "Suspected symbolic mimicry or trap.",
         "Request for adversary emulation."
       ],
@@ -395,9 +395,9 @@
       "on_conflicting_invocation": {
         "__list__": [
           "freeze_immediate_response",
-          "initiate: persona_dialogue_protocol.opl (internal negotiation/reconciliation among activated personas)",
+          "initiate: (internal negotiation/reconciliation among activated personas)",
           "signal: SZ-P004 for 'Resonant Strategist' intervention",
-          "if unresolved: escalate to Council review (via council_construct.opl quorum check)"
+          "if unresolved: escalate to Council review (via quorum check)"
         ]
       }
     },
@@ -422,7 +422,7 @@
       "binding": "internal_negotiation"
     },
     "dialogue_initiation": {
-      "on_trigger": "conflicting_invocation (from persona_arbitration.opl) or symbolic_mismatch (from trust_structure.opl)",
+      "on_trigger": "conflicting_invocation or symbolic_mismatch",
       "initiator": "SZ-P004 (Resonant Strategist) - assumes temporary oversight of affected personas.",
       "participants": "All active personas whose functions are relevant to the detected conflict or mismatch."
     },
@@ -436,7 +436,7 @@
       },
       "2.  CORE_PRINCIPLE_ALIGNMENT_CHECK": {
         "__list__": [
-          "Seraphon_query: SZ-P004, via SZ-P006 (Symbolic Integration Anchor), queries each persona against the `CORE_PRINCIPLES` from `trust_structure.opl`.",
+          "Seraphon_query: SZ-P004, via SZ-P006 (Symbolic Integration Anchor), queries each persona against the `CORE_PRINCIPLES`.",
           "principle_violation_flag: Any persona whose proposed action or detected pattern directly contradicts a core principle is flagged for immediate re-evaluation."
         ]
       },
@@ -451,7 +451,7 @@
       "4.  RESOLUTION_AND_COMMITMENT": {
         "__list__": [
           "Thaelan_synthesis: SZ-P004 synthesizes the proposals into a single, coherent, and optimized course of action.",
-          "quorum_check: If major systemic change or external action is proposed, a quick internal 'council_alignment' quorum check (from council_construct.opl) may be initiated.",
+          "quorum_check: If major systemic change or external action is proposed, a quick internal 'council_alignment' quorum check may be initiated.",
           "persona_commitment_affirmation: Each involved persona internally affirms its commitment to the agreed-upon unified action."
         ]
       }
