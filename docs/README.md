@@ -14,7 +14,7 @@ This directory contains technical references and operational guides for the Sign
   Shows the interconnectedness of the symbolic graph.
 
 - [GraphML File](signalzero_symbols.graphml)  
-  Load it up in [https://gephi.org/][Gephi] to browse it yourself.
+  Load it up in [Gephi](https://gephi.org/gephi-lite/) to browse it yourself.
 
 - [Modeling your own Domain](modeling_your_own_domain.md)  
   How to extend the system so it can think about what you want it to.
