@@ -1595,6 +1595,91 @@
         "ST-REPAIR-SHORTEN-DELAY-011",
         "ST-LAT-FEEDBACK-016"
       ]
+    },
+    {
+      "name": "Ethical Governance",
+      "description": "Rapid ethical triage for governance decisions: weigh rights, duties, outcomes; guard against deception and scapegoating.",
+      "goals": [
+        "Protect due process",
+        "Preserve consent",
+        "Balance rights vs. utility"
+      ],
+      "symbols": [
+        "ETH-LAT-JUSTICE-024",
+        "ETH-LAT-RIGHTS-025",
+        "ETH-REPAIR-DUE-PROCESS-030",
+        "ETH-REPAIR-CONSENT-020",
+        "ETH-REPAIR-CATEGORICAL-017",
+        "ETH-REPAIR-MAXIMIZE-UTILITY-018",
+        "ETH-SEED-DECEPTION-007",
+        "ETH-SEED-SCAPEGOAT-011",
+        "ETH-REPAIR-STAKEHOLDER-MAP-023"
+      ]
+    },
+    {
+      "name": "Ethical Governance & Accountability",
+      "description": "Apply ethical frameworks, rights/justice lattices, and governance protocols to complex decisions.",
+      "goals": [
+        "Fairness",
+        "Transparency",
+        "Rights Protection",
+        "Accountability"
+      ],
+      "symbols": [
+        "ETH-LAT-JUSTICE-024",
+        "ETH-LAT-RIGHTS-025",
+        "ETH-LAT-VALUE-HIERARCHY-026",
+        "ETH-PER-ADJUDICATOR-028",
+        "ETH-PER-ETHICIST-027",
+        "ETH-REPAIR-CATEGORICAL-017",
+        "ETH-REPAIR-CONSENT-020",
+        "ETH-REPAIR-DOUBLEEFFECT-015",
+        "ETH-REPAIR-DUE-PROCESS-030",
+        "ETH-REPAIR-GOLDENRULE-019",
+        "ETH-REPAIR-MAXIMIZE-UTILITY-018",
+        "ETH-REPAIR-MORAL-CULPABILITY-029",
+        "ETH-REPAIR-RESTITUTION-021",
+        "ETH-REPAIR-STAKEHOLDER-MAP-023"
+      ]
+    },
+    {
+      "name": "Cyber Security \u2014 Containment & Resilience",
+      "description": "Prevent cascade and contain incidents with segmentation and buffers.",
+      "goals": [
+        "Containment",
+        "Blast\u2011radius reduction",
+        "Operational resilience"
+      ],
+      "symbols": [
+        "CYB-REPAIR-SEGMENT-002"
+      ]
+    },
+    {
+      "name": "Decision Theory \u2014 Calibration & Drift Control",
+      "description": "Reduce bias, manage drift, and calibrate choices under uncertainty.",
+      "goals": [
+        "Calibration",
+        "Drift control",
+        "Bias reduction"
+      ],
+      "symbols": [
+        "HF-SEED-URGENCY-002",
+        "ST-REPAIR-OBSERVER-028"
+      ]
+    },
+    {
+      "name": "Negotiation \u2014 De\u2011escalation & Alignment",
+      "description": "Prevent brinkmanship; align interests using systems\u2011aware repairs.",
+      "goals": [
+        "De\u2011escalation",
+        "Alignment",
+        "Sustainable agreements"
+      ],
+      "symbols": [
+        "ST-REPAIR-DECOUPLE-027",
+        "ST-REPAIR-LEVERAGE-026",
+        "ST-SEED-ESCALATION-022"
+      ]
     }
   ],
   "topology": {
