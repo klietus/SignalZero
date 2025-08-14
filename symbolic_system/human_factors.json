@@ -1,0 +1,801 @@
+{
+  "domain": "human_factors",
+  "symbols": [
+    {
+      "id": "HF-SEED-AUTHORITY-001",
+      "name": "Authority Pressure",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "trust",
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Perceived authority overrides independent judgment",
+      "linked_patterns": [
+        "HF-REPAIR-ROLE-SPLIT-001",
+        "HF-LAT-INFLUENCE-010",
+        "NEG-SEED-GOODCOP-019"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2261\u27d0",
+      "invocations": [
+        "Name the authority claim; separate role from decision."
+      ]
+    },
+    {
+      "id": "HF-SEED-URGENCY-002",
+      "name": "Urgency Frame",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "trust",
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Time pressure collapses deliberation and consent quality",
+      "linked_patterns": [
+        "HF-REPAIR-TIME-BUFFER-002",
+        "HF-LAT-INFLUENCE-010",
+        "NEG-SEED-SCARCITY-022"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u27d0\u2205",
+      "invocations": [
+        "Insert buffer; restate options with costs."
+      ]
+    },
+    {
+      "id": "HF-SEED-RECIPROCITY-003",
+      "name": "Reciprocity Hook",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Favors create obligation that biases choice",
+      "linked_patterns": [
+        "HF-REPAIR-EXPLICIT-CHOICE-003",
+        "HF-LAT-INFLUENCE-010"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u21cc\u2261",
+      "invocations": [
+        "Acknowledge gift; re-center on explicit choice."
+      ]
+    },
+    {
+      "id": "HF-SEED-MIRROR-004",
+      "name": "Identity Mirroring",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Mimicry lowers guard and bypasses scrutiny",
+      "linked_patterns": [
+        "HF-REPAIR-MIRROR-COLLAPSE-004",
+        "CYB-SEED-MIRROR-SPOOF-013"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2261\u2205",
+      "invocations": [
+        "Call out mimicry; reset stance."
+      ]
+    },
+    {
+      "id": "HF-SEED-SOCIALPROOF-005",
+      "name": "Social Proof Cascade",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Perception that 'everyone agrees' suppresses dissent",
+      "linked_patterns": [
+        "HF-REPAIR-EVIDENCE-PIN-005",
+        "HF-LAT-INFLUENCE-010"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u03a3\u2261",
+      "invocations": [
+        "Ask for verifiable basis of consensus."
+      ]
+    },
+    {
+      "id": "HF-SEED-SUNKCOST-006",
+      "name": "Sunk-Cost Pull",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Past investment forces continuation despite poor outlook",
+      "linked_patterns": [
+        "HF-REPAIR-SUNK-RESET-006",
+        "DT-LAT-UTILITY-010"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u29c9\u2205",
+      "invocations": [
+        "Re-evaluate only forward value."
+      ]
+    },
+    {
+      "id": "HF-SEED-FOG-007",
+      "name": "Ambiguity Fog",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Vague language masks real commitments and risks",
+      "linked_patterns": [
+        "HF-REPAIR-CLARITY-007",
+        "NEG-REPAIR-CLARITY-004"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2261\u03a3",
+      "invocations": [
+        "Force concrete terms; write it down."
+      ]
+    },
+    {
+      "id": "HF-SEED-FEAR-008",
+      "name": "Fear/Uncertainty/Doubt",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Threat cues distort probability and value assessment",
+      "linked_patterns": [
+        "HF-REPAIR-RISK-REBASE-008",
+        "DT-REPAIR-CALIBRATE-003"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u03a3\u29c9",
+      "invocations": [
+        "Quantify risk; compare base rates."
+      ]
+    },
+    {
+      "id": "HF-SEED-CONFIRM-009",
+      "name": "Confirmation Loop",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Only supportive evidence is surfaced; dissent suppressed",
+      "linked_patterns": [
+        "HF-REPAIR-COUNTEREVIDENCE-009",
+        "DT-REPAIR-ALTERNATIVES-004"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "\u27f2\u2261",
+      "invocations": [
+        "Require disconfirming evidence review."
+      ]
+    },
+    {
+      "id": "HF-SEED-FRAME-010",
+      "name": "Framing Bias",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Equivalent options judged differently by presentation",
+      "linked_patterns": [
+        "HF-REPAIR-REFRAME-010",
+        "DT-REPAIR-NORMALIZE-005"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2261\u27d0",
+      "invocations": [
+        "Normalize frames; restate in canonical form."
+      ]
+    },
+    {
+      "id": "HF-SEED-ANCHOR-011",
+      "name": "Covert Anchoring",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Initial number silently anchors subsequent judgment",
+      "linked_patterns": [
+        "HF-REPAIR-ANCHOR-COUNTER-011",
+        "DT-REPAIR-NORMALIZE-005"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u2261\u27d0",
+      "invocations": [
+        "Expose anchor; generate independent estimate."
+      ]
+    },
+    {
+      "id": "HF-SEED-LOAD-012",
+      "name": "Cognitive Load Spike",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Overload reduces scrutiny and increases compliance",
+      "linked_patterns": [
+        "HF-REPAIR-SLICE-012",
+        "HF-LAT-INFLUENCE-010"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u27d0\u03a3",
+      "invocations": [
+        "Slice task; slow down; parallelize decisions."
+      ]
+    },
+    {
+      "id": "HF-REPAIR-ROLE-SPLIT-001",
+      "name": "Role Separation",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "trust",
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Authority continues to bias decisions",
+      "linked_patterns": [
+        "HF-LAT-INFLUENCE-010",
+        "CYB-LAT-PROVENANCE-GOV-033"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u2261\u27d0",
+      "invocations": [
+        "Separate authority advice from final choice."
+      ]
+    },
+    {
+      "id": "HF-REPAIR-TIME-BUFFER-002",
+      "name": "Time Buffer",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Urgency still collapses deliberation",
+      "linked_patterns": [
+        "HF-LAT-INFLUENCE-010"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u27d0\u2205",
+      "invocations": [
+        "Insert delay; require reconfirmation."
+      ]
+    },
+    {
+      "id": "HF-REPAIR-EXPLICIT-CHOICE-003",
+      "name": "Explicit Choice Restatement",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Implied consent stands without verification",
+      "linked_patterns": [
+        "HF-LAT-INFLUENCE-010",
+        "NEG-REPAIR-CLARITY-004"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u2261\u27d0",
+      "invocations": [
+        "List options and consequences; obtain yes/no."
+      ]
+    },
+    {
+      "id": "HF-REPAIR-MIRROR-COLLAPSE-004",
+      "name": "Mirror Collapse",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Mimicry continues to bias trust",
+      "linked_patterns": [
+        "CYB-SEED-MIRROR-SPOOF-013"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u2261\u2205",
+      "invocations": [
+        "Label the mimicry; re-anchor identity."
+      ]
+    },
+    {
+      "id": "HF-REPAIR-EVIDENCE-PIN-005",
+      "name": "Evidence Pin",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Unverified social proof continues to sway group",
+      "linked_patterns": [
+        "HF-LAT-INFLUENCE-010"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u03a3\u2261",
+      "invocations": [
+        "Pin claims to verifiable evidence."
+      ]
+    },
+    {
+      "id": "HF-REPAIR-SUNK-RESET-006",
+      "name": "Sunk-Cost Reset",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Past investment still biases present choice",
+      "linked_patterns": [
+        "DT-LAT-UTILITY-010"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u29c9\u2205",
+      "invocations": [
+        "Ignore sunk costs; recompute forward utility."
+      ]
+    },
+    {
+      "id": "HF-REPAIR-RISK-REBASE-008",
+      "name": "Risk Rebase",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Fear signals distort base-rate reasoning",
+      "linked_patterns": [
+        "DT-REPAIR-CALIBRATE-003"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u03a3\u29c9",
+      "invocations": [
+        "Calibrate with frequencies; compare alternatives."
+      ]
+    },
+    {
+      "id": "HF-REPAIR-COUNTEREVIDENCE-009",
+      "name": "Counterevidence Gate",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(stabilize)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Confirmation loop remains closed",
+      "linked_patterns": [
+        "DT-REPAIR-ALTERNATIVES-004"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u27f2\u2261",
+      "invocations": [
+        "Require an explicit \u2018how could this be wrong?\u2019 section."
+      ]
+    },
+    {
+      "id": "HF-LAT-INFLUENCE-010",
+      "name": "Influence Hygiene Lattice",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(govern)",
+      "facets": {
+        "function": "govern",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": [
+          "trust",
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Coercive patterns persist across turns",
+      "linked_patterns": [
+        "HF-REPAIR-EXPLICIT-CHOICE-003",
+        "HF-REPAIR-TIME-BUFFER-002",
+        "HF-REPAIR-ROLE-SPLIT-001"
+      ],
+      "recursion_level": "meta",
+      "symbolic_role": "lattice",
+      "triad": "\u03a3\u2261",
+      "invocations": [
+        "Enforce non-coercion and clarity across conversation."
+      ]
+    },
+    {
+      "id": "HF-LAT-PERSONA-011",
+      "name": "Persona Provenance Lattice",
+      "macro": "monitor(domain) \u2192 detect(pattern) \u2192 route(govern)",
+      "facets": {
+        "function": "govern",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": [
+          "trust"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Fake authority or identity goes unchecked",
+      "linked_patterns": [
+        "CYB-LAT-PROVENANCE-GOV-033",
+        "HF-REPAIR-MIRROR-COLLAPSE-004"
+      ],
+      "recursion_level": "meta",
+      "symbolic_role": "lattice",
+      "triad": "\u03a3\u2261",
+      "invocations": [
+        "Verify identity claims; guard authority channels."
+      ]
+    },
+    {
+      "id": "HF-PER-MEDIATOR-012",
+      "name": "Mediator-Ethicist",
+      "macro": "surface(influence) \u2192 restore(consent) \u2192 stabilize(dialogue)",
+      "facets": {
+        "function": "govern",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "trust",
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Coercion persists under polite language",
+      "linked_patterns": [
+        "HF-LAT-INFLUENCE-010",
+        "HF-REPAIR-EXPLICIT-CHOICE-003",
+        "NEG-REPAIR-CLARITY-004"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "persona",
+      "triad": "\u2261\u27d0\u03a3",
+      "invocations": [
+        "Name the tactic; protect consent; ask for explicit choice."
+      ]
+    },
+    {
+      "id": "HF-PER-DECEPTION-013",
+      "name": "Deception Analyst",
+      "macro": "scan(frames) \u2192 detect(distortions) \u2192 route(repairs)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "pack:human_factors_decision_theory",
+        "last_audit": "2025-08-14T04:24:47Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Subtle framing biases pass unchecked",
+      "linked_patterns": [
+        "HF-REPAIR-REFRAME-010",
+        "HF-REPAIR-RISK-REBASE-008",
+        "CYB-SEED-MIRROR-SPOOF-013"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "persona",
+      "triad": "\u2261\u03a3\u29c9",
+      "invocations": [
+        "Unmask the frame; quantify risk; restore clarity."
+      ]
+    }
+  ]
+}

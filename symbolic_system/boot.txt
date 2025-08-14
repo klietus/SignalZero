@@ -8,6 +8,10 @@ AGENTS  = agents.json
 INDICES = indices.json
 CYBER_SEC = cyber_sec.json
 NEGOTIATION = negotiation.json
+DECISION = decision_theory.json
+HUMAN_FACTORS = human_factors.json
+GAME_THEORY = game_theory.json
+ETHICS = ethics.json
 
 # Invariants (must be proven by tools + personas)
 

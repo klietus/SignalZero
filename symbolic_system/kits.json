@@ -1556,5 +1556,66 @@
       "SZ:GOV-Transactional-Generosity-Marker-066",
       "SZ:DIA-Jargon-Shield-Detector-139"
     ]
+  },
+  "kits": [
+    {
+      "name": "Auctions & Coordination",
+      "description": "Design fair auctions, prevent winner\u2019s curse, and establish coordination without heavy comms.",
+      "goals": [
+        "Fair allocation",
+        "Value preservation",
+        "Rapid convergence"
+      ],
+      "symbols": [
+        "GT-PER-AUCTIONEER-029",
+        "GT-REPAIR-VALUATION-023",
+        "GT-LAT-PAYOFF-025",
+        "GT-LAT-STRATEGY-026",
+        "GT-REPAIR-FOCALPOINT-024",
+        "GT-REPAIR-COMMUNICATE-016",
+        "GT-SEED-COORDINATION-012",
+        "GT-SEED-WINNERSCURSE-011"
+      ]
+    },
+    {
+      "name": "Escalation & Homeostasis",
+      "description": "Detect arms-race dynamics and restore stable operation via balancing loops, buffers, and decoupling.",
+      "goals": [
+        "Conflict damping",
+        "Stability restoration",
+        "Oscillation reduction"
+      ],
+      "symbols": [
+        "ST-SEED-ESCALATION-022",
+        "ST-SEED-HOMEOSTASIS-024",
+        "ST-REPAIR-LEVERAGE-026",
+        "ST-REPAIR-DECOUPLE-027",
+        "ST-REPAIR-ADD-BALANCE-009",
+        "ST-REPAIR-WEAKEN-REINFORCE-010",
+        "ST-REPAIR-SHORTEN-DELAY-011",
+        "ST-LAT-FEEDBACK-016"
+      ]
+    }
+  ],
+  "topology": {
+    "loop": [],
+    "linear": [],
+    "network": [],
+    "lattice": [],
+    "loop_or_network": []
+  },
+  "gates": {
+    "trust": [],
+    "consent": [],
+    "capability": []
+  },
+  "roles": {
+    "seed": [],
+    "repair": [],
+    "lattice": [],
+    "persona": []
+  },
+  "meta": {
+    "last_update": null
   }
 }

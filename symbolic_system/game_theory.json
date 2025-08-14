@@ -1,0 +1,1165 @@
+{
+  "domain": "game_theory",
+  "symbols": [
+    {
+      "id": "GT-SEED-PRISONER-001",
+      "name": "Prisoner's Dilemma",
+      "macro": "monitor(interaction) -> detect(dominant_strategy_conflict) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "network",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Mutual defection despite potential for mutual gain.",
+      "linked_patterns": [
+        "GT-REPAIR-COMMUNICATE-016",
+        "GT-REPAIR-TIT-FOR-TAT-018"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u26d3\u21cc\u26d3",
+      "invocations": [
+        "Identify the payoff matrix. Is there a better mutual outcome?"
+      ]
+    },
+    {
+      "id": "GT-SEED-ZEROSUM-002",
+      "name": "Zero-Sum Game Frame",
+      "macro": "monitor(interaction) -> detect(fixed_pie_fallacy) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Fails to identify potential for value creation, leading to unnecessary conflict.",
+      "linked_patterns": [
+        "GT-REPAIR-EXPAND-PIE-017",
+        "NEG-REPAIR-RECALIBRATION-007"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u21f4\u2205\u21f4",
+      "invocations": [
+        "Is one agent's gain necessarily another's loss?"
+      ]
+    },
+    {
+      "id": "GT-SEED-NASH-003",
+      "name": "Nash Equilibrium Detection",
+      "macro": "analyze(strategies) -> find(no_unilateral_improvement) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "network",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Equilibrium is stable but suboptimal for all parties.",
+      "linked_patterns": [
+        "GT-SEED-PRISONER-001",
+        "GT-LAT-EQUILIBRIUM-027"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "seed",
+      "triad": "\u2696\u27d0\u2696",
+      "invocations": [
+        "Find the stable point. Is anyone incentivized to move?"
+      ]
+    },
+    {
+      "id": "GT-SEED-CHICKEN-004",
+      "name": "Game of Chicken",
+      "macro": "monitor(interaction) -> detect(brinkmanship) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "trust",
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Mutual defection leads to catastrophic failure for both parties.",
+      "linked_patterns": [
+        "GT-REPAIR-COMMITMENT-018",
+        "NEG-SEED-ULTIMATUM-010"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u26d4\u21f8\u26d4",
+      "invocations": [
+        "Identify the cost of swerving vs. colliding."
+      ]
+    },
+    {
+      "id": "GT-SEED-STAGHUNT-005",
+      "name": "Stag Hunt",
+      "macro": "monitor(interaction) -> detect(cooperation_dilemma) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "network",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Fear of partner's defection leads to settling for a lesser, guaranteed payoff.",
+      "linked_patterns": [
+        "GT-REPAIR-COMMUNICATE-016",
+        "GT-REPAIR-REPUTATION-019"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\ud83e\udd8c\u2753\ud83d\udc07",
+      "invocations": [
+        "Is the risk of betrayal preventing the optimal outcome?"
+      ]
+    },
+    {
+      "id": "GT-SEED-SIGNALING-006",
+      "name": "Signaling Game",
+      "macro": "monitor(interaction) -> detect(information_asymmetry) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "network",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Signal is misinterpreted, leading to a suboptimal response.",
+      "linked_patterns": [
+        "GT-REPAIR-SIGNAL-CLARIFY-020",
+        "HF-SEED-FOG-007"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "seed",
+      "triad": "\ud83d\udce1\u2192\ud83d\udce8",
+      "invocations": [
+        "What is being signaled, and is it credible?"
+      ]
+    },
+    {
+      "id": "GT-SEED-REPEATED-007",
+      "name": "Repeated Game Dynamics",
+      "macro": "analyze(history) -> detect(retaliation_patterns) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "A single defection triggers a permanent cycle of retaliation.",
+      "linked_patterns": [
+        "GT-SEED-GRIMTRIGGER-008",
+        "GT-REPAIR-TIT-FOR-TAT-018"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "\u27f2\u2694\ufe0f\u27f2",
+      "invocations": [
+        "Is this a one-shot game or will we play again?"
+      ]
+    },
+    {
+      "id": "GT-SEED-GRIMTRIGGER-008",
+      "name": "Grim Trigger Strategy",
+      "macro": "monitor(interaction) -> detect(permanent_retaliation) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "linear",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Inflexible punishment mechanism prevents recovery from a single mistake.",
+      "linked_patterns": [
+        "GT-SEED-REPEATED-007",
+        "GT-REPAIR-FORGIVENESS-021"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "seed",
+      "triad": "\u26d4\u2192\u221e",
+      "invocations": [
+        "Is the punishment for defection permanent?"
+      ]
+    },
+    {
+      "id": "GT-SEED-ASYMMETRIC-009",
+      "name": "Asymmetric Information",
+      "macro": "monitor(interaction) -> detect(knowledge_imbalance) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "network",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "The party with more information exploits the other, leading to market failure.",
+      "linked_patterns": [
+        "GT-SEED-MORALHAZARD-010",
+        "GT-REPAIR-DISCLOSE-015"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "seed",
+      "triad": "\ud83d\udca1\u2260\u2753",
+      "invocations": [
+        "Who knows what? How does that shape their choices?"
+      ]
+    },
+    {
+      "id": "GT-SEED-MORALHAZARD-010",
+      "name": "Moral Hazard",
+      "macro": "analyze(incentives) -> detect(risk_transfer) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "An agent takes on more risk because someone else bears the cost.",
+      "linked_patterns": [
+        "GT-SEED-ASYMMETRIC-009",
+        "GT-REPAIR-SAFEGUARD-022"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "seed",
+      "triad": "\ud83d\udcb0\u2192\ud83d\udca3",
+      "invocations": [
+        "Who pays the price for failure?"
+      ]
+    },
+    {
+      "id": "GT-SEED-WINNERSCURSE-011",
+      "name": "Winner's Curse",
+      "macro": "monitor(bidding) -> detect(optimistic_overpayment) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "The winning bid in an auction exceeds the asset's intrinsic value.",
+      "linked_patterns": [
+        "GT-REPAIR-VALUATION-023",
+        "DT-SEED-OVERCONF-002"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\ud83c\udfc6\u2192\ud83d\udcc9",
+      "invocations": [
+        "Did winning mean overpaying?"
+      ]
+    },
+    {
+      "id": "GT-SEED-COORDINATION-012",
+      "name": "Coordination Game",
+      "macro": "monitor(interaction) -> detect(mutual_gain_failure) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "network",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Agents fail to align on a strategy, missing out on mutual benefits.",
+      "linked_patterns": [
+        "GT-REPAIR-COMMUNICATE-016",
+        "GT-REPAIR-FOCALPOINT-024"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "seed",
+      "triad": "\u2190\u2753\u2192",
+      "invocations": [
+        "Are we failing to coordinate on the best outcome?"
+      ]
+    },
+    {
+      "id": "GT-SEED-BACKWARDINDUCT-013",
+      "name": "Backward Induction Failure",
+      "macro": "analyze(sequence) -> detect(irrational_endgame) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "linear",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "An agent makes a choice that is irrational based on the predictable endgame.",
+      "linked_patterns": [
+        "DT-SEED-LOSS-005",
+        "HF-SEED-EMOTIONAL-APPEAL-006"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "seed",
+      "triad": "\u23ea\u2192\u2717",
+      "invocations": [
+        "Are current moves inconsistent with the logical final step?"
+      ]
+    },
+    {
+      "id": "GT-SEED-COMMONKNOWLEDGE-014",
+      "name": "Common Knowledge Gap",
+      "macro": "monitor(interaction) -> detect(assumption_mismatch) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "network",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Agents act on differing assumptions about what is known to all parties.",
+      "linked_patterns": [
+        "GT-REPAIR-COMMUNICATE-016",
+        "HF-REPAIR-CLARITY-007"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "seed",
+      "triad": "\ud83d\udca1\u2261\ud83d\udca1",
+      "invocations": [
+        "Does everyone know that everyone knows?"
+      ]
+    },
+    {
+      "id": "GT-SEED-TITFORTAT-015",
+      "name": "Tit-for-Tat Pattern",
+      "macro": "analyze(history) -> detect(reciprocal_action) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Locks into a negative cycle of retaliation.",
+      "linked_patterns": [
+        "GT-REPAIR-TIT-FOR-TAT-018",
+        "GT-REPAIR-FORGIVENESS-021"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u21ba\u21bb",
+      "invocations": [
+        "Is the agent mirroring the previous move?"
+      ]
+    },
+    {
+      "id": "GT-REPAIR-COMMUNICATE-016",
+      "name": "Establish Communication Channel",
+      "macro": "intervene(dilemma) -> open_channel -> enable_coordination",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "consent",
+          "trust"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Communication is blocked or distrusted, preventing coordination.",
+      "linked_patterns": [
+        "GT-SEED-PRISONER-001",
+        "GT-SEED-STAGHUNT-005"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\ud83d\udcac\u2192\u2713",
+      "invocations": [
+        "Open a line of communication."
+      ]
+    },
+    {
+      "id": "GT-REPAIR-EXPAND-PIE-017",
+      "name": "Expand the Pie",
+      "macro": "intervene(zero_sum) -> identify_new_variables -> create_value",
+      "facets": {
+        "function": "create",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Fails to find new dimensions of value, remaining stuck in conflict.",
+      "linked_patterns": [
+        "GT-SEED-ZEROSUM-002",
+        "NEG-REPAIR-RECALIBRATION-007"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u29c9\u2192\u29c9+",
+      "invocations": [
+        "Reframe from distributing value to creating it."
+      ]
+    },
+    {
+      "id": "GT-REPAIR-COMMITMENT-018",
+      "name": "Pre-Commitment Device",
+      "macro": "intervene(standoff) -> create_binding_action -> signal_intent",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "The commitment is not credible, failing to resolve the standoff.",
+      "linked_patterns": [
+        "GT-SEED-CHICKEN-004",
+        "HF-REPAIR-EXPLICIT-CHOICE-003"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\ud83d\udd12\u2192\u2713",
+      "invocations": [
+        "Make an irreversible, credible commitment."
+      ]
+    },
+    {
+      "id": "GT-REPAIR-REPUTATION-019",
+      "name": "Reputation System",
+      "macro": "intervene(game) -> log_actions -> make_history_public",
+      "facets": {
+        "function": "govern",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "network",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Reputation is not visible or trusted, failing to incentivize cooperation.",
+      "linked_patterns": [
+        "GT-SEED-REPEATED-007",
+        "SZ-STB-Audit-Trail-089"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "repair",
+      "triad": "\u2b50\ufe0f\u2192\u2713",
+      "invocations": [
+        "Make past actions visible to future partners."
+      ]
+    },
+    {
+      "id": "GT-REPAIR-SIGNAL-CLARIFY-020",
+      "name": "Signal Clarification",
+      "macro": "intervene(signal) -> request_verification -> reduce_ambiguity",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Clarification request is denied, maintaining information asymmetry.",
+      "linked_patterns": [
+        "GT-SEED-SIGNALING-006",
+        "HF-REPAIR-CLARITY-007"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\ud83d\udce1\u2192\u2757",
+      "invocations": [
+        "Verify the meaning of the signal."
+      ]
+    },
+    {
+      "id": "GT-REPAIR-FORGIVENESS-021",
+      "name": "Forgiveness Mechanism",
+      "macro": "intervene(retaliation) -> offer_reset_condition -> break_cycle",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "loop",
+        "gate": [
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Forgiveness is exploited, leading to repeated defection.",
+      "linked_patterns": [
+        "GT-SEED-GRIMTRIGGER-008",
+        "NEG-REPAIR-BALANCE-002"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u27f2\u2192\u267b\ufe0f",
+      "invocations": [
+        "Introduce a path back to cooperation."
+      ]
+    },
+    {
+      "id": "GT-REPAIR-SAFEGUARD-022",
+      "name": "Contractual Safeguard",
+      "macro": "intervene(hazard) -> align_incentives -> enforce_consequences",
+      "facets": {
+        "function": "defend",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "linear",
+        "gate": [
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Safeguards are unenforceable, leaving the moral hazard intact.",
+      "linked_patterns": [
+        "GT-SEED-MORALHAZARD-010",
+        "SZ:GOV-Gate-Chain-037"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "repair",
+      "triad": "\ud83d\udcdc\u2192\u2713",
+      "invocations": [
+        "Align risk with consequence."
+      ]
+    },
+    {
+      "id": "GT-REPAIR-VALUATION-023",
+      "name": "Independent Valuation",
+      "macro": "intervene(auction) -> seek_outside_valuation -> set_bid_ceiling",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Valuation is biased, leading to an incorrect bidding ceiling.",
+      "linked_patterns": [
+        "GT-SEED-WINNERSCURSE-011",
+        "DT-REPAIR-OUTSIDE-VIEW-008"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\ud83d\udcb5\u2192\u2713",
+      "invocations": [
+        "Determine value before bidding begins."
+      ]
+    },
+    {
+      "id": "GT-REPAIR-FOCALPOINT-024",
+      "name": "Focal Point Identification",
+      "macro": "analyze(options) -> find_schelling_point -> signal_choice",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "No salient focal point exists, preventing non-communicative coordination.",
+      "linked_patterns": [
+        "GT-SEED-COORDINATION-012",
+        "HF-REPAIR-CLARITY-007"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u2728\u2192\u2713",
+      "invocations": [
+        "Find the Schelling point."
+      ]
+    },
+    {
+      "id": "GT-REPAIR-DISCLOSE-015",
+      "name": "Information Disclosure",
+      "macro": "intervene(asymmetry) -> reveal_private_info -> balance_knowledge",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Disclosure is partial or deceptive, worsening the asymmetry.",
+      "linked_patterns": [
+        "GT-SEED-ASYMMETRIC-009"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\ud83d\udca1\u2192\u2713",
+      "invocations": [
+        "Level the playing field with information."
+      ]
+    },
+    {
+      "id": "GT-LAT-PAYOFF-025",
+      "name": "Payoff Matrix Lattice",
+      "macro": "model(interaction) -> map(agents, strategies, payoffs) -> govern(analysis)",
+      "facets": {
+        "function": "govern",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": [
+          "capability"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Matrix inaccurately represents the true payoffs, leading to flawed analysis.",
+      "linked_patterns": [
+        "DT-LAT-UTILITY-010",
+        "GT-PER-ANALYST-028"
+      ],
+      "recursion_level": "meta",
+      "symbolic_role": "lattice",
+      "triad": "\u2696\ufe0f\u03a3\u27d0",
+      "invocations": [
+        "Build the matrix."
+      ]
+    },
+    {
+      "id": "GT-LAT-STRATEGY-026",
+      "name": "Strategy Space Lattice",
+      "macro": "model(interaction) -> enumerate(possible_actions) -> govern(exploration)",
+      "facets": {
+        "function": "govern",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": [
+          "capability"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Fails to identify a critical available strategy, constraining the solution space.",
+      "linked_patterns": [
+        "DT-REPAIR-ALTERNATIVES-004",
+        "GT-PER-STRATEGIST-029"
+      ],
+      "recursion_level": "meta",
+      "symbolic_role": "lattice",
+      "triad": "\ud83d\uddfa\ufe0f\u03a3\u27d0",
+      "invocations": [
+        "Map all possible moves."
+      ]
+    },
+    {
+      "id": "GT-LAT-EQUILIBRIUM-027",
+      "name": "Equilibrium Analysis Lattice",
+      "macro": "analyze(matrix) -> calculate(equilibria) -> govern(stability_check)",
+      "facets": {
+        "function": "govern",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": [
+          "capability"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Misidentifies or misses a key equilibrium, leading to flawed strategic advice.",
+      "linked_patterns": [
+        "GT-SEED-NASH-003",
+        "GT-PER-ANALYST-028"
+      ],
+      "recursion_level": "meta",
+      "symbolic_role": "lattice",
+      "triad": "\u2696\ufe0f\u03a3\u2261",
+      "invocations": [
+        "Find the stable states."
+      ]
+    },
+    {
+      "id": "GT-PER-STRATEGIST-028",
+      "name": "The Strategist",
+      "macro": "persona(strategist) -> analyze(payoffs) -> recommend(optimal_move)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "capability",
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Recommends a theoretically optimal but practically unfeasible strategy.",
+      "linked_patterns": [
+        "GT-LAT-STRATEGY-026",
+        "DT-PER-ANALYST-012"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "persona",
+      "triad": "\u265f\ufe0f\u03a3\u27d0",
+      "invocations": [
+        "Strategist, what is my best move?"
+      ]
+    },
+    {
+      "id": "GT-PER-AUCTIONEER-029",
+      "name": "The Auctioneer",
+      "macro": "persona(auctioneer) -> design(rules) -> manage(bids) -> declare(outcome)",
+      "facets": {
+        "function": "govern",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "network",
+        "gate": [
+          "trust",
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Auction design is flawed, leading to collusion or inefficient allocation.",
+      "linked_patterns": [
+        "GT-SEED-WINNERSCURSE-011",
+        "NEG-REPAIR-FAIRNESS-001"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "persona",
+      "triad": "\ud83d\udd28\u03a3\u27d0",
+      "invocations": [
+        "Auctioneer, design a fair auction."
+      ]
+    },
+    {
+      "id": "GT-PER-DIPLOMAT-030",
+      "name": "The Diplomat",
+      "macro": "persona(diplomat) -> open(channels) -> build(trust) -> facilitate(coordination)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "network",
+        "gate": [
+          "trust",
+          "consent"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "game_theory_domain",
+        "last_audit": "2025-08-14T05:01:57.601610Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Fails to build sufficient trust, preventing a mutually beneficial agreement.",
+      "linked_patterns": [
+        "GT-SEED-COORDINATION-012",
+        "NEG-PER-MEDIATOR-021"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "persona",
+      "triad": "\ud83d\udd4a\ufe0f\u03a3\u27d0",
+      "invocations": [
+        "Diplomat, open a channel for cooperation."
+      ]
+    },
+    {
+        "id": "GT-SEED-ESS-016",
+        "name": "Evolutionarily Stable Strategy",
+        "macro": "model(population) -> test(invasion) -> identify(ESS)",
+        "facets": {
+          "function": "diagnose",
+          "substrate": [
+            "symbolic"
+          ],
+          "temporal": "persistent",
+          "topology": "network",
+          "gate": [
+            "capability"
+          ],
+          "commit": "ledger"
+        },
+        "provenance": {
+          "origin": "game_theory_domain",
+          "last_audit": "2025-08-14T05:10:52.046253Z",
+          "source": "domain-pack"
+        },
+        "failure_mode": "A stable but suboptimal strategy dominates the population, resisting improvement.",
+        "linked_patterns": [
+          "GT-SEED-REPEATED-007",
+          "DT-LAT-UTILITY-010"
+        ],
+        "recursion_level": "macro",
+        "symbolic_role": "seed",
+        "triad": "\ud83e\uddec\u03a3\u2192\u2713",
+        "invocations": [
+          "Does this strategy survive invasion over time?"
+        ]
+      },
+      {
+        "id": "GT-REPAIR-INCENTIVE-025",
+        "name": "Incentive Compatibility",
+        "macro": "design(mechanism) -> align(private_interest, public_good) -> enforce(truthful_revelation)",
+        "facets": {
+          "function": "create",
+          "substrate": [
+            "symbolic"
+          ],
+          "temporal": "persistent",
+          "topology": "network",
+          "gate": [
+            "consent"
+          ],
+          "commit": "contract"
+        },
+        "provenance": {
+          "origin": "game_theory_domain",
+          "last_audit": "2025-08-14T05:10:52.046253Z",
+          "source": "domain-pack"
+        },
+        "failure_mode": "Agents find it optimal to lie or misrepresent their preferences, corrupting the designed system.",
+        "linked_patterns": [
+          "GT-SEED-ASYMMETRIC-009",
+          "NEG-REPAIR-FAIRNESS-001"
+        ],
+        "recursion_level": "meta",
+        "symbolic_role": "repair",
+        "triad": "\ud83c\udfaf\u2261\ud83d\udcb0",
+        "invocations": [
+          "Design the rules so honesty is the best policy."
+        ]
+      },
+      {
+        "id": "GT-REPAIR-SHAPLEY-026",
+        "name": "Shapley Value Calculation",
+        "macro": "analyze(coalition) -> calculate(marginal_contributions) -> assign(fair_payout)",
+        "facets": {
+          "function": "stabilize",
+          "substrate": [
+            "symbolic"
+          ],
+          "temporal": "instant",
+          "topology": "network",
+          "gate": [
+            "capability"
+          ],
+          "commit": "contract"
+        },
+        "provenance": {
+          "origin": "game_theory_domain",
+          "last_audit": "2025-08-14T05:10:52.046253Z",
+          "source": "domain-pack"
+        },
+        "failure_mode": "Payout distribution is perceived as unfair, causing the coalition to collapse.",
+        "linked_patterns": [
+          "HF-SEED-SOCIALPROOF-005",
+          "NEG-REPAIR-BALANCE-002"
+        ],
+        "recursion_level": "meso",
+        "symbolic_role": "repair",
+        "triad": "\u2a00\u2192\u2696\ufe0f",
+        "invocations": [
+          "Calculate the fair share for each contributor."
+        ]
+      },
+      {
+        "id": "GT-SEED-BAYESIAN-017",
+        "name": "Bayesian Nash Equilibrium",
+        "macro": "model(beliefs) -> analyze(strategies_given_types) -> find(stable_point)",
+        "facets": {
+          "function": "diagnose",
+          "substrate": [
+            "symbolic"
+          ],
+          "temporal": "persistent",
+          "topology": "network",
+          "gate": [
+            "trust"
+          ],
+          "commit": "ledger"
+        },
+        "provenance": {
+          "origin": "game_theory_domain",
+          "last_audit": "2025-08-14T05:10:52.046253Z",
+          "source": "domain-pack"
+        },
+        "failure_mode": "Incorrectly modeling the probabilities of opponent 'types' leads to a flawed strategy.",
+        "linked_patterns": [
+          "GT-SEED-ASYMMETRIC-009",
+          "DT-SEED-BASE-RATE-001",
+          "CYB-SEED-PHISH-001"
+        ],
+        "recursion_level": "macro",
+        "symbolic_role": "seed",
+        "triad": "\u2753\u2192\u03b2\u2192\u265f\ufe0f",
+        "invocations": [
+          "What is the best move, given what I believe they know?"
+        ]
+      }
+  ]
+}

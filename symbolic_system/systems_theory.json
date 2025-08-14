@@ -1,0 +1,933 @@
+{
+  "domain": "systems_theory",
+  "symbols": [
+    {
+      "id": "ST-SEED-REINFORCE-001",
+      "name": "Reinforcing Feedback Loop",
+      "macro": "monitor(system) -> detect(exponential_change) -> diagnose(loop_polarity)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Unchecked growth or collapse leads to system destruction.",
+      "linked_patterns": [
+        "HF-SEED-SOCIALPROOF-005",
+        "DT-SEED-OVERCONF-002"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "seed",
+      "triad": "\ud83d\udcc8\u27f3",
+      "invocations": [
+        "Identify the engine of growth or collapse."
+      ]
+    },
+    {
+      "id": "ST-SEED-BALANCE-002",
+      "name": "Balancing Feedback Loop",
+      "macro": "monitor(system) -> detect(goal_seeking_behavior) -> diagnose(loop_polarity)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "The system becomes overly rigid and resistant to necessary change.",
+      "linked_patterns": [
+        "SZ:GOV-Loop-Checkpoint-120",
+        "HF-REPAIR-TIME-BUFFER-002"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "seed",
+      "triad": "\ud83c\udfaf\u27f3",
+      "invocations": [
+        "Identify the source of stability."
+      ]
+    },
+    {
+      "id": "ST-SEED-DELAY-003",
+      "name": "System Delay",
+      "macro": "analyze(flow) -> detect(time_lag) -> diagnose(impact_on_stability)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Delay causes oscillations and overcorrection as actors react to outdated information.",
+      "linked_patterns": [
+        "ST-SEED-BALANCE-002",
+        "NEG-SEED-DEADLINE-003"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "\u23f3\u2192 \u09aa\u09cd\u09b0\u09a4\u09bf\u0995\u09cd\u09b0\u09bf\u09af\u09bc\u09be",
+      "invocations": [
+        "Where is the delay between action and consequence?"
+      ]
+    },
+    {
+      "id": "ST-SEED-FIXESFAIL-004",
+      "name": "'Fixes that Fail' Archetype",
+      "macro": "analyze(history) -> detect(problem_recurrence) -> find(unintended_consequence_loop)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "The 'solution' makes the underlying problem worse over time.",
+      "linked_patterns": [
+        "ST-SEED-DELAY-003",
+        "ST-SEED-SHIFTBURDEN-005"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "\ud83d\udd27\u2192\ud83d\udc94",
+      "invocations": [
+        "Is our solution actually feeding the problem?"
+      ]
+    },
+    {
+      "id": "ST-SEED-SHIFTBURDEN-005",
+      "name": "'Shifting the Burden' Archetype",
+      "macro": "analyze(interventions) -> detect(symptomatic_fix) -> find(atrophied_capability)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "The system becomes addicted to a superficial solution, losing its ability to solve the fundamental problem.",
+      "linked_patterns": [
+        "ST-SEED-FIXESFAIL-004",
+        "HF-SEED-AUTHORITY-001"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "\ud83d\udcaa\u2192\ud83d\udc8a",
+      "invocations": [
+        "Are we solving the symptom or the root cause?"
+      ]
+    },
+    {
+      "id": "ST-SEED-COMMONS-006",
+      "name": "'Tragedy of the Commons' Archetype",
+      "macro": "analyze(resource) -> detect(individual_gain_vs_collective_loss) -> route(diagnose)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "network",
+        "gate": [
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Rational individual actions deplete a shared resource, harming the entire group.",
+      "linked_patterns": [
+        "GT-SEED-PRISONER-001",
+        "NEG-REPAIR-FAIRNESS-001"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "\ud83c\udfde\ufe0f\u2192\u2205",
+      "invocations": [
+        "Is individual success destroying the foundation of that success?"
+      ]
+    },
+    {
+      "id": "ST-SEED-LIMITS-007",
+      "name": "'Limits to Growth' Archetype",
+      "macro": "analyze(growth_engine) -> find(slowing_action) -> identify(limiting_factor)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Pushing harder on the growth engine only makes the system hit the limit harder.",
+      "linked_patterns": [
+        "ST-SEED-REINFORCE-001",
+        "ST-SEED-BALANCE-002"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "\ud83d\udcc8\u2192\ud83e\uddf1",
+      "invocations": [
+        "What is secretly slowing down our growth?"
+      ]
+    },
+    {
+      "id": "ST-SEED-POLICYRESIST-008",
+      "name": "Policy Resistance",
+      "macro": "analyze(intervention) -> detect(compensating_feedback) -> diagnose(ineffectiveness)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "network",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "The system compensates for the policy change, nullifying its intended effect.",
+      "linked_patterns": [
+        "HF-SEED-GROUPTHINK-012",
+        "ST-LAT-MODELING-015"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "\ud83d\udcdc\u2192\ud83e\udd37",
+      "invocations": [
+        "Why does this problem never seem to get better, no matter what we do?"
+      ]
+    },
+    {
+      "id": "ST-REPAIR-ADD-BALANCE-009",
+      "name": "Introduce Balancing Loop",
+      "macro": "intervene(reinforcing_loop) -> create(goal_oriented_feedback) -> stabilize(system)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "The new balancing loop is too weak or has too long a delay to counter the reinforcing loop.",
+      "linked_patterns": [
+        "ST-SEED-REINFORCE-001",
+        "ST-REPAIR-ALIGN-GOALS-012"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\ud83d\udcc8+\ud83c\udfaf",
+      "invocations": [
+        "Introduce a governor to the engine."
+      ]
+    },
+    {
+      "id": "ST-REPAIR-WEAKEN-REINFORCE-010",
+      "name": "Weaken Reinforcing Loop",
+      "macro": "intervene(reinforcing_loop) -> identify(lever) -> reduce(gain)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "The intervention fails to meaningfully reduce the exponential growth/collapse.",
+      "linked_patterns": [
+        "ST-SEED-REINFORCE-001",
+        "HF-SEED-SOCIALPROOF-005"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\ud83d\udcc8-",
+      "invocations": [
+        "Slow the rate of acceleration."
+      ]
+    },
+    {
+      "id": "ST-REPAIR-SHORTEN-DELAY-011",
+      "name": "Shorten Delay",
+      "macro": "intervene(system) -> restructure(information_path) -> reduce(time_lag)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Information flow is not meaningfully sped up, oscillations continue.",
+      "linked_patterns": [
+        "ST-SEED-DELAY-003",
+        "ST-REPAIR-INFO-FLOW-013"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\u23f3-",
+      "invocations": [
+        "Get the feedback faster."
+      ]
+    },
+    {
+      "id": "ST-REPAIR-ALIGN-GOALS-012",
+      "name": "Align System Goals",
+      "macro": "analyze(subsystems) -> find(goal_conflict) -> synthesize(superordinate_goal)",
+      "facets": {
+        "function": "govern",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "network",
+        "gate": [
+          "consent",
+          "trust"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "The superordinate goal is rejected by subsystems, or is too abstract to guide behavior.",
+      "linked_patterns": [
+        "ST-SEED-POLICYRESIST-008",
+        "NEG-REPAIR-CLARITY-004"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "repair",
+      "triad": "\ud83c\udfaf\ud83e\udd1d\ud83c\udfaf",
+      "invocations": [
+        "Unify the purpose of the parts."
+      ]
+    },
+    {
+      "id": "ST-REPAIR-INFO-FLOW-013",
+      "name": "Restructure Information Flow",
+      "macro": "map(system) -> identify(info_silos) -> create(new_connections)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "network",
+        "gate": [
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "New information channels are ignored or distrusted.",
+      "linked_patterns": [
+        "ST-SEED-DELAY-003",
+        "CYB-REPAIR-SEGMENT-002"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "repair",
+      "triad": "\ud83d\udcac\u2192\ud83d\udd17",
+      "invocations": [
+        "Ensure the right information reaches the right part of the system."
+      ]
+    },
+    {
+      "id": "ST-REPAIR-BUFFER-014",
+      "name": "Add Buffer/Stock",
+      "macro": "analyze(flows) -> identify(volatility) -> create(stabilizing_stock)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "The buffer is too small to handle volatility, or it becomes a new source of delay.",
+      "linked_patterns": [
+        "ST-SEED-DELAY-003",
+        "DT-SEED-LOSS-005"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "\ud83c\udf0a\u2192[   ]\u2192\ud83d\udca7",
+      "invocations": [
+        "Add a shock absorber to the system."
+      ]
+    },
+    {
+      "id": "ST-LAT-MODELING-015",
+      "name": "Causal Loop Modeling Lattice",
+      "macro": "model(system) -> define(variables) -> map(causal_links) -> govern(analysis)",
+      "facets": {
+        "function": "govern",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": [
+          "capability"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "The model is an oversimplification that misses key variables or feedback loops.",
+      "linked_patterns": [
+        "ST-PER-SYSTEMS-THINKER-017",
+        "DT-LAT-EVIDENCE-011"
+      ],
+      "recursion_level": "meta",
+      "symbolic_role": "lattice",
+      "triad": "\u270d\ufe0f\ud83d\uddfa\ufe0f",
+      "invocations": [
+        "Map the structure of the system."
+      ]
+    },
+    {
+      "id": "ST-LAT-FEEDBACK-016",
+      "name": "Feedback Analysis Lattice",
+      "macro": "analyze(model) -> identify(loops) -> determine(polarity_dominance)",
+      "facets": {
+        "function": "govern",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": [
+          "capability"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Fails to correctly identify the dominant loops that drive system behavior.",
+      "linked_patterns": [
+        "ST-SEED-REINFORCE-001",
+        "ST-SEED-BALANCE-002",
+        "ST-PER-CYBERNETICIST-018"
+      ],
+      "recursion_level": "meta",
+      "symbolic_role": "lattice",
+      "triad": "\u27f3\ud83d\udd0d",
+      "invocations": [
+        "Analyze the engines of behavior."
+      ]
+    },
+    {
+      "id": "ST-PER-SYSTEMS-THINKER-017",
+      "name": "The Systems Thinker",
+      "macro": "persona(systems_thinker) -> see(interconnections) -> surface(archetypes)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "capability",
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Analysis becomes too abstract and detached from the specific details of the problem.",
+      "linked_patterns": [
+        "ST-LAT-MODELING-015",
+        "SZ-P004"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "persona",
+      "triad": "\ud83c\udf10\ud83e\udd14",
+      "invocations": [
+        "Systems Thinker, reveal the underlying structure."
+      ]
+    },
+    {
+      "id": "ST-PER-CYBERNETICIST-018",
+      "name": "The Cyberneticist",
+      "macro": "persona(cyberneticist) -> analyze(control_and_communication) -> identify(leverage_points)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "capability",
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:15:20.823801Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Focuses on control mechanisms to the exclusion of human and adaptive factors.",
+      "linked_patterns": [
+        "ST-LAT-FEEDBACK-016",
+        "CYB-PER-INCIDENT-COMMANDER-035"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "persona",
+      "triad": "\u2699\ufe0f\ud83e\udde0",
+      "invocations": [
+        "Cyberneticist, where is the highest leverage point for intervention?"
+      ]
+    },
+    {
+      "id": "ST-SEED-SUCCESS-019",
+      "name": "'Success to the Successful' Archetype",
+      "macro": "monitor(resource_flow) -> detect(rich-get-richer) -> diagnose(reinforcing_loop)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:18:43Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Initial winners starve out all competition, leading to a fragile monopoly and loss of diversity.",
+      "linked_patterns": [
+        "ST-SEED-REINFORCE-001",
+        "NEG-SEED-POWER-IMBALANCE-009"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "🏆→+→🏆",
+      "invocations": [
+        "Does success breed more success at the expense of others?"
+      ]
+    },
+    {
+      "id": "ST-SEED-ERODEGOAL-020",
+      "name": "'Eroding Goals' Archetype",
+      "macro": "monitor(performance_gap) -> detect(pressure_to_adjust) -> lower(goal_state)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:18:43Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "The system quietly degrades its standards to meet targets, leading to a long-term decline in performance.",
+      "linked_patterns": [
+        "ST-SEED-BALANCE-002",
+        "HF-SEED-URGENCY-002"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "🎯→📉",
+      "invocations": [
+        "Are we lowering the bar to avoid taking difficult action?"
+      ]
+    },
+    {
+      "id": "ST-SEED-ACCADVERSARY-021",
+      "name": "'Accidental Adversaries' Archetype",
+      "macro": "analyze(system) -> detect(local_optimization) -> map(negative_externalities)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "network",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:18:43Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Well-intentioned actors inadvertently sabotage each other's efforts.",
+      "linked_patterns": [
+        "ST-REPAIR-ALIGN-GOALS-012",
+        "GT-SEED-ZEROSUM-002"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "🤝→💥←🤝",
+      "invocations": [
+        "Are we creating problems for each other without realizing it?"
+      ]
+    },
+    {
+      "id": "ST-SEED-ESCALATION-022",
+      "name": "'Escalation' Archetype",
+      "macro": "monitor(interaction) -> detect(retaliatory_loop) -> diagnose(reinforcing_conflict)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:18:43Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Two parties engage in an arms race that spirals out of control, harming both.",
+      "linked_patterns": [
+        "ST-SEED-REINFORCE-001",
+        "GT-SEED-CHICKEN-004"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "📈⚔️📈",
+      "invocations": [
+        "Is one side's action provoking a bigger reaction from the other?"
+      ]
+    },
+    {
+      "id": "ST-SEED-VARIETY-023",
+      "name": "Requisite Variety Deficit",
+      "macro": "analyze(system_complexity) -> compare(controller_complexity) -> diagnose(deficit)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:18:43Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "The control system is too simple to manage the complexity of the environment, leading to loss of control.",
+      "linked_patterns": [
+        "ST-PER-CYBERNETICIST-018",
+        "CYB-REPAIR-SEGMENT-002"
+      ],
+      "recursion_level": "meta",
+      "symbolic_role": "seed",
+      "triad": "🌀 > 🕹️",
+      "invocations": [
+        "Are our controls sophisticated enough for the system we're managing?"
+      ]
+    },
+    {
+      "id": "ST-SEED-HOMEOSTASIS-024",
+      "name": "Homeostatic Process",
+      "macro": "monitor(state) -> detect(deviation) -> trigger(balancing_loops)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:18:43Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "System becomes locked in a suboptimal but stable state, resisting all attempts at improvement.",
+      "linked_patterns": [
+        "ST-SEED-BALANCE-002",
+        "SZ:STB-Stabilization-Centering-030"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "⚖️⟳",
+      "invocations": [
+        "What processes are keeping this system in its current state?"
+      ]
+    },
+    {
+      "id": "ST-SEED-SUBOPTIMIZE-025",
+      "name": "Suboptimization Failure",
+      "macro": "analyze(subsystem_performance) -> detect(local_maxima) -> measure(global_impact)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "network",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:18:43Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Improving one part of the system makes the whole system's performance worse.",
+      "linked_patterns": [
+        "ST-REPAIR-ALIGN-GOALS-012",
+        "ST-SEED-ACCADVERSARY-021"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "↑🏅↓🌐",
+      "invocations": [
+        "Is optimizing this part hurting the whole?"
+      ]
+    },
+    {
+      "id": "ST-REPAIR-LEVERAGE-026",
+      "name": "Leverage Point Identification",
+      "macro": "analyze(system_model) -> identify(high_influence_node) -> propose(intervention)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "network",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:18:43Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Intervention is applied at a low-leverage point, wasting effort for minimal effect.",
+      "linked_patterns": [
+        "ST-PER-CYBERNETICIST-018",
+        "ST-LAT-MODELING-015"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "🔍→📌",
+      "invocations": [
+        "Find the place where a small push yields a big change."
+      ]
+    },
+    {
+      "id": "ST-REPAIR-DECOUPLE-027",
+      "name": "System Decoupling",
+      "macro": "analyze(system_links) -> identify(critical_dependency) -> insert(buffer_or_break)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "network",
+        "gate": [
+          "consent"
+        ],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:18:43Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Decoupling reduces efficiency or creates new vulnerabilities.",
+      "linked_patterns": [
+        "ST-REPAIR-BUFFER-014",
+        "CYB-REPAIR-SEGMENT-002"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "repair",
+      "triad": "🔗→✂→🔗",
+      "invocations": [
+        "Introduce a firewall to stop failures from cascading."
+      ]
+    },
+    {
+      "id": "ST-REPAIR-OBSERVER-028",
+      "name": "Observer Inclusion",
+      "macro": "analyze(observation) -> model(observer_effect) -> adjust(conclusion)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "trust"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "systems_theory_domain",
+        "last_audit": "2025-08-14T05:18:43Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "The act of observing the system alters it in an unacknowledged way, invalidating the analysis.",
+      "linked_patterns": [
+        "HF-SEED-CONFIRM-009",
+        "ST-PER-SYSTEMS-THINKER-017"
+      ],
+      "recursion_level": "meta",
+      "symbolic_role": "repair",
+      "triad": "👀→(🌀)",
+      "invocations": [
+        "Account for our own effect on the system."
+      ]
+    }
+  ]
+}
