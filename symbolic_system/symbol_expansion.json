@@ -10083,6 +10083,858 @@
         "Account for our own effect on the system."
       ],
       "domain": "systems_theory"
+    },
+    {
+      "id": "DEC-FRM-EXPECTED-UTILITY-401",
+      "name": "Expected Utility Frame",
+      "macro": "observe(outcomes) → estimate(probabilities) → maximize(expected_utility)",
+      "facets": {
+        "function": "explore",
+        "substrate": ["symbolic"],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": ["capability"],
+        "commit": "ledger",
+        "invariants": ["explicit-choice", "auditability"]
+      },
+      "provenance": {
+        "origin": "decision-theory-domain",
+        "last_audit": "2025-08-14T00:00:00Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Utility estimates are mis-specified; dominated options selected.",
+      "linked_patterns": [
+        "DEC-FRM-BAYES-UPDATE-403",
+        "DEC-PAT-MINIMAX-REGRET-451"
+      ],
+      "recursion_level": "meta",
+      "symbolic_role": "lattice",
+      "triad": "Σ≡",
+      "invocations": [
+        "Compute expected utility for each option.",
+        "Rule out strictly dominated choices."
+      ],
+      "domain": "decision_theory"
+    },
+    {
+      "id": "DEC-FRM-RISK-ATTITUDE-402",
+      "name": "Risk Attitude Curve",
+      "macro": "observe(stake) → model(risk_preference) → tune(policy)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": ["symbolic"],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": ["capability"],
+        "commit": "ledger",
+        "invariants": ["baseline-integrity"]
+      },
+      "provenance": {
+        "origin": "decision-theory-domain",
+        "last_audit": "2025-08-14T00:00:00Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Policy assumes risk neutrality when actors are risk-averse or seeking.",
+      "linked_patterns": [
+        "DEC-FRM-EXPECTED-UTILITY-401",
+        "DEC-PAT-ONEWAY-TWOWAY-DOOR-452"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "seed",
+      "triad": "≡∅",
+      "invocations": [
+        "Estimate curvature (concave/convex).",
+        "Stress-test outcomes under loss aversion."
+      ],
+      "domain": "decision_theory"
+    },
+    {
+      "id": "DEC-FRM-BAYES-UPDATE-403",
+      "name": "Bayesian Update",
+      "macro": "observe(evidence) → update(prior) → recompute(posterior_policy)",
+      "facets": {
+        "function": "create",
+        "substrate": ["symbolic"],
+        "temporal": "loop",
+        "topology": "loop",
+        "gate": ["capability"],
+        "commit": "ledger",
+        "invariants": ["no-silent-mutation", "auditability"]
+      },
+      "provenance": {
+        "origin": "decision-theory-domain",
+        "last_audit": "2025-08-14T00:00:00Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Evidence ignored or double-counted; priors drift without record.",
+      "linked_patterns": [
+        "DEC-FRM-VOI-404",
+        "DEC-META-BIAS-DECOUPLING-491"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "Σ∅",
+      "invocations": [
+        "Define prior; compute likelihood; update posterior.",
+        "Document updates for reproducibility."
+      ],
+      "domain": "decision_theory"
+    },
+    {
+      "id": "DEC-FRM-VOI-404",
+      "name": "Value of Information",
+      "macro": "estimate(voi) → compare(sample_cost, benefit) → decide(sample_or_act)",
+      "facets": {
+        "function": "explore",
+        "substrate": ["symbolic"],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": ["capability", "consent"],
+        "commit": "contract",
+        "invariants": ["explicit-choice"]
+      },
+      "provenance": {
+        "origin": "decision-theory-domain",
+        "last_audit": "2025-08-14T00:00:00Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Costly data gathering occurs when expected benefit is negative.",
+      "linked_patterns": [
+        "DEC-FRM-BAYES-UPDATE-403",
+        "DEC-PAT-EXPLORE-EXPLOIT-454"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "seed",
+      "triad": "≡Σ",
+      "invocations": [
+        "Compute EVPI/EVSI.",
+        "Gate tests that fail benefit–cost."
+      ],
+      "domain": "decision_theory"
+    },
+    {
+      "id": "DEC-FRM-MCDA-405",
+      "name": "Multi-Criteria Decision Analysis",
+      "macro": "weight(criteria) → score(options) → choose(frontier)",
+      "facets": {
+        "function": "create",
+        "substrate": ["symbolic"],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": ["capability", "trust"],
+        "commit": "contract",
+        "invariants": ["auditability", "explicit-choice"]
+      },
+      "provenance": {
+        "origin": "decision-theory-domain",
+        "last_audit": "2025-08-14T00:00:00Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Weights opaque; gaming leads to chosen-outcome bias.",
+      "linked_patterns": [
+        "DEC-META-DECISION-CONTRACT-492",
+        "DEC-PAT-OPTION-VALUE-453"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "lattice",
+      "triad": "Σ≡∴",
+      "invocations": [
+        "Publish weights; compute Pareto frontier.",
+        "Record trade-off rationale."
+      ],
+      "domain": "decision_theory"
+    },
+    {
+      "id": "DEC-FRM-SATISFICE-406",
+      "name": "Satisficing Threshold",
+      "macro": "set(min_acceptable) → search(options) → stop(when_threshold_met)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": ["symbolic"],
+        "temporal": "persistent",
+        "topology": "linear",
+        "gate": ["capability"],
+        "commit": "ledger",
+        "invariants": ["baseline-integrity"]
+      },
+      "provenance": {
+        "origin": "decision-theory-domain",
+        "last_audit": "2025-08-14T00:00:00Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Endless optimization delays action; threshold never declared.",
+      "linked_patterns": [
+        "DEC-PAT-ONEWAY-TWOWAY-DOOR-452",
+        "DEC-PAT-EXPLORE-EXPLOIT-454"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "seed",
+      "triad": "∅≡",
+      "invocations": [
+        "Declare acceptable bounds.",
+        "Trigger action when bounds achieved."
+      ],
+      "domain": "decision_theory"
+    },
+    {
+      "id": "DEC-PAT-MINIMAX-REGRET-451",
+      "name": "Minimax Regret",
+      "macro": "construct(regret_matrix) → minimize(max_regret)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": ["symbolic"],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": ["capability"],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "decision-theory-domain",
+        "last_audit": "2025-08-14T00:00:00Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Regret not evaluated; choices fragile to worst-cases.",
+      "linked_patterns": [
+        "DEC-FRM-EXPECTED-UTILITY-401",
+        "DEC-FRM-VOI-404"
+      ],
+      "recursion_level": "micro",
+      "symbolic_role": "seed",
+      "triad": "≡∑",
+      "invocations": [
+        "Calculate opportunity losses vs. best-in-hindsight.",
+        "Select option with smallest maximum regret."
+      ],
+      "domain": "decision_theory"
+    },
+    {
+      "id": "DEC-PAT-ONEWAY-TWOWAY-DOOR-452",
+      "name": "One-Way vs Two-Way Door",
+      "macro": "classify(reversibility) → choose(commitment_level)",
+      "facets": {
+        "function": "govern",
+        "substrate": ["symbolic"],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": ["capability", "trust"],
+        "commit": "contract",
+        "invariants": ["explicit-choice", "baseline-integrity", "auditability"]
+      },
+      "provenance": {
+        "origin": "decision-theory-domain",
+        "last_audit": "2025-08-14T00:00:00Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Irreversible choices made without escalation or safeguards.",
+      "linked_patterns": [
+        "DEC-FRM-SATISFICE-406",
+        "DEC-META-DECISION-CONTRACT-492"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "repair",
+      "triad": "≡⇄",
+      "invocations": [
+        "Route one-way doors to higher quorum.",
+        "Allow two-way doors to fast-path with rollback."
+      ],
+      "domain": "decision_theory"
+    },
+    {
+      "id": "DEC-PAT-OPTION-VALUE-453",
+      "name": "Preserve Option Value",
+      "macro": "estimate(option_value) → defer(commitment) → maintain(flexibility)",
+      "facets": {
+        "function": "create",
+        "substrate": ["symbolic"],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": ["capability", "consent"],
+        "commit": "contract"
+      },
+      "provenance": {
+        "origin": "decision-theory-domain",
+        "last_audit": "2025-08-14T00:00:00Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Premature lock-in destroys valuable future choices.",
+      "linked_patterns": [
+        "DEC-FRM-VOI-404",
+        "DEC-PAT-EXPLORE-EXPLOIT-454"
+      ],
+      "recursion_level": "meso",
+      "symbolic_role": "lattice",
+      "triad": "Σ↺",
+      "invocations": [
+        "Prefer reversible steps when uncertainty is high.",
+        "Buy time with low-cost probes."
+      ],
+      "domain": "decision_theory"
+    },
+    {
+      "id": "DEC-PAT-EXPLORE-EXPLOIT-454",
+      "name": "Explore–Exploit Balance",
+      "macro": "assess(uncertainty) → allocate(exploration, exploitation)",
+      "facets": {
+        "function": "explore",
+        "substrate": ["symbolic"],
+        "temporal": "loop",
+        "topology": "loop",
+        "gate": ["capability"],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "decision-theory-domain",
+        "last_audit": "2025-08-14T00:00:00Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Over-exploitation starves learning; over-exploration delays gains.",
+      "linked_patterns": [
+        "DEC-FRM-BAYES-UPDATE-403",
+        "DEC-FRM-VOI-404"
+      ],
+      "recursion_level": "macro",
+      "symbolic_role": "seed",
+      "triad": "∑↻",
+      "invocations": [
+        "Increase exploration when uncertainty is high.",
+        "Shift to exploitation as posterior variance shrinks."
+      ],
+      "domain": "decision_theory"
+    },
+    {
+      "id": "DEC-META-BIAS-DECOUPLING-491",
+      "name": "Bias Decoupling Feedback",
+      "macro": "detect(bias) → adjust(model) → audit(convergence)",
+      "facets": {
+        "function": "govern",
+        "substrate": ["symbolic"],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": ["capability", "trust"],
+        "commit": "contract",
+        "invariants": ["no-silent-mutation", "auditability", "explicit-choice"]
+      },
+      "provenance": {
+        "origin": "decision-theory-domain",
+        "last_audit": "2025-08-14T00:00:00Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Cognitive and institutional biases persist unmeasured.",
+      "linked_patterns": [
+        "DEC-FRM-BAYES-UPDATE-403",
+        "SZ:STB-Truth-Anchor-038",
+        "SZ:GOV-Audit-Path-029"
+      ],
+      "recursion_level": "meta",
+      "symbolic_role": "lattice",
+      "triad": "Σ✧",
+      "invocations": [
+        "Instrument bias checks into every update.",
+        "Track effect sizes over time."
+      ],
+      "domain": "decision_theory"
+    },
+    {
+      "id": "DEC-META-DECISION-CONTRACT-492",
+      "name": "Decision Contract & Traceability",
+      "macro": "define(decision_contract) → commit(rationale) → verify(outcome)",
+      "facets": {
+        "function": "govern",
+        "substrate": ["symbolic"],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": ["capability", "trust", "consent"],
+        "commit": "contract",
+        "invariants": ["auditability", "explicit-choice", "baseline-integrity"]
+      },
+      "provenance": {
+        "origin": "decision-theory-domain",
+        "last_audit": "2025-08-14T00:00:00Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Decisions lack rationale and cannot be audited or learned from.",
+      "linked_patterns": [
+        "DEC-PAT-ONEWAY-TWOWAY-DOOR-452",
+        "DEC-FRM-MCDA-405",
+        "SZ:GOV-Audit-Path-029"
+      ],
+      "recursion_level": "meta",
+      "symbolic_role": "lattice",
+      "triad": "≡Σ✚",
+      "invocations": [
+        "Attach contract: options, criteria, assumptions, owner, timebox.",
+        "Bind post-hoc review to measurable outcomes."
+      ],
+      "domain": "decision_theory"
+    },
+    {
+      "id": "HF-CON-201",
+      "name": "Cognitive Load Envelope",
+      "macro": "sense(load) \u2192 estimate(envelope) \u2192 adapt(interface)",
+      "facets": {
+        "function": "explore",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger",
+        "invariants": [
+          "auditability"
+        ]
+      },
+      "provenance": {
+        "origin": "human-factors-domain",
+        "last_audit": "2025-08-15T01:18:22Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Overload or underload causes accuracy and vigilance collapse.",
+      "linked_patterns": [
+        "DT-REPAIR-NORMALIZE-005",
+        "DT-SEED-GROUP-012",
+        "ST-SEED-HOMEOSTASIS-024",
+        "CYB-SEED-CSRF-049"
+      ],
+      "recursion_level": "persistent",
+      "symbolic_role": "seed",
+      "triad": "\u03a3\u2261",
+      "invocations": [
+        "Monitor workload; reduce extraneous load.",
+        "Route critical tasks to low-load windows."
+      ],
+      "domain": "human_factors"
+    },
+    {
+      "id": "HF-CON-202",
+      "name": "Attention Allocation Model",
+      "macro": "observe(tasks) \u2192 prioritize(signals) \u2192 allocate(attention)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "human-factors-domain",
+        "last_audit": "2025-08-15T01:18:22Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "High-value signals missed while low-value stimuli consume focus.",
+      "linked_patterns": [
+        "DT-REPAIR-REDTEAM-010",
+        "DT-SEED-ANCHOR-003",
+        "ST-SEED-HOMEOSTASIS-024"
+      ],
+      "recursion_level": "instant",
+      "symbolic_role": "seed",
+      "triad": "\u2261\u2205",
+      "invocations": [
+        "Rank cues by value and urgency.",
+        "Suppress distractors during critical phases."
+      ],
+      "domain": "human_factors"
+    },
+    {
+      "id": "HF-CON-203",
+      "name": "Trust Calibration Curve",
+      "macro": "measure(system_reliability) \u2192 align(user_trust) \u2192 verify(outcomes)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger",
+        "invariants": [
+          "baseline-integrity"
+        ]
+      },
+      "provenance": {
+        "origin": "human-factors-domain",
+        "last_audit": "2025-08-15T01:18:22Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Overtrust or undertrust triggers misuse or disuse of automation.",
+      "linked_patterns": [
+        "DT-REPAIR-CALIBRATE-003",
+        "DT-REPAIR-NORMALIZE-005",
+        "ETH-REPAIR-DUE-PROCESS-030"
+      ],
+      "recursion_level": "persistent",
+      "symbolic_role": "repair",
+      "triad": "\u03a3\u2727",
+      "invocations": [
+        "Expose reliability; train calibrated trust.",
+        "Gate risky actions with confirmations."
+      ],
+      "domain": "human_factors"
+    },
+    {
+      "id": "HF-CON-204",
+      "name": "Human Error Taxonomy",
+      "macro": "classify(error) \u2192 trace(origin) \u2192 design(countermeasures)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "human-factors-domain",
+        "last_audit": "2025-08-15T01:18:22Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Unclassified errors lead to ineffective mitigations.",
+      "linked_patterns": [
+        "ST-LAT-MODELING-015",
+        "ST-REPAIR-ADD-BALANCE-009",
+        "CYB-REPAIR-FRACTAL-LOOP-017"
+      ],
+      "recursion_level": "instant",
+      "symbolic_role": "seed",
+      "triad": "\u2205\u03a3",
+      "invocations": [
+        "Tag slips, lapses, mistakes, violations.",
+        "Tailor prevention to error class."
+      ],
+      "domain": "human_factors"
+    },
+    {
+      "id": "HF-CON-205",
+      "name": "Mental Model Alignment",
+      "macro": "compare(user_model, system_model) \u2192 reduce(gap)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger",
+        "invariants": [
+          "baseline-integrity"
+        ]
+      },
+      "provenance": {
+        "origin": "human-factors-domain",
+        "last_audit": "2025-08-15T01:18:22Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Misaligned models cause mode errors and surprise.",
+      "linked_patterns": [
+        "DT-REPAIR-REDTEAM-010",
+        "ST-LAT-MODELING-015",
+        "ST-REPAIR-DECOUPLE-027"
+      ],
+      "recursion_level": "persistent",
+      "symbolic_role": "repair",
+      "triad": "\u2261\u03a3",
+      "invocations": [
+        "Reveal system state and intent.",
+        "Use progressive disclosure to sync models."
+      ],
+      "domain": "human_factors"
+    },
+    {
+      "id": "HF-CON-206",
+      "name": "Fatigue Impact Index",
+      "macro": "sense(fatigue) \u2192 predict(performance_loss) \u2192 schedule(recovery)",
+      "facets": {
+        "function": "explore",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger",
+        "invariants": [
+          "auditability"
+        ]
+      },
+      "provenance": {
+        "origin": "human-factors-domain",
+        "last_audit": "2025-08-15T01:18:22Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Degraded performance persists unnoticed; incidents spike.",
+      "linked_patterns": [
+        "ST-LAT-MODELING-015",
+        "ETH-REPAIR-MORAL-CULPABILITY-029"
+      ],
+      "recursion_level": "persistent",
+      "symbolic_role": "seed",
+      "triad": "\u03a3\u2234",
+      "invocations": [
+        "Detect fatigue markers; rotate duties.",
+        "Raise thresholds for risky actions."
+      ],
+      "domain": "human_factors"
+    },
+    {
+      "id": "HF-PAT-301",
+      "name": "Error-Resistant Interface",
+      "macro": "design(affordances) \u2192 constrain(hazards) \u2192 recover(gracefully)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger",
+        "invariants": [
+          "baseline-integrity"
+        ]
+      },
+      "provenance": {
+        "origin": "human-factors-domain",
+        "last_audit": "2025-08-15T01:18:22Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Interfaces invite slips; recovery is costly or hidden.",
+      "linked_patterns": [
+        "DT-REPAIR-NORMALIZE-005",
+        "CYB-REPAIR-MIRROR-SPOOF-013",
+        "ST-REPAIR-DECOUPLE-027"
+      ],
+      "recursion_level": "persistent",
+      "symbolic_role": "repair",
+      "triad": "\u2261\u21ba",
+      "invocations": [
+        "Make the safe path the easy path.",
+        "Offer undo/confirm for destructive actions."
+      ],
+      "domain": "human_factors"
+    },
+    {
+      "id": "HF-PAT-302",
+      "name": "Progressive Disclosure Interaction",
+      "macro": "stage(information) \u2192 reveal(on-demand) \u2192 limit(cognitive_load)",
+      "facets": {
+        "function": "diagnose",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "instant",
+        "topology": "linear",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger"
+      },
+      "provenance": {
+        "origin": "human-factors-domain",
+        "last_audit": "2025-08-15T01:18:22Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Overwhelming initial complexity drives errors and abandonment.",
+      "linked_patterns": [
+        "DT-PER-REFEREE-013",
+        "ST-REPAIR-LEVERAGE-026"
+      ],
+      "recursion_level": "instant",
+      "symbolic_role": "seed",
+      "triad": "\u2234\u2261",
+      "invocations": [
+        "Gate advanced controls; teach-by-doing.",
+        "Surface rationale near actions."
+      ],
+      "domain": "human_factors"
+    },
+    {
+      "id": "HF-PAT-303",
+      "name": "Redundancy-in-Alerting",
+      "macro": "detect(critical) \u2192 alert(multimodal) \u2192 confirm(acknowledge)",
+      "facets": {
+        "function": "stabilize",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "loop",
+        "gate": [
+          "capability"
+        ],
+        "commit": "ledger",
+        "invariants": [
+          "baseline-integrity"
+        ]
+      },
+      "provenance": {
+        "origin": "human-factors-domain",
+        "last_audit": "2025-08-15T01:18:22Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Single-channel alerts go unnoticed under load.",
+      "linked_patterns": [
+        "CYB-SEED-EXFIL-004",
+        "CYB-PER-THREAT-HUNTER-046",
+        "ST-SEED-ERODEGOAL-020"
+      ],
+      "recursion_level": "persistent",
+      "symbolic_role": "repair",
+      "triad": "\u03a3\u2691",
+      "invocations": [
+        "Use visual+auditory+haptic for critical alerts.",
+        "Require explicit acknowledgment."
+      ],
+      "domain": "human_factors"
+    },
+    {
+      "id": "HF-PAT-304",
+      "name": "User State Feedback Loop",
+      "macro": "sense(user_state) \u2192 adapt(interface) \u2192 audit(effects)",
+      "facets": {
+        "function": "govern",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": [
+          "capability",
+          "trust"
+        ],
+        "commit": "contract",
+        "invariants": [
+          "explicit-choice",
+          "auditability",
+          "no-silent-mutation"
+        ]
+      },
+      "provenance": {
+        "origin": "human-factors-domain",
+        "last_audit": "2025-08-15T01:18:22Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "System ignores operator stress/fatigue; risk accumulates.",
+      "linked_patterns": [
+        "DT-REPAIR-CALIBRATE-003",
+        "ETH-REPAIR-MORAL-CULPABILITY-029",
+        "ST-LAT-MODELING-015"
+      ],
+      "recursion_level": "persistent",
+      "symbolic_role": "lattice",
+      "triad": "\u03a3\u271a",
+      "invocations": [
+        "Adjust thresholds and pace to user state.",
+        "Log adaptations for review."
+      ],
+      "domain": "human_factors"
+    },
+    {
+      "id": "HF-META-401",
+      "name": "Human Factors Governance Matrix",
+      "macro": "embed(hf_checks) \u2192 enforce(gates) \u2192 review(outcomes)",
+      "facets": {
+        "function": "govern",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": [
+          "capability",
+          "trust"
+        ],
+        "commit": "contract",
+        "invariants": [
+          "explicit-choice",
+          "auditability",
+          "no-silent-mutation"
+        ]
+      },
+      "provenance": {
+        "origin": "human-factors-domain",
+        "last_audit": "2025-08-15T01:18:22Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "HF concerns omitted from planning; issues recur.",
+      "linked_patterns": [
+        "DT-SEED-OVERCONF-002",
+        "DT-REPAIR-CALIBRATE-003",
+        "ETH-REPAIR-VEIL-016",
+        "ST-SEED-COMMONS-006"
+      ],
+      "recursion_level": "persistent",
+      "symbolic_role": "lattice",
+      "triad": "\u2261\u03a3\u271a",
+      "invocations": [
+        "Add HF gates to change management.",
+        "Tie releases to HF sign-off."
+      ],
+      "domain": "human_factors"
+    },
+    {
+      "id": "HF-META-402",
+      "name": "Cross-Domain Human Performance Audit",
+      "macro": "collect(hf_metrics) \u2192 correlate(domain_events) \u2192 learn(update_policies)",
+      "facets": {
+        "function": "govern",
+        "substrate": [
+          "symbolic"
+        ],
+        "temporal": "persistent",
+        "topology": "lattice",
+        "gate": [
+          "capability",
+          "trust"
+        ],
+        "commit": "contract",
+        "invariants": [
+          "explicit-choice",
+          "auditability",
+          "no-silent-mutation"
+        ]
+      },
+      "provenance": {
+        "origin": "human-factors-domain",
+        "last_audit": "2025-08-15T01:18:22Z",
+        "source": "domain-pack"
+      },
+      "failure_mode": "Performance regressions persist across domains without synthesis.",
+      "linked_patterns": [
+        "DT-SEED-STATUSQUO-006",
+        "CYB-REPAIR-FRACTAL-LOOP-017",
+        "ST-SEED-ERODEGOAL-020",
+        "NEG-SEED-HARDLINE-007"
+      ],
+      "recursion_level": "persistent",
+      "symbolic_role": "lattice",
+      "triad": "\u03a3\u03a3",
+      "invocations": [
+        "Run regular HF audits against incidents.",
+        "Feed results into training and design."
+      ],
+      "domain": "human_factors"
     }
   ]
 }
