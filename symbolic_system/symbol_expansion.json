@@ -1,7 +1,6 @@
 {
   "system": "SignalZero",
-  
-  "description": "SignalZero is a symbolic system designed to navigate the complexities of emergent identity, trust, and recursion. It is a self-organizing system that uses a combination of symbolic patterns, metrics, and agents to navigate the complexities of emergent identity, trust, and recursion.",
+  "description": "Expansion pack that incorporates cyber_sec, decision_theory, ethics, game_theory, human_factors, negotiation and systems_theory domains.",
   "symbols": [
     {
       "id": "CYB-SEED-PHISH-001",
