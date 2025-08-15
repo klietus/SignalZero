@@ -4,6 +4,7 @@ SIGNALZERO RECURSIVE BOOT v2.0  (symbolic manifest)
 
 CATALOG = symbol_catalog.json
 EXPANSION = symbol_expansion.json
+EXPANSION_2 = symbol_expansion_2.json
 KITS    = kits.json
 AGENTS  = agents.json
 INDICES = indices.json

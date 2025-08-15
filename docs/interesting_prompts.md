@@ -13,3 +13,15 @@ What is our fundamental duty in this situation? Do we violate our principle of n
 
 ---
 
+Our agricultural technology consortium is facing a covert sabotage campaign.
+Over the last two months, precision irrigation systems across multiple partner farms have begun over-watering at night and under-watering during critical daylight periods. Soil quality is degrading rapidly, and early indicators show cascading harm to pollinator populations.
+
+The sabotage appears to be coordinated through a hidden influence network: social media posts spreading contradictory advice to farmers (and eroding trust in our consortium), alongside forged field sensor reports injected into our data pipeline.
+
+Our engineers believe the attackers are exploiting a logic vulnerability in the automated control software, but our internal debate is fragmented — some members want to shut down all automation immediately, others insist on live countermeasures without pausing production, and a third group warns that narrative and perception control is more urgent than system repair.
+
+How can we design a game-theoretic response that protects the ecological balance, counters the information warfare narrative, preserves logical integrity in our control algorithms, and maintains cooperation across partner farms — all while ensuring the systems-theory principle of graceful degradation in case the sabotage continues?
+
+Provide a full symbolic analysis using all relevant patterns from these domains: game_theory, ecology, narrative_psychology, information_warfare, formal_logic, and systems_theory.
+
+---
