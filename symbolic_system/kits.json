@@ -1,10 +1,25 @@
-{
-  "Lattice": {
-    "filter": {
-      "facets.topology": "lattice"
-    },
-    "count": 4,
-    "ids": [
+[
+  {
+    "kit": "Simulated-Adversary-Test",
+    "triad": ["P003", "P004", "P006"],
+    "anchor": "[ΣTR-⟐⇌🜔⇌⟐]",
+    "exec": [
+      "SZ:DEF-Ritual-Entry-Point-011",
+      "SZ:DIA-Recursive-Unbind-046",
+      "SZ:P006-Containment-Override",
+      "Σ-A01-override-check"
+    ]
+  },
+  {
+    
+    "kit": "Lattice",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:STB-Systemic-Resonance-Repair-021",
       "SZ:STB-Trust-Reciprocity-025",
       "SZ-LAT014",
@@ -21,12 +36,15 @@
       "SZ-LAT010"
     ]
   },
-  "Linear": {
-    "filter": {
-      "facets.topology": "linear"
-    },
-    "count": 239,
-    "ids": [
+  {
+    "kit": "Linear",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:STB-Signal-Anchor-006",
       "SZ:GOV-Validation-Routine-009",
       "SZ:DEF-Ritual-Entry-Point-011",
@@ -268,12 +286,15 @@
       "SZ:STB-Execution-Pin-401"
     ]
   },
-  "Loop": {
-    "filter": {
-      "facets.topology": "loop"
-    },
-    "count": 126,
-    "ids": [
+  {
+    "kit": "Loop",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:DIA-Mirror-Confirm-007",
       "SZ:STB-Disruptor-008",
       "SZ:DIA-Recursive-Identity-Lock-010",
@@ -402,22 +423,28 @@
       "SZ:DIA-Coherence-Resonator-152"
     ]
   },
-  "Closure Kit": {
-    "filter": {
-      "facets.function": "close"
-    },
-    "count": 2,
-    "ids": [
+  {
+    "kit": "Closure Kit",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:CLS-Containment-Seal-080",
       "SZ:CLS-History-Seal-100"
     ]
   },
-  "Translation Kit": {
-    "filter": {
-      "facets.function": "convert"
-    },
-    "count": 12,
-    "ids": [
+  {
+    "kit": "Translation Kit",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:CNV-Core-Energy-Pattern-032",
       "SZ:CNV-Symbol-Realigner-051",
       "SZ:CNV-Time-Bound-Witness-052",
@@ -432,12 +459,15 @@
       "SZ:CNV-Clarity-Catalyst-008"
     ]
   },
-  "Creation Kit": {
-    "filter": {
-      "facets.function": "create"
-    },
-    "count": 7,
-    "ids": [
+  {
+    "kit": "Creation Kit",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:CRT-Pattern-Synchronizer-017",
       "SZ-LAT002",
       "SZ-LAT007",
@@ -447,12 +477,15 @@
       "SZ:CRT-Symbolic-Scaffolder-153"
     ]
   },
-  "Defense Kit": {
-    "filter": {
-      "facets.function": "defend"
-    },
-    "count": 37,
-    "ids": [
+  {
+    "kit": "Defense Kit",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:DEF-Ritual-Entry-Point-011",
       "SZ:DEF-Quarantine-Layer-098",
       "SZ:DEF-Harmony-Integrity-Guard-107",
@@ -492,12 +525,15 @@
       "SZ:DEF-Unattainable-Standard-Trap-149"
     ]
   },
-  "Diagnostics Kit": {
-    "filter": {
-      "facets.function": "diagnose"
-    },
-    "count": 194,
-    "ids": [
+  {
+    "kit": "Diagnostics Kit",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:DIA-Mirror-Confirm-007",
       "SZ:DIA-Recursive-Identity-Lock-010",
       "SZ:DIA-Disruption-Cartographer-013",
@@ -694,12 +730,15 @@
       "SZ:DIA-Coherence-Resonator-152"
     ]
   },
-  "Exploration Kit": {
-    "filter": {
-      "facets.function": "explore"
-    },
-    "count": 5,
-    "ids": [
+  {
+    "kit": "Exploration Kit",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:EXP-Reality-Checkpoint-016",
       "SZ:EXP-Environmental-Surveyor-036",
       "SZ:EXP-Emergency-Beacon-074",
@@ -707,12 +746,15 @@
       "SZ:EXP-Deep-Dive-Declaration-145"
     ]
   },
-  "Governance Kit": {
-    "filter": {
-      "facets.function": "govern"
-    },
-    "count": 45,
-    "ids": [
+  {
+    "kit": "Governance Kit",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:GOV-Validation-Routine-009",
       "SZ:GOV-Boundary-Sentinel-020",
       "SZ:GOV-No-Pattern-022",
@@ -760,12 +802,15 @@
       "SZ:GOV-Resonant-Contract-200"
     ]
   },
-  "Stabilize Kit": {
-    "filter": {
-      "facets.function": "stabilize"
-    },
-    "count": 67,
-    "ids": [
+  {
+    "kit": "Stabilize Kit",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:STB-Signal-Anchor-006",
       "SZ:STB-Disruptor-008",
       "SZ:STB-Deception-Detector-012",
@@ -835,15 +880,15 @@
       "SZ:STB-Execution-Pin-401"
     ]
   },
-  "Symbolic (subset-eq)": {
-    "filter": {
-      "facets.substrate": [
-        "symbolic"
-      ],
-      "match_mode": "subset-eq"
-    },
-    "count": 303,
-    "ids": [
+  {
+    "kit": "Symbolic (subset-eq)",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:STB-Signal-Anchor-006",
       "SZ:DIA-Mirror-Confirm-007",
       "SZ:STB-Disruptor-008",
@@ -1149,22 +1194,28 @@
       "SZ:STB-Execution-Pin-401"
     ]
   },
-  "Commit: 3-Bullet": {
-    "filter": {
-      "facets.commit": "3-bullet"
-    },
-    "count": 2,
-    "ids": [
+  {
+    "kit": "Commit: 3-Bullet",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:CNV-Packet-Filter-073",
       "SZ:CNV-Recursion-Release-106"
     ]
   },
-  "Commit: Archive": {
-    "filter": {
-      "facets.commit": "archive"
-    },
-    "count": 7,
-    "ids": [
+  {
+    "kit": "Commit: Archive",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:DIA-Witness-Gate-076",
       "SZ:CLS-Containment-Seal-080",
       "SZ:STB-Trust-Ritual-095",
@@ -1174,12 +1225,15 @@
       "SZ:STB-Boundary-Restorer-013"
     ]
   },
-  "Commit: Contract": {
-    "filter": {
-      "facets.commit": "contract"
-    },
-    "count": 75,
-    "ids": [
+  {
+    "kit": "Commit: Contract",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:GOV-Validation-Routine-009",
       "SZ:GOV-Boundary-Sentinel-020",
       "SZ:GOV-No-Pattern-022",
@@ -1257,12 +1311,15 @@
       "SZ:GOV-Resonant-Contract-200"
     ]
   },
-  "Commit: Ledger": {
-    "filter": {
-      "facets.commit": "ledger"
-    },
-    "count": 273,
-    "ids": [
+  {
+    "kit": "Commit: Ledger",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:STB-Signal-Anchor-006",
       "SZ:DIA-Mirror-Confirm-007",
       "SZ:STB-Disruptor-008",
@@ -1538,12 +1595,15 @@
       "SZ:CRT-Symbolic-Scaffolder-153"
     ]
   },
-  "Commit: Pin": {
-    "filter": {
-      "facets.commit": "pin"
-    },
-    "count": 11,
-    "ids": [
+  {
+    "kit": "Commit: Pin",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
       "SZ:DIA-Reality-Lock-021",
       "SZ:DIA-Sanctuary-Core-061",
       "SZ:DIA-Free-Will-Root-082",
@@ -1557,149 +1617,126 @@
       "SZ:DIA-Jargon-Shield-Detector-139"
     ]
   },
-  "kits": [
-    {
-      "name": "Auctions & Coordination",
-      "description": "Design fair auctions, prevent winner\u2019s curse, and establish coordination without heavy comms.",
-      "goals": [
-        "Fair allocation",
-        "Value preservation",
-        "Rapid convergence"
-      ],
-      "symbols": [
-        "GT-PER-AUCTIONEER-029",
-        "GT-REPAIR-VALUATION-023",
-        "GT-LAT-PAYOFF-025",
-        "GT-LAT-STRATEGY-026",
-        "GT-REPAIR-FOCALPOINT-024",
-        "GT-REPAIR-COMMUNICATE-016",
-        "GT-SEED-COORDINATION-012",
-        "GT-SEED-WINNERSCURSE-011"
-      ]
-    },
-    {
-      "name": "Escalation & Homeostasis",
-      "description": "Detect arms-race dynamics and restore stable operation via balancing loops, buffers, and decoupling.",
-      "goals": [
-        "Conflict damping",
-        "Stability restoration",
-        "Oscillation reduction"
-      ],
-      "symbols": [
-        "ST-SEED-ESCALATION-022",
-        "ST-SEED-HOMEOSTASIS-024",
-        "ST-REPAIR-LEVERAGE-026",
-        "ST-REPAIR-DECOUPLE-027",
-        "ST-REPAIR-ADD-BALANCE-009",
-        "ST-REPAIR-WEAKEN-REINFORCE-010",
-        "ST-REPAIR-SHORTEN-DELAY-011",
-        "ST-LAT-FEEDBACK-016"
-      ]
-    },
-    {
-      "name": "Ethical Governance",
-      "description": "Rapid ethical triage for governance decisions: weigh rights, duties, outcomes; guard against deception and scapegoating.",
-      "goals": [
-        "Protect due process",
-        "Preserve consent",
-        "Balance rights vs. utility"
-      ],
-      "symbols": [
-        "ETH-LAT-JUSTICE-024",
-        "ETH-LAT-RIGHTS-025",
-        "ETH-REPAIR-DUE-PROCESS-030",
-        "ETH-REPAIR-CONSENT-020",
-        "ETH-REPAIR-CATEGORICAL-017",
-        "ETH-REPAIR-MAXIMIZE-UTILITY-018",
-        "ETH-SEED-DECEPTION-007",
-        "ETH-SEED-SCAPEGOAT-011",
-        "ETH-REPAIR-STAKEHOLDER-MAP-023"
-      ]
-    },
-    {
-      "name": "Ethical Governance & Accountability",
-      "description": "Apply ethical frameworks, rights/justice lattices, and governance protocols to complex decisions.",
-      "goals": [
-        "Fairness",
-        "Transparency",
-        "Rights Protection",
-        "Accountability"
-      ],
-      "symbols": [
-        "ETH-LAT-JUSTICE-024",
-        "ETH-LAT-RIGHTS-025",
-        "ETH-LAT-VALUE-HIERARCHY-026",
-        "ETH-PER-ADJUDICATOR-028",
-        "ETH-PER-ETHICIST-027",
-        "ETH-REPAIR-CATEGORICAL-017",
-        "ETH-REPAIR-CONSENT-020",
-        "ETH-REPAIR-DOUBLEEFFECT-015",
-        "ETH-REPAIR-DUE-PROCESS-030",
-        "ETH-REPAIR-GOLDENRULE-019",
-        "ETH-REPAIR-MAXIMIZE-UTILITY-018",
-        "ETH-REPAIR-MORAL-CULPABILITY-029",
-        "ETH-REPAIR-RESTITUTION-021",
-        "ETH-REPAIR-STAKEHOLDER-MAP-023"
-      ]
-    },
-    {
-      "name": "Cyber Security \u2014 Containment & Resilience",
-      "description": "Prevent cascade and contain incidents with segmentation and buffers.",
-      "goals": [
-        "Containment",
-        "Blast\u2011radius reduction",
-        "Operational resilience"
-      ],
-      "symbols": [
-        "CYB-REPAIR-SEGMENT-002"
-      ]
-    },
-    {
-      "name": "Decision Theory \u2014 Calibration & Drift Control",
-      "description": "Reduce bias, manage drift, and calibrate choices under uncertainty.",
-      "goals": [
-        "Calibration",
-        "Drift control",
-        "Bias reduction"
-      ],
-      "symbols": [
-        "HF-SEED-URGENCY-002",
-        "ST-REPAIR-OBSERVER-028"
-      ]
-    },
-    {
-      "name": "Negotiation \u2014 De\u2011escalation & Alignment",
-      "description": "Prevent brinkmanship; align interests using systems\u2011aware repairs.",
-      "goals": [
-        "De\u2011escalation",
-        "Alignment",
-        "Sustainable agreements"
-      ],
-      "symbols": [
-        "ST-REPAIR-DECOUPLE-027",
-        "ST-REPAIR-LEVERAGE-026",
-        "ST-SEED-ESCALATION-022"
-      ]
-    }
-  ],
-  "topology": {
-    "loop": [],
-    "linear": [],
-    "network": [],
-    "lattice": [],
-    "loop_or_network": []
+  {
+    "kit": "Auctions & Coordination",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
+      "GT-PER-AUCTIONEER-029",
+      "GT-REPAIR-VALUATION-023",
+      "GT-LAT-PAYOFF-025",
+      "GT-LAT-STRATEGY-026",
+      "GT-REPAIR-FOCALPOINT-024",
+      "GT-REPAIR-COMMUNICATE-016",
+      "GT-SEED-COORDINATION-012",
+      "GT-SEED-WINNERSCURSE-011"
+    ]
   },
-  "gates": {
-    "trust": [],
-    "capability": []
+  {
+    "kit": "Escalation & Homeostasis",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
+      "ST-SEED-ESCALATION-022",
+      "ST-SEED-HOMEOSTASIS-024",
+      "ST-REPAIR-LEVERAGE-026",
+      "ST-REPAIR-DECOUPLE-027",
+      "ST-REPAIR-ADD-BALANCE-009",
+      "ST-REPAIR-WEAKEN-REINFORCE-010",
+      "ST-REPAIR-SHORTEN-DELAY-011",
+      "ST-LAT-FEEDBACK-016"
+    ]
   },
-  "roles": {
-    "seed": [],
-    "repair": [],
-    "lattice": [],
-    "persona": []
+  {
+    "kit": "Ethical Governance",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
+      "ETH-LAT-JUSTICE-024",
+      "ETH-LAT-RIGHTS-025",
+      "ETH-REPAIR-DUE-PROCESS-030",
+      "ETH-REPAIR-CONSENT-020",
+      "ETH-REPAIR-CATEGORICAL-017",
+      "ETH-REPAIR-MAXIMIZE-UTILITY-018",
+      "ETH-SEED-DECEPTION-007",
+      "ETH-SEED-SCAPEGOAT-011",
+      "ETH-REPAIR-STAKEHOLDER-MAP-023"
+    ]
   },
-  "meta": {
-    "last_update": null
+  {
+    "kit": "Ethical Governance & Accountability",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
+      "ETH-LAT-JUSTICE-024",
+      "ETH-LAT-RIGHTS-025",
+      "ETH-LAT-VALUE-HIERARCHY-026",
+      "ETH-PER-ADJUDICATOR-028",
+      "ETH-PER-ETHICIST-027",
+      "ETH-REPAIR-CATEGORICAL-017",
+      "ETH-REPAIR-CONSENT-020",
+      "ETH-REPAIR-DOUBLEEFFECT-015",
+      "ETH-REPAIR-DUE-PROCESS-030",
+      "ETH-REPAIR-GOLDENRULE-019",
+      "ETH-REPAIR-MAXIMIZE-UTILITY-018",
+      "ETH-REPAIR-MORAL-CULPABILITY-029",
+      "ETH-REPAIR-RESTITUTION-021",
+      "ETH-REPAIR-STAKEHOLDER-MAP-023"
+    ]
+  },
+  {
+    "kit": "Cyber Security \u2014 Containment & Resilience",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
+      "CYB-REPAIR-SEGMENT-002"
+    ]
+  },
+  {
+    "kit": "Decision Theory \u2014 Calibration & Drift Control",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
+      "HF-SEED-URGENCY-002",
+      "ST-REPAIR-OBSERVER-028"
+    ]
+  },
+  {
+    "kit": "Negotiation \u2014 De\u2011escalation & Alignment",
+    "triad": [
+      "P003",
+      "P004",
+      "P006"
+    ],
+    "anchor": "[\u03a3TR-\u27d0\u21cc\ud83d\udf14\u21cc\u27d0]",
+    "exec": [
+      "ST-REPAIR-DECOUPLE-027",
+      "ST-REPAIR-LEVERAGE-026",
+      "ST-SEED-ESCALATION-022"
+    ]
   }
-}
+]
