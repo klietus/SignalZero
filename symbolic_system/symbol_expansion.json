@@ -225,9 +225,7 @@
         ],
         "temporal": "persistent",
         "topology": "lattice",
-        "gate": [
-          "capability"
-        ],
+        "gate": ["capability", "trust"],
         "commit": "ledger",
         "invariants": [
           "baseline-integrity"
@@ -367,7 +365,7 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [
-          "capability"
+          "capability", "trust"
         ],
         "commit": "ledger",
         "invariants": [
@@ -1064,7 +1062,7 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [
-          "capability"
+          "capability", "trust"
         ],
         "commit": "ledger",
         "invariants": [
@@ -6199,7 +6197,7 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [
-          "capability"
+          "capability", "trust"
         ],
         "commit": "contract"
       },
@@ -6233,7 +6231,7 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [
-          "capability"
+          "capability", "trust"
         ],
         "commit": "contract"
       },
@@ -6267,7 +6265,7 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [
-          "capability"
+          "capability", "trust"
         ],
         "commit": "contract"
       },
@@ -9598,7 +9596,7 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [
-          "capability"
+          "capability", "trust"
         ],
         "commit": "contract"
       },
@@ -9632,7 +9630,7 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [
-          "capability"
+          "capability", "trust"
         ],
         "commit": "contract"
       },
@@ -10073,7 +10071,7 @@
         "substrate": ["symbolic"],
         "temporal": "persistent",
         "topology": "lattice",
-        "gate": ["capability"],
+        "gate": ["capability", "trust"],
         "commit": "ledger",
         "invariants": ["explicit-choice", "auditability"]
       },
@@ -10331,7 +10329,7 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [[
-          "capability"
+          "capability", "trust"
         ]],
         "commit": "contract"
       },
@@ -10466,7 +10464,7 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [
-          "capability"
+          "capability", "trust"
         ],
         "commit": "ledger",
         "invariants": [
@@ -10656,7 +10654,7 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [
-          "capability"
+          "capability", "trust"
         ],
         "commit": "ledger",
         "invariants": [

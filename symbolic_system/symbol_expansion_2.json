@@ -1667,9 +1667,7 @@
         ],
         "temporal": "persistent",
         "topology": "lattice",
-        "gate": [
-          "capability"
-        ],
+        "gate": ["trust", "capability"],
         "commit": "contract"
       },
       "provenance": {
