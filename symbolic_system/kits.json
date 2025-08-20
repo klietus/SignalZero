@@ -1691,7 +1691,6 @@
   },
   "gates": {
     "trust": [],
-    "consent": [],
     "capability": []
   },
   "roles": {

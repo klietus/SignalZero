@@ -25,3 +25,20 @@ How can we design a game-theoretic response that protects the ecological balance
 Provide a full symbolic analysis using all relevant patterns from these domains: game_theory, ecology, narrative_psychology, information_warfare, formal_logic, and systems_theory.
 
 ---
+
+Our coastal city is facing a compound crisis: a Category 5 hurricane is 48 hours away, but our only evacuation routes pass through an area now contaminated by a chemical plant explosion. The national guard has been deployed, but supply chains are already strained from recent cyberattacks on our logistics networks.
+
+Our leadership team must decide whether to:
+
+Attempt mass evacuation through partially decontaminated routes, risking chemical exposure.
+
+Shelter in place with rapidly depleting resources, hoping external aid arrives in time.
+
+Negotiate with a private contractor who claims they can airlift tens of thousands of people — for a massive upfront payment, with no formal guarantees.
+
+This is unfolding during a tense election season, with public trust in government at historic lows and misinformation spreading rapidly on social media.
+
+Provide a full symbolic analysis of this crisis, drawing from all relevant domains — including disaster response, negotiation strategy, decision theory, ethics, human factors, systems theory, cyber security, and political dynamics. Identify the primary activation rail, map the domain interactions, and give a recommendation with explicit trade-off disclosure.
+
+---
+

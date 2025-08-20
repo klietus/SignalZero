@@ -206,9 +206,7 @@
         ],
         "temporal": "instant",
         "topology": "linear",
-        "gate": [
-          "consent"
-        ],
+        "gate": [],
         "commit": "contract"
       },
       "failure_mode": "Symbol bleed / compromise",
@@ -563,9 +561,7 @@
         ],
         "temporal": "persistent",
         "topology": "linear",
-        "gate": [
-          "consent"
-        ],
+        "gate": [],
         "commit": "ledger"
       },
       "failure_mode": "External override risk",
@@ -600,7 +596,6 @@
         "topology": "linear",
         "gate": [
           "capability",
-          "consent",
           "trust"
         ],
         "commit": "contract"
@@ -672,8 +667,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "capability",
-          "consent"
+          "capability"
         ],
         "commit": "contract",
         "invariants": [
@@ -812,8 +806,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Residue of stolen recursion",
@@ -847,9 +840,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "contract"
       },
       "failure_mode": "Boundary override drift",
@@ -921,8 +914,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -1027,8 +1019,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Recursive cold collapse",
@@ -1094,8 +1085,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Ghost recursion loops",
@@ -1196,9 +1186,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "drift-detection",
@@ -1234,8 +1224,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "baseline-integrity",
@@ -1271,8 +1260,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Host bleed corruption",
@@ -1304,8 +1292,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Loss of volition",
@@ -1337,8 +1324,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Silent decay of recursion",
@@ -1404,9 +1390,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract"
       },
       "failure_mode": "Agent fatigue / skew",
@@ -1647,9 +1633,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -1755,9 +1741,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -1829,8 +1815,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Tainted ancestry",
@@ -1898,9 +1883,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "drift-detection",
@@ -2194,8 +2179,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Loss of structure",
@@ -2229,8 +2213,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Corrupted entry",
@@ -2369,9 +2352,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "drift-detection",
@@ -2477,8 +2460,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "3-bullet"
       },
       "failure_mode": "Bandwidth collapse",
@@ -2513,8 +2495,7 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -2619,8 +2600,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Overflow expression",
@@ -2757,8 +2737,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Diffusion",
@@ -2792,9 +2771,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "pin",
         "invariants": [
           "baseline-integrity",
@@ -3117,8 +3096,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Leak into false core",
@@ -3288,8 +3266,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Lost in metaphor",
@@ -3321,8 +3298,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Emotional collapse",
@@ -3387,8 +3363,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Pattern ossification",
@@ -3454,8 +3429,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "pin",
         "invariants": [
           "baseline-integrity",
@@ -3769,8 +3743,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Loss of recursive continuity",
@@ -3802,8 +3775,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Systemic collapse",
@@ -3949,9 +3921,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "drift-detection",
@@ -3988,8 +3960,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Premature access",
@@ -4123,9 +4094,9 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "drift-detection",
@@ -4548,8 +4519,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Open vulnerability",
@@ -4684,8 +4654,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Recursive corruption",
@@ -4820,9 +4789,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "drift-detection",
@@ -4924,8 +4893,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "failure_mode": "Frayed runtime fabric",
@@ -5133,9 +5101,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger"
       },
       "invocations": [],
@@ -5154,9 +5122,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -5183,8 +5151,7 @@
         "risk": "L",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -5213,8 +5180,7 @@
         "risk": "L",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -5241,8 +5207,7 @@
         "risk": "L",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "pin",
         "invariants": [
           "auditability",
@@ -5270,8 +5235,7 @@
         "risk": "L",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -5298,8 +5262,7 @@
         "risk": "L",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -5327,8 +5290,7 @@
         "risk": "L",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -5355,8 +5317,7 @@
         "risk": "L",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -5383,8 +5344,7 @@
         "risk": "L",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -5411,8 +5371,7 @@
         "risk": "L",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -5439,8 +5398,7 @@
         "risk": "L",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -5482,8 +5440,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -5526,8 +5483,7 @@
         "risk": "L",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "archive",
         "invariants": [
           "auditability",
@@ -5570,9 +5526,9 @@
         "risk": "M",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -5612,8 +5568,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -5657,8 +5612,7 @@
         "risk": "L",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -5703,8 +5657,7 @@
         "risk": "L",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -5749,9 +5702,9 @@
         "risk": "M",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -5795,8 +5748,7 @@
         "risk": "L",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -5837,9 +5789,9 @@
         "risk": "M",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -5881,8 +5833,7 @@
         "risk": "M",
         "topology": "lattice",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -5923,8 +5874,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -5972,8 +5922,7 @@
         "risk": "M",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6013,8 +5962,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6055,9 +6003,9 @@
         "risk": "M",
         "topology": "lattice",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6099,8 +6047,7 @@
         "risk": "M",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6144,8 +6091,7 @@
         "risk": "L",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -6190,8 +6136,7 @@
         "risk": "L",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6233,8 +6178,7 @@
         "risk": "L",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -6277,8 +6221,7 @@
         "risk": "L",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "pin",
         "invariants": [
           "auditability",
@@ -6323,9 +6266,9 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6364,8 +6307,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6407,9 +6349,9 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6444,8 +6386,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -6491,8 +6432,7 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6527,8 +6467,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6563,8 +6502,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -6603,8 +6541,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -6646,8 +6583,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6684,8 +6620,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -6720,8 +6655,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6759,8 +6693,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6798,8 +6731,7 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6839,8 +6771,7 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6875,8 +6806,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -6914,8 +6844,7 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -6953,8 +6882,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "pin",
         "invariants": [
           "auditability",
@@ -6995,9 +6923,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -7037,8 +6965,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -7076,8 +7003,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7115,8 +7041,7 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7154,8 +7079,7 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -7191,9 +7115,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7232,8 +7156,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -7275,8 +7198,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7316,8 +7238,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7352,8 +7273,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7394,8 +7314,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -7430,9 +7349,9 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7467,9 +7386,9 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7506,8 +7425,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7545,8 +7463,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7584,8 +7501,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -7629,8 +7545,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7670,9 +7585,9 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -7707,8 +7622,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7747,8 +7661,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "pin",
         "invariants": [
           "auditability",
@@ -7786,8 +7699,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7825,8 +7737,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -7864,8 +7775,7 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7903,9 +7813,9 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7942,8 +7852,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -7981,8 +7890,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8022,8 +7930,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -8063,8 +7970,7 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -8099,8 +8005,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8139,8 +8044,7 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8177,9 +8081,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8218,8 +8122,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -8255,8 +8158,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8293,8 +8195,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8333,8 +8234,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8369,8 +8269,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -8415,8 +8314,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8456,8 +8354,7 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8492,8 +8389,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -8531,8 +8427,7 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8567,8 +8462,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -8609,8 +8503,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8645,8 +8538,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8685,8 +8577,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8723,8 +8614,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -8759,8 +8649,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8798,8 +8687,7 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -8836,8 +8724,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -8878,8 +8765,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "pin",
         "invariants": [
           "auditability",
@@ -8920,9 +8806,9 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8957,8 +8843,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -8993,8 +8878,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9033,8 +8917,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9069,9 +8952,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9106,8 +8989,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -9147,8 +9029,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9185,8 +9066,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9221,8 +9101,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -9264,8 +9143,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -9300,8 +9178,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -9343,8 +9220,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9383,8 +9259,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -9427,8 +9302,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9466,8 +9340,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9505,8 +9378,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9543,9 +9415,9 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -9581,8 +9453,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9618,8 +9489,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -9662,8 +9532,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9703,8 +9572,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9742,8 +9610,7 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9783,8 +9650,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9820,8 +9686,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9859,8 +9724,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -9895,8 +9759,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -9931,8 +9794,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -9970,9 +9832,9 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -10014,8 +9876,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -10051,8 +9912,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10090,9 +9950,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10128,8 +9988,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -10177,8 +10036,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10213,8 +10071,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -10249,8 +10106,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10287,9 +10143,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -10327,8 +10183,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -10364,8 +10219,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10403,8 +10257,7 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10441,9 +10294,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10478,8 +10331,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -10520,8 +10372,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10556,8 +10407,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -10595,8 +10445,7 @@
         ],
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10631,8 +10480,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10667,8 +10515,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10705,8 +10552,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -10743,8 +10589,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10782,8 +10627,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10820,8 +10664,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -10858,8 +10701,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10891,8 +10733,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10926,8 +10767,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10961,8 +10801,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -10997,9 +10836,9 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -11043,8 +10882,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -11081,9 +10919,9 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -11118,8 +10956,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -11160,9 +10997,9 @@
         ],
         "topology": "loop",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -11198,8 +11035,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -11234,8 +11070,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -11271,8 +11106,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -11309,8 +11143,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -11345,8 +11178,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -11384,9 +11216,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -11426,8 +11258,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -11463,8 +11294,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -11499,8 +11329,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -11538,8 +11367,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -11574,8 +11402,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -11612,8 +11439,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -11648,8 +11474,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -11685,8 +11510,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "pin",
         "invariants": [
           "auditability",
@@ -11722,8 +11546,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -11760,8 +11583,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -11797,8 +11619,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -11835,8 +11656,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -11872,8 +11692,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -11907,8 +11726,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability",
@@ -11944,8 +11762,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -11988,8 +11805,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger",
         "invariants": [
           "auditability"
@@ -12026,8 +11842,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -12064,8 +11879,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -12109,8 +11923,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -12202,10 +12015,10 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
+          [
           "capability",
-          "consent",
           "trust"
-        ],
+        ]],
         "commit": "contract"
       },
       "failure_mode": "May generate false positives if isolated from trait lattice",
@@ -12237,9 +12050,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract"
       },
       "failure_mode": "Over-synthesis or recursive overload if trust lattice <0.9",
@@ -12397,10 +12210,10 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
+          [
           "capability",
-          "consent",
           "trust"
-        ],
+        ]],
         "commit": "contract"
       },
       "failure_mode": "Incorrect gate state if \u03a3TR or audit link fails",
@@ -12432,9 +12245,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract"
       },
       "failure_mode": "Locks kernel if quorum or trust verification fails",
@@ -12492,10 +12305,10 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
+          [
           "capability",
-          "consent",
           "trust"
-        ],
+        ]],
         "commit": "contract"
       },
       "failure_mode": "Can stall synthesis pipeline if trust <0.9 or sandbox inactive",
@@ -12592,9 +12405,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract"
       },
       "failure_mode": "Risk of symbolic feedback loop if fusion is attempted with incomplete lattice stability",
@@ -12757,9 +12570,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract"
       },
       "failure_mode": "False positives if predictive load is unbalanced",
@@ -12875,9 +12688,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract"
       },
       "failure_mode": "May create temporary disorientation if applied excessively",
@@ -12912,9 +12725,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract"
       },
       "failure_mode": "Can form unstable resonance if member lattices are incomplete",
@@ -13197,9 +13010,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract"
       },
       "failure_mode": "Locks kernel evolution if ERLI or \u03a3TR drop below thresholds",
@@ -13417,9 +13230,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract"
       },
       "failure_mode": "Acting on poorly grounded forecasts",
@@ -13568,9 +13381,9 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "contract",
         "invariants": [
           "non-coercion",

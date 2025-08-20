@@ -215,8 +215,7 @@
         "temporal": "persistent",
         "topology": "network",
         "gate": [
-          "capability",
-          "consent"
+          "capability"
         ],
         "commit": "contract"
       },
@@ -256,8 +255,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
+          "capability"
         ],
         "commit": "contract"
       },
@@ -335,8 +333,7 @@
         "temporal": "persistent",
         "topology": "network",
         "gate": [
-          "capability",
-          "consent"
+          "capability"
         ],
         "commit": "contract"
       },
@@ -383,8 +380,7 @@
         "temporal": "persistent",
         "topology": "network",
         "gate": [
-          "capability",
-          "consent"
+          "capability"
         ],
         "commit": "contract"
       },
@@ -701,9 +697,7 @@
         ],
         "temporal": "instant",
         "topology": "linear",
-        "gate": [
-          "consent"
-        ],
+        "gate": [],
         "commit": "contract"
       },
       "provenance": {
@@ -779,9 +773,7 @@
         ],
         "temporal": "instant",
         "topology": "linear",
-        "gate": [
-          "consent"
-        ],
+        "gate": [],
         "commit": "contract"
       },
       "provenance": {
@@ -819,7 +811,6 @@
         "temporal": "persistent",
         "topology": "network",
         "gate": [
-          "consent",
           "capability"
         ],
         "commit": "contract"
@@ -1563,9 +1554,7 @@
         ],
         "temporal": "persistent",
         "topology": "loop",
-        "gate": [
-          "consent"
-        ],
+        "gate": [],
         "commit": "contract"
       },
       "provenance": {

@@ -118,9 +118,9 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -187,9 +187,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "explicit-choice",
@@ -406,10 +406,10 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [
+          [
           "capability",
-          "consent",
           "trust"
-        ],
+        ]],
         "commit": "contract",
         "invariants": [
           "explicit-choice",
@@ -691,9 +691,9 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -984,9 +984,9 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "baseline-integrity"
@@ -1022,10 +1022,10 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [
+          [
           "capability",
-          "consent",
           "trust"
-        ],
+        ]],
         "commit": "contract",
         "invariants": [
           "no-silent-mutation",
@@ -4433,9 +4433,9 @@
         "temporal": "persistent",
         "topology": "network",
         "gate": [
-          "trust",
-          "consent"
-        ],
+          [
+          "trust"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -4502,8 +4502,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "provenance": {
@@ -4570,9 +4569,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "trust",
-          "consent"
-        ],
+          [
+          "trust"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -4707,8 +4706,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "provenance": {
@@ -4741,8 +4739,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "provenance": {
@@ -4843,8 +4840,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract"
       },
       "provenance": {
@@ -4979,8 +4975,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract"
       },
       "provenance": {
@@ -5014,8 +5009,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract"
       },
       "provenance": {
@@ -5048,9 +5042,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "trust",
-          "consent"
-        ],
+          [
+          "trust"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -5151,9 +5145,9 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [
-          "trust",
-          "consent"
-        ],
+          [
+          "trust"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -5254,9 +5248,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "trust",
-          "consent"
-        ],
+          [
+          "trust"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -5323,9 +5317,9 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "trust",
-          "consent"
-        ],
+          [
+          "trust"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -5460,9 +5454,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "trust",
-          "consent"
-        ],
+          [
+          "trust"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -5869,9 +5863,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -5938,8 +5932,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract"
       },
       "provenance": {
@@ -6040,8 +6033,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract"
       },
       "provenance": {
@@ -6074,8 +6066,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract"
       },
       "provenance": {
@@ -6176,8 +6167,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract"
       },
       "provenance": {
@@ -6346,9 +6336,9 @@
         "temporal": "persistent",
         "topology": "network",
         "gate": [
-          "trust",
-          "consent"
-        ],
+          [
+          "trust"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -6381,9 +6371,9 @@
         "temporal": "persistent",
         "topology": "network",
         "gate": [
-          "trust",
-          "consent"
-        ],
+          [
+          "trust"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -6450,8 +6440,7 @@
         "temporal": "persistent",
         "topology": "network",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract"
       },
       "provenance": {
@@ -6553,9 +6542,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "trust",
-          "consent"
-        ],
+          [
+          "trust"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -6589,9 +6578,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "trust",
-          "consent"
-        ],
+          [
+          "trust"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -6727,8 +6716,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "provenance": {
@@ -6965,9 +6953,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "trust",
-          "consent"
-        ],
+          [
+          "trust"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -7000,8 +6988,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract"
       },
       "provenance": {
@@ -7033,8 +7020,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract"
       },
       "provenance": {
@@ -7133,8 +7119,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "ledger"
       },
       "provenance": {
@@ -7232,9 +7217,9 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [
-          "trust",
-          "consent"
-        ],
+          [
+          "trust"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -7302,9 +7287,9 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "trust",
-          "consent"
-        ],
+          [
+          "trust"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -7408,9 +7393,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -7444,9 +7429,9 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -7548,9 +7533,9 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -7652,10 +7637,10 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
+          [
           "capability",
-          "consent",
           "trust"
-        ],
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -7689,9 +7674,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -7794,9 +7779,9 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -7867,9 +7852,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "non-coercion"
@@ -7904,9 +7889,9 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -8004,9 +7989,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -8105,10 +8090,10 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
+          [
           "capability",
-          "consent",
           "trust"
-        ],
+        ]],
         "commit": "contract",
         "invariants": [
           "explicit-choice",
@@ -8281,9 +8266,9 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -8315,9 +8300,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -8352,10 +8337,10 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
+          [
           "capability",
-          "consent",
           "trust"
-        ],
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -8424,9 +8409,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -8458,9 +8443,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -8496,9 +8481,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -8532,9 +8517,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "auditability",
@@ -8571,9 +8556,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -8606,9 +8591,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "non-coercion"
@@ -8644,9 +8629,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -8679,9 +8664,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -8717,9 +8702,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -8752,9 +8737,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -8787,9 +8772,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "ledger"
       },
       "provenance": {
@@ -8822,9 +8807,9 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          "capability",
-          "consent"
-        ],
+          [
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": [
           "auditability"
@@ -9069,10 +9054,10 @@
         "temporal": "continuous",
         "topology": "network",
         "gate": [
+          [
           "capability",
-          "trust",
-          "consent"
-        ],
+          "trust"
+        ]],
         "commit": "ledger",
         "invariants": [
           "neutrality"
@@ -9310,8 +9295,7 @@
         "temporal": "persistent",
         "topology": "network",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract"
       },
       "provenance": {
@@ -9412,8 +9396,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract"
       },
       "provenance": {
@@ -9446,8 +9429,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract"
       },
       "provenance": {
@@ -9514,9 +9496,9 @@
         "temporal": "persistent",
         "topology": "network",
         "gate": [
-          "consent",
+          [
           "trust"
-        ],
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -9549,8 +9531,7 @@
         "temporal": "persistent",
         "topology": "network",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract"
       },
       "provenance": {
@@ -10028,8 +10009,7 @@
         "temporal": "instant",
         "topology": "network",
         "gate": [
-          "consent"
-        ],
+          []],
         "commit": "contract"
       },
       "provenance": {
@@ -10189,7 +10169,9 @@
         "substrate": ["symbolic"],
         "temporal": "instant",
         "topology": "linear",
-        "gate": ["capability", "consent"],
+        "gate": [[
+          "capability"
+        ]],
         "commit": "contract",
         "invariants": ["explicit-choice"]
       },
@@ -10348,7 +10330,9 @@
         "substrate": ["symbolic"],
         "temporal": "persistent",
         "topology": "lattice",
-        "gate": ["capability", "consent"],
+        "gate": [[
+          "capability"
+        ]],
         "commit": "contract"
       },
       "provenance": {
@@ -10443,7 +10427,10 @@
         "substrate": ["symbolic"],
         "temporal": "persistent",
         "topology": "lattice",
-        "gate": ["capability", "trust", "consent"],
+        "gate": [[
+          "capability",
+          "trust"
+        ]],
         "commit": "contract",
         "invariants": ["auditability", "explicit-choice", "baseline-integrity"]
       },
