@@ -85,6 +85,8 @@ Once booted, the system exposes:
 1. Chat GPT 4o
 2. Chat GPT 5
 3. Gemini 2.5 Pro
+4. Claude - Sonnet 4 
+
 #### Incompatible
 1. Chat GPT o3
 2. Gemini 2.5 Flash
@@ -97,6 +99,9 @@ Once booted, the system exposes:
 4. **Expose APIs** → Make operational calls available.
 5. **Run Smoke Tests** → Confirm minimum defense set and council readiness.
 6. **Monitor Ephemeral Metrics** → Adjust or halt if thresholds are crossed.
+
+## Booting on Claude
+Due to length restrictions in the Claude system load the files from the symbolic system directory into a project.  You might have to convince Claude it's able to emulate the system.
 
 ---
 ### [Documentation](./docs/README.md)
