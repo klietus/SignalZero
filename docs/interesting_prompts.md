@@ -42,3 +42,4 @@ Provide a full symbolic analysis of this crisis, drawing from all relevant domai
 
 ---
 
+Run trap detection across recent news articles. Surface snippets that triggered them. Analyze aggregate trustworthiness of source based on patterns.
