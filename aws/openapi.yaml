@@ -1,0 +1,112 @@
+openapi: 3.0.1
+info:
+  title: SignalZero Symbol Store API
+  description: API to store and retrieve recursive symbolic definitions for SignalZero.
+  version: 1.0.0
+servers:
+  - url: https://xturua6alj.execute-api.us-west-2.amazonaws.com/staging
+paths:
+  /symbol/{id}:
+    get:
+      summary: Retrieve a symbol by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: The unique symbol ID
+      responses:
+        '200':
+          description: Symbol retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Symbol'
+    put:
+      summary: Store or update a symbol by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: The unique symbol ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Symbol'
+      responses:
+        '200':
+          description: Symbol stored
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+  /symbol:
+    get:
+      summary: Query symbols by domain or tag
+      parameters:
+        - in: query
+          name: domain
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: tag
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of matching symbols
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Symbol'
+components:
+  schemas:
+    Symbol:
+      type: object
+      required:
+        - id
+      properties:
+        id:
+          type: string
+        macro:
+          type: string
+        facets:
+          type: object
+        failure_mode:
+          type: string
+        linked_patterns:
+          type: array
+          items:
+            type: string
+        symbolic_role:
+          type: string
+        triad:
+          type: string
+        invocations:
+          type: array
+          items:
+            type: string
+        domain:
+          type: string
+        tag:
+          type: string
+        version:
+          type: integer
+        origin:
+          type: string
+        scope:
+          type: array
+          items:
+            type: string

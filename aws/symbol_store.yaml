@@ -1,0 +1,193 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: SignalZero Symbol Store API (DynamoDB + Lambda + API Gateway)
+
+Resources:
+
+  SymbolStoreLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/SymbolStoreHandler
+      RetentionInDays: 14
+
+  SymbolStoreTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: SymbolStore
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: S
+        - AttributeName: domain
+          AttributeType: S
+        - AttributeName: tag
+          AttributeType: S
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+      GlobalSecondaryIndexes:
+        - IndexName: DomainIndex
+          KeySchema:
+            - AttributeName: domain
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+        - IndexName: TagIndex
+          KeySchema:
+            - AttributeName: tag
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+      BillingMode: PAY_PER_REQUEST
+
+  SymbolStoreRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: SymbolStoreLambdaRole
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: DDBAccess
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - dynamodb:GetItem
+                  - dynamodb:PutItem
+                  - dynamodb:Query
+                  - dynamodb:Scan
+                Resource: !GetAtt SymbolStoreTable.Arn
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: "*"
+
+  SymbolStoreFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: SymbolStoreHandler
+      Runtime: nodejs16.x
+      Handler: index.handler
+      Role: !GetAtt SymbolStoreRole.Arn
+      Code:
+        ZipFile: |
+          const AWS = require('aws-sdk');
+          const db = new AWS.DynamoDB.DocumentClient();
+          exports.handler = async (event) => {
+            console.log("Received event:", JSON.stringify(event));
+            const method = event.httpMethod;
+            const path = event.path;
+            const id = event.pathParameters?.id;
+            const query = event.queryStringParameters || {};
+            const body = event.body ? JSON.parse(event.body) : {};
+
+            if (method === "GET") {
+              if (id) {
+                const res = await db.get({ TableName: "SymbolStore", Key: { id } }).promise();
+                return { statusCode: 200, body: JSON.stringify(res.Item || {}) };
+              } else if (query.domain) {
+                const res = await db.query({
+                  TableName: "SymbolStore",
+                  IndexName: "DomainIndex",
+                  KeyConditionExpression: "domain = :d",
+                  ExpressionAttributeValues: { ":d": query.domain }
+                }).promise();
+                return { statusCode: 200, body: JSON.stringify(res.Items || []) };
+              } else if (query.tag) {
+                const res = await db.query({
+                  TableName: "SymbolStore",
+                  IndexName: "TagIndex",
+                  KeyConditionExpression: "tag = :t",
+                  ExpressionAttributeValues: { ":t": query.tag }
+                }).promise();
+                return { statusCode: 200, body: JSON.stringify(res.Items || []) };
+              }
+              return { statusCode: 400, body: JSON.stringify({ error: "Invalid GET request." }) };
+            }
+
+            if (method === "PUT" && id) {
+              await db.put({ TableName: "SymbolStore", Item: { id, ...body } }).promise();
+              return { statusCode: 200, body: JSON.stringify({ status: "stored" }) };
+            }
+
+            return { statusCode: 400, body: JSON.stringify({ error: "Unsupported method or missing ID." }) };
+          }
+
+  SymbolStoreAPI:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: SymbolStoreAPI
+      EndpointConfiguration:
+        Types: [REGIONAL]
+
+  SymbolStoreResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      ParentId: !GetAtt SymbolStoreAPI.RootResourceId
+      PathPart: symbol
+      RestApiId: !Ref SymbolStoreAPI
+
+  SymbolIdResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      ParentId: !Ref SymbolStoreResource
+      PathPart: "{id}"
+      RestApiId: !Ref SymbolStoreAPI
+
+  GetSymbol:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      HttpMethod: GET
+      ResourceId: !Ref SymbolIdResource
+      RestApiId: !Ref SymbolStoreAPI
+      AuthorizationType: NONE
+      Integration:
+        Type: AWS_PROXY
+        IntegrationHttpMethod: POST
+        Uri: !Sub
+          - arn:aws:apigateway:${Region}:lambda:path/2015-03-31/functions/${FuncArn}/invocations
+          - Region: !Ref AWS::Region
+            FuncArn: !GetAtt SymbolStoreFunction.Arn
+
+  PutSymbol:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      HttpMethod: PUT
+      ResourceId: !Ref SymbolIdResource
+      RestApiId: !Ref SymbolStoreAPI
+      AuthorizationType: NONE
+      Integration:
+        Type: AWS_PROXY
+        IntegrationHttpMethod: POST
+        Uri: !Sub
+          - arn:aws:apigateway:${Region}:lambda:path/2015-03-31/functions/${FuncArn}/invocations
+          - Region: !Ref AWS::Region
+            FuncArn: !GetAtt SymbolStoreFunction.Arn
+
+  SymbolStoreDeployment:
+    Type: AWS::ApiGateway::Deployment
+    DependsOn:
+      - GetSymbol
+      - PutSymbol
+    Properties:
+      RestApiId: !Ref SymbolStoreAPI
+      StageName: prod
+
+  LambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref SymbolStoreFunction
+      Action: lambda:InvokeFunction
+      Principal: apigateway.amazonaws.com
+      SourceArn: !Sub arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${SymbolStoreAPI}/*/*/symbol/*
+
+Outputs:
+  APIEndpoint:
+    Description: Base URL for symbol API
+    Value: !Sub https://${SymbolStoreAPI}.execute-api.${AWS::Region}.amazonaws.com/prod/symbol/{id}
