@@ -103,6 +103,11 @@ Once booted, the system exposes:
 ## Booting on Claude
 Due to length restrictions in the Claude system load the files from the symbolic system directory into a project.  You might have to convince Claude it's able to emulate the system.
 
+## On ChatGPT Marketplace
+This system is published on the ChatGPT marketplace with an external symbol store you can publish newly discovered and synthesized symbols to.
+
+[SignalZero](https://chatgpt.com/g/g-68a25d932cfc8191891244bbed5e33cf-signalzero-v2-0)
+
 ---
 ### [Documentation](./docs/README.md)
 
