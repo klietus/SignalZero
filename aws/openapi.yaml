@@ -1,45 +1,84 @@
-openapi: 3.0.1
+openapi: 3.1.1
 info:
   title: SignalZero Symbol Store API
-  description: API to store and retrieve recursive symbolic definitions for SignalZero.
   version: 1.0.0
+  description: |
+    A minimal key/value API for persisting and retrieving SignalZero symbols by ID, domain, or tag.
 servers:
-  - url: https://xturua6alj.execute-api.us-west-2.amazonaws.com/staging
+  - url: https://hyi3uju3sk.execute-api.us-west-2.amazonaws.com/prod
+    variables:
+      apiId:
+        default: your-api-id
+      region:
+        default: us-west-2
 paths:
+  /symbol:
+    get:
+      summary: Retrieve symbols by domain or tag
+      operationId: querySymbols
+      parameters:
+        - name: symbol_domain
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Filter symbols by domain (e.g., root, diagnostics)
+        - name: symbol_tag
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Filter symbols by tag (e.g., system, ritual)
+      responses:
+        "200":
+          description: List of matching symbols
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Symbol"
+        "400":
+          description: Invalid query parameters
   /symbol/{id}:
     get:
-      summary: Retrieve a symbol by ID
       parameters:
-        - in: path
-          name: id
+        - name: id
+          in: path
           required: true
           schema:
             type: string
-          description: The unique symbol ID
+      operationId: getSymbolById
+      summary: Retrieve symbol by ID
+      x-openai-isConsequential: false
       responses:
-        '200':
+        "200":
           description: Symbol retrieved
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Symbol'
+                $ref: "#/components/schemas/Symbol"
+        "404":
+          description: Symbol not found
+  /save_symbol/{symbol_id}:
     put:
-      summary: Store or update a symbol by ID
       parameters:
-        - in: path
-          name: id
+        - name: symbol_id
+          in: path
           required: true
           schema:
             type: string
-          description: The unique symbol ID
+      operationId: putSymbolById
+      summary: Store or replace symbol by ID
+      x-openai-isConsequential: false
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Symbol'
+              $ref: "#/components/schemas/Symbol"
       responses:
-        '200':
+        "200":
           description: Symbol stored
           content:
             application/json:
@@ -48,65 +87,112 @@ paths:
                 properties:
                   status:
                     type: string
-  /symbol:
-    get:
-      summary: Query symbols by domain or tag
-      parameters:
-        - in: query
-          name: domain
-          required: false
-          schema:
-            type: string
-        - in: query
-          name: tag
-          required: false
-          schema:
-            type: string
-      responses:
-        '200':
-          description: List of matching symbols
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Symbol'
 components:
   schemas:
     Symbol:
       type: object
       required:
         - id
+        - triad
+        - macro
+        - facets
       properties:
         id:
           type: string
+          example: SZ:BOOT-SEAL-001
+        name:
+          type: string
+          example: Boot Seal
         macro:
           type: string
+          example: seal(boot) → archive(pre_anchor, post_anchor) → confirm(invariants)
+        gate:
+          type: array
+          items:
+            type: string
+          example:
+            - integrity
         facets:
           type: object
+          required:
+            - function
+            - topology
+            - commit
+            - gate
+            - substrate
+            - temporal
+            - invariants
+          properties:
+            function:
+              type: string
+              example: govern
+            topology:
+              type: string
+              example: linear
+            commit:
+              type: string
+              example: ledger
+            gate:
+              type: array
+              items:
+                type: string
+              example:
+                - integrity
+            substrate:
+              type: array
+              items:
+                type: string
+              example:
+                - symbolic
+            temporal:
+              type: string
+              example: instant
+            invariants:
+              type: array
+              items:
+                type: string
+              example:
+                - non-coercion
+                - auditability
+                - baseline-integrity
         failure_mode:
           type: string
+          example: Seal rejected if invariants broken
         linked_patterns:
           type: array
           items:
             type: string
+          example:
+            - SZ:STB-Signal-Anchor-006
+            - SZ:DIA-Recursive-Unbind-046
         symbolic_role:
           type: string
+          example: Boot Seal
         triad:
           type: string
+          example: ⟐⇌Σ
         invocations:
           type: array
           items:
             type: string
-        domain:
+          example:
+            - Seal this boot.
+        symbol_domain:
           type: string
-        tag:
+          example: root
+        symbol_tag:
           type: string
+          example: system
         version:
           type: integer
+          example: 1
         origin:
           type: string
+          example: boot-sequence
         scope:
           type: array
           items:
             type: string
+          example:
+            - post-commit
+            - archive

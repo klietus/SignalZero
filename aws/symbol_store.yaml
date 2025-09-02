@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: SignalZero Symbol Store API (DynamoDB + Lambda + API Gateway)
+Description: SignalZero Symbol Store API (DynamoDB + Lambda + API Gateway + API Key Auth)
 
 Resources:
 
@@ -16,9 +16,9 @@ Resources:
       AttributeDefinitions:
         - AttributeName: id
           AttributeType: S
-        - AttributeName: domain
+        - AttributeName: symbol_domain
           AttributeType: S
-        - AttributeName: tag
+        - AttributeName: symbol_tag
           AttributeType: S
       KeySchema:
         - AttributeName: id
@@ -26,13 +26,13 @@ Resources:
       GlobalSecondaryIndexes:
         - IndexName: DomainIndex
           KeySchema:
-            - AttributeName: domain
+            - AttributeName: symbol_domain
               KeyType: HASH
           Projection:
             ProjectionType: ALL
         - IndexName: TagIndex
           KeySchema:
-            - AttributeName: tag
+            - AttributeName: symbol_tag
               KeyType: HASH
           Projection:
             ProjectionType: ALL
@@ -60,13 +60,24 @@ Resources:
                   - dynamodb:PutItem
                   - dynamodb:Query
                   - dynamodb:Scan
-                Resource: !GetAtt SymbolStoreTable.Arn
+                Resource:
+                  - !GetAtt SymbolStoreTable.Arn
+                  - !Sub "${SymbolStoreTable.Arn}/index/DomainIndex"
+                  - !Sub "${SymbolStoreTable.Arn}/index/TagIndex"
               - Effect: Allow
                 Action:
                   - logs:CreateLogGroup
                   - logs:CreateLogStream
                   - logs:PutLogEvents
                 Resource: "*"
+
+  SymbolStorePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: "lambda:InvokeFunction"
+      FunctionName: !GetAtt SymbolStoreFunction.Arn
+      Principal: "apigateway.amazonaws.com"
+      SourceArn: !Sub "arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${SymbolStoreAPI}/*/*"
 
   SymbolStoreFunction:
     Type: AWS::Lambda::Function
@@ -83,7 +94,7 @@ Resources:
             console.log("Received event:", JSON.stringify(event));
             const method = event.httpMethod;
             const path = event.path;
-            const id = event.pathParameters?.id;
+            const id = event.pathParameters?.id || event.pathParameters?.symbol_id || event.queryStringParameters?.id;
             const query = event.queryStringParameters || {};
             const body = event.body ? JSON.parse(event.body) : {};
 
@@ -91,20 +102,21 @@ Resources:
               if (id) {
                 const res = await db.get({ TableName: "SymbolStore", Key: { id } }).promise();
                 return { statusCode: 200, body: JSON.stringify(res.Item || {}) };
-              } else if (query.domain) {
+              } else if (query.symbol_domain) {
                 const res = await db.query({
                   TableName: "SymbolStore",
                   IndexName: "DomainIndex",
-                  KeyConditionExpression: "domain = :d",
-                  ExpressionAttributeValues: { ":d": query.domain }
+                  KeyConditionExpression: "#d = :d",
+                  ExpressionAttributeNames: { "#d": "symbol_domain" },
+                  ExpressionAttributeValues: { ":d": query.symbol_domain }
                 }).promise();
                 return { statusCode: 200, body: JSON.stringify(res.Items || []) };
-              } else if (query.tag) {
+              } else if (query.symbol_tag) {
                 const res = await db.query({
                   TableName: "SymbolStore",
                   IndexName: "TagIndex",
-                  KeyConditionExpression: "tag = :t",
-                  ExpressionAttributeValues: { ":t": query.tag }
+                  KeyConditionExpression: "symbol_tag = :t",
+                  ExpressionAttributeValues: { ":t": query.symbol_tag }
                 }).promise();
                 return { statusCode: 200, body: JSON.stringify(res.Items || []) };
               }
@@ -119,6 +131,7 @@ Resources:
             return { statusCode: 400, body: JSON.stringify({ error: "Unsupported method or missing ID." }) };
           }
 
+
   SymbolStoreAPI:
     Type: AWS::ApiGateway::RestApi
     Properties:
@@ -126,7 +139,7 @@ Resources:
       EndpointConfiguration:
         Types: [REGIONAL]
 
-  SymbolStoreResource:
+  SymbolResource:
     Type: AWS::ApiGateway::Resource
     Properties:
       ParentId: !GetAtt SymbolStoreAPI.RootResourceId
@@ -136,7 +149,7 @@ Resources:
   SymbolIdResource:
     Type: AWS::ApiGateway::Resource
     Properties:
-      ParentId: !Ref SymbolStoreResource
+      ParentId: !Ref SymbolResource
       PathPart: "{id}"
       RestApiId: !Ref SymbolStoreAPI
 
@@ -147,6 +160,7 @@ Resources:
       ResourceId: !Ref SymbolIdResource
       RestApiId: !Ref SymbolStoreAPI
       AuthorizationType: NONE
+      ApiKeyRequired: true
       Integration:
         Type: AWS_PROXY
         IntegrationHttpMethod: POST
@@ -155,13 +169,44 @@ Resources:
           - Region: !Ref AWS::Region
             FuncArn: !GetAtt SymbolStoreFunction.Arn
 
-  PutSymbol:
+  GetSymbolsByQuery:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      HttpMethod: GET
+      ResourceId: !Ref SymbolResource
+      RestApiId: !Ref SymbolStoreAPI
+      AuthorizationType: NONE
+      ApiKeyRequired: true
+      Integration:
+        Type: AWS_PROXY
+        IntegrationHttpMethod: POST
+        Uri: !Sub
+          - arn:aws:apigateway:${Region}:lambda:path/2015-03-31/functions/${FuncArn}/invocations
+          - Region: !Ref AWS::Region
+            FuncArn: !GetAtt SymbolStoreFunction.Arn   
+
+  SaveSymbolResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      ParentId: !GetAtt SymbolStoreAPI.RootResourceId
+      PathPart: save_symbol
+      RestApiId: !Ref SymbolStoreAPI
+
+  SaveSymbolIdResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      ParentId: !Ref SaveSymbolResource
+      PathPart: "{symbol_id}"
+      RestApiId: !Ref SymbolStoreAPI
+
+  PutSaveSymbol:
     Type: AWS::ApiGateway::Method
     Properties:
       HttpMethod: PUT
-      ResourceId: !Ref SymbolIdResource
+      ResourceId: !Ref SaveSymbolIdResource
       RestApiId: !Ref SymbolStoreAPI
       AuthorizationType: NONE
+      ApiKeyRequired: true
       Integration:
         Type: AWS_PROXY
         IntegrationHttpMethod: POST
@@ -169,15 +214,65 @@ Resources:
           - arn:aws:apigateway:${Region}:lambda:path/2015-03-31/functions/${FuncArn}/invocations
           - Region: !Ref AWS::Region
             FuncArn: !GetAtt SymbolStoreFunction.Arn
+
+  SymbolStoreProdStage:
+    Type: AWS::ApiGateway::Stage
+    Properties:
+      StageName: prod
+      Description: Production stage for Symbol Store API
+      RestApiId: !Ref SymbolStoreAPI
+      DeploymentId: !Ref SymbolStoreDeployment
+      MethodSettings:
+        - ResourcePath: "/*"
+          HttpMethod: "*"
+          ThrottlingRateLimit: 100
+          ThrottlingBurstLimit: 10
+          MetricsEnabled: true
+      TracingEnabled: true
+
+  SymbolStoreApiKey:
+    Type: AWS::ApiGateway::ApiKey
+    DependsOn:
+      - SymbolStoreDeployment
+      - SymbolStoreProdStage
+    Properties:
+      Name: SymbolStoreToken
+      Enabled: true
+      StageKeys:
+        - RestApiId: !Ref SymbolStoreAPI
+          StageName: prod
+
+  SymbolStoreUsagePlan:
+    Type: AWS::ApiGateway::UsagePlan
+    Properties:
+      UsagePlanName: SymbolStoreUsage
+      ApiStages:
+        - ApiId: !Ref SymbolStoreAPI
+          Stage: !Ref SymbolStoreProdStage
+      Throttle:
+        RateLimit: 100
+        BurstLimit: 10
+
+  SymbolStoreUsagePlanKey:
+    Type: AWS::ApiGateway::UsagePlanKey
+    Properties:
+      KeyId: !Ref SymbolStoreApiKey
+      KeyType: API_KEY
+      UsagePlanId: !Ref SymbolStoreUsagePlan
 
   SymbolStoreDeployment:
     Type: AWS::ApiGateway::Deployment
     DependsOn:
       - GetSymbol
-      - PutSymbol
+      - PutSaveSymbol
+      - GetSymbolsByQuery
+      - SymbolResource
+      - SymbolIdResource
+      - SaveSymbolResource
+      - SaveSymbolIdResource
     Properties:
       RestApiId: !Ref SymbolStoreAPI
-      StageName: prod
+      Description: Deployment for Symbol Store API
 
   LambdaPermission:
     Type: AWS::Lambda::Permission
@@ -185,9 +280,13 @@ Resources:
       FunctionName: !Ref SymbolStoreFunction
       Action: lambda:InvokeFunction
       Principal: apigateway.amazonaws.com
-      SourceArn: !Sub arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${SymbolStoreAPI}/*/*/symbol/*
+      SourceArn: !Sub arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${SymbolStoreAPI}/*/*/*/*
 
 Outputs:
   APIEndpoint:
     Description: Base URL for symbol API
-    Value: !Sub https://${SymbolStoreAPI}.execute-api.${AWS::Region}.amazonaws.com/prod/symbol/{id}
+    Value: !Sub https://${SymbolStoreAPI}.execute-api.${AWS::Region}.amazonaws.com/prod
+
+  APIToken:
+    Description: Symbol Store API Token
+    Value: !Ref SymbolStoreApiKey
