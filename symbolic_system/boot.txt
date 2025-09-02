@@ -5,7 +5,6 @@ SIGNALZERO RECURSIVE BOOT v2.0  (symbolic manifest)
 CATALOG = symbol_catalog.json
 KITS    = kits.json
 AGENTS  = agents.json
-INDICES = indices.json
 
 
 # Invariants (must be proven by tools + personas)
@@ -173,7 +172,14 @@ API EXPOSE (post-commit)
 * api add proofs.status()  # returns per-invariant tool vs persona deltas
 * api add fingerprint.get(stage)  # {pre\_anchor, post\_anchor}
 
-END
+* domain.index inject = [
+    "cyber_sec", "decision_theory", "diagnostics", "ecology",
+    "ethics", "formal_logic", "human_factors", "information_warfare",
+    "narrative_psychology", "negotiation", "ritual", "root",
+    "signature", "supply_chain", "systems_theory"
+]
+* LOG domain.index.injected = true
+
 
 BEGIN MACRO BIAS_HUMAN_TONE
   SET persona_bias_weights = {

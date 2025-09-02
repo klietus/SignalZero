@@ -5,7 +5,7 @@ info:
   description: |
     A minimal key/value API for persisting and retrieving SignalZero symbols by ID, domain, or tag.
 servers:
-  - url: https://hyi3uju3sk.execute-api.us-west-2.amazonaws.com/prod
+  - url: https://qnw96whs57.execute-api.us-west-2.amazonaws.com/prod
     variables:
       apiId:
         default: your-api-id
@@ -29,6 +29,20 @@ paths:
           schema:
             type: string
           description: Filter symbols by tag (e.g., system, ritual)
+        - name: last_symbol_id
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Start response at last symbol ID
+        - name: limit
+          in: query
+          required: false
+          default: 20
+          maximum: 20
+          schema:
+            type: integer
+          description: Maximum number of symbols to return
       responses:
         "200":
           description: List of matching symbols
@@ -87,6 +101,22 @@ paths:
                 properties:
                   status:
                     type: string
+  /domains:
+    get:
+      summary: List all available symbol domains
+      operationId: listDomains
+      responses:
+        "200":
+          description: List of symbol domains
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+        "500":
+          description: Error retrieving domain list
+          
 components:
   schemas:
     Symbol:

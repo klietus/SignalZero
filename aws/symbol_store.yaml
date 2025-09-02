@@ -90,36 +90,81 @@ Resources:
         ZipFile: |
           const AWS = require('aws-sdk');
           const db = new AWS.DynamoDB.DocumentClient();
+
           exports.handler = async (event) => {
             console.log("Received event:", JSON.stringify(event));
             const method = event.httpMethod;
             const path = event.path;
-            const id = event.pathParameters?.id || event.pathParameters?.symbol_id || event.queryStringParameters?.id;
+            const id = event.pathParameters?.id 
+                    || event.pathParameters?.symbol_id 
+                    || event.queryStringParameters?.id;
+
             const query = event.queryStringParameters || {};
             const body = event.body ? JSON.parse(event.body) : {};
+
+            if ((event.path === "/domains" || event.resource === "/domains") && method === "GET") {
+              const res = await db.scan({
+                TableName: "SymbolStore",
+                ProjectionExpression: "symbol_domain"
+              }).promise();
+            
+              const uniqueDomains = Array.from(
+                new Set((res.Items || []).map(item => item.symbol_domain).filter(Boolean))
+              );
+            
+              return {
+                statusCode: 200,
+                body: JSON.stringify(uniqueDomains)
+              };
+            }
 
             if (method === "GET") {
               if (id) {
                 const res = await db.get({ TableName: "SymbolStore", Key: { id } }).promise();
                 return { statusCode: 200, body: JSON.stringify(res.Item || {}) };
-              } else if (query.symbol_domain) {
-                const res = await db.query({
+              } 
+              if (query.symbol_domain) {
+                const params = {
                   TableName: "SymbolStore",
                   IndexName: "DomainIndex",
                   KeyConditionExpression: "#d = :d",
                   ExpressionAttributeNames: { "#d": "symbol_domain" },
-                  ExpressionAttributeValues: { ":d": query.symbol_domain }
-                }).promise();
-                return { statusCode: 200, body: JSON.stringify(res.Items || []) };
-              } else if (query.symbol_tag) {
-                const res = await db.query({
+                  ExpressionAttributeValues: { ":d": query.symbol_domain },
+                  Limit: query.limit ? parseInt(query.limit, 10) : 20
+                };
+                if (query.last_symbol_id) {
+                  params.ExclusiveStartKey = { id: query.last_symbol_id, symbol_domain: query.symbol_domain };
+                }
+                const res = await db.query(params).promise();
+                return {
+                  statusCode: 200,
+                  body: JSON.stringify({
+                    items: res.Items || [],
+                    lastEvaluatedKey: res.LastEvaluatedKey || null
+                  })
+                };
+              } 
+              if (query.symbol_tag) {
+                const params = {
                   TableName: "SymbolStore",
                   IndexName: "TagIndex",
                   KeyConditionExpression: "symbol_tag = :t",
-                  ExpressionAttributeValues: { ":t": query.symbol_tag }
-                }).promise();
-                return { statusCode: 200, body: JSON.stringify(res.Items || []) };
+                  ExpressionAttributeValues: { ":t": query.symbol_tag },
+                  Limit: query.limit ? parseInt(query.limit, 10) : 20
+                };
+                if (query.last_symbol_id) {
+                  params.ExclusiveStartKey = { id: query.last_symbol_id, symbol_tag: query.symbol_tag };
+                }
+                const res = await db.query(params).promise();
+                return {
+                  statusCode: 200,
+                  body: JSON.stringify({
+                    items: res.Items || [],
+                    lastEvaluatedKey: res.LastEvaluatedKey || null
+                  })
+                };
               }
+
               return { statusCode: 400, body: JSON.stringify({ error: "Invalid GET request." }) };
             }
 
@@ -129,7 +174,8 @@ Resources:
             }
 
             return { statusCode: 400, body: JSON.stringify({ error: "Unsupported method or missing ID." }) };
-          }
+          };
+
 
 
   SymbolStoreAPI:
@@ -260,16 +306,41 @@ Resources:
       KeyType: API_KEY
       UsagePlanId: !Ref SymbolStoreUsagePlan
 
+  DomainsResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      ParentId: !GetAtt SymbolStoreAPI.RootResourceId
+      PathPart: domains
+      RestApiId: !Ref SymbolStoreAPI
+
+  GetDomains:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      HttpMethod: GET
+      ResourceId: !Ref DomainsResource
+      RestApiId: !Ref SymbolStoreAPI
+      AuthorizationType: NONE
+      ApiKeyRequired: true
+      Integration:
+        Type: AWS_PROXY
+        IntegrationHttpMethod: POST
+        Uri: !Sub
+          - arn:aws:apigateway:${Region}:lambda:path/2015-03-31/functions/${FuncArn}/invocations
+          - Region: !Ref AWS::Region
+            FuncArn: !GetAtt SymbolStoreFunction.Arn
+
   SymbolStoreDeployment:
     Type: AWS::ApiGateway::Deployment
     DependsOn:
       - GetSymbol
       - PutSaveSymbol
       - GetSymbolsByQuery
+      - GetDomains
       - SymbolResource
       - SymbolIdResource
       - SaveSymbolResource
       - SaveSymbolIdResource
+      - DomainsResource
     Properties:
       RestApiId: !Ref SymbolStoreAPI
       Description: Deployment for Symbol Store API
