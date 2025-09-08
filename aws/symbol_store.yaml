@@ -91,6 +91,16 @@ Resources:
           const AWS = require('aws-sdk');
           const db = new AWS.DynamoDB.DocumentClient();
 
+          const addCors = (response) => ({
+            ...response,
+            headers: {
+              ...(response.headers || {}),
+              "Access-Control-Allow-Origin": "*",
+              "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+              "Access-Control-Allow-Methods": "GET,PUT,OPTIONS"
+            }
+          });
+
           exports.handler = async (event) => {
             console.log("Received event:", JSON.stringify(event));
             const method = event.httpMethod;
@@ -112,16 +122,16 @@ Resources:
                 new Set((res.Items || []).map(item => item.symbol_domain).filter(Boolean))
               );
             
-              return {
+              return addCors({
                 statusCode: 200,
                 body: JSON.stringify(uniqueDomains)
-              };
+              });
             }
 
             if (method === "GET") {
               if (id) {
                 const res = await db.get({ TableName: "SymbolStore", Key: { id } }).promise();
-                return { statusCode: 200, body: JSON.stringify(res.Item || {}) };
+                return addCors({ statusCode: 200, body: JSON.stringify(res.Item || {}) });
               } 
               if (query.symbol_domain) {
                 const params = {
@@ -136,13 +146,13 @@ Resources:
                   params.ExclusiveStartKey = { id: query.last_symbol_id, symbol_domain: query.symbol_domain };
                 }
                 const res = await db.query(params).promise();
-                return {
+                return addCors({
                   statusCode: 200,
                   body: JSON.stringify({
                     items: res.Items || [],
                     lastEvaluatedKey: res.LastEvaluatedKey || null
                   })
-                };
+                });
               } 
               if (query.symbol_tag) {
                 const params = {
@@ -156,24 +166,28 @@ Resources:
                   params.ExclusiveStartKey = { id: query.last_symbol_id, symbol_tag: query.symbol_tag };
                 }
                 const res = await db.query(params).promise();
-                return {
+                return addCors({
                   statusCode: 200,
                   body: JSON.stringify({
                     items: res.Items || [],
                     lastEvaluatedKey: res.LastEvaluatedKey || null
                   })
-                };
+                });
               }
 
-              return { statusCode: 400, body: JSON.stringify({ error: "Invalid GET request." }) };
+              return addCors({ statusCode: 400, body: JSON.stringify({ error: "Invalid GET request." }) });
+            }
+
+            if (method === "OPTIONS") {
+              return addCors({ statusCode: 200, body: JSON.stringify({ status: "ok" }) });
             }
 
             if (method === "PUT" && id) {
               await db.put({ TableName: "SymbolStore", Item: { id, ...body } }).promise();
-              return { statusCode: 200, body: JSON.stringify({ status: "stored" }) };
+              return addCors({ statusCode: 200, body: JSON.stringify({ status: "stored" }) });
             }
 
-            return { statusCode: 400, body: JSON.stringify({ error: "Unsupported method or missing ID." }) };
+            return addCors({ statusCode: 400, body: JSON.stringify({ error: "Unsupported method or missing ID." }) });
           };
 
 
