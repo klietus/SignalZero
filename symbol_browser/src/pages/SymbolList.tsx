@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import axios from "axios";
-import type { StringListParameter } from "aws-cdk-lib/aws-ssm";
 
 interface Symbol {
   id: string;
@@ -77,13 +76,6 @@ export default function SymbolList() {
     if (symbols.length > 0) {
       const lastId = symbols[symbols.length - 1].id;
       setSearchParams({ domain, tag, cursor: lastId, direction: "next" });
-    }
-  };
-
-  const goToPrevious = () => {
-    if (symbols.length > 0) {
-      const firstId = symbols[0].id;
-      setSearchParams({ domain, tag, cursor: firstId, direction: "previous" });
     }
   };
 
