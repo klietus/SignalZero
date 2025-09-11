@@ -40,6 +40,7 @@ export default function SymbolDetail() {
       <p className="text-sm text-gray-600 mb-1">Symbolic Role: {symbol.symbolic_role || "n/a"}</p>
       <p className="text-sm text-gray-600 mb-1">Function: {symbol.facets.function}</p>
       <p className="text-sm text-gray-600 mb-1">Topology: {symbol.facets.topology}</p>
+      <p className="text-sm text-gray-600 mb-1">Version: {symbol.version}</p>
       <div className="mt-6 text-xs text-gray-400">
         <p><strong>Macro:</strong> {symbol.macro}</p>
       </div>
@@ -76,7 +77,7 @@ export default function SymbolDetail() {
           <p className="text-gray-500">None</p>
         )}
       </div>
-      
+
       <div className="mt-4">
         <h2 className="text-xl font-semibold mb-2">Invariants</h2>
         <ul className="list-disc ml-6">
