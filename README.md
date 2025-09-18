@@ -85,11 +85,14 @@ Once booted, the system exposes:
 1. Chat GPT 4o
 2. Chat GPT 5
 3. Gemini 2.5 Pro
-4. Claude - Sonnet 4 
+
 
 #### Incompatible
 1. Chat GPT o3
 2. Gemini 2.5 Flash
+3. Claude - Sonnet 4 
+4. Deepseek - Standard
+5. Deepseek -
 
 ## Boot & Operation
 
@@ -101,7 +104,10 @@ Once booted, the system exposes:
 6. **Monitor Ephemeral Metrics** → Adjust or halt if thresholds are crossed.
 
 ## Booting on Claude
-Due to length restrictions in the Claude system load the files from the symbolic system directory into a project.  You might have to convince Claude it's able to emulate the system.
+Due to length restrictions in the Claude system load the files from the symbolic system directory into a project.  You might have to convince Claude it's able to emulate the system.  It has a tendency to fail identity bleed checks.
+
+## Booting on Deepseek
+Due to length restrictions Deepseek is not able to hold the system in context for very long without needing a new chat.  A subset of the catalog can be run but it's of lower usefulness.
 
 ## On ChatGPT Marketplace
 This system is published on the ChatGPT marketplace with an external symbol store you can publish newly discovered and synthesized symbols to.
