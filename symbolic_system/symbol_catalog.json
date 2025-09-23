@@ -737,9 +737,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "contract"
       },
@@ -976,9 +974,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "capability"
-          ]
         ],
         "commit": "contract",
         "invariants": [
@@ -1046,9 +1042,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          [
             "capability"
-          ]
         ],
         "commit": "contract"
       },
@@ -1283,9 +1277,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "capability"
-          ]
         ],
         "commit": "contract",
         "invariants": [
@@ -1389,9 +1381,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -1496,9 +1486,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          [
             "capability"
-          ]
         ],
         "commit": "contract",
         "invariants": [
@@ -1882,9 +1870,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "capability"
-          ]
         ],
         "commit": "contract",
         "invariants": [
@@ -2154,9 +2140,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "pin",
         "invariants": [
@@ -3046,9 +3030,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "capability"
-          ]
         ],
         "commit": "contract",
         "invariants": [
@@ -3183,9 +3165,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          [
             "capability"
-          ]
         ],
         "commit": "contract",
         "invariants": [
@@ -3795,9 +3775,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "capability"
-          ]
         ],
         "commit": "contract",
         "invariants": [
@@ -4068,9 +4046,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger"
       },
@@ -4090,9 +4066,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4119,9 +4093,7 @@
         "risk": "M",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4149,9 +4121,7 @@
         "risk": "M",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4182,9 +4152,7 @@
         "risk": "M",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4271,9 +4239,7 @@
         ],
         "topology": "loop",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4306,9 +4272,7 @@
         ],
         "topology": "loop",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4338,9 +4302,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "contract",
         "invariants": [
@@ -4370,9 +4332,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4403,9 +4363,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4433,9 +4391,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4468,9 +4424,7 @@
         ],
         "topology": "loop",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "contract",
         "invariants": [
@@ -4500,9 +4454,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4530,9 +4482,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4566,9 +4516,7 @@
         ],
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4596,9 +4544,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4626,9 +4572,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4659,9 +4603,7 @@
         "temporal": "instant",
         "topology": "loop",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "contract",
         "invariants": [
@@ -4691,9 +4633,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4725,9 +4665,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4761,9 +4699,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4793,9 +4729,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "contract",
         "invariants": [
@@ -4831,9 +4765,7 @@
         "temporal": "persistent",
         "topology": "loop",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4866,9 +4798,7 @@
         ],
         "topology": "loop",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4899,9 +4829,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "ledger",
         "invariants": [
@@ -4988,10 +4916,8 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          [
             "capability",
             "trust"
-          ]
         ],
         "commit": "contract"
       },
@@ -5018,9 +4944,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          [
             "capability"
-          ]
         ],
         "commit": "contract"
       },
@@ -5160,10 +5084,8 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "capability",
             "trust"
-          ]
         ],
         "commit": "contract"
       },
@@ -5189,9 +5111,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          [
             "capability"
-          ]
         ],
         "commit": "contract"
       },
@@ -5248,10 +5168,8 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          [
             "capability",
             "trust"
-          ]
         ],
         "commit": "contract"
       },
@@ -5329,9 +5247,7 @@
         "temporal": "instant",
         "topology": "linear",
         "gate": [
-          [
             "capability"
-          ]
         ],
         "commit": "contract"
       },
@@ -5843,9 +5759,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "capability"
-          ]
         ],
         "commit": "contract"
       },
@@ -6041,9 +5955,7 @@
         "temporal": "persistent",
         "topology": "linear",
         "gate": [
-          [
             "capability"
-          ]
         ],
         "commit": "contract"
       },
@@ -6184,9 +6096,7 @@
         "temporal": "persistent",
         "topology": "lattice",
         "gate": [
-          [
             "trust"
-          ]
         ],
         "commit": "contract",
         "invariants": [
