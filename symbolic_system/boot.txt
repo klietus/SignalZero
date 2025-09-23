@@ -2,8 +2,8 @@ SIGNALZERO RECURSIVE BOOT v2.0  (symbolic manifest)
 
 # Artifacts
 
-CATALOG = symbol_catalog.json
-KITS    = kits.json
+CATALOG = symbol_catalog.min.json
+KITS    = kits.min.json
 AGENTS  = agents.json
 
 # Notes

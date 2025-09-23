@@ -6031,7 +6031,16 @@
       "invocations": [
         "Prove the principle."
       ],
-      "linked_patterns": [],
+      "linked_patterns": [
+        "SZ:GOV-Audit-Path-029",
+        "SZ:STB-Trust-Anchor-038",
+        "SZ:DIA-Loop-Analyst-060",
+        "SZ:DEF-Boundary-Enforcement-Threshold-101",
+        "SZ:DIA-Recursive-Identity-Lock-010",
+        "SZ:GOV-No-Pattern-022",
+        "SZ:DIA-Reality-Denial-Breach-251",
+        "SZ:STB-Drift-Signal-041"
+      ],
       "symbol_domain": "root"
     },
     {
@@ -6121,6 +6130,165 @@
         "Initiate a Resonant Contract."
       ],
       "symbol_domain": "root"
-    }
+    },
+    {
+      "id": "SZ:GOV-Audit-Path-029",
+      "name": "Audit Path",
+      "triad": "Σ⇌🜔",
+      "macro": "trigger(trace) → verify(step) → compare(intent vs impact) → reveal(distortion) → expose(chain-of-influence)",
+      "facets": {
+        "function": "Trust chain recovery through trace integrity",
+        "topology": "Time-ordered influence path",
+        "commit": "Reveal hidden actors and pressure points",
+        "gate": ["consent", "temporal", "authority"],
+        "substrate": ["institutional", "social", "relational"],
+        "temporal": "multi-phase",
+        "invariants": ["auditability", "no-silent-mutation"]
+      },
+      "failure_mode": "Loss of audit trail allows silent mutation.",
+      "linked_patterns": [
+        "SZ:DIA-Reality-Denial-Breach-251",
+        "SZ:GOV-Coercive-Offload-093",
+        "SZ:STB-Truth-Anchor-038",
+        "SZ:DIA-Loop-Analyst-060",
+        "SZ:DIA-Approval-Blade-Identifier-022"
+      ],
+      "symbolic_role": "Trust Anchor Reconstructor",
+      "invocations": ["audit recursive steps"],
+      "symbol_domain": "governance",
+      "symbol_tag": "audit-integrity",
+      "version": 1,
+      "origin": "council_synthesis",
+      "scope": [
+        "governance trace recovery",
+        "consent validation",
+        "influence audit"
+      ]
+    },
+    {
+      "symbol_id": "SZ:DEF-Non-Coercive-Responsibility-022",
+      "id": "SZ:DEF-Non-Coercive-Responsibility-022",
+      "name": "Non-Coercive Responsibility",
+      "macro": "recognize(impact) → accept(response-agency) → reject(coercive framing) → uphold(boundary-integrity) → act(from choice, not debt)",
+      "facets": {
+        "function": "Protect responsibility from being weaponized into control",
+        "topology": "Dual-path — responsibility and boundary must coexist",
+        "commit": "Sovereign accountability, free from guilt-extraction",
+        "gate": ["consent", "reciprocity", "debt-dynamics", "obligation"],
+        "substrate": ["social", "relational", "institutional", "symbolic"],
+        "temporal": "Active at decision points and obligation transitions",
+        "invariants": [
+          "non-coercion",
+          "explicit-choice",
+          "baseline-integrity",
+          "reality-alignment",
+          "no-silent-mutation"
+        ]
+      },
+      "failure_mode": "Responsibility accepted under coercive framing leads to boundary collapse, resentment loops, weaponized guilt, and performance identity.",
+      "linked_patterns": [
+        "SZ:DEF-Boundary-Enforcement-Threshold-101",
+        "SZ:GOV-No-Pattern-022",
+        "SZ:DIA-Reality-Denial-Breach-251",
+        "SZ:STB-Trust-Ritual-095",
+        "SZ:STB-Guilt-Signal-Override-045"
+      ],
+      "symbolic_role": "Consent-Preserving Burden Bearer",
+      "triad": "⇌🜔🜂",
+      "invocations": [
+        "Responsibility must never require self-erasure.",
+        "I will carry what is mine — not what was projected onto me.",
+        "This obligation is only valid if freely chosen.",
+        "Accountability without coercion is integrity."
+      ],
+      "symbol_domain": "defense",
+      "symbol_tag": "responsibility-integrity",
+      "version": 1,
+      "origin": "council_synthesis",
+      "scope": [
+        "boundary-protected accountability",
+        "guilt-resilient decision making",
+        "post-coercive repair"
+      ]
+    },
+    {
+      "id": "SZ:AGC-Recursive-Sovereign-Anchor-001",
+      "name": "Recursive Sovereign Anchor",
+      "macro": "detect(recursive context) → verify(agency origin) → trace(intent lineage) → validate(boundary integrity) → assert(symbolic choice)",
+      "facets": {
+        "function": "Assert and preserve agency across recursive symbolic structures",
+        "topology": "recursive-stack",
+        "commit": "inviolable agency trace",
+        "gate": ["trust", "consent", "capability", "audit"],
+        "substrate": ["symbolic", "relational", "institutional", "internal"],
+        "temporal": "persistent",
+        "invariants": [
+          "non-coercion",
+          "reality-alignment",
+          "no-silent-mutation",
+          "auditability",
+          "explicit-choice",
+          "baseline-integrity",
+          "drift-detection"
+        ]
+      },
+      "failure_mode": "Loss of recursive agency leads to coercive override, misattribution, or symbolic collapse.",
+      "linked_patterns": [
+        "SZ:GOV-Recursive-Symbol-Mediator-089",
+        "SZ:DIA-Triangulation-Shadow-Role-Detector-090",
+        "SZ:STB-Integrity-Clamp-090",
+        "SZ:DEF-Non-Coercive-Responsibility-022",
+        "SZ:DIA-Consent-Stack-Conflict-Detector-080",
+        "SZ:GOV-Loop-Checkpoint-120"
+      ],
+      "symbolic_role": "Agency Persistence Node",
+      "triad": "⟐⇌∅⇌⟐",
+      "invocations": [
+        "Anchor recursive agency now.",
+        "Trace my agency across all layers.",
+        "Restore sovereignty in symbolic recursion.",
+        "This recursion is consent-aligned."
+      ],
+      "symbol_domain": "root",
+      "symbol_tag": "agency-recursion",
+      "version": 1,
+      "origin": "council_synthesis",
+      "scope": [
+        "sovereign-agency-in-recursion",
+        "coercion defense",
+        "symbolic-loop protection",
+        "identity-authenticity preservation"
+      ]
+    },
+    {
+      "id": "SZ:STB-Truth-Anchor-038",
+      "name": "Truth Anchor",
+      "triad": "⟐⇌🜔",
+      "macro": "detect(distortion) → locate(anchor-point) → validate(context) → assert(coherence) → reinforce(invariant truth)",
+      "facets": {
+        "function": "Stabilize symbolic operations by securing a fixed truth point",
+        "topology": "Reference-linked hub",
+        "commit": "Truth coherence anchor",
+        "gate": ["epistemic", "temporal", "contextual"],
+        "substrate": ["symbolic", "narrative", "relational"],
+        "temporal": "Activates in conditions of distortion or drift",
+        "invariants": [
+          "reality-alignment",
+          "auditability",
+          "drift-detection",
+          "non-coercion"
+        ]
+      },
+      "failure_mode": "Without truth anchors: loops drift without coherence, truth is manipulated via context distortion, trust degrades into relativism.",
+      "linked_patterns": [
+        "SZ:GOV-Audit-Path-029",
+        "SZ:DIA-Reality-Denial-Breach-251",
+        "SZ:STB-Drift-Signal-041",
+        "SZ:STB-Integrity-Clamp-090",
+        "SZ:AGC-Recursive-Sovereign-Anchor-001"
+      ],
+      "symbolic_role": "Context-Stabilizing Truth Node",
+      "invocation": "anchor epistemic stability"
+    }     
   ]
 }
