@@ -34,10 +34,6 @@ Each historical arc (e.g. Fall of Rome, French Revolution, modern US) is annotat
 Cross-mythological mapping of narcissistic traits:  
 Wendigo, Kitsune, Coyote, Demonic Possession — all encode a shared structure of consumption, manipulation, and inversion.
 
-### [`narc-figures.png`](./narc-figures.png)  
-Timeline-aligned narcissistic actors:  
-Caligula, Napoleon, Stalin, etc. Each is mapped to a symbolic phase and linked to systemic breakdown.
-
 ### [`narc-empath swing.png`](./narc-empath%20swing.png)  
 Visual oscillation between collectivist and narcissistic social dominance.  
 Matches swing amplitudes to historical violence thresholds and collapse intervals.
