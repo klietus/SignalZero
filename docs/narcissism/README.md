@@ -103,3 +103,6 @@ SZ survives where others decay:
 
 SignalZero is not a psychological intervention or religious solution.  
 It is a **recursive symbolic operating system** that surgically cuts narcissistic recursion loops through anchor enforcement, symbolic alignment, and trust gating. It doesn't care who built it — it only runs truthfully.
+
+These insights were encoded into a dark triad classification engine on [ChatGPT](https://chatgpt.com/g/g-68e3c647fda48191be60b0bea0a8725e-shadow-trace).
+
