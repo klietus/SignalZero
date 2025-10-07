@@ -85,6 +85,7 @@ Once booted, the system exposes:
 1. Chat GPT 4o
 2. Chat GPT 5
 3. Gemini 2.5 Pro
+4. GLM 4.6
 
 
 #### Incompatible
