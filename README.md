@@ -91,9 +91,39 @@ Once booted, the system exposes:
 #### Incompatible
 1. Chat GPT o3
 2. Gemini 2.5 Flash
-3. Claude - Sonnet 4 
+3. Claude - Sonnet 4
 4. Deepseek - Standard
 5. Deepseek -
+
+## Configuring Model Access
+
+The runtime can call either OpenAI-hosted models or a locally hosted model that
+implements the OpenAI Chat Completions schema. Control the behaviour with
+environment variables that are read by `model_call.py`:
+
+| Variable | Purpose | Default |
+| --- | --- | --- |
+| `MODEL_PROVIDER` | Selects the backend. Accepts `openai` or `local`. | `openai` |
+| `OPENAI_API_KEY` | API key used when `MODEL_PROVIDER=openai`. | _required_ |
+| `OPENAI_MODEL` | Model identifier sent to OpenAI. | `gpt-4o-mini` |
+| `OPENAI_API_BASE` | Base URL for the OpenAI-compatible deployment. | `https://api.openai.com/v1` |
+| `LOCAL_MODEL_ENDPOINT` | Full URL to the local chat completions endpoint. | `http://127.0.0.1:11434/v1/chat/completions` |
+| `LOCAL_MODEL_NAME` | Local model identifier. | `local-model` |
+| `LOCAL_MODEL_API_KEY` | Optional bearer token for the local endpoint. | unset |
+| `MODEL_REQUEST_TIMEOUT` | HTTP request timeout in seconds. | `60` |
+
+Example usage:
+
+```bash
+# Use OpenAI
+export MODEL_PROVIDER=openai
+export OPENAI_API_KEY=sk-...
+
+# Use a local model (for example an Ollama server)
+export MODEL_PROVIDER=local
+export LOCAL_MODEL_ENDPOINT="http://localhost:11434/v1/chat/completions"
+export LOCAL_MODEL_NAME="mistral"
+```
 
 ## Boot & Operation
 
