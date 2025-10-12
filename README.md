@@ -93,7 +93,6 @@ Once booted, the system exposes:
 2. Gemini 2.5 Flash
 3. Claude - Sonnet 4 
 4. Deepseek - Standard
-5. Deepseek -
 
 ## Boot & Operation
 
