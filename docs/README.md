@@ -4,6 +4,9 @@ This directory contains technical references and operational guides for the Sign
 
 ## Core Documents
 
+- [Symbolic Engineering Basics](symbolic_engineering_basics.md)  
+  The engineering basics for creating symbolic systems on LLMs.  The how, when and why to use them.
+
 - [Symbolic Macros & Operational Guide](symbolic_macros.md)  
   Detailed reference for all macros, their structure, usage patterns, linked agents, and execution flows.
 
