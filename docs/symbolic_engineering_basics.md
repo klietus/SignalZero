@@ -1,7 +1,3 @@
-Here is the **revised version** of your guide with clean, abstract definitions, removal of SignalZero-specific framing (except for case study), and precise explanations for *lens*, *symbol*, and *UUIDs*.
-
----
-
 # **Symbolic Engineering: Foundational Guide**
 
 ---
@@ -1072,5 +1068,6 @@ It replaces mimicry with structure.
 
 **Summary:**
 Use symbolic systems for coherence, repair, identity integrity, collapse mapping, and trust-bound execution.
-Avoid them when speed, sensory volume, or intentional ambiguity are required.
+Avoid them when speed, sensory volume, or intentional ambiguity are required.  
 
+Symbolic Engineering: Brett Earley (klietus), 2025
